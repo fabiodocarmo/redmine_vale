@@ -1,0 +1,12 @@
+load database
+     from      mysql://redmine:reD7362926@valedisumy.clxbcprct36q.us-east-1.rds.amazonaws.com:3307/redmine
+     into postgresql://postgres:postgres@localhost:5432/vale_sac_redmine_development
+
+ WITH include drop, create tables, no truncate,
+      create indexes, preserve index names, reset sequences, foreign keys
+
+ SET maintenance_work_mem to '2048MB', work_mem to '1024MB'
+
+ CAST type datetime to timestamptz
+                drop default drop not null using zero-dates-to-null,
+      type date drop not null drop default using zero-dates-to-null;

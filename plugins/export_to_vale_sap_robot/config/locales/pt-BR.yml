@@ -1,0 +1,37 @@
+pt-BR:
+
+  export_to_vale_nfse_robot: "Template Robô NFSe's"
+  export_to_vale_utilities_robot: 'Template Robô Utilities'
+  export_to_vale_invoice_robot: 'Template Robô Invoice'
+  export_to_vale_transmission_companies_robot: 'Template Robô Transmissoras'
+  export_to_vale_telecom_companies_robot: 'Template Robô Telecom'
+  export_to_vale_danfe_companies_robot: 'Template Robô DANFE'
+  export_to_vale_cte_os_robot: 'Template Robô CTe-OS'
+  export_to_vale_danfe_nfse_robot: 'Template Robô DANFE com FRS e SPS/SPOT'
+  export_to_vale_grc_robot: "Relatório GRC"
+  export_to_vale_priorities_robot: "Template Robô Prioritários"
+  export_to_vale_rpa_robot: "Template Robô RPA"
+  export_to_vale_rents_robot: "Template Robô Aluguéis"
+  export_to_vale_measurement_robot: "Template Robô Requisição"
+  export_to_vale_measurement2_robot: "Template Robô FRS"
+
+  error_export_grc: "Não foi identificado nenhum chamado na planilha importada"
+  error_wrong_file_format: 'Formato de arquivo inválido. Verifique se o arquivo enviado é uma pasta de trabalho do Excel (.xlsx) válida.'
+
+  project_module_export_to_vale_sap_robot: "Templates de robôs de NFSe's"
+  permission_export_to_vale_nfse_robot: "Exportar/Importar template para robô de NFSe's"
+  permission_export_to_vale_transmission_companies_robot: 'Exportar/Importar template para robô de transmissoras'
+  permission_export_to_vale_grc_robot: "Exportar/Importar template GRC"
+
+  nf_robot_upload_finish: 'Processamento do resultado do robô concluido'
+  grc_import_success: 'Log do GRC Importado com sucesso'
+  email_will_be_send_when_finish: 'Quando o arquivo terminar de ser processado, um e-mail será enviado'
+
+  import_grc_report: Importar Relatório GRC
+  import_grc_robot_success_log: Importar log de sucesso do Robô do GRC
+  import_grc_robot_error_log: Importar log de erro do Robô do GRC
+  send_to_nfse_robot: Enviar Aguardando NFS-e no GRC para Robô NFS-e
+
+  import_log: Importar log
+  import_report: Importar relatório
+  send_file: Enviar

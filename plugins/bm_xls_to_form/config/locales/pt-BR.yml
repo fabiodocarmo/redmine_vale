@@ -1,0 +1,91 @@
+pt-BR:
+  activerecord:
+    messages:
+      less_than_created_on:  "%{field_name} deve ser menor que a data de criação do chamado"
+      tax_rate_equals_zero:  "%{rate_field_name} igual a zero com %{value_field_name} maior que zero"
+      tax_value_equals_zero: "%{value_field_name}  igual a zero com %{rate_field_name} maior que zero"
+      tax_base_value_greater_than_service_value: "%{tax_base_value_field_name} maior que %{service_value_field_name}. Conferir %{tax_rate_field_name} e %{tax_value_field_name}"
+
+  auto_forward_job:
+    title: 'Job de encaminhamento automático'
+    status_grc: 'Situação para cadastro via GRC'
+    status_robot: 'Situação para cadastro via Robô'
+
+  csv_converter: Conversor de CSV para XML
+  back: Voltar
+  csv_converter_description: Emite arquivos XML individuais para cada nota incluída em um arquivo CSV.
+  csv_converter_error_message: Algo inesperado ocorreu. Verifique o arquivo.
+  csv_converter_invalid_file: Formato de arquivo inválido.
+  csv_converter_no_file: Nenhum arquivo selecionado.
+  csv_converter_error_reading_file: Erro ao ler o arquivo.
+  permission_csv_converter: Converter notas em CSV para XML.
+
+  row: Linha
+  column: Coluna
+  bm_file_field: Arquivo do Boletim de Medição
+  bm_field: Campo do BM
+  rows_ct: Linhas do Contrato
+  column_final: Coluna Final
+  grid_field: Campo Grid
+  bm_status_clearfields: Status para limpar campos do BM
+  grid_autofill_frs: Preenchimento automático das grids que usam FRS
+  grid_frs_approval_date: Grid Data Aprovação FRS
+  frs_number_field: Campo Número da FRS
+  enable_feature: Habilitar essa função
+  frs_approval_status: Status de Aprovação da FRS
+  rf_sent_status: Status de RF Enviada
+  grid_rf_data: Grid de Dados da RF
+  grid_frs_data: Grid de Dados da FRS
+  status_newissue: Status de Novo Chamado
+  tracker_id: Tipo de Chamado
+  status_rf: Campos e Status do Recebimento Fiscal
+  bm_rf_field: Campo da RF (BM)
+  nfse_rf_field: Campo da RF (NFSE)
+  status_nfse_novo: Novo
+  status_nfse_em_andamento: Em Andamento
+  status_nfse_rejeitado: Rejeitado
+  status_nfse_em_cadastro: Em Cadastro
+  status_nfse_em_divergencia: Em Divergência
+  status_nfse_cadastrado: Cadastrado
+  status_nfse_analise: Análise
+  tracker_nfse_id: Tipo de Chamado NFSE
+  nf_status: Status NFSE
+  bm_status: Status BM
+  nf_status_priority: Prioridade
+  status_nfse_not_received: Não Recebida
+  req_to_pay_upload: Upload do Relatório Req To Pay
+  req_to_pay_upload_description: Altera os status de chamados de Medição de Serviço de acordo com o relatório fornecido.
+  req_to_pay_upload_invalid_file: Não foi possível abrir o arquivo. Verifique se o arquivo é do Excel e foi enviado no formato padrão.
+  req_to_pay_upload_invalid_data: 'Erro na leitura dos dados.'
+  req_to_pay_upload_success: Sucesso no envio e processamento do relatório.
+  report_begin: Início do relatório
+  report_rf: RF
+  report_pay_date: Data de Pagamento
+  status_scheduled_payment: Status Pagamento Programado
+  status_payment_executed: Status Pagamento Efetuado
+  updated_bm_issues: Chamados de BM atualizados
+  no_updated_bm_issue: Nenhum chamado de BM foi atualizado.
+  issue_id_bm_lbl: C %{id}
+  payment_date_field: Campo Data de Pagamento
+  document_number_field: Núm. Doc. Ref.
+  project_id: Project ID
+  order_number_field: Número do Pedido
+  status_material_order: Status Material - Pedido Criado
+  bm_value_mismatch: Valor do BM e soma das linhas não batem
+  releitura_bm: Releitura dos BMs
+  bm_work: Executar
+  bm_working: Executando...
+  bm_order_field: Campo Número Pedido (BM)
+  nfse_order_field: Campo Número Pedido (NFSE)
+  order_created_status: Status "Material - Pedido Criado"
+  mat_order_field: Campo Número Pedido (Material)
+  tracker_utilities_id: Tipo de Chamado (Utilities)
+  tracker_materials: Tipo de Chamado (Materiais)
+  req_to_pay_upload_success_total: Total de chamados atualizados
+  reqtopay_grid_field: Campo Grid Req To Pay
+  auto_change_system_user: Usuário do histórico de atualizações
+  valid_statuses: Situações válidas
+  enqueued_request: Requisição enviada. Após o término do processamento, notificaremos por email.
+  frs_field: FRS.Núm
+  clearing_field: Doc.Compensação.Núm
+  clearing_date_field: Data de Compensação

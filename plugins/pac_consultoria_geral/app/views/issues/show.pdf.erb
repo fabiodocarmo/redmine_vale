@@ -1,0 +1,7 @@
+<%=
+if @issue.tracker_id != 307
+  raw issue_to_pdf(@issue, :journals => @journals)
+else
+  raw PacPdfHelper.issue_pac_pdf(@issue, :journals => @journals)
+end
+%>

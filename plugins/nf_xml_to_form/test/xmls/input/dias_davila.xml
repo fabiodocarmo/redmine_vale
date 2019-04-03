@@ -1,0 +1,116 @@
+<GerarNfseResposta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse versao="2.01">
+            <InfNfse Id="NFSE_Declaracao_002065_ACACAMGI-GNADGU">
+               <Numero>2065</Numero>
+               <CodigoVerificacao>ACACAMGI-GNADGU</CodigoVerificacao>
+               <DataEmissao>2015-12-01T09:31:19</DataEmissao>
+               <NfseSubstituida>0</NfseSubstituida>
+               <OutrasInformacoes>VENCIMENTO: 30/12/2015.</OutrasInformacoes>
+               <ValoresNfse>
+                  <BaseCalculo>1070.00</BaseCalculo>
+                  <Aliquota>3.0000000000</Aliquota>
+                  <ValorIss>32.10</ValorIss>
+                  <ValorLiquidoNfse>1037.90</ValorLiquidoNfse>
+               </ValoresNfse>
+               <ValorCredito>0.00</ValorCredito>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>02266555000105</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>12467</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>GIRON COMERCIO LOGISTICA DE RESIDUOS LTDA</RazaoSocial>
+                  <NomeFantasia>GIRON</NomeFantasia>
+                  <Endereco>
+                     <Endereco>AV  RAUL SEIXAS</Endereco>
+                     <Numero>2516</Numero>
+                     <Complemento></Complemento>
+                     <Bairro>SANTA HELENA</Bairro>
+                     <CodigoMunicipio>0</CodigoMunicipio>
+                     <Uf>BA</Uf>
+                     <CodigoPais>01058</CodigoPais>
+                     <Cep>42850000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone></Telefone>
+                     <Email></Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>2910057</CodigoMunicipio>
+                  <Uf>BA</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <InfDeclaracaoPrestacaoServico Id="Declaracao_02266555000105">
+                     <Competencia>2015-12-01T00:00:00</Competencia>
+                     <Servico>
+                        <Valores>
+                           <ValorServicos>1070.00</ValorServicos>
+                           <ValorDeducoes>0.00</ValorDeducoes>
+                           <ValorPis>0.00</ValorPis>
+                           <ValorCofins>0.00</ValorCofins>
+                           <ValorInss>0.00</ValorInss>
+                           <ValorIr>0.00</ValorIr>
+                           <ValorCsll>0.00</ValorCsll>
+                           <OutrasRetencoes>0.00</OutrasRetencoes>
+                           <ValorIss>32.10</ValorIss>
+                           <Aliquota>3.0000000000</Aliquota>
+                           <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                           <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+                        <IssRetido>1</IssRetido>
+                        <ResponsavelRetencao>1</ResponsavelRetencao>
+                        <ItemListaServico>07.09</ItemListaServico>
+                        <CodigoCnae>3821100</CodigoCnae>
+                        <Discriminacao>TRANSPORTE E DESTINA&#xC7;&#xC3;O PARA ATERRO HERA.
+
+PEDIDO: 4502273550.
+
+FR: 1001318569.</Discriminacao>
+                        <CodigoMunicipio>2910057</CodigoMunicipio>
+                        <CodigoPais>1058</CodigoPais>
+                        <ExigibilidadeISS>1</ExigibilidadeISS>
+                        <MunicipioIncidencia>2930709</MunicipioIncidencia>
+                     </Servico>
+                     <Prestador>
+                        <CpfCnpj>
+                           <Cnpj>02266555000105</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>12467</InscricaoMunicipal>
+                     </Prestador>
+                     <Tomador>
+                        <IdentificacaoTomador>
+                           <CpfCnpj>
+                              <Cnpj>15144306000199</Cnpj>
+                           </CpfCnpj>
+                           <InscricaoMunicipal></InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE MANGAN&#xCA;S S/A</RazaoSocial>
+                        <Endereco>
+                           <Endereco>BR 324 - KM 24</Endereco>
+                           <Numero></Numero>
+                           <Complemento></Complemento>
+                           <Bairro>&#xC1;GUA COMPRIDA</Bairro>
+                           <CodigoMunicipio>0</CodigoMunicipio>
+                           <Uf>BA</Uf>
+                           <CodigoPais>01058</CodigoPais>
+                           <Cep>43700000</Cep>
+                        </Endereco>
+                        <Contato>
+                           <Telefone>7121095259</Telefone>
+                           <Email>nfe.servico@vale.com</Email>
+                        </Contato>
+                     </Tomador>
+                     <RegimeEspecialTributacao>0</RegimeEspecialTributacao>
+                     <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                     <IncentivoFiscal>2</IncentivoFiscal>
+                  </InfDeclaracaoPrestacaoServico>
+               </DeclaracaoPrestacaoServico>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</GerarNfseResposta>

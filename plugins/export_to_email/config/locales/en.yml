@@ -1,0 +1,6 @@
+en:
+  sending_mail_message: Sending Mail
+  csv_export_mail_subject_message: CSV exported
+  csv_export_message: You will receive a CSV file with the list via email as soon as the exportation is finished.
+  ok_label: OK
+  send_issues_export_message: Attached is a CSV file containing the list of exported issues.

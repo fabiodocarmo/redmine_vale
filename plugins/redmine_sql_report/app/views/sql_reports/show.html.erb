@@ -1,0 +1,30 @@
+<%#encoding: utf-8%>
+<h2><%= l(:report_detail_header) %></h2>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <b><%= l(:field_name)%>:</b>
+  <p>
+    <%= @sql_report.name %>
+  </p>
+</p>
+
+<p>
+  <b><%= l(:sql_label) %>:</b>
+  <p>
+    <%= @sql_report.sql %>
+  </p>
+</p>
+
+<p>
+  <b><%= l(:label_filter_plural)%>:</b>
+  <p>
+    <ul>
+      <% @sql_report.filters.each do |name, type| %>
+        <li><%= "#{name} - #{type}" %></li>
+      <% end %>
+    </ul>
+  </p>
+</p>
+
+<%= link_to l(:button_back), sql_reports_path %>

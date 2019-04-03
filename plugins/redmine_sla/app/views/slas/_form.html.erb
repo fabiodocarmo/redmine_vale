@@ -1,0 +1,10 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { sla: @sla } %>
+</div>
+
+<% include_calendar_headers_tags %>
+<%= javascript_include_tag "cocoon", plugin: 'redmine_sla' %>
+<%= stylesheet_link_tag "cocoon", plugin: 'redmine_sla' %>
+
+<%= javascript_include_tag "chosen.jquery.min", plugin: 'redmine_sla' %>
+<%= stylesheet_link_tag "chosen", plugin: 'redmine_sla' %>

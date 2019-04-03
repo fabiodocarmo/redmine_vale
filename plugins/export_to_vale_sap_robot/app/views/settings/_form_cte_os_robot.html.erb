@@ -1,0 +1,177 @@
+<% @trackers = Tracker.all
+   @issue_custom_fields = IssueCustomField.all %>
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cte_os_rf_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_tracker_id]', options_from_collection_for_select(@trackers, :id, :name, settings['cte_os_tracker_id']), include_blank: true %>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br />
+<div style="margin-left:30px;">
+  <h4> cte_os Statuses </h4>
+  <table>
+    <tbody>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[cte_os_wating_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['cte_os_wating_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[cte_os_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['cte_os_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[cte_os_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['cte_os_success_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[cte_os_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['cte_os_error_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_vale') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_cnpj_vale_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_cnpj_vale_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.empresa') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_empresa_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_empresa_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_fornecedor') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_cnpj_fornecedor_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_cnpj_fornecedor_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.emissao') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_emissao_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_emissao_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_referencia_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_referencia_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.valor_total_nf') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_valor_total_nf_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_valor_total_nf_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.serie') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_serie_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_serie_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_pedido_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_pedido_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cv_grid_linhas_pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_cv_grid_linhas_pedido_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_cv_grid_linhas_pedido_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.campos_linhas_pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_campos_linhas_pedido]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_campos_linhas_pedido']), include_blank: true %>
+    </td>
+  </tr>
+    <th><%= t('export_to_vale_sap_robot.texto') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_texto_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_texto_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cv_data_basica') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_cv_data_basica_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_cv_data_basica_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cv_tipo_documento_cte_os') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_cv_tipo_documento_cte_os_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_cv_tipo_documento_cte_os_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.base_de_calculo_inss') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_base_calculo_inss_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_base_calculo_inss_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.aliquota_inss') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_aliquota_inss_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_aliquota_inss_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.optante_simples') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_optante_simples_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_optante_simples_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.chave_acesso') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_chave_acesso_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_chave_acesso_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.hora_emissao') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_hora_emissao_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_hora_emissao_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.numero_protocolo') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_numero_protocolo_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_numero_protocolo_id']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.MIRO') %>:</th>
+    <td>
+      <%= select_tag 'settings[cte_os_miro]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['cte_os_miro']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,20 @@
+---
+:concurrency: 5
+:pidfile: tmp/pids/sidekiq.pid
+:logfile: log/sidekiq.log
+production:
+  :concurrency: 20
+  :logfile: log/sidekiq-production.log
+:queues:
+  - [default, 1]
+  - [sla, 1]
+  - [auto_issue, 1]
+  - [exec_job, 3]
+  - [upload_sap_robot, 1]
+  - [external_validation, 3]
+  - [document_type_queries, 3]
+  - [sql_report, 1]
+  - [bpmint_start_process, 1]
+  - [status_change, 1]
+  - [import_xlsx_issue_job, 1]
+  - [req_to_pay, 1]

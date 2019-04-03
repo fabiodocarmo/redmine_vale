@@ -1,0 +1,9 @@
+<ul>
+  <% @sql_reports.each do |report| %>
+    <% if User.current.allowed_to?(report.snake_case_name, @project) %>
+      <li>
+        <%= link_to t("report.#{report.snake_case_name}"), project_sql_report_path(report, project_id: @project.id) %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

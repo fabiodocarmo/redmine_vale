@@ -1,0 +1,16 @@
+<%= render :partial => 'issue', :formats => [:html], :locals => { :issue => @issue, :users => @users, :issue_url => @issue_url } %>
+<hr />
+
+<h3><%= "#{t(:updated_issue_at)}" %> por <%= "#{@author.name}" -%></h3>
+
+<ul>
+<% @journal_details.each do |detail| -%>
+<li><%= MailerModel.detail_to_string(detail) %></li>
+<% end -%>
+</ul>
+
+<% if @journal.notes? -%>
+<ul>
+<li><b><%= "#{t(:note_added)}" %> </b> <%= @journal.notes %></li>
+</ul>
+<% end -%>

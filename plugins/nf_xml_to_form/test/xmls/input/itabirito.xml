@@ -1,0 +1,117 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse>
+      <InfNfse Id="38460234000194300050900000121">
+         <Numero>00000121</Numero>
+         <CodigoVerificacao></CodigoVerificacao>
+         <CodigoControle>{61F1AD03-B3F4-49D6-9F0C-A5E03F86C240}</CodigoControle>
+         <DataEmissao>2016-03-08T00:00:00</DataEmissao>
+         <ValoresNfse>
+            <BaseCalculo>12005.20</BaseCalculo>
+            <Aliquota>3.0000</Aliquota>
+            <ValorIss>360.16</ValorIss>
+            <ValorLiquidoNfse>10126.39</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>38460234000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>3000509</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>SEMEP - SERV.ESP. EM MAQ.EQUIP. E PECAS LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>AV WILSON TAVARES RIBEIRO</Endereco>
+               <Numero>443</Numero>
+               <Complemento></Complemento>
+               <Bairro>FAZENDA DO MANDU</Bairro>
+               <CodigoMunicipio>3118601</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <CodigoPais></CodigoPais>
+               <Cep>31183680</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>33688600</Telefone>
+               <Email>contabilidade@semep.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3131901</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <Competencia>2016-03-08</Competencia>
+            <Servico></Servico>
+            <Valores>
+               <ValorServicos>12005.20</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>78.03</ValorPis>
+               <ValorCofins>360.16</ValorCofins>
+               <ValorInss>1320.57</ValorInss>
+               <ValorIr>0.00</ValorIr>
+               <ValorCsll>120.05</ValorCsll>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <ValorIss>360.16</ValorIss>
+               <Aliquota>3.0000</Aliquota>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <IssRetido></IssRetido>
+            <ResponsavelRetencao></ResponsavelRetencao>
+            <ItemListaServico>-</ItemListaServico>
+            <CodigoCnae>3314715</CodigoCnae>
+            <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+            <Discriminacao>Serviços prestados nas dependências da contratante de mandrilamento de recuperação, rebaixamento por usinagem, soldagem de enchimento, usinagem de acabamento, remoção e montagem de buchas de alojamentos de equipamentos de mina, na Mina do Pico em Itabirito/MG, no mês de Fevereiro/2016, conforme contrato 5900009061.
+
+RF:	6200345498
+N° Contrato:	5900009061
+N° Pedido/Item:	4502507647/00010
+N° FRS:	1001511003
+
+Centro de Custo: 	15309
+
+</Discriminacao>
+            <CodigoMunicipio>3131901</CodigoMunicipio>
+            <CodigoPais></CodigoPais>
+            <ExigibilidadeISS></ExigibilidadeISS>
+            <MunicipioIncidencia></MunicipioIncidencia>
+            <NumeroProcesso></NumeroProcesso>
+            <Prestador>
+               <CpfCnpj>
+                  <Cnpj>38460234000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>3000509</InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+               <IdentificacaoTomador>
+                  <CpfCnpj>
+                     <Cnpj>33592510004494</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>1500734</InscricaoMunicipal>
+               </IdentificacaoTomador>
+               <RazaoSocial>VALE S.A.</RazaoSocial>
+               <Endereco>
+                  <Endereco>FAZ CATA BRANCA</Endereco>
+                  <Numero>SN</Numero>
+                  <Complemento>PICO</Complemento>
+                  <Bairro>ZONA RURAL</Bairro>
+                  <CodigoMunicipio></CodigoMunicipio>
+                  <Uf>MG</Uf>
+                  <CodigoPais></CodigoPais>
+                  <Cep>35450000</Cep>
+               </Endereco>
+               <Contato>
+                  <Telefone>34267645</Telefone>
+                  <Email>merces.bedran@vale.com</Email>
+               </Contato>
+            </Tomador>
+            <ConstrucaoCivil>
+               <CodigoObra></CodigoObra>
+               <Art></Art>
+            </ConstrucaoCivil>
+            <OptanteSimplesNacional></OptanteSimplesNacional>
+            <IncentivoFiscal></IncentivoFiscal>
+         </DeclaracaoPrestacaoServico>
+         <Versao>2.01</Versao>
+      </InfNfse>
+   </Nfse>
+</CompNfse>

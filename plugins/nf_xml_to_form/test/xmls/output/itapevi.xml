@@ -1,0 +1,101 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse versao="1.00">
+      <InfNfse Id="nfse">
+         <Numero>1492</Numero>
+         <CodigoVerificacao>WNVJ-VKWS</CodigoVerificacao>
+         <DataEmissao>2016-03-08 00:00:00</DataEmissao>
+         <IdentificacaoRps>
+            <Numero></Numero>
+            <Serie></Serie>
+            <Tipo></Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps></DataEmissaoRps>
+         <NaturezaOperacao>511</NaturezaOperacao>
+         <OptanteSimplesNacional></OptanteSimplesNacional>
+         <IncentivadorCultural></IncentivadorCultural>
+         <Competencia></Competencia>
+         <Servico>
+            <Valores>
+               <ValorServicos>29400.0</ValorServicos>
+               <ValorPis>191.1</ValorPis>
+               <ValorCofins>882.0</ValorCofins>
+               <ValorIr>0.0</ValorIr>
+               <ValorCsll>294.0</ValorCsll>
+               <IssRetido>1</IssRetido>
+               <ValorIss>588.0</ValorIss>
+               <BaseCalculo>29400.0</BaseCalculo>
+               <Aliquota></Aliquota>
+               <ValorLiquidoNfse>29400.0</ValorLiquidoNfse>
+            </Valores>
+            <ItemListaServico>14.01</ItemListaServico>
+            <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+            <Discriminacao>N/Ref. PI 1510/095 - S/Ref. PC nº 4502492304 (ASS 3532 e 1º termo aditivo). S/ NF recebimento: 27227 (13/8/15) N/ NF retorno: 1786 (24/2/16) - Dados P/Pgto: Banco (104) CEF - Ag 1228 - C/C 03001220-0</Discriminacao>
+            <CodigoMunicipio>-</CodigoMunicipio>
+         </Servico>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>66.973.801/0001-41</Cnpj>
+               <InscricaoMunicipal>10950</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>DENSITEL TRANSFORMADORES LTDA</RazaoSocial>
+            <NomeFantasia></NomeFantasia>
+            <Endereco>
+               <Endereco>ENG.RENE BENEDITO SILVA </Endereco>
+               <Numero>1025</Numero>
+               <Complemento></Complemento>
+               <Bairro>JD.SANTA RITA</Bairro>
+               <CodigoMunicipio></CodigoMunicipio>
+               <Uf>SP</Uf>
+               <Cep></Cep>
+            </Endereco>
+            <Contato>
+               <Telefone></Telefone>
+            </Contato>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33.592.510/0220-42</Cnpj>
+               </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>Vale S.A</RazaoSocial>
+            <Endereco>
+               <Endereco>Av. Dante Michelini, 5500</Endereco>
+               <Numero></Numero>
+               <Bairro>Ponta do Tubarão</Bairro>
+               <CodigoMunicipio></CodigoMunicipio>
+               <Uf>ES</Uf>
+               <Cep>29090-900</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone></Telefone>
+               <Email></Email>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>352250</CodigoMunicipio>
+            <Uf>SP</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="NfseAssSMF_nfse">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#nfse">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>IDctIj4P0NsYgLf8VP2z0GJkveM=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>cOLhW920L/fn2jndH3pFd9LMsCFjQ/+h8TfmV5lcz8Qc33njBe3W39alrZTRPdpmn0CcaWG4bu2vvihRsX0HzDztPyBqUs9BF/YIdtKTfDfOlAA7heuaBo8FLaXcbI0TdGJNK5dbYEavbtrqP97ReEozKP/aEjaK8KUlS2KLXgZb5t9mM172l4DarhuVYBY9QTmuyvtlP1lv7OnjI9I+PnuSDKVEGeHZfQQH51EJSEOku4v/YWQkYh9wbVlzZj+JrWSWtkmexomO8cmP9DBq1lcU3lwPsWMyTYesE0xteRHG1KHYJakVH1wJcKu8zxdxmkbGyRASWFgAiJm9Iw2lPQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

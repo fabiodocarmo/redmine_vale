@@ -1,0 +1,23 @@
+<h1><%= l(:dependency_list_header) %></h1>
+
+<%= render 'cruj_cruj_cruj/filters' %>
+
+<br />
+<br />
+
+<div>
+  <div style="float: left;">
+  <%= link_to l(:dependency_new_label), new_dependent_field_path %>
+  </div>
+  <div style="float: right;">
+    <%= form_tag export_template_dependent_fields_path, style: 'margin-right: 10px' do %>
+      <%= submit_tag l(:dependency_import_template_label) %>
+    <% end %>
+    <%= form_tag import_dependent_fields_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:button_import) %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'cruj_cruj_cruj/list_table' %>

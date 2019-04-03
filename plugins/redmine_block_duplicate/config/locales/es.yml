@@ -1,0 +1,27 @@
+es:
+  label_block_duplicates: Prevención de duplicados
+  block_duplicate_rule_edit_sucess_message: Regla de prevención de duplicados editada con éxito.
+  block_duplicate_rule_create_sucess_message: Regla de prevención de duplicados criada con éxito.
+  block_duplicate_no_block_message: No hay reglas de prevención de duplicados registradas en el sistema.
+  block_duplicate_rule_delete_confirmation: ¿Está seguro de que quiere eliminar esta regla?
+
+  fields_to_consider_label: Los campos que deben considerarse
+  custom_fields_to_consider_label: Los campos personalizados que deben considerarse
+  statuses_to_consider_label: Estados que deben considerarse
+
+  all_statuses_label: Todos estados
+
+  block_duplicates_edit_header: Editar regla de prevención de duplicados
+  block_duplicates_list_header: Lista de reglas de prevención de duplicados
+  block_duplicates_new_header: Nueva regla de prevención de duplicados
+  block_duplicates_detail_header: Detalles de la regla de prevención de duplicados
+
+  link_to_new_block_duplicates: Nueva regla de prevención de duplicados
+
+  duplicated_issue_alert: Petición duplica %{issues}, creadas por %{authors}, respectivamente. Por favor compruebe los campos y vuelva a intentarlo.
+  prohibited_message: impidieron que se guarde esta configuración
+  custom_field_different_from_parent: El campo %{custom_field} tiene que tener el mismo valor que en la petición original.
+  check_duplicated_field: Verifique el valor del campo %{custom_field} porque podría duplicarse en otra petición.
+  label_duplicated_copies_enabled: Habilitar duplicar peticiones copiadas
+  verify_multiple_value: Comprobar si los valores de %{custom_field} están duplicados.
+  verify_empty_value: Comprobar si los valores de %{custom_field} están llenados.

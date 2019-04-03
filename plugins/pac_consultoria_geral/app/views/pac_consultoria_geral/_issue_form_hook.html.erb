@@ -1,0 +1,207 @@
+<%= javascript_tag do %>
+  //Plugin PAC Consultoria Geral
+
+  //const _MS_PER_YEAR = 1000 * 60 * 60 * 24;
+
+  var thread_running = false;
+  var thread_instance;
+
+  //Pega no Setting o id de cada custom_field
+  var grid_concorrentes_global = <%= Setting.plugin_pac_consultoria_geral["grid_concorrentes"].to_i %>;
+  var grid_distribuicao = <%= Setting.plugin_pac_consultoria_geral["distribuicao"].to_i %>;
+  var valor_distribuido_id = <%= Setting.plugin_pac_consultoria_geral["valor_distribuido"].to_i %>;
+  var variacao_proposta_id = <%= Setting.plugin_pac_consultoria_geral["variacao_proposta"].to_i %>;
+  var diferenca_orcamento_id = <%= Setting.plugin_pac_consultoria_geral["diferenca_orcamento"].to_i %>;
+  var proposta_inicial_id = <%= Setting.plugin_pac_consultoria_geral["proposta_inicial"].to_i %>;
+  var proposta_final_id = <%= Setting.plugin_pac_consultoria_geral["proposta_final"].to_i %>;
+  var orcamento_vale_id = <%= Setting.plugin_pac_consultoria_geral["orcamento_vale"].to_i %>;
+  var inicio_contrato_id = <%= Setting.plugin_pac_consultoria_geral["inicio_contrato"].to_i %>;
+  var fim_contrato_id = <%= Setting.plugin_pac_consultoria_geral["fim_contrato"].to_i %>;
+  var contencioso_id = <%= Setting.plugin_pac_consultoria_geral["contencioso"].to_i %>;
+  var valor_total_pac_id = <%= Setting.plugin_pac_consultoria_geral["valor_total_pac"].to_i %>;
+  var valor_bruto_servico_id = <%= Setting.plugin_pac_consultoria_geral["valor_bruto_servico"].to_i %>;
+  var valor_despesas_id = <%= Setting.plugin_pac_consultoria_geral["valor_despesas"].to_i %>;
+  var valor_atual_contrato_id = <%= Setting.plugin_pac_consultoria_geral["valor_atual_contrato"].to_i %>;
+  var valor_apos_aditivo_id = <%= Setting.plugin_pac_consultoria_geral["valor_apos_aditivo"].to_i %>;
+
+  //Transforma os campos Variação de Proposta (%) e Diferença Orçamento (%) em readonly.
+  function readOnlyConcorrentesFields() {
+    var id_base = "issue_custom_field_values_" + grid_concorrentes_global + "_";
+      $( "*[id^="+id_base+"]" ).each(function( index ) {
+        if($(this).attr('id').includes(variacao_proposta_id) || $(this).attr('id').includes(diferenca_orcamento_id)){
+          $(this).prop('readonly', true);
+        }
+    });
+  };
+
+  //Transforma o campo Valor Total do PAC e Valor Após Aditivo em readonly.
+  function readOnlyValores() {
+    var id_valor_total_pac = "issue_custom_field_values_" + valor_total_pac_id;
+    var id_valor_apos_aditivo = "issue_custom_field_values_" + valor_apos_aditivo_id;
+    $("*[id="+id_valor_total_pac+"]").prop('readonly', true);
+    $("*[id="+id_valor_apos_aditivo+"]").prop('readonly', true);
+  };
+
+  //Formata os campos de valores da Grid
+  function formatConcorrentesFields() {
+    var id_base = "issue_custom_field_values_" + grid_concorrentes_global + "_";
+    /*$( "*[id^="+id_base+"]" ).each(function( index ) {
+      if($(this).attr('id').includes(variacao_proposta_id) || $(this).attr('id').includes(diferenca_orcamento_id) || $(this).attr('id').includes(proposta_inicial_id) || $(this).attr('id').includes(proposta_final_id) || $(this).attr('id').includes(orcamento_vale_id)){
+        $(this).val($(this).val().replace(".","").replace(",","."));
+      }
+    });
+    var id_base = "issue_custom_field_values_" + grid_distribuicao + "_";
+    $( "*[id^="+id_base+"]" ).each(function( index ) {
+      if($(this).attr('id').includes(valor_distribuido_id)){
+        $(this).val($(this).val().replace(".","").replace(",","."));
+      }
+    });*/
+  };
+
+  //Binds de changes para os campos do grid
+  function bindGridChanges() {
+    var id_base = "issue_custom_field_values_" + grid_concorrentes_global + "_";
+      $( "*[id^="+id_base+"][id*="+proposta_inicial_id+"], *[id^="+id_base+"][id*="+proposta_final_id+"], *[id^="+id_base+"][id*="+orcamento_vale_id+"]" ).each(function( index ) {
+        if( $(this).attr('id').includes(proposta_inicial_id) || $(this).attr('id').includes(proposta_final_id) ){
+          $(this).bind( "change", fillVariacaoProposta );
+        }
+        if( $(this).attr('id').includes(orcamento_vale_id) || $(this).attr('id').includes(proposta_final_id) ){
+          $(this).bind( "change", fillDiferencaOrcamento );
+        }
+      });
+  }
+
+  //Binds de changes para os campos de data
+  function bindDateChanges() {
+  var id_contencioso = "issue_custom_field_values_" + contencioso_id;
+    $( "*[id^="+id_contencioso+"]" ).bind( "change", contenciosoSim );
+
+  }
+
+  //Binds de changes para os campos de data
+  function bindValorChanges() {
+    var id_valor_despesas = "issue_custom_field_values_" + valor_despesas_id;
+    var id_valor_bruto_servico = "issue_custom_field_values_" + valor_bruto_servico_id;
+    var id_valor_atual_contrato = "issue_custom_field_values_" + valor_atual_contrato_id;
+
+    $( "*[id^="+id_valor_despesas+"]" ).bind( "change", fillValores );
+    $( "*[id^="+id_valor_bruto_servico+"]" ).bind( "change", fillValores );
+    $( "*[id^="+id_valor_atual_contrato+"]" ).bind( "change", fillValores );
+
+  }
+
+  //Preenche a porcentagem de variação entre a proposta final e a inicial.
+  function fillVariacaoProposta() {
+    //Pega os campos do Grid de Concorrentes
+    var id_base = "issue_custom_field_values_" + grid_concorrentes_global + "_";
+    //Loop nos campos
+    $( "*[id^="+id_base+"][id*="+variacao_proposta_id+"]" ).each(function( index ) {
+      var idNumber = $(this).context.id.split('_');
+      idNumber = idNumber[idNumber.length - 2];
+      var id_proposta_inicial = "issue_custom_field_values_" + grid_concorrentes_global + "_" + idNumber + "_" + proposta_inicial_id;
+      var id_proposta_final = "issue_custom_field_values_" + grid_concorrentes_global + "_" + idNumber + "_" + proposta_final_id;
+      var proposta_inicial_val = Number.parseFloat($("#"+id_proposta_inicial).val());
+      var proposta_final_val = Number.parseFloat($("#"+id_proposta_final).val());
+      if( !isNaN(proposta_inicial_val) && !isNaN(proposta_final_val) ){
+        var variacao_proposta = (proposta_final_val - proposta_inicial_val) / proposta_inicial_val * 100;
+        if(!isNaN(variacao_proposta) && isFinite(variacao_proposta)){
+          $(this).val( variacao_proposta.toFixed(2));
+        }else {
+          $(this).val("");
+        }
+      }else {
+        $(this).val("");
+      }
+    });
+  };
+
+  //Preenche a diferença entre o orçamento e a proposta final.
+  function fillDiferencaOrcamento() {
+    //Pega os campos do Grid de Concorrentes
+    var id_base = "issue_custom_field_values_" + grid_concorrentes_global + "_";
+    //Loop nos campos
+    $( "*[id^="+id_base+"][id*="+diferenca_orcamento_id+"]" ).each(function( index ) {
+      var idNumber = $(this).context.id.split('_');
+      idNumber = idNumber[idNumber.length - 2];
+      var id_orcamento_vale = "issue_custom_field_values_" + grid_concorrentes_global + "_" + idNumber + "_" + orcamento_vale_id;
+      var id_proposta_final = "issue_custom_field_values_" + grid_concorrentes_global + "_" + idNumber + "_" + proposta_final_id;
+      var orcamento_vale_val = Number.parseFloat($("#"+id_orcamento_vale).val());
+      var proposta_final_val = Number.parseFloat($("#"+id_proposta_final).val());
+      if( !isNaN(orcamento_vale_val) && !isNaN(proposta_final_val) ){
+        var diferenca_orcamento = (proposta_final_val - orcamento_vale_val) / orcamento_vale_val * 100;
+        if(!isNaN(diferenca_orcamento) && isFinite(diferenca_orcamento)){
+          $(this).val( diferenca_orcamento.toFixed(2));
+        }else {
+          $(this).val("");
+        }
+      }else {
+        $(this).val("");
+      }
+    });
+  };
+
+  function contenciosoSim(){
+    var id_contencioso = "issue_custom_field_values_" + contencioso_id;
+    var id_inicio_contrato = "issue_custom_field_values_" + inicio_contrato_id;
+    var id_fim_contrato = "issue_custom_field_values_" + fim_contrato_id;
+    var contencioso = $( "*[id^="+id_contencioso+"]" ).val();
+    if(contencioso==1){
+      var inicio_contrato = new Date($("*[id="+id_inicio_contrato+"]").val());
+      if (isDate(inicio_contrato) ){
+        var fim_contrato = new Date(inicio_contrato);
+        fim_contrato.setFullYear(fim_contrato.getFullYear()+10);
+        $("*[id="+id_fim_contrato+"]").val(fim_contrato.toISOString().split('T')[0]);
+        $("*[id="+id_fim_contrato+"]").prop('readonly', true);
+      }
+    }else {
+      $("*[id="+id_fim_contrato+"]").prop('readonly', false);
+      var fim_contrato = new Date($("*[id="+id_inicio_contrato+"]").val());
+      if (!isDate(fim_contrato)){
+        $("*[id="+id_fim_contrato+"]").val("yyyy-MM-dd");
+      }
+    }
+
+  }
+
+  function fillValores(){
+    var id_valor_despesas = "issue_custom_field_values_" + valor_despesas_id;
+    var id_valor_bruto_servico = "issue_custom_field_values_" + valor_bruto_servico_id;
+    var id_valor_atual_contrato = "issue_custom_field_values_" + valor_atual_contrato_id;
+    var id_valor_total_pac = "issue_custom_field_values_" + valor_total_pac_id;
+    var id_valor_apos_aditivo = "issue_custom_field_values_" + valor_apos_aditivo_id;
+    var valor_despesas_val = Number.parseFloat($("#"+id_valor_despesas).val().replace(/\./g,'').replace(/\,/g,'.'));
+    var valor_bruto_servico_val = Number.parseFloat($("#"+id_valor_bruto_servico).val().replace(/\./g,'').replace(/\,/g,'.'));
+    if ($("#"+id_valor_atual_contrato).length)
+      var valor_atual_contrato_val = Number.parseFloat($("#"+id_valor_atual_contrato).val().replace(/\./g,'').replace(/\,/g,'.'));
+    else
+      var valor_atual_contrato_val = 0;
+
+    if(!isNaN(valor_despesas_val) && !isNaN(valor_bruto_servico_val)){
+      valor_total_pac_val = (valor_despesas_val + valor_bruto_servico_val);
+      $("*[id="+id_valor_total_pac+"]").val(valor_total_pac_val.toFixed(2).toString().replace(/\./g,','));
+      if(!isNaN(valor_atual_contrato_val)){
+        $("*[id="+id_valor_apos_aditivo+"]").val((Number.parseFloat(valor_total_pac_val)+valor_atual_contrato_val).toFixed(2).toString().replace(/\./g,','));
+      }
+    }
+  }
+
+  function isDate(date){
+    return date instanceof Date && !isNaN(date.valueOf());
+  }
+
+  readOnlyConcorrentesFields();
+  readOnlyValores();
+  formatConcorrentesFields();
+  bindGridChanges();
+  bindDateChanges();
+  bindValorChanges();
+
+  if(thread_running){
+      clearInterval(thread_instance);
+      thread_running = false;
+  }
+
+  thread_running = true;
+  thread_instance = setInterval(bindGridChanges, 100);
+  thread_instance = setInterval(readOnlyConcorrentesFields, 100);
+<% end %>

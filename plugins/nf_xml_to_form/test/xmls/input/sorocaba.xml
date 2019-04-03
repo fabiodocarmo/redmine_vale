@@ -1,0 +1,216 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe versao="3.10" Id="NFe35160307204578000109550010000265551928647656">
+         <ide>
+            <cUF>35</cUF>
+            <cNF>92864765</cNF>
+            <natOp>Venda de Mercadoria Adq. Terc. /</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>26555</nNF>
+            <dhEmi>2016-03-09T15:20:38-02:00</dhEmi>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>3552205</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>6</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>0</indFinal>
+            <indPres>9</indPres>
+            <procEmi>0</procEmi>
+            <verProc>1</verProc>
+         </ide>
+         <emit>
+            <CNPJ>07204578000109</CNPJ>
+            <xNome>FLIR SYSTEMS BRASIL COMERCIO DE CAMERAS INFRAVERMELHAS LTDA.</xNome>
+            <xFant>Sao Paulo</xFant>
+            <enderEmit>
+               <xLgr>Avenida Antonio Bardella</xLgr>
+               <nro>320</nro>
+               <xBairro>Alto da Boa Vista</xBairro>
+               <cMun>3552205</cMun>
+               <xMun>Sorocaba</xMun>
+               <UF>SP</UF>
+               <CEP>18085852</CEP>
+               <xPais>Brasil</xPais>
+            </enderEmit>
+            <IE>669544325113</IE>
+            <IM>138.188</IM>
+            <CNAE>4669999</CNAE>
+            <CRT>3</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510022042</CNPJ>
+            <xNome>VALE S/A 081-CVRD - PELOTIZACAO SUL MATERIAIS - OF MECANICA</xNome>
+            <enderDest>
+               <xLgr>AVE DANTE MICHELINI</xLgr>
+               <nro>5500</nro>
+               <xBairro>JARDIM CAMBURI</xBairro>
+               <cMun>3205309</cMun>
+               <xMun>VITORIA</xMun>
+               <UF>ES</UF>
+               <CEP>29090000</CEP>
+               <cPais>1058</cPais>
+               <xPais>Brasil</xPais>
+               <fone>2733336174</fone>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>080266240</IE>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>1196818</cProd>
+               <cEAN></cEAN>
+               <xProd>CAPA PARA LENTE</xProd>
+               <NCM>90319090</NCM>
+               <CEST>2804400</CEST>
+               <CFOP>6102</CFOP>
+               <uCom>EA</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>413.0400000000</vUnCom>
+               <vProd>413.04</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>EA</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>413.0400000000</vUnTrib>
+               <indTot>1</indTot>
+               <xPed>4502384900</xPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMS00>
+                     <orig>1</orig>
+                     <CST>00</CST>
+                     <modBC>3</modBC>
+                     <vBC>475.00</vBC>
+                     <pICMS>4.0000</pICMS>
+                     <vICMS>19.00</vICMS>
+                  </ICMS00>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>00</CST>
+                     <vBC>413.04</vBC>
+                     <pIPI>15.0000</pIPI>
+                     <vIPI>61.96</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISAliq>
+                     <CST>01</CST>
+                     <vBC>413.04</vBC>
+                     <pPIS>0.6500</pPIS>
+                     <vPIS>2.68</vPIS>
+                  </PISAliq>
+               </PIS>
+               <COFINS>
+                  <COFINSAliq>
+                     <CST>01</CST>
+                     <vBC>413.04</vBC>
+                     <pCOFINS>3.0000</pCOFINS>
+                     <vCOFINS>12.39</vCOFINS>
+                  </COFINSAliq>
+               </COFINS>
+            </imposto>
+            <infAdProd>PEDIDO DE COMPRA: 4502384900 LINHA: 20 CONTATO: KESIA SILVA- Email: kesia.silva@vale.com LOCAL DE ENTREGA DENTRO DA VALE: PPL:1001 Aliquota de ICMS de 4%, aplicavel em todas as operacoes interestaduais subsequentes a importacao, conforme Resolucao do Senado Federal n.o 13/2012. Excecoes: bens e mercadorias importados do exterior que nao tenham similar nacional: NCM 8525.80.13 / 9031.80.99 NO VENCIMENTO FAVOR DEPOSITAR NO BANCO DO BRASIL S/A. AGENCIA 2414-7  CC 6017-8</infAdProd>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>475.00</vBC>
+               <vICMS>19.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>413.04</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>61.96</vIPI>
+               <vPIS>2.68</vPIS>
+               <vCOFINS>12.39</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>475.00</vNF>
+            </ICMSTot>
+         </total>
+         <transp>
+            <modFrete>1</modFrete>
+         </transp>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe35160307204578000109550010000265551928647656">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>TYLaWj162hPTlkjOmiyLlxbXfvA=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>hKWhoRQyu6seWXmHXehAMJZD9QI1HpQKFdm/T/2GYcaFgTHreQ9rdcuFp2wAFEezsVTVNSuu/jHV
++Pk6R6c1kT1gGLEM2eo6Cq/TWySV7pEvvJT98hT6H/sTD0roebT+HTmI+9WAtarbsGuPM5vSyjOK
+54DqMrReJqJiVHvZgMU6FLxU0Gbne2nMWgxdx1O7PayJmuEZdaPJrGDfpqdMbCZyY0nE8HXjpTWm
+3aB8/lCOp/SMgQzShvX96ErtlOsqvvp4ujIe0gXf0Um4Drj2TyV/DnqvWue3oTbx8VyhzZOzRzey
+0XrhqkE/jCBVf6B4DVuVsj02nX9gwThhLLHKzQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIH9DCCBdygAwIBAgIIP50kVU4/1bkwDQYJKoZIhvcNAQELBQAwTDELMAkGA1UEBhMCQlIxEzAR
+BgNVBAoTCklDUC1CcmFzaWwxKDAmBgNVBAMTH1NFUkFTQSBDZXJ0aWZpY2Fkb3JhIERpZ2l0YWwg
+djIwHhcNMTYwMjAyMTI0MDAwWhcNMTcwMjAxMTI0MDAwWjCCAQYxCzAJBgNVBAYTAkJSMRMwEQYD
+VQQKEwpJQ1AtQnJhc2lsMRQwEgYDVQQLEwsoRU0gQlJBTkNPKTEYMBYGA1UECxMPMDAwMDAxMDA2
+NzE0MTk0MRQwEgYDVQQLEwsoRU0gQlJBTkNPKTEUMBIGA1UECxMLKEVNIEJSQU5DTykxFDASBgNV
+BAsTCyhFTSBCUkFOQ08pMRQwEgYDVQQLEwsoRU0gQlJBTkNPKTEUMBIGA1UECxMLKEVNIEJSQU5D
+TykxRDBCBgNVBAMTO0ZMSVIgU1lTVEVNUyBCUkFTSUwgQ09NRVJDSU8gREUgQ0FNRVJBUyBJTkZS
+QVZFUk1FTEhBUyBMVERBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhdCbX97uMYbx
++g5pffQOzXYMRbbbyxLkpexo647sgv+JXRxjzWGyH5NRWevNbDC8wsYhTCJqcBLs64Psla+h5Wg7
+gY53L+CVpPNwgLjYiWUK/MPbHYQJBbl5ZnZoM/5XBNlHf5LMwTHDn5AC2O67KekfG84e7DjwDaG/
+PWX5LrDErltVqDgX/MpDyCqyxSd5z+QAi7RBYTQkMfkeSFpxvffpidJRuWQl1tPrlyQ9ZD6Zmq7b
+Yqe7XdhUwR4MbTmQWhRTQ7c4Rc1XfcKphhAohpkkkB3JerhwYBt+8Aegk02pDvkau0q8Kez+06v3
+keE88DuUf9H9rO2XZWvyguWU1wIDAQABo4IDHDCCAxgwgZcGCCsGAQUFBwEBBIGKMIGHMEcGCCsG
+AQUFBzAChjtodHRwOi8vd3d3LmNlcnRpZmljYWRvZGlnaXRhbC5jb20uYnIvY2FkZWlhcy9zZXJh
+c2FjZHYyLnA3YjA8BggrBgEFBQcwAYYwaHR0cDovL29jc3AuY2VydGlmaWNhZG9kaWdpdGFsLmNv
+bS5ici9zZXJhc2FjZHYyMB8GA1UdIwQYMBaAFJrggxDXJpvputqCsoHOORrTh3CGMHEGA1UdIARq
+MGgwZgYGYEwBAgEGMFwwWgYIKwYBBQUHAgEWTmh0dHA6Ly9wdWJsaWNhY2FvLmNlcnRpZmljYWRv
+ZGlnaXRhbC5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL2RlY2xhcmFjYW8tc2NkLnBkZjCB8AYDVR0f
+BIHoMIHlMEmgR6BFhkNodHRwOi8vd3d3LmNlcnRpZmljYWRvZGlnaXRhbC5jb20uYnIvcmVwb3Np
+dG9yaW8vbGNyL3NlcmFzYWNkdjIuY3JsMEOgQaA/hj1odHRwOi8vbGNyLmNlcnRpZmljYWRvcy5j
+b20uYnIvcmVwb3NpdG9yaW8vbGNyL3NlcmFzYWNkdjIuY3JsMFOgUaBPhk1odHRwOi8vcmVwb3Np
+dG9yaW8uaWNwYnJhc2lsLmdvdi5ici9sY3IvU2VyYXNhL3JlcG9zaXRvcmlvL2xjci9zZXJhc2Fj
+ZHYyLmNybDAOBgNVHQ8BAf8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMIHF
+BgNVHREEgb0wgbqBGEZFUk5BTkRPLkxJU0JPQUBGTElSLkNPTaA+BgVgTAEDBKA1EzMwNjAxMTk2
+MDMyNDAzMjY3NjAwMDAwMDAwMDAwMDAwMDAwMDAwMTg5NTg0OTdTU1AgU1CgKgYFYEwBAwKgIRMf
+QU5UT05JTyBGRVJOQU5ETyBQSU1FTlRBIExJU0JPQaAZBgVgTAEDA6AQEw4wNzIwNDU3ODAwMDEw
+OaAXBgVgTAEDB6AOEwwwMDAwMDAwMDAwMDAwDQYJKoZIhvcNAQELBQADggIBADqgA1TGddHuoS+S
+8+qzgclTmFL2xzvjR6OpsE3eAlw301u1ZNqTeuksbmM4Kkr97ie+o4d8wioSQOfdqJdUHNEZe7Cr
+bDcWAn8bzF7QRa0/ZlkLv41nRhTWeC20a8nuaOwUsdBP1k+CEgwkcWvpReMJkc78f082FTNHTpPe
+7oOnQUndO2O1GwTrF7zZ6KfozBs7pvfdWDI/4H6jtzqA74LFaW4SPb5nK0p6ZhGZCwQOcxUexofY
+a505F/FsjMT+hAdqM0z7/FrPX0eF0WB0q0CMTf16FwNKOEhi/n7rrz9VOJV4qFlut+sjm1Z4MQeV
+FQGFyvnr5t/cAcxDh+DJwZi+5fP7NUXHjMc2QlTHmdpIYAiNCJEr8pPM6K8fCcIUBO+fcHAC5ts3
+Igt8+pxD4kOYzua2zEhrnmZlR1HovHUuhAOeGV67/ysjyLdswLALWRTayKtnoFtMn3HVwYwzEDU1
+KuBCghnDZnWivjtXJWLyyQZ505wCKtI6l96e9J+WYAVzHG30v0cCnkZLbC8r4lvyXQeivOveLVD0
+ecKxq4+jIy4h8iN+bsryb6MTW4h6eooS/6Q437hjWNL4X4ns3bXeVJv5U6lCntECEY3B+e9129Dx
+aStdv3ppfN99AKy7X30QUfbNgA1fFOCDbLQ7EVMYxLOnFWeh3qf2nDJhCm/6</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+      <infProt>
+         <tpAmb>1</tpAmb>
+         <verAplic>SP_NFE_PL_008h2</verAplic>
+         <chNFe>35160307204578000109550010000265551928647656</chNFe>
+         <dhRecbto>2016-03-09T14:22:34-03:00</dhRecbto>
+         <nProt>135160146871983</nProt>
+         <digVal>TYLaWj162hPTlkjOmiyLlxbXfvA=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

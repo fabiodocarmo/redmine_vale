@@ -1,0 +1,2 @@
+class DapsBusinessRule < BusinessRule
+end

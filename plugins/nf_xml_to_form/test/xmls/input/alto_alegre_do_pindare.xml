@@ -1,0 +1,128 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="2600575100019413100568400000400">
+               <Numero>00000400</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{A112AAC6-0009-4FB4-BF24-0B406407F9F6}</CodigoControle>
+               <DataEmissao>2016-06-07T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>663508.38</BaseCalculo>
+                  <Aliquota>5.0000</Aliquota>
+                  <ValorIss>33175.42</ValorIss>
+                  <ValorLiquidoNfse>644882.19</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>26005751000194</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>131005684</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>BEMON ENGENHARIA E MONTAGENS LTDA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>RUA DA PAISAGEM</Endereco>
+                     <Numero>480</Numero>
+                     <Complemento>SALA 708</Complemento>
+                     <Bairro>VILA DA SERRA</Bairro>
+                     <CodigoMunicipio></CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>32546700</Telefone>
+                     <Email>bh@bemon.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>2100477</CodigoMunicipio>
+                  <Uf>MA</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2016-06-07</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>663508.38</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>18626.19</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>33175.42</ValorIss>
+                     <Aliquota>5.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>7.04</ItemListaServico>
+                  <CodigoCnae>4329104</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao> SERVIÇOS DE MONTAGEM, TESTE, COMISSIONAMENTO, OPERAÇÃO ASSISTIDA E TREINAMENTOS PARA O SISTEMA DE SINALIZAÇÃO DISTRIBUÍDA DA LINHA TRONCO DA VALE-EFC.
+
+ Materiais e Equipamentos 	 131.331,46
+ Mão de Obra 	 532.176,92
+
+
+ VENCIMENTO  	07/07/2016
+ CONTRATO: 5900020950
+  PEDIDO: 4502720782
+  FRS: 1001638093
+
+Venda de serviço efetuada com suspensão da exigência da Contribuição para o PIS/PASEP e da COFINS, conforme artigo 2º da Instrução Normativa RFB nº 758, de 25 de julho de 2007. Projeto aprovado e enquadrado ao REIDI pela Portaria do Ministério de Estado dos Transportes nº 335, de 9 de setembro de 2014. Pessoa jurídica adquirente habilitada ao REIDI conforme Ato Declaratório Executivo da Receita Federal do Brasil nº. 5, de 2 de fevereiro de 2015.
+
+ CEI:512120031276 	 CREA: 561478
+IMPOSTOS INCIDENTES CONF. TAB IBPT: 16,26%
+</Discriminacao>
+                  <CodigoMunicipio>2100477</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>26005751000194</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>131005684</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510037821</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>318311139</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>Vale S.A.</RazaoSocial>
+                     <Endereco>
+                        <Endereco>AV DOS PORTUGUESES</Endereco>
+                        <Numero></Numero>
+                        <Complemento>PRAIA DO BOQUEIRAO</Complemento>
+                        <Bairro>ITAQUI</Bairro>
+                        <CodigoMunicipio>2111300</CodigoMunicipio>
+                        <Uf>MA</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>68085580</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone>33332222</Telefone>
+                        <Email></Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

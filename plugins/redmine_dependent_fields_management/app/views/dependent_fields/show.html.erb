@@ -1,0 +1,38 @@
+#encoding: utf-8
+
+<div class="field">
+  <label> <b><%= l(:label_project) %> </b></label><br />
+  <%= @dependent_field.project.try(:name) %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:label_tracker) %> </b></label><br />
+  <%= @dependent_field.tracker.try(:name) %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:main_field_label) %> </b></label><br />
+  <%= @dependent_field.main_field.try(:name) %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:expected_value_label) %> </b></label><br />
+  <%= @dependent_field.main_field_value %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:secondary_field_label) %> </b></label><br />
+  <%= @dependent_field.secondary_field.try(:name) %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:non_nullable_secondary_field_label) %> </b></label><br />
+  <%= @dependent_field.not_nullable %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:expected_secondary_field_label) %></b></label><br />
+  <%= @dependent_field.secondary_field_value %><br /><br />
+</div>
+
+<%= link_to l(:button_back), dependent_fields_path %>

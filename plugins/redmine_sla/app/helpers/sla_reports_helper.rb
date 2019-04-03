@@ -1,0 +1,2 @@
+module SlaReportsHelper
+end

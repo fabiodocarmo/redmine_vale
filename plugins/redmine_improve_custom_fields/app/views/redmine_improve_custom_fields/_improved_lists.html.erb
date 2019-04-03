@@ -1,0 +1,136 @@
+<% if Setting.try(:plugin_redmine_improve_custom_fields)[:select_as_chosen] %>
+  <%= javascript_include_tag('chosen.jquery.min.js', plugin: 'redmine_improve_custom_fields') %>
+  <%= javascript_include_tag('ajax-chosen.min.js', plugin: 'redmine_improve_custom_fields') %>
+
+  <script type="text/javascript">
+    var fix_chosen_css = function(chosen_element) {
+      var parent = $(chosen_element).siblings('.chosen-container');
+
+      if (parent.parent('td').length == 0) {
+        parent.css('position', 'absolute');
+        parent.css('display', 'block');
+        parent.parent().css('height', (parent.height()+10) + 'px');
+      } else {
+        parent.css('width', '100%');
+      }
+      parent.css('min-width', '236px');
+
+      var lastHeight = parent.height();
+      function checkForHeightChanges() {
+        if (parent.height() != lastHeight) {
+          parent.parent().css('height', (parent.height()+10) + 'px');
+          lastHeight = parent.height();
+        } else {
+          setTimeout(checkForHeightChanges, 500);
+        }
+      };
+      setTimeout(checkForHeightChanges, 500);
+    }
+
+    var make_chosen = function(elem) {
+      $(elem).chosen({inherit_select_classes: true, allow_single_deselect: true}).change(function(elem) {
+        var container = $(this).siblings('.chosen-container').parent();
+        if (container.length >= 0) {
+          container.css('height', $(this).siblings('.chosen-container').height());
+        }
+      });
+      fix_chosen_css(elem)
+    }
+
+
+    var update_chosen = function(chosen) {
+      input = $(chosen).parent().find('div.chosen-drop input[type=text]');
+      value = $(input).val();
+      $(chosen).trigger('chosen:updated');
+      $(input).val(value);
+    }
+
+    var make_autocomplete_chosen = function(container, custom_field_id) {
+      var update_autocomplete_list = function(event) {
+        typewatch(function () {
+          value = event.target.value;
+          if (value.length > 0) {
+            $.ajax({
+              url: '<%= autocomplete_options_path %>',
+              dataType: 'json',
+              type: 'GET',
+              data: {
+                query: value,
+                custom_field_id: custom_field_id
+              }
+            }).success(function(data) {
+              success(container, data, value);
+            }).error(function() {
+              console.error('Erro ao buscar opções de auto compleção');
+            });
+          }
+        }, 300);
+      } // executed only ms after the last keyup event.
+      $(container).find('div.chosen-drop input[type=text]').on("keypress", function(event) {
+        update_autocomplete_list(event);
+      });
+      $(container).find('div.chosen-drop input[type=text]').on("keyup", function(event) {
+        if (event.keyCode == 8) { //backspace
+          update_autocomplete_list(event);
+        }
+      });
+
+      var success = function(container, data, value) {
+        list = $(container).find('div.chosen-drop ul.chosen-results').first();
+        select = $(container).siblings('select.improvecf_list_autocomplete').first();
+
+        result = data['data'];
+        total = data['total'];
+        if (result.length > 0) {
+          select_options = '<option value=""></option>';
+          list_options = ''
+          $(result).each(function(index, element) {
+            list_options += '<li class="active-result" data-option-array-index=' + (index + 1) + '>' + element + '</li>'
+            select_options += '<option value="' + element + '">' + element + '</option>'
+          });
+          $(list).html(list_options);
+          $(select).html(select_options);
+          update_chosen(select);
+
+          $(list).prepend('<li class="disabled-result" data-option-array-index="0"><%= l(:showing_label) %> ' + result.length + ' <%= l(:of_label) %> ' + total  + '</li>')
+        }
+      }
+
+      var typewatch = (function(){
+        var timer = 0;
+        return function(callback, ms){
+          clearTimeout (timer);
+          timer = setTimeout(callback, ms);
+        };
+      })();
+    };
+
+    var make_select_elements_chosen = function (){
+      $('select').not("#relation_relation_type")
+                 .not('.improvecf_list_autocomplete')
+                 .not('.description')
+                 .not('#project_quick_jump_box').each(function(index, elem){
+        make_chosen(elem);
+      });
+    }
+
+    var make_select_elements_autocomplete = function (){
+      $('select.improvecf_list_autocomplete').each(function(index, select_autocomp){
+        make_chosen(select_autocomp);
+        var custom_field_id = $(select_autocomp).attr('id').split('_').pop();
+        var container = $(select_autocomp).parent().find("div.improvecf_list_autocomplete").first();
+        make_autocomplete_chosen(container, custom_field_id);
+      });
+    }
+
+    make_select_elements_chosen();
+    make_select_elements_autocomplete();
+
+    // Grid custom field
+    $( document ).delegate('button[id^=grid_custom_field_add_row]', 'click', function(e) {
+      $('.chosen-container:not([id$="_chosen"])').remove()
+      make_select_elements_chosen();
+      make_select_elements_autocomplete();
+    });
+  </script>
+<% end %>

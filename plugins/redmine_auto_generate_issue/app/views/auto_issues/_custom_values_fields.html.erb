@@ -1,0 +1,13 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Custom Field: </b></label><br />
+    <%= f.collection_select :custom_field_id, @auto_issue.tracker.custom_fields.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Value: </b></label><br />
+    <%= f.text_field :value %><br /><br />
+  </div>
+
+  <%= link_to_remove_association "auto_issue_remove_custom_value", f %>
+</div>

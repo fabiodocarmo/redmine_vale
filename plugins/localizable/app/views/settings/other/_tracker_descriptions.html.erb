@@ -1,0 +1,28 @@
+<% tracker_descriptions = Tracker.all.where('description != ?', "").map(&:description).flatten.uniq %>
+<% if tracker_descriptions.size > 0 && !tracker_descriptions.nil? && tracker_descriptions != ""%>
+  <br />
+  <h2 id="tracker_description"><%= l(:field_tracker_description) %> [+]</h2>
+  <table id="table-tracker_description">
+    <thead>
+      <th align="left" width="180px"><%= ll(@settings["default_language"], :general_lang_name) %></th>
+      <% @settings["locales_to_translate"].each do |locale| -%>
+        <th align="left"><%= ll(locale, :general_lang_name) %></th>
+      <%- end -%>
+    </thead>
+    <%- @settings["locales"][:tracker_descriptions] = {} if @settings["locales"][:tracker_descriptions].nil? -%>
+    <% tracker_descriptions.each do |tracker_description| %>
+    <%- @settings["locales"][:tracker_descriptions][tracker_description] = {} if @settings["locales"][:tracker_descriptions][tracker_description].nil? -%>
+      <tr>
+        <td>
+          <%= tracker_description %>
+        </td>
+        <%- @settings["locales_to_translate"].each do |locale| -%>
+        <td align="left">
+          <input name="settings[locales][tracker_descriptions][<%= tracker_description %>][<%= locale.to_s.force_encoding("UTF-8") %>]"
+                 value="<%= @settings["locales"][:tracker_descriptions][tracker_description][locale].to_s.force_encoding("UTF-8") %>" />
+        </td>
+        <%- end -%>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

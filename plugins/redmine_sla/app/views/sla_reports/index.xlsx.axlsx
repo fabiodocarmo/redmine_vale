@@ -1,0 +1,1 @@
+VsgSla::SlaReport.generate_xlsx(@project, params[:sla_report], xlsx_package.workbook)

@@ -1,0 +1,11 @@
+api.message      t(:watcher_added)
+api.array :user do
+  @users.each do |user|
+    api.user do
+      api.id         user.id
+      api.login      user.login
+      api.firstname  user.firstname
+      api.lastname   user.lastname
+    end
+  end
+end 

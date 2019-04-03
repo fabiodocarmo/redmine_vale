@@ -1,0 +1,61 @@
+<script type="text/javascript">
+  var cnpj_custom_field = <%= Setting.plugin_redmine_gestor_chamadas[:customer_field] %>;
+  var nf_custom_field = <%= Setting.plugin_consulta_unificada[:nf_custom_field] %>;
+  var regex = /(\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b)/i;
+  var url_consulta = "<%= Setting.plugin_consulta_unificada[:url_consulta] %>";
+
+  if(url_consulta[url_consulta.length-1] != "/"){
+    url_consulta = url_consulta + "/";
+  }
+  var id_cnpj_input = "#issue_custom_field_values_" + cnpj_custom_field
+  var id_nf_input = "#issue_custom_field_values_" + nf_custom_field;
+  $(document).ready(function(){
+    $(id_nf_input).change(function(){
+
+      if (url_consulta == null || url_consulta == "") return;
+      var cnpj = $(id_cnpj_input).val();
+      var nf = $(id_nf_input).val();
+      var url = url_consulta + "ws/statusNF/" + cnpj + "/" + nf;
+      var xml_problem = false;
+      $.ajax({
+        url: url,
+        dataType: 'json',
+        type: 'GET',
+        crossDomain:true
+      }).success(show_warning)
+      .error(function(xhr, status, error) {
+        console.log(error);
+        console.log(xhr);
+      });
+
+    });
+  });
+
+  var show_warning = function(data){
+    remove_warning();
+    if(data != null && data.status != null){
+      $.ajax({
+        url: "<%= get_nf_status_url() %>",
+        data: {
+        nf_status_id: data.status
+        },
+        dataType: 'json',
+        type: 'GET',
+        crossDomain:true
+      }).success(function(data){
+        var nf_warning_msg = data.nf_status.warning_msg;
+        var final_msg = nf_warning_msg;//.replace(regex,'<a href=\"mailto:$1\"/>');
+        $(id_nf_input).parent().append("<p id=\"nf_warning\" style=\"padding-left:0px;color:red;font-style: italic;font-size:16px;\">"+final_msg+"</p>");
+      }).error(function(xhr, status, error) {
+        console.log(error);
+        console.log(xhr);
+        nf_status_obj = null;
+      });
+    }
+  }
+
+  var remove_warning = function(data){
+    $("#nf_warning").remove();
+  }
+
+</script>

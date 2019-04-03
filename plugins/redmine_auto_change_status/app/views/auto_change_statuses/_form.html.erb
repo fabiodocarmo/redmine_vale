@@ -1,0 +1,83 @@
+<%= form_for(@resource, html: {id: 'auto_change_status_form'}) do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> <%= l(:save_prohibited) %></h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:project) %></b></label><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_projects_label) %></b></label><br />
+    <%= f.check_box :all_projects %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:tracker) %></b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_trackers_label) %></b></label><br />
+    <%= f.check_box :all_trackers %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:role) %></b></label><br />
+    <%= f.collection_select :role_id, Role.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_roles_label) %></b></label><br />
+    <%= f.check_box :all_roles %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%=  l(:status_from) %></b></label><br />
+    <%= f.collection_select :status_from_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%=  l(:status_to) %></b></label><br />
+    <%= f.collection_select :status_to_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:use_custom_field_label) %></b></label><br />
+    <%= f.check_box :use_custom_field %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_custom_field) %>:</b></label><br />
+    <%= f.collection_select :custom_field_id, IssueCustomField.order('name ASC'), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:custom_field_value_label) %>:</b></label><br />
+    <%= f.text_field :custom_field_value %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%=  l(:action) %></b></label><br />
+    <%= f.select :action, AutoChangeStatus::ACTIONS.map { |k,v| [v,k] } %><br /><br />
+  </div>
+
+  <% if f.object.id %>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%end%>
+<% end %>

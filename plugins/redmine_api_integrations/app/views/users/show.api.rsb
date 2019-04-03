@@ -1,0 +1,8 @@
+api.user do
+  api.id         @user.id
+  api.login      @user.login
+  api.firstname  @user.firstname
+  api.lastname   @user.lastname
+  api.mail       @user.mail
+  api.last_login_on @user.last_login_on
+end

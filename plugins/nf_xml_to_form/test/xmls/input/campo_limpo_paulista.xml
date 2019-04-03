@@ -1,0 +1,121 @@
+<CompNfse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Nfse versao="2.02">
+      <InfNfse Id="15289780000109_201500000000012">
+         <Numero>201500000000012</Numero>
+         <CodigoVerificacao>a3d92919d</CodigoVerificacao>
+         <DataEmissao>2015-08-21T17:09:15</DataEmissao>
+         <OutrasInformacoes>Lei 12741/2012: Mun: R$ 3192,00; Est: R$ 0,00; Fed: R$ 0,00; Total: R$ 3192,00.</OutrasInformacoes>
+         <ValoresNfse>
+            <BaseCalculo>106400.00</BaseCalculo>
+            <Aliquota>3.00</Aliquota>
+            <ValorIss>3192.00</ValorIss>
+            <ValorLiquidoNfse>106400.00</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>15289780000109</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>20397</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>ADX EQUIPAMENTOS INDUSTRIAIS IMPORTAÇÃO E EXPORTAÇÃO LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>AVN JOÃO AMATO</Endereco>
+               <Numero>2755</Numero>
+               <Complemento>2755</Complemento>
+               <Bairro>SÍTIO LAGOA BRANCA</Bairro>
+               <CodigoMunicipio>3509601</CodigoMunicipio>
+               <Uf>SP</Uf>
+               <CodigoPais>01058</CodigoPais>
+               <Cep>13231620</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>1145953894</Telefone>
+               <Email>BROLIO@ADXBRAZIL.COM.BR</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3509601</CodigoMunicipio>
+            <Uf>SP</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <InfDeclaracaoPrestacaoServico>
+               <Competencia>2015-08-21</Competencia>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>106400.00</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>3192.00</ValorIss>
+                     <Aliquota>3.00</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido>2</IssRetido>
+                  <ItemListaServico>14.01</ItemListaServico>
+                  <CodigoTributacaoMunicipio>1401</CodigoTributacaoMunicipio>
+                  <Discriminacao>SERVIÇO DE ENGENHARIA DETALHADA OC 4100114905LIB: 01PEDIDO: 4100114905FRS: 1001137078Nº RF: 6200269298LOCAL DE PRESTAÇÃO DE SERVIÇO: SP 3509601 / CAMPO LIMPO PAULISTA  / SP </Discriminacao>
+                  <CodigoMunicipio>3509601</CodigoMunicipio>
+                  <CodigoPais>1058</CodigoPais>
+                  <ExigibilidadeISS>1</ExigibilidadeISS>
+                  <MunicipioIncidencia>3509601</MunicipioIncidencia>
+               </Servico>
+               <Prestador>
+                  <CpfCnpj>
+                     <Cnpj>15289780000109</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>20397</InscricaoMunicipal>
+               </Prestador>
+               <Tomador>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510007590</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>0146.6</InscricaoMunicipal>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S/A</RazaoSocial>
+                  <Endereco>
+                     <Endereco>VICINAL PICADÃO</Endereco>
+                     <Numero>S/N</Numero>
+                     <Bairro>ZONA RURAL</Bairro>
+                     <CodigoMunicipio>1505437</CodigoMunicipio>
+                     <Uf>PA</Uf>
+                     <Cep>68390000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>9434347087</Telefone>
+                     <Email>REJANE.FIGUEIREDO@VALE.COM</Email>
+                  </Contato>
+               </Tomador>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivoFiscal>2</IncentivoFiscal>
+            </InfDeclaracaoPrestacaoServico>
+         </DeclaracaoPrestacaoServico>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="SMF_15289780000109_201500000000012">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#15289780000109_201500000000012">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>kjfugXo7tcPMujm/Wmqe4WPmpFk=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>BOa/VfYHo10vXv8AtWOjX03c+JyGIBGyvHxIVBOcJApY84Kg4C0o8u2a5huUlQASy4NEEI0xuibRD7iCb2ekH6FvPOGazeW2Bp0qGUUPwBaTIkOXEqE3EsVa9G8XnOM+kSzqefdUCKbidtkS11uz+GZvC7XoX7aZ8Hgr3kTZ5EwfUW4dkZoLlWgjHMt9FOdJHc8cufvSyrwpmH4y43aMIr+FpH+1CrF8zR2HvCrnPazq6w4jtuyD0y5qgGqB3nBcGQCKqnhexhalGXsmo3hy6hdmgJ3e4NyMHyPSH05Je8AD/1TSsNBxHy1vw65c9tBKSYQsdGtSW7Gb1nGDrMt8wQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

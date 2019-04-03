@@ -1,0 +1,552 @@
+@import url(../../../stylesheets/application.css);
+@import url(font-awesome.css);
+/*@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);*/
+@import url(theme.css);
+@import url(color_tasks.css);
+@import url(DMSF.css);
+@import url(buttons.css);
+@import url(forum.css);
+@import url(news.css);
+@import url(pagination.css);
+@import url(redminebacklogs.css);
+@import url(activity.css);
+
+
+html{
+  overflow-x: hidden;
+}
+body {
+  font-family: Arial,sans-serif;
+  font-size: 100%;
+  padding: 0 !important;
+  margin: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+h1, h2, h3, h4 {
+  padding: 2px 10px 1px 0px;
+  margin: 0 0 10px 0;
+}
+
+h1:first-letter{
+  text-transform: capitalize;
+}
+
+a, a:link, a:visited {
+  color: #373a41;
+}
+
+a:hover {
+  color: #f58220;
+}
+
+.icon:before {
+  color: #f58220;
+}
+
+.fa-check:before, form .icon-checked:before {
+  color: #f58220;
+}
+
+input, select {
+  font-size: 1em;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  padding: 4px;
+  border: 1px solid;
+  border-color: rgb(169, 169, 169);
+}
+
+#top-menu{
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+
+  border-bottom: 4px solid #003767;
+  color: #373a41;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  left: -240px;
+  text-transform: uppercase;
+  border-right: 2px solid #eeeff3;
+  padding: 0;
+  /*background-color: #354051;*/
+  line-height: 40px;
+}
+
+#top-menu a {
+  color: #fff;
+  margin-right: 0px;
+  font-size: 16px;
+}
+
+#top-menu a:hover {
+  text-decoration: none;
+  color: #dcd22a;
+}
+
+#top-menu #loggedas {
+  float: right;
+  margin-right: 0.5em;
+  color: #FFF;
+  font-size: 15px;
+  font-size: 0;
+  text-align: center;
+  margin-top: 10px;
+  float: none;
+  line-height: 25px;
+  padding-bottom: 5px;
+}
+
+#top-menu > ul li {
+  border-bottom: 2px solid #FFF;
+}
+
+#top-menu > ul li:hover {
+  background: #F59F28;
+}
+
+#top-menu > ul li:hover a {
+  color: #FBE506;
+}
+
+#top-menu ul li {
+  float: none;
+}
+
+#top-menu a.home:before {
+  content: "\f015";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #FFF;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+
+#top-menu a.my-page:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #FFF;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#top-menu a.issues:before {
+  content: "\f0ae";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #FFF;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#top-menu a.administration:before {
+  content: "\f085";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #FFF;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#top-menu > ul a:after {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #FFF;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  float: right;
+}
+
+#top-menu > ul{
+  margin-top: 20px;
+}
+#top-menu, .menu-push-toright, body, #menu, #quick-search {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#menu{
+  left: 0;
+  top: 0px;
+  padding-top: 3px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  position: fixed;
+  border: 2px solid #eeeff3;
+  border-top: none;
+  z-index: 101;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#top-menu.open{
+  left: 0;
+}
+
+.menu-push-toright{
+  left: 240px;
+}
+#menu.menu-push-toright{
+  left: 240px;
+}
+
+#quick-search.menu-push-toright{
+  left: 300px;
+}
+
+label[for="q"]{
+  display: none;
+}
+
+#header{
+  padding-left: 30px;
+  padding-top: 80px;
+  background-color: #fefefe;
+  color: #fefefe;
+}
+
+#header h1{
+  color: #4e515e;
+  display: inline-block;
+  position: relative;
+  top: -30px;
+}
+
+#header h1 a{
+  color: #4e515e;
+}
+#header a{
+  color: #fefefe;
+}
+
+#quick-search {
+  position: fixed;
+  left: 60px;
+  top: 0;
+  /*padding-top: 8px;*/
+  height: 53px;
+  margin-left: 15px;
+  border: 3px;
+  border: 2px solid #eeeff3;
+  border-top: none;
+  right: 0;
+  border-right: 0;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 101;
+}
+
+#quick-search form {
+  display: block;
+  height: 100%;
+  margin-right: 310px;
+}
+
+#quick-search input{
+  padding: 0 20px !important;
+  height: 100%  !important;
+  width: calc(100% - 5em);
+  border: none;
+  background: transparent;
+  color: rgba(0,0,0,0.8);
+  font-size: 1em;
+  line-height: 1;
+  /*opacity: 0;*/
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.s;
+}
+
+#quick-search form:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #f58220;
+  font-size: 18px;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+#account{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+#account .tt_start, #account .tt_stop{
+  padding: 0px;
+}
+#top-menu .logout{
+  color: #fff;
+}
+#top-menu .logout:hover{
+  color: #dcd22a;
+}
+
+#header{
+  border-bottom: 2px solid #dee4e9;
+}
+/*=========MAIN MENU=======*/
+#main-menu {
+  margin-right:0;
+}
+#main-menu li a.selected,
+#main-menu li a.selected:hover {
+  border-bottom: 3px solid #f58220;
+}
+#main-menu li a:hover {
+  border-bottom: 3px solid #f58220;
+}
+#main-menu li a {
+  color: #848f9f;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 4px 5px 4px 5px;
+  border-bottom: 3px solid #fff;
+}
+#main-menu li a:hover {
+  background: none;
+  color: #373a41;
+  border-bottom: 3px solid #f58220;
+}
+#content{
+  width: 81%;
+  background-color: #edeceb;
+  padding-left: 20px;
+}
+
+#footer {
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+}
+
+/*==========FALSH NOTICE======*/
+div.flash.notice{
+  border: none;
+  border-left: 20px solid #1ABB9B;
+  background: none;
+  background-color: rgba(0,255,0,0.1);
+  padding-left: 10px;
+  border-radius: 4px;
+}
+div.flash.error, #errorExplanation{
+  border: none;
+  border-left: 20px solid #880000;
+  background: none;
+  background-color: rgba(255,0,0,0.1);
+  padding-left: 10px;
+  border-radius: 4px;
+}
+div.flash.error, #errorExplanation ul{
+  margin: 2px;
+}
+p.nodata{
+  border: none;
+  border-left: 20px solid #FDBF3B;
+  background: none;
+  background-color: #FFEBC1;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+/*==========CALENDAR==========*/
+#ui-datepicker-div{
+  padding: 0;
+}
+.ui-datepicker-header{
+  background: #6f7c93;
+  border: none;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+  border-radius: 0px !important;
+}
+.ui-datepicker table{
+  display: block;
+}
+.ui-datepicker table .ui-datepicker-week-col{
+  padding-left: 20px;
+}
+#s2id_project_quick_jump_box, #project_quick_jump_box,
+.select2-drop.select2-with-searchbox.select2-drop-active{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+#sidebar {
+  width: 15% !important;
+}
+#sidebarHandler,
+#hideSidebarButton {
+  position: absolute !important;
+  margin-top: -12px !important;
+  top: 50% !important;
+}
+
+.icon-file.application-pdf {
+  background-repeat: no-repeat;
+  padding-left: 26px;
+}
+
+.icon.icon-folder:before {
+  content: "\f07b";
+  display: inline-block;
+  width: 23px;
+}
+/*============ ISSUE ===========*/
+div.issue { background: #f6f6f6; }
+/*============ SELECT ==========*/
+select, .chosen-container-single .chosen-single {
+  background: #fff;
+  border-color: #cccccc;
+}
+
+select {
+    outline:none;
+    display: inline-block;
+    cursor:pointer;
+}
+/*=========== MY PAGE ==========*/
+tr.time-entry {
+  white-space: normal !important;
+}
+/*=========== LOGO ============*/
+.redmine-logo{
+  width: 85px;
+  height: 85px;
+  background-image: url('../images/logo.png');
+  background-size: 85px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+/*=========== RedmineCRM ======*/
+/* TODO: Find a way rewrite it */
+select[onchange="if (this.value != '') { window.location = this.value; }"]{
+  position: fixed;
+  top: 17px;
+  right: 10px;
+}
+
+.theme-Itau a.more:before, .theme-Itau a.less:before {
+  color: #FFF;
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+}
+
+.theme-Itau a.more:hover:before, .theme-Itau a.less:hover:before {
+  background: #F59F28;
+}
+
+.theme-Itau #issues-index .issue .status {
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+  color: #FFF;
+}
+
+.theme-Itau #issues-index .issue:hover .status {
+  background: #F59F28;
+}
+
+.action-login #content {
+  background-image: url('http://marcos-falcao.com/wp-content/uploads/2015/10/002ITAUagenciaFULL.jpg');
+  height: 900px;
+}
+
+.action-login #header {
+  padding: 0px;
+  min-height: 53px;
+}
+
+.action-login #header h1 {
+  display: none;
+}
+
+#login-form table {
+  background: rgba(255,255,255,.85);
+  border: 2px solid #003767;
+}
+
+#login-form table:before {
+  content: '';
+  display: table-caption;
+  margin: auto;
+  font-size: 6em;
+  text-align: center;
+  color: #FBE506;
+  padding: 20px;
+  font-weight: bold;
+}
+
+div#query_form_with_buttons {
+  background: #FFF;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.theme-Itau .redmine_widget_filter input.hasDatepicker {
+  width: calc(100% - 30px);
+}
+
+.theme-Itau.action-index .splitcontentleft,
+.theme-Itau.action-index .splitcontentright {
+  border-bottom: 3px solid #f58220;
+}
+
+#workflow-help { display: none;}
+
+html>body .tabular p {
+  min-height: 35px;
+}
+
+#filter-assing-to-icon {
+  position: relative;
+  left: 255px;
+  color: #F59F28;
+  cursor: pointer;
+}
+
+.ui-widget-header {
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+}

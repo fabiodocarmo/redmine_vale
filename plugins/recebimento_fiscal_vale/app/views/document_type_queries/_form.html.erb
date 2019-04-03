@@ -1,0 +1,6 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { resource: @resource } %>
+</div>
+
+<%= javascript_include_tag "cocoon", plugin: 'recebimento_fiscal_vale' %>
+<%= stylesheet_link_tag "cocoon"   , plugin: 'recebimento_fiscal_vale' %>

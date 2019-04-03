@@ -1,0 +1,77 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  csv_converter: CSV to XML Converter
+  back: Back
+  csv_converter_description: Generates individual XML files for each invoice included in an CSV file.
+  csv_converter_error_message: An unexpected error has ocurred. Check the file.
+  csv_converter_invalid_file: Invalid file format.
+  csv_converter_no_file: Noo file selected.
+  csv_converter_error_reading_file: Error reading the file.
+  csv_converter_error_message: Something unexpected has ocurred. Check the selected file.
+
+  row: Row
+  column: Column
+  bm_file_field: BM File Field
+  bm_field: BM Field
+  rows_ct: Contract Lines
+  column_final: Last Column
+  grid_field: Grid Field
+  bm_status_clearfields: Workflow status in which BM fields should be cleared
+  grid_autofill_frs: Autofill grids which make use of FRS data
+  grid_frs_approval_date: Grid for FRS Approval Date
+  frs_number_field: FRS Number Field
+  enable_feature: Feature Enabled
+  frs_approval_status: FRS Approval Status
+  rf_sent_status: RF Sent Status
+  grid_rf_data: Grid for RF Data
+  grid_frs_data: Grid for FRS Data
+  status_newissue: New Issue Status
+  tracker_id: Tracker
+  status_rf: Fields and Statuses from NFSE
+  bm_rf_field: Campo da RF (BM)
+  nfse_rf_field: RF Field (NFSE)
+  status_nfse_novo: Novo
+  status_nfse_em_andamento: Em Andamento
+  status_nfse_rejeitado: Rejeitado
+  status_nfse_em_cadastro: Em Cadastro
+  status_nfse_em_divergencia: Em Divergência
+  status_nfse_cadastrado: Cadastrado
+  status_nfse_analise: Análise
+  tracker_nfse_id: NFSE Tracker
+  nf_status: NFSE Status
+  bm_status: BM Status
+  nf_status_priority: Priority
+  status_nfse_not_received: Not Received
+  req_to_pay_upload: Req To Pay Report Upload
+  req_to_pay_upload_description: Altera os status de chamados de Medição de Serviço de acordo com o relatório fornecido.
+  req_to_pay_upload_invalid_file: Invalid file. Make sure the file is a Excel file and is in the standard template.
+  req_to_pay_upload_invalid_data: 'Error reading data. Line: %{line}, error: %{error}.'
+  req_to_pay_upload_success: The report was successfully processed.
+  report_begin: Report beginning
+  report_rf: RF
+  report_pay_date: Payment Date
+  status_scheduled_payment: Scheduled Payment Status
+  status_payment_executed: Payment Executed Status
+  updated_bm_issues: Updated BM issues
+  no_updated_bm_issue: No BM issues were updated.
+  issue_id_bm_lbl: C %{id}
+  payment_date_field: Payment Date Field
+  document_number_field: Reference Document's Number
+  project_id: Project ID
+  order_number_field: Order Number
+  status_material_order: Material Order Created Status
+  bm_value_mismatch: BM Header value and sum of rows don't match
+  releitura_bm: BM reprocessing
+  bm_work: Work
+  bm_working: Working...
+  bm_order_field: Order Number Field (BM)
+  nfse_order_field: Order Number Field (NFSE)
+  order_created_status: Status "Material - Pedido Criado"
+  mat_order_field: Campo Número Pedido (Material)
+  tracker_utilities_id: Tipo de Chamado (Utilities)
+  tracker_materials: Tipo de Chamado (Materiais)
+  req_to_pay_upload_success_total: Total BM issues updated
+  reqtopay_grid_field: Req To Pay Grid Field
+  auto_change_system_user: Journal User
+  valid_statuses: Valid statuses

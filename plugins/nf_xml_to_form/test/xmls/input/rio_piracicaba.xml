@@ -1,0 +1,115 @@
+<ConsultarNfseResposta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.abrasf.org.br/nfse">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="NFSe201601000000019">
+               <Numero>201601000000019</Numero>
+               <CodigoVerificacao>QRJ2-95PF</CodigoVerificacao>
+               <DataEmissao>2016-04-07T17:13:40</DataEmissao>
+               <NaturezaOperacao>1</NaturezaOperacao>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivadorCultural>2</IncentivadorCultural>
+               <Competencia>2016-04-01T00:00:00</Competencia>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>6024.1600</ValorServicos>
+                     <ValorPis>39.1600</ValorPis>
+                     <ValorCofins>180.7200</ValorCofins>
+                     <ValorIr>90.3600</ValorIr>
+                     <ValorCsll>60.2400</ValorCsll>
+                     <IssRetido>2</IssRetido>
+                     <ValorIss>180.7200</ValorIss>
+                     <BaseCalculo>6024.1600</BaseCalculo>
+                     <Aliquota>0.030000</Aliquota>
+                     <ValorLiquidoNfse>5653.6800</ValorLiquidoNfse>
+                  </Valores>
+                  <ItemListaServico>0720</ItemListaServico>
+                  <CodigoCnae>7119701</CodigoCnae>
+                  <CodigoTributacaoMunicipio>0720</CodigoTributacaoMunicipio>
+                  <Discriminacao>ITEM 260 - Serviço de monitoramento geotécnico conforme especificação técnica (1 equipe fixa) Estação Robótica -  R$ 6.024,16
+
+VALE
+Contrato 5900023704 - OS 01/2015 Pedido  4502561858/00010  FRS 1001549160  RF 6200352449 Valor  6.024,16
+IAC - MINA DE DEL REY
+
+
+NOTA FISCAL NÃO SUJEITA A RETENÇÃO DA CONTRIBUIÇÃO DE SEGURIDADE SOCIAL DE ACORDO COM A INSTRUÇÃO NORMATIVA RFB Nº 971, DE 13/11/2009 ART. 143 INCISO IX.
+
+RETENÇÃO DA FONTE PIS/ COFINS/ CSLL (4,65%)  - LEI 10833
+
+Valor aproximado dos Tributos Federais, Estaduais e Municipais  R$ 1.093,99  (18,16%)  Fonte: IBPT
+
+
+</Discriminacao>
+                  <CodigoMunicipio>3140001</CodigoMunicipio>
+               </Servico>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <Cnpj>00967186000152</Cnpj>
+                     <InscricaoMunicipal>31881995</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>JB TOPOGRAFIA LTDA-EPP</RazaoSocial>
+                  <NomeFantasia>JB TOPOGRAFIA LTDA-EPP</NomeFantasia>
+                  <Endereco>
+                     <Endereco>RUA GUSTAVE PEFFER</Endereco>
+                     <Numero>529</Numero>
+                     <Complemento>B</Complemento>
+                     <Bairro>LOUIS ENSCH</Bairro>
+                     <CodigoMunicipio>3155702</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35940000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3199630745</Telefone>
+                     <Email>Contamig.fiscal@hotmail.com</Email>
+                  </Contato>
+               </PrestadorServico>
+               <TomadorServico>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510003765</Cnpj>
+                     </CpfCnpj>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE SA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>Avenida de Ligação</Endereco>
+                     <Numero>3580</Numero>
+                     <Bairro>São Sebastião de Águas Claras</Bairro>
+                     <CodigoMunicipio>3144805</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone></Telefone>
+                     <Email>nfe.servico@vale.com</Email>
+                  </Contato>
+               </TomadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3155702</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+            </InfNfse>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+               <SignedInfo>
+                  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                  <Reference URI="#NFSe201601000000019">
+                     <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                     </Transforms>
+                     <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                     <DigestValue>vFHuvHeSoD5pEE7LwXhlhe2FM4U=</DigestValue>
+                  </Reference>
+               </SignedInfo>
+               <SignatureValue>JAXR2WqYYstlql5mjqgaAiaKoYYdvHLSCB71am7Eoajww5hPdrWLbjfcsvK18ENXG8mJo4mkcw/UAovaGWEFki2hzWxmCm3eYO00wKlMP2DguB44TfANF4vW+Rp/4F8xhh7McjwfFqnXgxnjpwKr9jjHe8RcGdpojKUsBdzkZOlp7UXz+fiW8u06XPe9KxDDVVOrHfzy/9nt11xxHkuvAxvaOctsCBOHjf0GTmCncrN3y5rjpOK6/CAVOQAaIFSK6ANxz4Qb6atfK9Y7WDFwgsAn5rxnrutraJgFoE0gl5e1AOM6GMN6VpmzBYIjoIMePgvsV7zJeinxGA3H56dM2g==</SignatureValue>
+               <KeyInfo>
+                  <X509Data>
+                     <X509Certificate>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</X509Certificate>
+                  </X509Data>
+               </KeyInfo>
+            </Signature>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarNfseResposta>

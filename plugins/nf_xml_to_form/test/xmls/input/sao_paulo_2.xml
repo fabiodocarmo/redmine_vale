@@ -1,0 +1,223 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe Id="NFe35160303218932000101550010000010531000231463" versao="3.10">
+         <ide>
+            <cUF>35</cUF>
+            <cNF>00023146</cNF>
+            <natOp>PRESTACAO DE SERVICO</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>1053</nNF>
+            <dhEmi>2016-03-01T00:00:00-03:00</dhEmi>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>3550308</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>3</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>1</indFinal>
+            <indPres>0</indPres>
+            <procEmi>3</procEmi>
+            <verProc>3.10.78</verProc>
+         </ide>
+         <emit>
+            <CNPJ>03218932000101</CNPJ>
+            <xNome>Agrax Comercio e Servicos de Pecas e Plasticos Ltda</xNome>
+            <enderEmit>
+               <xLgr>Rua Nilton Coelho de Andrade</xLgr>
+               <nro>125</nro>
+               <xBairro>Jd. Andarai</xBairro>
+               <cMun>3550308</cMun>
+               <xMun>Sao Paulo</xMun>
+               <UF>SP</UF>
+               <CEP>02167010</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>1129673091</fone>
+            </enderEmit>
+            <IE>116975406114</IE>
+            <IM>0850</IM>
+            <CNAE>0033147</CNAE>
+            <CRT>1</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510044798</CNPJ>
+            <xNome>VALE S/A</xNome>
+            <enderDest>
+               <xLgr>ETC SERRA DO MACHADO</xLgr>
+               <nro>S/N</nro>
+               <xBairro>Sao Goncalo do Rio Abaixo</xBairro>
+               <cMun>3161908</cMun>
+               <xMun>Sao Goncalo do Rio Abaixo</xMun>
+               <UF>MG</UF>
+               <CEP>35935000</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>3164121679</fone>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>6190241614688</IE>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>2330</cProd>
+               <cEAN></cEAN>
+               <xProd>MANUT E CONSERV MAQ;EQUIP MOV E SIMILAR PERIODO 21.09.2015 a 20.10.2015, RF:6200343044,  FRS:1001500906   OC: 4502491522</xProd>
+               <NCM>00000000</NCM>
+               <CFOP>6933</CFOP>
+               <uCom>UN</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>10704.7000000000</vUnCom>
+               <vProd>10704.70</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>UN</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>10704.7000000000</vUnTrib>
+               <indTot>1</indTot>
+               <xPed>4502491522</xPed>
+               <nItemPed>10</nItemPed>
+            </prod>
+            <imposto>
+               <ISSQN>
+                  <vBC>10704.70</vBC>
+                  <vAliq>5.0000</vAliq>
+                  <vISSQN>535.24</vISSQN>
+                  <cMunFG>3550308</cMunFG>
+                  <cListServ>14.01</cListServ>
+                  <indISS>2</indISS>
+                  <indIncentivo>2</indIncentivo>
+               </ISSQN>
+               <PIS>
+                  <PISNT>
+                     <CST>06</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>06</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>0.00</vBC>
+               <vICMS>0.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vFCPUFDest>0.00</vFCPUFDest>
+               <vICMSUFDest>0.00</vICMSUFDest>
+               <vICMSUFRemet>0.00</vICMSUFRemet>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>0.00</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.00</vPIS>
+               <vCOFINS>0.00</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>10704.70</vNF>
+               <vTotTrib>0.00</vTotTrib>
+            </ICMSTot>
+            <ISSQNtot>
+               <vServ>10704.70</vServ>
+               <vBC>10704.70</vBC>
+               <vISS>535.24</vISS>
+               <dCompet>2016-03-01</dCompet>
+               <cRegTrib>1</cRegTrib>
+            </ISSQNtot>
+         </total>
+         <transp>
+            <modFrete>9</modFrete>
+         </transp>
+         <cobr>
+            <dup>
+               <nDup>00105A</nDup>
+               <dVenc>2016-03-26</dVenc>
+               <vDup>10704.70</vDup>
+            </dup>
+         </cobr>
+         <infAdic>
+            <infCpl>- "DOCUMENTO EMITIDO POR EPP OPTANTE PELO SIMPLES NACIONAL."    RF:6200343044,  FRS:1001500906   OC: 4502491522</infCpl>
+         </infAdic>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe35160303218932000101550010000010531000231463">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>KbFyQS1xSER2DFFmjj1wB6yB6LM=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>ZWAGzmoFf1IPJ991/zNU2CN2ZENbycOgkyrUXzJN7tRPCZVKXkTOkNsoxwy1zi0po+b+vMHKpVHa
+Q2gctrwUruooH7RWaewH4pGa1hbh9SoIGGbZ5cHdr6yAB7lRlse2Af/tgeMHu43cOzFy3W3nIMnm
+bVeeMThcdUKofQ6CKYOffeEKVT4VT/+DrGPcVRHvLHyQwlO9injA6vxwZmbwDLf3RGvE/+0ulAje
+sNfW7LjeBIWlJE5z3iYyu+98Jx3KOcMLQfHw/3gz7Ksi+UoDp4vN4RSCcu9DMm/WLv0udPKKYbFU
+g6MyCrloOilstHBJi2z3IvVivXVcGZtzVsgrLg==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIIVzCCBj+gAwIBAgIQfcGgTPfGaugTRB2KikccEDANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc0MB4X
+DTEzMTIxMDAwMDAwMFoXDTE2MTIwODIzNTk1OVowggENMQswCQYDVQQGEwJCUjETMBEGA1UEChQK
+SUNQLUJyYXNpbDELMAkGA1UECBMCU1AxEjAQBgNVBAcUCVNBTyBQQVVMTzE2MDQGA1UECxQtU2Vj
+cmV0YXJpYSBkYSBSZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRYwFAYDVQQLFA1SRkIg
+ZS1DTlBKIEEzMS0wKwYDVQQLFCRBdXRlbnRpY2FkbyBwb3IgQVIgQmFsY2FvIGRlIFNlZ3Vyb3Mx
+STBHBgNVBAMTQEFHUkFYIENPTUVSQ0lPIEUgU0VSVklDT1MgREUgUEVDQVMgRSBQTEFTVElDT1Mg
+TFQ6MDMyMTg5MzIwMDAxMDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDNhskpCtaN
+zwU/BPP7sjRPvs6uyvdanc26MM+6LDVmQ+iuM6jDet4No6aRvBrLWfcpuqM6sT9lCgTUe9jONtS5
+jRePHxTDFM+Qqb2zu65IdFnbp1TPdvZdAAsEGzyzNenuTxi/P23zYB5TaubeP+hfMth1dCkADL6I
+09fUpxPb36nlSqRA0na3+IIhj/VxNBOpy1Kk1i9qC9yLXOycgDzl1V9V0zzSPUwgXLt/SqNXgrRI
+dysnOTydq+fEILtzXYdULdjAo1YlMioxHMKw+kPZYVh0tDbVDM3Y8C3m6TGAdh6OO3cqomrJlpgj
+WRGKwRMHR6OujgQ6SB9IgVBeMbNFAgMBAAGjggNEMIIDQDCBqQYDVR0RBIGhMIGeoDgGBWBMAQME
+oC8ELTEyMDkxOTcxNjg1NzQ5MzIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMKAbBgVgTAED
+AqASBBBESU5BIExBVVJBIEhPUlNUoBkGBWBMAQMDoBAEDjAzMjE4OTMyMDAwMTAxoBcGBWBMAQMH
+oA4EDDAwMDAwMDAwMDAwMIERZGluYUBhZ3JheC5jb20uYnIwCQYDVR0TBAIwADAfBgNVHSMEGDAW
+gBQukerWbeWyWYLcOIUpdjQWVjzQPjAOBgNVHQ8BAf8EBAMCBeAwfwYDVR0gBHgwdjB0BgZgTAEC
+AwYwajBoBggrBgEFBQcCARZcaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBv
+c2l0b3Jpby9kcGMvQUNfQ2VydGlzaWduX1JGQi9EUENfQUNfQ2VydGlzaWduX1JGQi5wZGYwggEW
+BgNVHR8EggENMIIBCTBXoFWgU4ZRaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9y
+ZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNpZ25SRkJHNC9MYXRlc3RDUkwuY3JsMFagVKBShlBodHRw
+Oi8vaWNwLWJyYXNpbC5vdXRyYWxjci5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2VydGlzaWdu
+UkZCRzQvTGF0ZXN0Q1JMLmNybDBWoFSgUoZQaHR0cDovL3JlcG9zaXRvcmlvLmljcGJyYXNpbC5n
+b3YuYnIvbGNyL0NlcnRpc2lnbi9BQ0NlcnRpc2lnblJGQkc0L0xhdGVzdENSTC5jcmwwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMIGbBggrBgEFBQcBAQSBjjCBizBfBggrBgEFBQcwAoZT
+aHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9jZXJ0aWZpY2Fk
+b3MvQUNfQ2VydGlzaWduX1JGQl9HNC5wN2MwKAYIKwYBBQUHMAGGHGh0dHA6Ly9vY3NwLmNlcnRp
+c2lnbi5jb20uYnIwDQYJKoZIhvcNAQELBQADggIBAJ2U+jPtnfy2bUOr9fZms5keUYEPgzFHwIpk
+/BeRouSjyqegaDLoNbRmQLFpSTVea9e2aSmwzLcFIlE6h0ZQazXS8B/QAuMDAytwHtHKuCOWzbki
+2gvc5nsVF0HugTaojWlTNYlJ+1ZqqrHgQPIG39ZUn32n/7YfSXZiRF9BfEEiueywF42n4vNAmxXP
+mzZfmIsTK+YN0rpZvvMZVHrNGoWJm8pSRLxQt8ip8coMLELqx6wpZYT+0L2s2dvT97ImHDk0TGTB
+o/GMuNN6puIVcBRiewzkrkzbMtViLaIdldf/b4TuLG0Pneztq4fu/+NGjAWe52l1cSCTFR1rj9d6
+uz9z1LFB6GxN9R4BtKzcLxpZUXhfKVxRirnqnR/vbZLXngR5GT5QH8EPnaa/0dvR8uK7JOM0rnQD
+SIm3v9coKuR+K6w3WWvMQZxTufrFzaUxGLlpnynU/h5ubDIej9+IMxZd1cBQVSFHWSaOw/8eIBaj
+8905kzgzr5aUKICaxMOAxwcdqyWRj0dsDq4Xs6uEV/GPOp553D3MJHU66m+h3xgsA6a28K/KIpOq
+EBTU7e7no0if0lc8J5IF+Q/IIE15Ne0zaWEZlKch3+uU5qnbLFYFKpLCctafkQpGhAxUJlhA1jsy
+750HOGmq9HQ7BNGEY43SokFPkYfnhPWmkH9ax8sY</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe versao="3.10">
+      <infProt>
+         <tpAmb>1</tpAmb>
+         <verAplic>SP_NFE_PL_008h2</verAplic>
+         <chNFe>35160303218932000101550010000010531000231463</chNFe>
+         <dhRecbto>2016-03-01T16:25:20-03:00</dhRecbto>
+         <nProt>135160128629614</nProt>
+         <digVal>KbFyQS1xSER2DFFmjj1wB6yB6LM=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

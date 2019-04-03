@@ -1,0 +1,292 @@
+<% @issue_custom_fields_grid = IssueCustomField.where(field_format: 'grid') %>
+<% @issue_custom_fields_float = IssueCustomField.where(field_format: 'float') %>
+<% @issue_custom_fields_string = IssueCustomField.where(field_format: 'string') %>
+<% @issue_custom_fields_text = IssueCustomField.where(field_format: 'text') %>
+<% @issue_custom_fields_user = IssueCustomField.where(field_format: 'user') %>
+<% @issue_custom_fields_list = IssueCustomField.where(field_format: 'list') %>
+<% @issue_custom_fields_bool = IssueCustomField.where(field_format: 'bool') %>
+<% @issue_custom_fields_date = IssueCustomField.where(field_format: 'date') %>
+
+
+<%= l(:field_mappings) %>
+
+<br/><br/>
+<div>
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:grid_concorrentes) %>:</th>
+      <td>
+        <%= select_tag 'settings[grid_concorrentes]', options_for_select(@issue_custom_fields_grid.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['grid_concorrentes'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:variacao_proposta) %>:</th>
+      <td>
+        <%= select_tag 'settings[variacao_proposta]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['variacao_proposta'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:diferenca_orcamento) %>:</th>
+      <td>
+        <%= select_tag 'settings[diferenca_orcamento]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['diferenca_orcamento'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:proposta_inicial) %>:</th>
+      <td>
+        <%= select_tag 'settings[proposta_inicial]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['proposta_inicial'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:proposta_final) %>:</th>
+      <td>
+        <%= select_tag 'settings[proposta_final]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['proposta_final'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:orcamento_vale) %>:</th>
+      <td>
+        <%= select_tag 'settings[orcamento_vale]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['orcamento_vale'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:inicio_contrato) %>:</th>
+      <td>
+        <%= select_tag 'settings[inicio_contrato]', options_for_select(@issue_custom_fields_date.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['inicio_contrato'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:fim_contrato) %>:</th>
+      <td>
+        <%= select_tag 'settings[fim_contrato]', options_for_select(@issue_custom_fields_date.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['fim_contrato'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:contencioso) %>:</th>
+      <td>
+        <%= select_tag 'settings[contencioso]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['contencioso'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:tipo_pac) %>:</th>
+      <td>
+        <%= select_tag 'settings[tipo_pac]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['tipo_pac'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:razao_social) %>:</th>
+      <td>
+        <%= select_tag 'settings[razao_social]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['razao_social'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:prestrado_entre_grupo) %>:</th>
+      <td>
+        <%= select_tag 'settings[prestrado_entre_grupo]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['prestrado_entre_grupo'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:distribuicao) %>:</th>
+      <td>
+        <%= select_tag 'settings[distribuicao]', options_for_select(@issue_custom_fields_grid.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['distribuicao'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_distribuido) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_distribuido]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_distribuido'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_total_pac) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_total_pac]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_total_pac'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_bruto_servico) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_bruto_servico]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_bruto_servico'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_despesas) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_despesas]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_despesas'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_atual_contrato) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_atual_contrato]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_atual_contrato'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:valor_apos_aditivo) %>:</th>
+      <td>
+        <%= select_tag 'settings[valor_apos_aditivo]', options_for_select(@issue_custom_fields_float.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['valor_apos_aditivo'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:metodo_contratacao) %>:</th>
+      <td>
+        <%= select_tag 'settings[metodo_contratacao]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['metodo_contratacao'])  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:campo_area) %>:</th>
+      <td>
+        <%= select_tag 'settings[campo_area]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['campo_area'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:gestor_contrato) %>:</th>
+      <td>
+        <%= select_tag 'settings[gestor_contrato]', options_for_select(@issue_custom_fields_user.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['gestor_contrato'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:cnpj_contrato) %>:</th>
+      <td>
+        <%= select_tag 'settings[cnpj_contrato]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['cnpj_contrato'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:cnpj_emissor) %>:</th>
+      <td>
+        <%= select_tag 'settings[cnpj_emissor]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['cnpj_emissor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:contrato_guardachuva) %>:</th>
+      <td>
+        <%= select_tag 'settings[contrato_guardachuva]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['contrato_guardachuva'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:selecionado_menor_valor) %>:</th>
+      <td>
+        <%= select_tag 'settings[selecionado_menor_valor]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['selecionado_menor_valor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:campo_objeto) %>:</th>
+      <td>
+        <%= select_tag 'settings[campo_objeto]', options_for_select(@issue_custom_fields_text.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['campo_objeto'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:justificativa_necessidade) %>:</th>
+      <td>
+        <%= select_tag 'settings[justificativa_necessidade]', options_for_select(@issue_custom_fields_text.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['justificativa_necessidade'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:justificativa_direta) %>:</th>
+      <td>
+        <%= select_tag 'settings[justificativa_direta]', options_for_select(@issue_custom_fields_text.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['justificativa_direta'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:justificativa_menor_valor) %>:</th>
+      <td>
+        <%= select_tag 'settings[justificativa_menor_valor]', options_for_select(@issue_custom_fields_text.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['justificativa_menor_valor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:justificativa_regularicazao) %>:</th>
+      <td>
+        <%= select_tag 'settings[justificativa_regularicazao]', options_for_select(@issue_custom_fields_text.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['justificativa_regularicazao'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:campo_nome_fornecedor) %>:</th>
+      <td>
+        <%= select_tag 'settings[campo_nome_fornecedor]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['campo_nome_fornecedor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:declinou) %>:</th>
+      <td>
+        <%= select_tag 'settings[declinou]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['declinou'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:desclassificado) %>:</th>
+      <td>
+        <%= select_tag 'settings[desclassificado]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['desclassificado'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:criterios_selecao) %>:</th>
+      <td>
+        <%= select_tag 'settings[criterios_selecao]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['criterios_selecao'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:outros_metodos) %>:</th>
+      <td>
+        <%= select_tag 'settings[outros_metodos]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['outros_metodos'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:empresa_vale) %>:</th>
+      <td>
+        <%= select_tag 'settings[empresa_vale]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['empresa_vale'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:campo_moeda) %>:</th>
+      <td>
+        <%= select_tag 'settings[campo_moeda]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['campo_moeda'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:fim_contrato_atual) %>:</th>
+      <td>
+        <%= select_tag 'settings[fim_contrato_atual]', options_for_select(@issue_custom_fields_date.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['fim_contrato_atual'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:gerente_diretor) %>:</th>
+      <td>
+        <%= select_tag 'settings[gerente_diretor]', options_for_select(@issue_custom_fields_user.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['gerente_diretor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:consultor_geral) %>:</th>
+      <td>
+        <%= select_tag 'settings[consultor_geral]', options_for_select(@issue_custom_fields_user.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['consultor_geral'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:fornecedor_certificado) %>:</th>
+      <td>
+        <%= select_tag 'settings[fornecedor_certificado]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['fornecedor_certificado'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:aprovacao_gestor) %>:</th>
+      <td>
+        <%= select_tag 'settings[aprovacao_gestor]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['aprovacao_gestor'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:aprovacao_gerente) %>:</th>
+      <td>
+        <%= select_tag 'settings[aprovacao_gerente]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['aprovacao_gerente'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:aprovacao_consultor) %>:</th>
+      <td>
+        <%= select_tag 'settings[aprovacao_consultor]', options_for_select(@issue_custom_fields_bool.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['aprovacao_consultor'])  %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<div>
+<br><br>

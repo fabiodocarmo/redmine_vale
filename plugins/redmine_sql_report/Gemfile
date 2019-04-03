@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'zip-zip'
+gem 'rubyzip', '>= 1.0.0'
+gem 'axlsx_rails'

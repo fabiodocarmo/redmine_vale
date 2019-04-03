@@ -1,0 +1,28 @@
+# English strings go here for Rails i18n
+en:
+  label_block_duplicates: Duplicates prevention
+  block_duplicate_rule_edit_sucess_message: Duplicates prevention rule successfully updated.
+  block_duplicate_rule_create_sucess_message: Duplicates prevention rule successfully created.
+  block_duplicate_no_block_message: No rules saved.
+  block_duplicate_rule_delete_confirmation: Are you sure you want to delete this rule?
+
+  fields_to_consider_label: Fields to be considered
+  custom_fields_to_consider_label: Custom fields to be considered
+  statuses_to_consider_label: Statuses to be considered
+
+  all_statuses_label: All statuses
+
+  block_duplicates_edit_header: Edit duplicates prevention rule
+  block_duplicates_list_header: List of duplicates prevention rules
+  block_duplicates_new_header: New duplicates prevention rule
+  block_duplicates_detail_header: Details of duplicates prevention rule
+
+  link_to_new_block_duplicates: New duplicates prevention rule
+
+  duplicated_issue_alert: Issue duplicates %{issues} created by %{authors}, respectively. Please check the fields and try again.
+  prohibited_message: prohibited this configuration from being saved
+  custom_field_different_from_parent: The field %{custom_field} has to have the same value as in the original issue.
+  check_duplicated_field: Check %{custom_field} value because it might be duplicated in another issue.
+  label_duplicated_copies_enabled: Enabled duplicate copied issues
+  verify_multiple_value: Verify if %{custom_field} values are duplicated.
+  verify_empty_value: Verify if %{custom_field} values are filled.

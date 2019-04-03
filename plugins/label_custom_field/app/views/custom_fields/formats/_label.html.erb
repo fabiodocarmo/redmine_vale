@@ -1,0 +1,11 @@
+<p>
+  <%= content_tag 'span' do %>
+    <%= f.text_area :default_value,
+                  :id => :label_default_value,
+                  :cols => 60,
+                  :rows => 10,
+                  :accesskey => accesskey(:edit)
+                  %>
+  <% end %>
+  <%= wikitoolbar_for 'label_default_value' %>
+</p>

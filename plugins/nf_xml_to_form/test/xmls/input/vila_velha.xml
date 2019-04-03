@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarNfseFaixaResposta xmlns="http://www.abrasf.org.br/nfse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse>
+               <Numero>1147</Numero>
+               <CodigoVerificacao>8239AB96-</CodigoVerificacao>
+               <DataEmissao>2016-05-05</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>112984.10</BaseCalculo>
+                  <Aliquota>5.00</Aliquota>
+                  <ValorIss>5649.21</ValorIss>
+                  <ValorLiquidoNfse>88523.05</ValorLiquidoNfse>
+               </ValoresNfse>
+               <ValorCredito>0.00</ValorCredito>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>02904691000183</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>23575</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>RESGATE TREINAMENTOS LTDA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>RUA LINHARES</Endereco>
+                     <Numero>201</Numero>
+                     <Complemento>SALA 208</Complemento>
+                     <Bairro>ULISSES GUIMARAES</Bairro>
+                     <CodigoMunicipio>3205200</CodigoMunicipio>
+                     <Cep>29124209</Cep>
+                  </Endereco>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3205200</CodigoMunicipio>
+                  <Uf>ES</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <InfDeclaracaoPrestacaoServico Id="f05f1410-cd06-4b1b-a373-666fca5cc560">
+                     <Competencia>2016-05-05</Competencia>
+                     <Servico>
+                        <Valores>
+                           <ValorServicos>112984.10</ValorServicos>
+                           <ValorDeducoes>0.00</ValorDeducoes>
+                           <ValorPis>734.40</ValorPis>
+                           <ValorCofins>3389.52</ValorCofins>
+                           <ValorInss>12428.25</ValorInss>
+                           <ValorIr>1129.84</ValorIr>
+                           <ValorCsll>1129.84</ValorCsll>
+                           <OutrasRetencoes>0.00</OutrasRetencoes>
+                           <ValorIss>5649.21</ValorIss>
+                           <Aliquota>5.00</Aliquota>
+                           <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+                        <IssRetido>1</IssRetido>
+                        <ResponsavelRetencao>1</ResponsavelRetencao>
+                        <ItemListaServico>11.02</ItemListaServico>
+                        <CodigoCnae>8020001</CodigoCnae>
+                        <Discriminacao>PRESTAÇÃO DE SERVIÇO DE SUPORTE TÉCNICO E OPERACIONAL ESPECIALIZADO EM PREVENÇÃO E COMBATE A INCÊNDIO, ATENDIMENTO DE URGÊNCIAS, ENVOLVENDO A UTILIZAÇÃO DE EQUIPAMENTOS, FERRAMENTAS E UNIDADES MÓVEIS, ALÉM DE AÇÕES DE DESENVOLVIMENTO CONTINUADO À MCR.  br /br /Contrato: 4600029710br /Pedido: 4502627680br /Folha: 1001587816br /UMSAbr /br /VALOR APROXIMADO DOS TRIBUTOS (8,65%) = R$ 9.773,12br /LEI DA TRANSPARÊNCIA FISCAL 12.741/2012</Discriminacao>
+                        <CodigoMunicipio>5003207</CodigoMunicipio>
+                        <ExigibilidadeISS>1</ExigibilidadeISS>
+                        <MunicipioIncidencia>5003207</MunicipioIncidencia>
+                     </Servico>
+                     <Tomador>
+                        <IdentificacaoTomador>
+                           <CpfCnpj>
+                              <Cnpj>03327988000196</Cnpj>
+                           </CpfCnpj>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>MINERAÇÃO CORUMBAENSE REUNIDA S.A (UMSA)</RazaoSocial>
+                        <Endereco>
+                           <Endereco>RODOVIA MORRO DO URUCUM</Endereco>
+                           <Numero>S/Nº</Numero>
+                           <Bairro>ZONA RURAL</Bairro>
+                           <CodigoMunicipio>5003207</CodigoMunicipio>
+                           <Uf>MS</Uf>
+                           <CodigoPais>1058</CodigoPais>
+                           <Cep>79301970</Cep>
+                        </Endereco>
+                     </Tomador>
+                     <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                     <IncentivoFiscal>2</IncentivoFiscal>
+                  </InfDeclaracaoPrestacaoServico>
+               </DeclaracaoPrestacaoServico>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+      <ProximaPagina>0</ProximaPagina>
+   </ListaNfse>
+</ConsultarNfseFaixaResposta>

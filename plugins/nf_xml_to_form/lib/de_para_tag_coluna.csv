@@ -1,0 +1,26 @@
+//Numero;Nº NFS-e
+//CodigoVerificacao;Código de Verificação da NFS-e
+//DataEmissao;Data Hora NFE
+//OptanteSimplesNacional;Opção Pelo Simples
+//Competencia;Data Hora NFE
+//ValorServicos;Valor dos Serviços
+//ValorPis;PIS/PASEP
+//ValorCofins;COFINS
+//ValorIr;IR
+//ValorCsll;CSLL
+//IssRetido;ISS pago
+//ValorInss;INSS
+//BaseCalculo;NULL
+//Aliquota;Alíquota
+//ValorLiquidoNfse;NULL
+//ItemListaServico;NULL
+//Servico/CodigoMunicipio;Município Prestação - cód. IBGE
+//PrestadorServico/IdentificacaoPrestador/Cnpj;CPF/CNPJ do Prestador
+//PrestadorServico/IdentificacaoPrestador/InscricaoMunicipal;Inscrição Municipal do Prestador
+//PrestadorServico/RazaoSocial;Razão Social do Prestador
+//PrestadorServico/Endereco/CodigoMunicipio;Cidade do Prestador
+//PrestadorServico/Endereco/Uf;UF do Prestador
+//TomadorServico/IdentificacaoTomador/CpfCnpj/Cnpj;CPF/CNPJ do Tomador
+//TomadorServico/RazaoSocial;Razão Social do Tomador
+//OrgaoGerador/CodigoMunicipio;NULL
+//OrgaoGerador/Uf;NULL

@@ -1,0 +1,4 @@
+<div id="<%= widget.name_id %>" class='redimine-widget'>
+  <div id="<%= widget.name_id %>_chart"></div>
+  <%= render REDMINE_DASHBOARD_PLUGINS_CONFIG[widget.name_id][:chart_type], widget: widget %>
+</div>

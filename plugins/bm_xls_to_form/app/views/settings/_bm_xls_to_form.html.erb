@@ -1,0 +1,600 @@
+<% @issue_custom_fields = IssueCustomField.all %>
+<% @issue_statuses = IssueStatus.all %>
+
+<table>
+  <tbody>
+  <tr>
+    <th>
+      <%= l(:auto_change_system_user) %>
+    </th>
+    <td>
+      <%= select_tag 'settings[auto_change_system_user]',
+                     options_from_collection_for_select(User.all, 'id', 'name', settings['auto_change_system_user']),
+                     include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td style='width: 25%;'><%= l(:tracker_id) %>:</td>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_id]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_id'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td style='width: 25%;'><%= l(:project_id) %>:</td>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[project_id]', options_for_select(Project.all.map { |project| ["#{project.id.to_s} - #{project.name}", project.id ] }, settings['project_id']), multiple: true  %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <th style='width: 25%;'><%= l(:bm_file_field) %>:</th>
+      <td style='width: 75%;'>
+        <%= select_tag 'settings[file_field]', options_for_select(IssueCustomField.where(field_format: 'file').map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['file_field'])  %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+<table>
+  <thead>
+    <tr>
+      <td><%= l(:bm_field) %></td>
+      <td><%= l(:label_custom_field) %></td>
+      <td> <%= l(:row) %> </td>
+      <td> <%= l(:column) %> </td>
+    </tr>
+  <thead>
+  <tbody>
+    <%
+      field_names = ["razaosocial_field", "cnpj_field", "numerofornsap_field",
+                     "numerocontrato_field", "emailliberacao_field",
+                     "empresacontratante_field", "numeroempresacont_field",
+                     "vigencia_field",
+                     "npedidoenitem_field",
+                     "nomeaprovador_field",
+                     "numeroaprovador_field", "localprestacao_field",
+                     "periodoreferencia_field", "descricaoservico_field",
+                     "valor_field", "moeda_field"]
+    %>
+
+    <% field_names.each do |fieldname|%>
+      <tr>
+        <th><%= t("bm_xml_controller.#{fieldname}") %></th>
+        <td>
+          <%= select_tag "settings[#{fieldname}]", options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings["#{fieldname}"]), include_blank: true %>
+        </td>
+        <td><%= text_field_tag "settings[#{fieldname}_row]", settings["#{fieldname}_row"] %></td>
+        <td><%= text_field_tag "settings[#{fieldname}_column]",  settings["#{fieldname}_column"]%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+
+<%= l(:rows_ct) %>
+<table>
+  <thead>
+    <tr>
+      <td><%= l(:grid_field) %></td>
+      <td><%= l(:row) %></td>
+      <td><%= l(:column) %></td>
+      <td><%= l(:column_final) %></td>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <%= select_tag 'settings[grid_field]', options_for_select(IssueCustomField.where(field_format: 'grid').map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['grid_field'])  %>
+      </td>
+      <td>
+        <%= text_field_tag "settings[row_linhasct]", settings["row_linhasct"]  %>
+      </td>
+      <td>
+        <%= text_field_tag "settings[column_linhasct]", settings["column_linhasct"]  %>
+      </td>
+      <td>
+        <%= text_field_tag "settings[column_final_linhasct]", settings["column_final_linhasct"]  %>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+<br>
+<hr>
+<br>
+
+<%= l(:grid_autofill_frs) %>
+<table>
+  <tbody>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:frs_number_field) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[frs_number_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['frs_number_field'])    %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:grid_frs_data) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[grid_frs_data]', options_for_select(IssueCustomField.where(field_format: 'grid').map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['grid_frs_data'])    %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:frs_approval_status) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[frs_approval_status]', options_for_select(IssueStatus.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['frs_approval_status'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:grid_frs_approval_date) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[grid_frs_approval_date]', options_for_select(IssueCustomField.where(field_format: 'grid').map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['grid_frs_approval_date'])    %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:rf_sent_status) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[rf_sent_status]', options_for_select(IssueStatus.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['rf_sent_status'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:grid_rf_data) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[grid_rf_data]', options_for_select(IssueCustomField.where(field_format: 'grid').map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['grid_rf_data'])    %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+
+<table>
+  <tbody>
+  <tr>
+    <th style='width: 25%;'><%= l(:status_newissue) %>:</th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[status_newissue]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_newissue'])  %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+
+<%= l(:status_rf) %>
+<table>
+  <tbody>
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_nfse_id) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_nfse_id]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_nfse_id'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_nfse_id) %> 2:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_nfse_id2]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_nfse_id2'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %> 2:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id2]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id2'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %> 3:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id3]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id3'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %> 4:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id4]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id4'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %> 5 (Somente Pedido):</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id5]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id5'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_utilities_id) %> 6 (Somente Pedido):</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_utilities_id6]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_utilities_id6'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:tracker_materials) %> (Somente Pedido):</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[tracker_materials]', options_for_select(Tracker.all.map { |tracker| ["#{tracker.id.to_s} - #{tracker.name}", tracker.id ] }, settings['tracker_materials'])  %>
+    </td>
+  </tr>
+
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:bm_rf_field) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[bm_rf_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['bm_rf_field'])  %>
+    </td>
+  </tr>
+  <tr>
+    <th style='width: 25%;'><b><%= l(:nfse_rf_field) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[nfse_rf_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['nfse_rf_field'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:bm_order_field) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[bm_order_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['bm_order_field'])  %>
+    </td>
+  </tr>
+  <tr>
+    <th style='width: 25%;'><b><%= l(:nfse_order_field) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[nfse_order_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['nfse_order_field'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:mat_order_field) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[mat_order_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['mat_order_field'])  %>
+    </td>
+  </tr>
+
+  <tr>
+    <th style='width: 25%;'><b><%= l(:order_created_status) %>:</b></th>
+    <td style='width: 75%;'>
+      <%= select_tag 'settings[order_created_status]', options_for_select(IssueStatus.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['order_created_status'])  %>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+<br>
+<hr>
+<br>
+
+<table>
+  <tr>
+    <td><%= l(:valid_statuses) %></td>
+    <td colspan="2">
+      <%= select_tag 'settings[recebimento_fiscal_valid_statuses]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['recebimento_fiscal_valid_statuses']),
+                     include_blank: true, multiple: true%>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <thead>
+  <tr>
+    <td> </td>
+    <td><%= l(:nf_status) %></td>
+    <td><%= l(:bm_status) %></td>
+    <td><%= l(:nf_status_priority) %></td>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <th style='width: 25%;'><%= l(:status_nfse_rejeitado) %>:</th>
+    <td>
+      <%= select_tag 'settings[status_nfse_rejeitado]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_rejeitado'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_rejeitado]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_rejeitado'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_rejeitado_priority]', settings['nfse_rejeitado_priority'] %></td>
+
+  </tr>
+
+  <tr>
+    <th ><%= l(:status_nfse_em_divergencia) %>:</th>
+    <td >
+      <%= select_tag 'settings[status_nfse_em_divergencia]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_em_divergencia'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_em_divergencia]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_em_divergencia'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_em_divergencia_priority]', settings['nfse_em_divergencia_priority'] %></td>
+
+  </tr>
+
+  <tr>
+    <th><%= l(:status_nfse_not_received) %>:</th>
+    <td>
+
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_not_received]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_not_received'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_not_received_priority]', settings['nfse_not_received_priority'] %></td>
+
+  </tr>
+
+  <tr>
+    <th ><%= l(:status_nfse_novo) %>:</th>
+    <td>
+      <%= select_tag 'settings[status_nfse_novo]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_novo'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_novo]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_novo'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_novo_priority]', settings['nfse_novo_priority'] %></td>
+  </tr>
+
+  <tr>
+    <th ><%= l(:status_nfse_em_andamento) %>:</th>
+    <td>
+      <%= select_tag 'settings[status_nfse_em_andamento]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_em_andamento'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_em_andamento]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_em_andamento'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_em_andamento_priority]', settings['nfse_em_andamento_priority'] %></td>
+  </tr>
+
+  <tr>
+    <th><%= l(:status_nfse_analise) %>:</th>
+    <td>
+      <%= select_tag 'settings[status_nfse_analise]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_analise'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_analise]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_analise'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_analise_priority]', settings['nfse_analise_priority'] %></td>
+
+  </tr>
+
+  <tr>
+    <th ><%= l(:status_nfse_em_cadastro) %>:</th>
+    <td >
+      <%= select_tag 'settings[status_nfse_em_cadastro]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_em_cadastro'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_em_cadastro]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_em_cadastro'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_em_cadastro_priority]', settings['nfse_em_cadastro_priority'] %></td>
+
+  </tr>
+
+  <tr>
+    <th ><%= l(:status_nfse_cadastrado) %>:</th>
+    <td >
+      <%= select_tag 'settings[status_nfse_cadastrado]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_nfse_cadastrado'])  %>
+    </td>
+    <td>
+      <%= select_tag 'settings[status_bm_cadastrado]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_bm_cadastrado'])  %>
+    </td>
+    <td><%= text_field_tag 'settings[nfse_cadastrado_priority]', settings['nfse_cadastrado_priority'] %></td>
+
+  </tr>
+
+
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<%= l(:req_to_pay_upload) %>
+<table>
+  <thead>
+  <tr>
+    <td> </td>
+    <td align="center"><%= l(:row) %></td>
+    <td align="center"><%= l(:column) %></td>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= l(:report_begin) %></td>
+      <td><%= text_field_tag 'settings[req_to_pay_row]', settings['req_to_pay_row'] %></td>
+      <td><%= text_field_tag 'settings[req_to_pay_column]', settings['req_to_pay_column'] %></td>
+    </tr>
+
+  <tr>
+    <td><%= l(:report_rf) %></td>
+    <td> </td>
+    <td><%= text_field_tag 'settings[req_to_pay_rf_column]', settings['req_to_pay_rf_column'] %></td>
+  </tr>
+
+  <tr>
+    <td><%= l(:report_pay_date) %></td>
+    <td> </td>
+    <td><%= text_field_tag 'settings[req_to_pay_paydate_column]', settings['req_to_pay_paydate_column'] %></td>
+  </tr>
+
+    <tr>
+      <td><%= l(:document_number_field) %></td>
+      <td> </td>
+      <td><%= text_field_tag 'settings[req_to_pay_ndocref_column]', settings['req_to_pay_ndocref_column'] %></td>
+    </tr>
+
+    <tr>
+      <td><%= l(:order_number_field) %></td>
+      <td> </td>
+      <td><%= text_field_tag 'settings[req_to_pay_order_column]', settings['req_to_pay_order_column'] %></td>
+    </tr>
+
+    <tr>
+      <td><%= l(:frs_field) %></td>
+      <td> </td>
+      <td><%= text_field_tag 'settings[req_to_pay_frs_column]', settings['req_to_pay_frs_column'] %></td>
+    </tr>
+
+    <tr>
+      <td><%= l(:clearing_field) %></td>
+      <td> </td>
+      <td><%= text_field_tag 'settings[req_to_pay_clearing_column]', settings['req_to_pay_clearing_column'] %></td>
+    </tr>
+
+    <tr>
+      <td><%= l(:clearing_date_field) %></td>
+      <td> </td>
+      <td><%= text_field_tag 'settings[req_to_pay_clearing_date_column]', settings['req_to_pay_clearing_date_column'] %></td>
+    </tr>
+
+
+    <tr>
+      <td><%= l(:valid_statuses) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[req_to_pay_upload_valid_statuses]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['req_to_pay_upload_valid_statuses']),
+                        include_blank: true, multiple: true%>
+      </td>
+    </tr>
+
+    <tr>
+      <td><%= l(:status_material_order) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[status_material_order]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_material_order']) %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><%= l(:status_scheduled_payment) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[status_scheduled_payment]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_scheduled_payment']) %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><%= l(:status_payment_executed) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[status_payment_executed]', options_for_select(IssueStatus.all.map { |issue_status| ["#{issue_status.id.to_s} - #{issue_status.name}", issue_status.id ] }, settings['status_payment_executed']) %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><%= l(:payment_date_field) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[payment_date_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['payment_date_field']), include_blank: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><%= l(:document_number_field) %></td>
+      <td colspan="2">
+        <%= select_tag 'settings[document_number_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['document_number_field']), include_blank: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <td ><%= l(:reqtopay_grid_field) %>:</td>
+      <td colspan="2">
+        <%= select_tag 'settings[reqtopay_grid_field]', options_for_select(IssueCustomField.all.map { |cf| ["#{cf.id.to_s} - #{cf.name}", cf.id ] }, settings['reqtopay_grid_field'])    %>
+      </td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+<%= javascript_include_tag('chosen.jquery.min.js', plugin: 'redmine_improve_custom_fields') %>
+<%= javascript_include_tag('ajax-chosen.min.js', plugin: 'redmine_improve_custom_fields') %>
+<script type="text/javascript">
+
+  var fix_chosen_css = function(chosen_element) {
+    var parent = $(chosen_element).siblings('.chosen-container');
+
+    if (parent.parent('td').length == 0) {
+      parent.css('position', 'absolute');
+      parent.css('display', 'block');
+      parent.parent().css('height', (parent.height()+10) + 'px');
+    } else {
+      parent.css('width', '100%');
+    }
+    parent.css('min-width', '236px');
+
+    var lastHeight = parent.height();
+    function checkForHeightChanges() {
+      if (parent.height() != lastHeight) {
+        parent.parent().css('height', (parent.height()+10) + 'px');
+        lastHeight = parent.height();
+      } else {
+        setTimeout(checkForHeightChanges, 500);
+      }
+    };
+    setTimeout(checkForHeightChanges, 500);
+  }
+
+  var make_chosen = function(elem) {
+    $(elem).chosen({inherit_select_classes: true, allow_single_deselect: true}).change(function(elem) {
+      var container = $(this).siblings('.chosen-container').parent();
+      if (container.length >= 0) {
+        container.css('height', $(this).siblings('.chosen-container').height());
+      }
+    });
+    fix_chosen_css(elem)
+  }
+
+  var update_chosen = function(chosen) {
+    input = $(chosen).parent().find('div.chosen-drop input[type=text]');
+    value = $(input).val();
+    $(chosen).trigger('chosen:updated');
+    $(input).val(value);
+  }
+
+  var make_select_elements_chosen = function (){
+    $('select').not("#relation_relation_type")
+        .not('.description')
+        .not('#project_quick_jump_box').each(function(index, elem){
+      make_chosen(elem);
+    });
+  }
+
+  make_select_elements_chosen();
+
+</script>

@@ -1,0 +1,74 @@
+<%= labelled_fields_for :issue, @issue do |f| %>
+  <%= call_hook(:view_issues_form_details_top, { :issue => @issue, :form => f }) %>
+
+  <%= hidden_field_tag 'status_id', @issue.status.id %>
+
+  <% if Setting.plugin_redmine_gestor_chamadas[:projects].count > 1 %>
+    <p><%= f.select :project_id, project_tree_options_for_select(Project.where(id: Setting.plugin_redmine_gestor_chamadas[:projects]), :selected => @issue.project), {:required => true},
+                  :onchange => "updateIssueFrom('#{escape_javascript  gestor_chamados_tickets_update_form_path(id: @issue, format: 'js')}')" %></p>
+  <% end %>
+
+  <% if @issue.safe_attribute? 'tracker_id' %>
+    <p><%= f.select :tracker_id, @issue.project.trackers.collect {|t| [t.name, t.id]}, {:required => true},
+                  :onchange => "updateIssueFrom('#{escape_javascript gestor_chamados_tickets_update_form_path(id: @issue, format: 'js')}')" %></p>
+  <% end %>
+
+  <% if @show_faq %>
+    <p>
+      <strong><%= l(:in_case_of_doubts_message) %>:<br /></strong>
+      <% @faqs.each do |faq| %>
+        <%= link_to faq.faq_link, faq.faq_link %><br />
+      <% end %>
+    </p>
+  <% else %>
+    <% if @issue.safe_attribute? 'subject' %>
+      <p><%= f.text_field :subject, :size => 80, :maxlength => 255, :required => true %></p>
+    <% end %>
+
+    <% if @issue.safe_attribute? 'description' %>
+      <p>
+        <%= f.label_for_field :description, :required => @issue.required_attribute?('description') %>
+        <%= content_tag 'span', :id => "issue_description_and_toolbar", :style => (@issue.new_record? ? nil : 'display:none') do %>
+          <%= f.text_area :description,
+                         :cols => 60,
+                         :rows => (@issue.description.blank? ? 10 : [[10, @issue.description.length / 50].max, 100].min),
+                         :accesskey => accesskey(:edit),
+                         :class => 'wiki-edit',
+                         :no_label => true %>
+        <% end %>
+      </p>
+    <% end %>
+
+    <div id="attributes" class="attributes">
+      <%= render :partial => 'gestor_chamados_tickets/attributes' %>
+    </div>
+
+    <% @update_form_url = gestor_chamados_tickets_update_form_path(format: 'js') %>
+    <%= call_hook(:view_issues_form_details_bottom, { :issue => @issue, :form => f, update_form_url: @update_form_url }) %>
+
+    <% if @copy_from && @copy_from.attachments.any? %>
+      <p>
+        <label for="copy_attachments"><%= l(:label_copy_attachments) %></label>
+        <%= check_box_tag 'copy_attachments', '1', @copy_attachments %>
+      </p>
+    <% end %>
+
+    <% if @copy_from && !@copy_from.leaf? %>
+      <p>
+        <label for="copy_subtasks"><%= l(:label_copy_subtasks) %></label>
+        <%= check_box_tag 'copy_subtasks', '1', @copy_subtasks %>
+      </p>
+    <% end %>
+    <p id="attachments_form"><label><%= l(:label_attachment_plural) %></label><%= render :partial => 'attachments/form', :locals => {:container => @ticket.issue} %></p>
+  <% end %>
+
+  <% heads_for_wiki_formatter %>
+
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      $("#issue_tracker_id, #issue_status_id").each(function(){
+        $(this).val($(this).find("option[selected=selected]").val());
+      });
+    });
+  <% end %>
+<% end %>

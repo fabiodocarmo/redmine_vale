@@ -1,0 +1,8 @@
+<%= f.fields_for :auto_issue_schedule_triggers do |trigger| %>
+  <%= render 'auto_issue_schedule_triggers_fields', f: trigger %>
+<% end %>
+
+<div class="links">
+  <%= link_to_add_association t('auto_issue_add_trigger'), f, :auto_issue_schedule_triggers,
+    partial: 'auto_issue_schedule_triggers_fields' %>
+</div>

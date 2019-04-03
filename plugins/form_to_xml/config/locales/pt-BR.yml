@@ -1,0 +1,5 @@
+pt-BR:
+  transport_converter_issues_label: Selecione os chamados que usarão o conversor de xml de transportes.
+  transport_xml_configuration: Configuração do XML Convertido de NF de transportes
+  nfs_xml_configuration: Configuração do XML Convertido de NF de Serviço
+  sender_email: 'E-mail remetente'

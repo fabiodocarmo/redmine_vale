@@ -1,0 +1,19 @@
+en:
+  aging_has_atendent:
+    title: Aging - Atribuídos e não atribuídos
+  aging_per_atendent:
+    title: Aging - Por funcionário
+  aging_project:
+    title: Aging - Projetos
+  average_answer_time_per_project:
+    title: Tempo médio de resposta por projeto
+  new_by_tracker:
+    title: Novos chamados - Últimos %{count} meses
+  new_by_project:
+    title: Novos chamados - Últimos %{count} meses
+  performance_per_fte:
+    title: "# Chamados médio por FTE"
+  weekly_progress:
+    title: Progresso
+  answered_by_project:
+    title: Chamados Fechados - Últimos %{count} Meses

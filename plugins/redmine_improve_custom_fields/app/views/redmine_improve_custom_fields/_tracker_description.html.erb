@@ -1,0 +1,10 @@
+<% if Setting.plugin_redmine_improve_custom_fields[:show_tracker_description_on_show] %>
+  <% unless @issue.tracker.description.blank? %>
+    <div class="description">
+      <p><strong><%=l(:field_tracker_description)%></strong></p>
+      <div class="wiki">
+        <%= textilizable @issue.tracker, :description %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

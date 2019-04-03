@@ -1,0 +1,225 @@
+<div class="contextual">
+  <% if User.current.allowed_to?(:add_subprojects, @project) %>
+      <%= link_to l(:label_subproject_new), new_project_path(:parent_id => @project), :class => 'icon icon-add' %>
+  <% end %>
+  <% if User.current.allowed_to?(:close_project, @project) %>
+      <% if @project.active? %>
+          <%= link_to l(:button_close), close_project_path(@project), :data => {:confirm => l(:text_are_you_sure)}, :method => :post, :class => 'icon icon-lock' %>
+      <% else %>
+          <%= link_to l(:button_reopen), reopen_project_path(@project), :data => {:confirm => l(:text_are_you_sure)}, :method => :post, :class => 'icon icon-unlock' %>
+      <% end %>
+  <% end %>
+</div>
+
+<h2><%=l(:label_overview)%></h2>
+
+<hr style="visibility: hidden"> <!-- Necessário para aparecer a HR dentro da tabela -->
+
+<% unless @project.active? %>
+    <p class="warning"><span class="icon icon-lock"><%= l(:text_project_closed) %></span></p>
+<% end %>
+
+<div class="splitcontentleft">
+  <% if @project.description.present? %>
+      <div class="wiki">
+        <%= textilizable @project.description %>
+      </div>
+  <% end %>
+
+  <% trackers_allowed = Issue.allowed_target_trackers(@project, User.current)%>
+  <% if Setting.plugin_redmine_gestor_chamadas[:enable_tracker_description_in_projects_show].eql?("true") &&  trackers_allowed.size > 0%>
+      <div class="issues box">
+        <h3><%= l(:label_tracker_plural) %></h3>
+        <table class="list issue-report">
+          <tbody>
+          <%  Issue.allowed_target_trackers(@project, User.current).each do |tracker| %>
+              <tr class="<%= cycle("odd", "even") %>">
+                <td class="name" style="width: 35%;">
+                  <a class="external" href="<%=request.original_url%>/issues/new?issue%5Btracker_id%5D=<%=tracker.id%>">
+                    <%= tracker.name %> </td>
+                </a>
+                <td class="name"><%=textilizable tracker, :description %></td>
+              </tr>
+          <% end %>
+
+          </tbody>
+        </table>
+      </div>
+  <% end %>
+
+  <% if @project.homepage.present? || @subprojects.any? || @project.visible_custom_field_values.any?(&:present?) %>
+      <ul>
+        <% unless @project.homepage.blank? %>
+            <li><span class="label"><%=l(:field_homepage)%>:</span> <%= link_to_if uri_with_safe_scheme?(@project.homepage), @project.homepage, @project.homepage %></li>
+        <% end %>
+
+        <% render_custom_field_values(@project) do |custom_field, formatted| %>
+            <li><span class="label"><%= custom_field.name %>:</span> <%= formatted %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+
+
+  <% if @subprojects.any? %>
+      <div class="issues box">
+        <h3><%=l(:label_subproject_plural)%></h3>
+        <ul>
+          <% @subprojects.each do |p| %>
+              <li><%= link_to_project p %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+  <% error = false %>
+
+  <% if User.current.allowed_to?(:view_issues, @project) %>
+      <div class="issues box">
+        <h3><%=l(:label_issue_tracking)%></h3>
+        <% if @trackers.present? %>
+            <table class="list issue-report">
+              <thead>
+              <tr>
+                <th></th>
+                <th><%=l(:label_open_issues_plural)%></th>
+                <th><%=l(:label_closed_issues_plural)%></th>
+                <th><%=l(:label_total)%></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @trackers.each do |tracker| %>
+                  <tr class="<%= cycle("odd", "even") %>">
+                    <td class="name">
+                      <%= link_to tracker.name, project_issues_path(@project, :set_filter => 1, :tracker_id => tracker.id) %>
+                    </td>
+                    <td>
+                      <%= link_to @open_issues_by_tracker[tracker].to_i, project_issues_path(@project, :set_filter => 1, :tracker_id => tracker.id) %>
+                    </td>
+                    <td>
+                      <%= link_to (@total_issues_by_tracker[tracker].to_i - @open_issues_by_tracker[tracker].to_i), project_issues_path(@project, :set_filter => 1, :tracker_id => tracker.id, :status_id => 'c') %>
+                    </td>
+                    <td>
+                      <%= link_to @total_issues_by_tracker[tracker].to_i, project_issues_path(@project, :set_filter => 1, :tracker_id => tracker.id, :status_id => '*') %>
+                    </td>
+                  </tr>
+
+                  <% if User.current.allowed_to?(:visualizar_chamados_atribuicao, @project) and
+                      @project.id.to_s.in? Setting.plugin_bm_xls_to_form["project_id"]  %>
+                      <%
+
+                        begin
+
+                          if @project.display_subprojects_trackers
+                            projects_ids = [@project.id] | @subprojects.map(&:id)
+                          else
+                            projects_ids = [@project.id]
+                          end
+
+                          assignees_issues = {}
+                          data = Issue.where(tracker_id: tracker.id, project_id: projects_ids).group(:assigned_to).count
+                          data.each do |vdata|
+                            userInfo = vdata.first
+                            if userInfo == nil
+                              userInfo = User.new
+                              userInfo.id = 0
+                              userInfo.firstname = l(:not_assigned)
+                              userInfo.lastname = ""
+                            end
+                            total = vdata.last
+
+                            userName = userInfo.firstname + " " + userInfo.lastname
+
+                            userId = userInfo.id
+
+                            if !(assignees_issues.key?(userId))
+                              assignees_issues = assignees_issues.merge(Hash[userId, Hash["name", userName, "total", total]])
+                            end
+
+                          end
+
+                          assignees_issues.each do |userId, _|
+
+                            if (userId == 0)
+                              open_issues = Issue.open.where(tracker_id: tracker.id, project_id: projects_ids, assigned_to_id: nil).count
+                            else
+                              open_issues = Issue.open.where(tracker_id: tracker.id, project_id: projects_ids, assigned_to_id: userId).count
+                            end
+
+                            assignees_issues[userId] = assignees_issues[userId].merge(Hash["open", open_issues])
+
+                          end
+
+                        rescue
+                          error = true;
+                        end
+
+                      %>
+
+                      <%
+                        if !(error)
+                          assignees_issues.each do |userId, issueInfo|
+                      %>
+                              <%
+                                open_issues = issueInfo["open"]
+                                total_issues = issueInfo["total"]
+                                closed_issues = total_issues - open_issues
+                                userName = issueInfo["name"]
+                              %>
+
+                              <tr>
+                                <td><%= userName %></td>
+                                <td><%= open_issues %></td>
+                                <td><%= closed_issues %></td>
+                                <td><%= total_issues %></td>
+                              </tr>
+
+                          <% end %>
+                      <% end %>
+
+                      <% if !(error) %>
+                          <tr>
+                            <td colspan="4"><hr></td>
+                          </tr>
+                      <% end %>
+
+                  <% end %>
+
+              <% end %>
+              </tbody>
+            </table>
+        <% end %>
+        <p>
+          <%= link_to l(:label_issue_view_all), project_issues_path(@project, :set_filter => 1) %>
+          <% if User.current.allowed_to?(:view_calendar, @project, :global => true) %>
+              | <%= link_to l(:label_calendar), project_calendar_path(@project) %>
+          <% end %>
+          <% if User.current.allowed_to?(:view_gantt, @project, :global => true) %>
+              | <%= link_to l(:label_gantt), project_gantt_path(@project) %>
+          <% end %>
+        </p>
+      </div>
+  <% end %>
+  <%= call_hook(:view_projects_show_left, :project => @project) %>
+</div>
+
+<div class="splitcontentright">
+  <% if @news.any? && authorize_for('news', 'index') %>
+      <div class="news box">
+        <h3><%=l(:label_news_latest)%></h3>
+        <%= render :partial => 'news/news', :collection => @news %>
+        <p><%= link_to l(:label_news_view_all), project_news_index_path(@project) %></p>
+      </div>
+  <% end %>
+  <%= call_hook(:view_projects_show_right, :project => @project) %>
+</div>
+
+<% content_for :sidebar do %>
+    <%= render :partial => 'projects/sidebar' %>
+<% end %>
+
+<% content_for :header_tags do %>
+    <%= auto_discovery_link_tag(:atom, {:controller => 'activities', :action => 'index', :id => @project, :format => 'atom', :key => User.current.rss_key}) %>
+<% end %>
+
+<% html_title(l(:label_overview)) -%>

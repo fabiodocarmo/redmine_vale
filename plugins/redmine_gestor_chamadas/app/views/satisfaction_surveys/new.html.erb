@@ -1,0 +1,106 @@
+<h2><%= l(:satisfaction_survey_header) %></h2>
+<%= form_for @satisfaction do |f| %>
+	<div class='box'>
+		<fieldset>
+			<legend><%= l(:satisfaction_label) %></legend>
+				<%= f.hidden_field :issue_id, :value => params[:issue_id]%>
+
+				<% if @satisfaction.errors.any? %>
+
+				  <div id="error_explanation" class="errors">
+				    <!--<ul>-->
+						<%if !@satisfaction.errors.messages[:satisfaction].nil?%>
+							<p><%= @satisfaction.errors.messages[:satisfaction].first %></p>
+						<%end%>
+						<%if !@satisfaction.errors.messages[:issue_reopened].nil?%>
+							<p><%= @satisfaction.errors.messages[:issue_reopened].first %></p>
+						<%end%>
+						<%if !@satisfaction.errors.messages[:comment].nil?%>
+				    	<p><%= @satisfaction.errors.messages[:comment].first %></p>
+						<%end%>
+
+				    <!--</ul>-->
+				  </div>
+				<% end %>
+				<ul />
+				<p>
+					<label> <b><%= l(:satisfaction_survey_question)%> </b></label>
+
+					<div class = "checkboxgroup">
+					<%= f.radio_button(:satisfaction, ['nao_satisfeito',1], :satisfaction_level => 1) %>
+					<%= f.label(:satisfaction_level, '1') %>
+					<label><b><%= l(:totally_dissatisfied)%></b> </label>
+					</div>
+
+					<% for i in 2..6 do %>
+						<div class = "checkboxgroup">
+						<%= f.radio_button(:satisfaction, ['nao_satisfeito',i], :satisfaction_level => i) %>
+						<%= f.label(:satisfaction_level, i) %>
+
+						</div>
+					<% end %>
+
+
+					<% for i in 7..9 do %>
+            <div class = "checkboxgroup">
+						<%= f.radio_button(:satisfaction, ['satisfeito',i], :satisfaction_level => i) %>
+						<%= f.label(:satisfaction_level, i) %>
+					</div>
+					<% end %>
+
+					<div class = "checkboxgroup">
+					<%= f.radio_button(:satisfaction, ['satisfeito',10], :satisfaction_level => 10) %>
+					<%= f.label(:satisfaction_level, '10') %>
+					<label><b><%= l(:totally_satisfied)%></b> </label>
+					</div>
+				</p>
+
+				<p><label> <b><%= l(:satisfaction_explanation_reopen)%> </b></label></p>
+				<label> <b><%= l(:satisfaction_explanation_no_reopen)%> </b></label>
+
+
+				<% if @issue.reopen_allowed? == true %>
+					<span id="cb_reopen" class="field_reopen" style="display:none">
+						<label><p> <b><%= l(:satisfaction_reasons)%></b></p></label>
+
+						<% satisfaction_questions = Array.new %>
+						<% satisfaction_questions = SatisfactionQuestion.all%>
+						<% satisfaction_questions.each do |sq| %>
+							<%if sq.reopen_enabled%>
+								<%=f.radio_button(:enable_reopen,[true,sq.question]) %>
+							<%else%>
+								<%=f.radio_button(:enable_reopen,[false,sq.question]) %>
+							<%end%>
+							<%if User.current.language == "en"%>
+								<label <b> <%= sq.question_en %> </b> </label>
+							<%elsif User.current.language == "es"%>
+								<label <b> <%= sq.question_es %> </b> </label>
+							<%else%>
+								<label <b> <%= sq.question %> </b> </label>
+							<%end%>
+							</br>
+						<%end%>
+						<span id="reopen_issue" class="field_reopen" style="display:none">
+							<label><b><%= l(:reopen_issue_label)%> </b></label>
+							<%= f.check_box :issue_reopened%>
+						</span>
+					</span>
+
+				<% end %>
+		</fieldset>
+		<fieldset>
+			<legend><%= l(:comments_label) %></legend>
+				<p>
+					<label> <b><%= l(:comments_field_label)%>: </b></label>
+				</p>
+				<p>
+					<%= f.text_area :comment, :rows => 10, :cols => 80 %>
+				</p>
+		</fieldset>
+	</div>
+	<%= f.submit l(:button_save) %>
+
+<% end %>
+
+<%= stylesheet_link_tag    'satisfaction_surveys/satisfaction_surveys', plugin: 'redmine_gestor_chamadas' %>
+<%= javascript_include_tag 'satisfaction_surveys/satisfaction_surveys', plugin: 'redmine_gestor_chamadas' %>

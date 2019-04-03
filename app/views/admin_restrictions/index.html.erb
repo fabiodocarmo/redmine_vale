@@ -1,0 +1,24 @@
+<div class="contextual">
+<%= link_to l(:label_admin_restriction_new), new_admin_restriction_path, :class => 'icon icon-add' %>
+</div>
+
+<h2><%=l(:label_admin_restriction_plural)%></h2>
+
+<table class="list">
+  <thead><tr>
+    <th><%=l(:label_admin_restriction)%></th>
+  <th></th>
+  </tr></thead>
+  <tbody>
+<% for admin_restriction in @admin_restrictions %>
+  <tr class="<%= cycle("odd", "even") %>">
+  <td class="name"><%=  link_to(admin_restriction.name, edit_admin_restriction_path(admin_restriction)) %></td>
+  <td class="buttons">
+    <%= delete_link admin_restriction_path(admin_restriction) %>
+  </td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<% html_title(l(:label_admin_restriction_plural)) -%>

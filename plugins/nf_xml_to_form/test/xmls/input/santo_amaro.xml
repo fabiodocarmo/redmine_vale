@@ -1,0 +1,117 @@
+<GerarNfseResposta xmlns="http://www.abrasf.org.br/nfse.xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse versao="2.01">
+                <InfNfse Id="123456">
+                    <Numero>2</Numero>
+                    <CodigoVerificacao>123456</CodigoVerificacao>
+                    <DataEmissao>-</DataEmissao>
+                    <NfseSubstituida>0</NfseSubstituida>
+                    <OutrasInformacoes>BASE DE CÁLCULO INSS EM R$ 4.320,15, BASEADOS NA INSTRUÇÃO NORMATIVA RFB 971/2009, NOS ARTIGOS 121 E 122</OutrasInformacoes>
+                    <ValoresNfse>
+                        <BaseCalculo>6171.65</BaseCalculo>
+                        <Aliquota>3.00</Aliquota>
+                        <ValorIss>185.15</ValorIss>
+                        <ValorLiquidoNfse>5162.58</ValorLiquidoNfse>
+                    </ValoresNfse>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <CpfCnpj>
+<Cnpj>02.238.981/0001-35</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>300609</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>ESBA - EMPRESA PATRIMONIAL DE SERVICOS DA BAHIA LTDA - ME</RazaoSocial>
+                        <NomeFantasia>ESBA - EMPRESA PATRIMONIAL DE SERVICOS DA BAHIA LTDA - ME</NomeFantasia>
+                        <Endereco>
+                            <Endereco>DO SINIMBU</Endereco>
+                            <Numero>0</Numero>
+                            <Complemento>EDIF RAISSA LOBO SALA 2</Complemento>
+                            <Bairro>SINIMBU</Bairro>
+                            <CodigoMunicipio>2928604</CodigoMunicipio>
+                            <Uf>BA</Uf>
+                            <CodigoPais>1058</CodigoPais>
+                            <Cep>44200-000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone></Telefone>
+                            <Email>contabilidadejs9@gmail.com</Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <OrgaoGerador>
+                        <CodigoMunicipio>2928604</CodigoMunicipio>
+                        <Uf>ba</Uf>
+                    </OrgaoGerador>
+                    <DeclaracaoPrestacaoServico>
+                        <InfDeclaracaoPrestacaoServico>
+                            <Competencia>2016-06-01</Competencia>
+                            <Servico>
+<Valores>
+    <ValorServicos>6171.65</ValorServicos>
+    <ValorDeducoes>0.00</ValorDeducoes>
+    <ValorPis>40.11</ValorPis>
+    <ValorCofins>185.15</ValorCofins>
+    <ValorInss>475.22</ValorInss>
+    <ValorIr>61.72</ValorIr>
+    <ValorCsll>61.72</ValorCsll>
+    <OutrasRetencoes>0.00</OutrasRetencoes>
+    <ValorIss>185.15</ValorIss>
+    <Aliquota>3.00</Aliquota>
+    <DescontoIncondicionado>0.00</DescontoIncondicionado>
+    <DescontoCondicionado>0.00</DescontoCondicionado>
+</Valores>
+<IssRetido>1</IssRetido>
+<ResponsavelRetencao>1</ResponsavelRetencao>
+<ItemListaServico>17.05</ItemListaServico>
+<CodigoCnae>0</CodigoCnae>
+<Discriminacao>SERVIÇOS PRESTADOS DE VIGILÂNCIA NA VALE MANGANÊS.&#13;
+&#13;
+CONTRATO NÚMERO 4600028491&#13;
+&#13;
+PEDIDO NÚMERO 4502698472&#13;
+FRS NÚMERO 1001624377&#13;
+NÚMERO RF: CNPJ: 15.144.306/0001-99 ROD BR 324 KM 24 AGUA COMPRIDA S/N - Simoes Filho - BA CEP: 43700-000&#13;
+</Discriminacao>
+<CodigoMunicipio>2930709</CodigoMunicipio>
+<CodigoPais>Brasil</CodigoPais>
+<ExigibilidadeISS>1</ExigibilidadeISS>
+<MunicipioIncidencia>2930709</MunicipioIncidencia>
+                            </Servico>
+                            <Prestador>
+<CpfCnpj>
+    <Cnpj>02.238.981/0001-35</Cnpj>
+</CpfCnpj>
+<InscricaoMunicipal>300609</InscricaoMunicipal>
+                            </Prestador>
+                            <Tomador>
+<IdentificacaoTomador>
+    <CpfCnpj>
+        <Cnpj>15.144.306/0001-99</Cnpj>
+    </CpfCnpj>
+</IdentificacaoTomador>
+<RazaoSocial>VALE MANGANÊS S.A</RazaoSocial>
+<Endereco>
+    <Endereco>BR 324 KM 24 S/N</Endereco>
+    <Numero>0</Numero>
+    <Complemento></Complemento>
+    <Bairro>ÁGUA COMPRIDA</Bairro>
+    <CodigoMunicipio>2930709</CodigoMunicipio>
+    <Uf>BA</Uf>
+    <CodigoPais>1058</CodigoPais>
+    <Cep>43700-000</Cep>
+</Endereco>
+<Contato>
+    <Telefone></Telefone>
+    <Email>nfe.servico@vale.com</Email>
+</Contato>
+                            </Tomador>
+                            <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
+                            <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                            <IncentivoFiscal>2</IncentivoFiscal>
+                        </InfDeclaracaoPrestacaoServico>
+                    </DeclaracaoPrestacaoServico>
+                </InfNfse>
+            </Nfse>
+        </CompNfse>
+    </ListaNfse>
+</GerarNfseResposta>

@@ -1,0 +1,28 @@
+<div class="contextual">
+
+  <% if @issue.editable? %>
+    <% if @allowed_statuses.length > 1 && @allowed_statuses.length <= 4 && Setting.try(:plugin_redmine_improve_custom_fields)[:issue_status_buttons] %>
+      <% @allowed_statuses.reject { |as| as == @issue.status }.each do |allowed_status| %>
+        <%= link_to allowed_status.name, 'javascript:void(0);', :class => 'issue-status-button', 'data-status' => allowed_status.id %>
+      <% end %>
+    <% end %>
+    <%= link_to l(:button_edit), edit_issue_path(@issue), :onclick => 'showAndScrollTo("update", "issue_notes"); return false;', :class => 'icon icon-edit', :accesskey => accesskey(:edit) %>
+  <% end %>
+
+  <%= link_to l(:button_log_time), new_issue_time_entry_path(@issue), :class => 'icon icon-time-add' if User.current.allowed_to?(:log_time, @project) %>
+  <%= watcher_link(@issue, User.current) %>
+  <%= link_to l(:button_copy), project_copy_issue_path(@project, @issue), :class => 'icon icon-copy' if User.current.allowed_to?(:copy_issues, @project) && Issue.allowed_target_projects.any? %>
+  <%= link_to l(:button_delete), issue_path(@issue), :data => {:confirm => issues_destroy_confirmation_message(@issue)}, :method => :delete, :class => 'icon icon-del' if User.current.allowed_to?(:delete_issues, @project) %>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'buttons', plugin: 'redmine_improve_custom_fields' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.issue-status-button').on('click', function() {
+        $('#issue_status_id').val($(this).data('status'));
+        $('#issue-form').submit();
+      });
+    });
+  </script>
+<% end %>

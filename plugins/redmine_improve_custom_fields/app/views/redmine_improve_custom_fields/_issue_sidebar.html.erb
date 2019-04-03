@@ -1,0 +1,41 @@
+<% if Setting.plugin_redmine_improve_custom_fields['show_issues_in_sidebar'] %>
+  <% issues = Issue.visible.open.
+        where(:author_id => User.current.id).
+        limit(5).
+        order("#{Issue.table_name}.updated_on DESC").pluck(:id, :subject) %>
+
+  <% if issues.any? %>
+    <h3>
+      <%= link_to l(:label_reported_issues),
+            issues_path(:set_filter => 1, :status_id => '*', :author_id => 'me', :sort => 'updated_on:desc') %>
+      (<%= Issue.visible.open.where(:author_id => User.current.id).count %>)
+    </h3>
+
+    <ul>
+      <% issues.each do |issue| %>
+        <li><%= link_to "##{issue[0]} #{issue[1]}", issue_path(issue[0]) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% issues = Issue.visible.open.
+        where(:assigned_to_id => ([User.current.id] + User.current.group_ids)).
+        limit(5).
+        includes(:priority).
+        references(:priority).
+        order("#{IssuePriority.table_name}.position DESC, #{Issue.table_name}.updated_on DESC").pluck(:id, :subject) %>
+
+  <% if issues.any? %>
+    <h3>
+      <%= link_to l(:label_assigned_to_me_issues),
+      issues_path(:set_filter => 1, :assigned_to_id => 'me', :sort => 'priority:desc,updated_on:desc') %>
+      (<%= Issue.visible.open.where(:assigned_to_id => ([User.current.id] + User.current.group_ids)).count %>)
+    </h3>
+
+    <ul>
+      <% issues.each do |issue| %>
+        <li><%= link_to "##{issue[0]} #{issue[1]}", issue_path(issue[0]) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

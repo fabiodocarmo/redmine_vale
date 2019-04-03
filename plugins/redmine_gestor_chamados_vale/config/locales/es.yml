@@ -1,0 +1,11 @@
+es:
+  field_project: Área Responsable
+  label_helpdesk_customer_profile: Perfil del proveedor
+  label_helpdesk_show_contact_card: Visualizar perfil del proveedor
+  field_has_invoice: Tiene factura
+  hide_areas_label: Ocultar Áreas
+  show_areas_label: Exhibir Áreas
+  hide_label: Ocultar
+  show_label: Exhibir
+  read_more_label: Leer Más...
+  read_less_label: Leer Menos...

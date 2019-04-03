@@ -1,0 +1,13 @@
+# English strings go here for Rails i18n
+en:
+  status_change:
+    settings_label: 'StatusChangeJob settings'
+    hour_label: 'Hour:'
+    minutes_label: 'Minute:'
+    days_label: 'Days:'
+    old_status_id_label: 'Old Status ID:'
+    status_id_label: 'New Status ID:'
+
+  order_type:
+    settings_label: 'OrderTypeJob settings'
+    missing_order_type: 'Default Value'

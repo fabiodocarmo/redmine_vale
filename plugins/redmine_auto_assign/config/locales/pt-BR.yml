@@ -1,0 +1,55 @@
+pt-BR:
+  label_atribuicao_automaticas: Atribuição Automática
+  column_invalid_rows: "O valor da coluna %{column} da(s) seguinte(s) linha(s) não é válido: %{rows}"
+  views:
+    pagination:
+      first: 'Primeira'
+      last: 'Última'
+      previous: 'Anterior'
+      next: 'Próxima'
+      truncate: '...'
+
+  auto_assignment_edit_success_message: Atribuição automática editada com sucesso.
+  auto_assignment_create_success_message: Atribuição automática criada com sucesso.
+  import_success_message: Importação concluída com sucesso
+  access_delete_confirmation_message: Tem certeza que deseja deletar esse acesso?
+  no_auto_assignment_message: Não há atribuições automáticas cadastradas no sistema
+
+  no_file_to_import_error_message: É necessário selecionar um arquivo para importar.
+  export_template_filename: Template_Importação_Atribuição_Automática.xlsx
+
+  redistribute_type_workload: Carga de Trabalho
+  redistribute_type_round: Circular
+  redistribute_type_author: Autor
+  redistribute_type_watcher: Observador
+  redistribute_type_open: Primeiro a Abrir
+  redistribute_type_me: Usuário Corrente
+  redistribute_type_assigned_to_watcher: Atribuído para como Observador
+  redistribute_type_author_manager: Gestor do Autor
+  redistribute_type_assigned_to_manager: Gestor do Atribuído para
+  redistribute_type_current_user_manage: Gestor do Usuário corrente
+
+  label_status_from: Situação de
+  label_status_to: Situação para
+  label_redistribute: Redistribuir
+  label_auto_assignment_type: Tipo de atribuição automática
+  label_use_custom_field: Usar campo personalizado?
+  label_import_template: Template para importação
+  label_custom_field_value: Valor do campo personalizado
+
+  user_custom_field: Campo customizado do usuário
+
+  auto_assignment_edit_header: Editar atribuição automática
+  auto_assignment_list_header: Lista de atribuição automática
+  new_auto_assignment_header: Nova atribuição automática
+  detail_auto_assignment_header: Detalhes da atribuição automática
+
+  link_to_new_auto_assignment: Nova atribuição automática
+  redistribute_eq: Redistribuir é
+  use_custom_field_true: Usa campo customizado?
+  link_to_new_atribuicao_automatica: Nova Atribuição Automática
+  no_atribuicao_automatica_message: 'Nenhuma atribuição automática encontrada'
+
+  all_projects_label: Todos os processos
+  all_trackers_label: Todos os tipos de tarefa
+  all_status_from_label: Todos os status de

@@ -1,0 +1,48 @@
+<%#encoding: utf-8%>
+<h2><%= l(:block_duplicates_detail_header) %></h2>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <b><%= l(:label_project) %>:</b>
+  <% @block_duplicate.find_project_id.each do |project_id| %>
+    <li> <%= "#{project_id.name}" %></li>
+  <% end %>
+</p>
+
+<p>
+  <b><%= l(:label_tracker) %>:</b>
+  <% @block_duplicate.find_tracker_id.each do |tracker_id| %>
+    <li> <%= "#{tracker_id.name}" %></li>
+  <% end %>
+</p>
+
+<p>
+  <b><%= l(:custom_fields_to_consider_label) %>:</b>
+  <ul>
+  	<% @block_duplicate.find_custom_fields.each do |custom_field| %>
+  		<li><%= "#{custom_field.id} - #{custom_field.name}" %></li>
+  	<% end %>
+  </ul>
+</p>
+
+<p>
+  <b><%= l(:statuses_to_consider_label) %>:</b>
+  <ul>
+  	<% statuses = @block_duplicate.find_statuses
+			statuses.each do |status| %>
+  		<li><%= status.name %></li>
+  	<% end %>
+		<% if statuses.blank?  %>
+			<li><%= l(:all_statuses_label) %></li>
+		<% end %>
+  </ul>
+</p>
+
+<p>
+  <b> <%= l(:label_duplicated_copies_enabled)%> </b><br />
+  <ul>
+    <li><%= @block_duplicate.copy_flag %> </li>
+  </ul>
+</p>
+
+<%= link_to l(:button_back), block_duplicates_path %>

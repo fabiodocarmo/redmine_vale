@@ -1,0 +1,78 @@
+<%= form_tag(imports_path, :class => 'import_issue', :multipart => true, id: 'import_issues_form') do %>
+  <fieldset class="box">
+
+    <div class="field">
+      <label> <b><%= l(:label_import_template) %>:</b></label><br />
+      <%= select_tag :import_template_id, options_from_collection_for_select(import_templates,"id","name", import.settings["selected_template"]), include_blank: true, onchange: 'updateForm();', class: 'import' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= l(:label_project) %>:</b></label><br />
+      <%= select_tag :project_id, options_from_collection_for_select(default_projects,"id","name", import.settings["project_id"]), include_blank: true, onchange: 'updateForm();', class: 'import' %><br /><br />
+    </div>
+    <div class="field">
+      <label> <b><%= l(:label_tracker) %>:</b></label><br />
+      <%= select_tag :tracker_id, options_from_collection_for_select(import_trackers, "id", "name", import.settings["tracker_id"]), include_blank: true, onchange: 'updateForm();', class: 'import' %><br /><br />
+    </div>
+
+    <table class="query-columns">
+      <tr>
+        <td style="padding-left:0">
+          <b><%= l(:label_custom_field_plural) %></b>
+          <br />
+
+          <%= select_tag 'available_columns',
+                  options_for_select(import_custom_fields),
+                  :multiple => true, :size => 10, :style => "width:200px",
+                  :ondblclick => "moveOptions(this.form.available_columns, this.form.selected_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" value="&#8594;"
+           onclick="moveOptions(this.form.available_columns, this.form.selected_columns);" /><br />
+          <input type="button" value="&#8592;"
+           onclick="moveOptions(this.form.selected_columns, this.form.available_columns);" />
+        </td>
+        <td>
+          <b><%= l(:label_select_custom_field_plural)  %></b>
+          <br />
+
+          <%= select_tag 'selected_columns', options_from_collection_for_select((import.settings["custom_fields"].blank? ? [] : @import.settings["custom_fields"].map { |id| CustomField.find_by_id(id) }.compact),"id", "name"),
+              multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.selected_columns, this.form.available_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.selected_columns);" /><br />
+          <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.selected_columns);" /><br />
+          <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.selected_columns);" /><br />
+          <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.selected_columns);" />
+        </td>
+      </tr>
+    </table>
+    <b><%= l(:label_save_template) %></b>
+    <%= check_box_tag 'save_template' %>
+  </fieldset>
+
+  <fieldset class="box">
+    <legend><%= l(:label_select_file_to_import) %> Arquivo:</legend>
+    <p>
+      <%= file_field_tag 'file' %>
+    </p>
+  </fieldset>
+
+  <script type="text/javascript">
+    function updateForm() {
+      $.ajax({
+        url: "<%= import_issues_form_form_path(format: 'js') %>",
+        method: 'POST',
+        data: $('#import_issues_form').serialize()
+      });
+    };
+
+    $( document ).ready(function() {
+      $('.import_issue').attr('onsubmit', 'selectAllOptions("selected_columns");');
+      $("#import_issues_form select.import").chosen();
+    });
+  </script>
+
+  <p><%= submit_tag l(:label_next).html_safe + " &#187;".html_safe, :name => nil %></p>
+
+<% end %>

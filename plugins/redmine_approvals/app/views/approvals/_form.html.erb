@@ -1,0 +1,94 @@
+<%= form_for(@resource) do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= t('project_label') %>: </b></label><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('tracker_label') %>: </b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('status_from_label') %>: </b></label><br />
+    <%= f.collection_select :status_from_id, IssueStatus.all, :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('status_to_label') %>: </b></label><br />
+    <%= f.collection_select :status_to_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('group_label') %>: </b></label><br />
+    <%= f.collection_select :group_id, Group.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('custom_field_label') %>: </b></label><br />
+    <%= f.collection_select :custom_field_id, CustomField.where(type: 'IssueCustomField').sorted.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('sign_label') %>: </b></label><br />
+    <%= f.select :sign, Approval::SIGNS.map { |k,v| [v,k] } %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('value_label') %>: </b></label><br />
+    <%= f.text_field :value %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('level_label') %>: </b></label><br />
+    <%= f.text_field :level %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('level_below_label') %>: </b></label><br />
+    <%= f.text_field :level_below %><br /><br />
+  </div>
+
+  <fieldset class="box"><legend><%= l(:label_filter_plural) %></legend>
+    <div class="field">
+      <label> <b><%= l(:use_custom_field_label) %></b></label><br />
+      <%= f.check_box :use_second_custom_field %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('second_custom_field_label') %>: </b></label><br />
+      <%= f.collection_select :second_custom_field_id, CustomField.where(type: 'IssueCustomField').sorted.all, :id, :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('second_custom_field_value_label') %>: </b></label><br />
+      <%= f.text_field :second_custom_field_value %><br /><br />
+    </div>
+  </fieldset>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>
+
+<script>
+
+</script>

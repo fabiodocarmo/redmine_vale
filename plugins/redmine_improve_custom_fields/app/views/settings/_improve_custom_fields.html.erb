@@ -1,0 +1,99 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('improve_fields.only_one_project_mode') %>:</th>
+      <td>
+        <%= select_tag 'settings[only_one_project_mode]', options_for_select([[t('improve_fields.normal'), :normal], [t('improve_fields.read_only'), :read_only]], settings['only_one_project_mode'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.only_one_tracker_mode') %>:</th>
+      <td>
+        <%= select_tag 'settings[only_one_tracker_mode]', options_for_select([[t('improve_fields.normal'), :normal], [t('improve_fields.read_only'), :read_only]], settings['only_one_tracker_mode'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.only_one_status_mode') %>:</th>
+      <td>
+        <%= select_tag 'settings[only_one_status_mode]', options_for_select([[t('improve_fields.normal'), :normal], [t('improve_fields.read_only'), :read_only], [t('improve_fields.hide'), :hide]], settings['only_one_status_mode'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.parent_issue_id_mode') %>:</th>
+      <td>
+        <%= select_tag 'settings[parent_issue_id_mode]', options_for_select([[t('improve_fields.normal'), :normal], [t('improve_fields.read_only'), :read_only], [t('improve_fields.hide'), :hide]], settings['parent_issue_id_mode'])  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.view_documents') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[view_documents]', true, settings['view_documents']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.use_hint') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[use_hint]', true, settings['use_hint']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.select_empty_tracker') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[select_empty_tracker]', true, settings['select_empty_tracker']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.select_as_chosen') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[select_as_chosen]', true, settings['select_as_chosen']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.attachments_description_possible_values') %>:</th>
+      <td>
+        <%= text_area_tag 'settings[attachments_description_possible_values]', settings['attachments_description_possible_values']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.show_tracker_description_on_show') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[show_tracker_description_on_show]', true, settings['show_tracker_description_on_show']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('improve_fields.format_integer') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[format_integer]', false, settings['format_integer']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('improve_fields.filter_assign_to') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[filter_assign_to]', false, settings['filter_assign_to']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('improve_fields.issue_status_buttons') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[issue_status_buttons]', false, settings['issue_status_buttons']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('improve_fields.hide_empty_fields') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[hide_empty_fields]', false, settings['hide_empty_fields']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('improve_fields.show_issues_in_sidebar') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[show_issues_in_sidebar]', true, settings['show_issues_in_sidebar']  %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

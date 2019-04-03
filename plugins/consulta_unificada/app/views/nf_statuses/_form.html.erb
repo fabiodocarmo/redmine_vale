@@ -1,0 +1,43 @@
+<%= form_for(nf_status, url: {controller: :nf_statuses, action: action}) do |f| %>
+  <% if nf_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nf_status.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+
+      <ul>
+        <% nf_status.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:field_status) %>: </b></label><br />
+    <%= @nf_status.status %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_copy_source) %>: </b></label><br />
+    <%= @nf_status.source %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:field_name) %>: </b></label><br />
+    <%= f.text_field :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:warning_message_label) %>: </b></label><br />
+    <%= f.text_field :warning_msg %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>

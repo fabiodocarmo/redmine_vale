@@ -1,0 +1,34 @@
+<h1><%= l(:faq_link_list_header) %></h1>
+
+<p>
+  <%= link_to l(:link_to_new_faq), new_faq_link_path %>
+</p>
+
+<%if !@faq_links.empty? %>
+  <div class="autoscroll">
+    <table class="list issues">
+      <tr>
+        <th><%= l(:label_tracker) %></th>
+        <th><%= l(:label_link) %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @faq_links.each do |faq| %>
+        <tr>
+          <td><%= faq.tracker.try(&:name) %></td>
+          <td><%= faq.faq_link %></td>
+
+          <td><%= link_to l(:label_details), faq %></td>
+          <td><%= link_to l(:button_edit), edit_faq_link_path(faq) %></td>
+          <td><%= link_to l(:button_delete), faq, confirm: l(:delete_access_confirmation), method: :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <br />
+<% else %>
+  <h1><%= l(:no_faqs_registered_message) %></h1>
+<% end %>

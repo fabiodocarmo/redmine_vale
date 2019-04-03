@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+    <Nfse versao="2.01">
+        <InfNfse Id="97007O0XF9A3HMQYHCU6958UD0L2PJCI">
+            <Numero>35</Numero>
+            <CodigoVerificacao>RSI887BZV</CodigoVerificacao>
+            <DataEmissao>2016-03-04T15:55:21</DataEmissao>
+            <OutrasInformacoes>Val. Aprox. Tributos: Federal (0,00%) R$0,00 Estadual (0,00%) R$0,00 Municipal (0,00%) R$0,00</OutrasInformacoes>
+            <ValoresNfse>
+                <BaseCalculo>20216.98</BaseCalculo>
+                <Aliquota>2.79</Aliquota>
+                <ValorIss>564.05</ValorIss>
+                <ValorLiquidoNfse>19652.93</ValorLiquidoNfse>
+            </ValoresNfse>
+            <PrestadorServico>
+                <IdentificacaoPrestador>
+                    <CpfCnpj>
+                        <Cnpj>15145598000184</Cnpj>
+                    </CpfCnpj>
+                    <InscricaoMunicipal>002732</InscricaoMunicipal>
+                </IdentificacaoPrestador>
+                <RazaoSocial>M R V TRANSPORTES LTDA-EPP</RazaoSocial>
+                <NomeFantasia>M R V LOCAÇÕES</NomeFantasia>
+                <Endereco>
+                    <Endereco>MANOEL BORGES</Endereco>
+                    <Numero>0</Numero>
+                    <Complemento>S/N QUADRA 72 LOTE 24</Complemento>
+                    <Bairro>LOTEA. NOVO HORIZONTE III</Bairro>
+                    <CodigoMunicipio>1502152</CodigoMunicipio>
+                    <Uf>PA</Uf>
+                    <CodigoPais>1058</CodigoPais>
+                    <Cep>68537000</Cep>
+                </Endereco>
+                <Contato>
+                    <Telefone>9499139-6481</Telefone>
+                    <Email></Email>
+                </Contato>
+            </PrestadorServico>
+            <OrgaoGerador>
+                <CodigoMunicipio>1502152</CodigoMunicipio>
+                <Uf>PA</Uf>
+            </OrgaoGerador>
+            <DeclaracaoPrestacaoServico>
+                <InfDeclaracaoPrestacaoServico>
+                    <Competencia>2016-03-04</Competencia>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>20216.98</ValorServicos>
+                            <ValorDeducoes>0.00</ValorDeducoes>
+                            <ValorPis>0.00</ValorPis>
+                            <ValorCofins>0.00</ValorCofins>
+                            <ValorInss>0.00</ValorInss>
+                            <ValorIr>0.00</ValorIr>
+                            <ValorCsll>0.00</ValorCsll>
+                            <OutrasRetencoes>0.00</OutrasRetencoes>
+                            <ValorIss>564.05</ValorIss>
+                            <Aliquota>2.79</Aliquota>
+                            <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                            <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+                        <IssRetido>1</IssRetido>
+                        <ResponsavelRetencao>1</ResponsavelRetencao>
+                        <ItemListaServico>16.01</ItemListaServico>
+                        <CodigoCnae>4921301</CodigoCnae>
+                        <CodigoTributacaoMunicipio>0000160000001</CodigoTributacaoMunicipio>
+                        <Discriminacao>Prestação de serviço de transporte de óleo diesel entre os postos de combustíveis credenciados pela Vale, no Município de Canaã dos Carajás, no Pará, e áreas de atuação do Projeto S11D, Canteiro SE, localizado no município de Canaã dos Carajás - Pará e demais áreas afins visando o abastecimento de geradores, bem como outros equipamentos necessários para a funcionalidade operacional do Projeto Período da medição 21/01/2016 a 20/02/2016 Nº CONTRATO: 4600023946 Nº PEDIDO: 4502497246/00010 Nº FRS: 1001504707  Nº RF: 6200345336   Bancos Sicredi – Cod. 748 agencia 3828 Conta corrente 15692 2-20.216,98 </Discriminacao>
+                        <CodigoMunicipio>1502152</CodigoMunicipio>
+                        <ExigibilidadeISS>1</ExigibilidadeISS>
+                        <MunicipioIncidencia>1502152</MunicipioIncidencia>
+                    </Servico>
+                    <Prestador>
+                        <CpfCnpj>
+                            <Cnpj>15145598000184</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>000012377</InscricaoMunicipal>
+                    </Prestador>
+                    <Tomador>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+<Cnpj>33592510008996</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>2322</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S.A. - Mina S11D:MPL: 1001</RazaoSocial>
+                        <Endereco>
+                            <Endereco>ESTRADA VICINAL VP-12</Endereco>
+                            <Numero>S/N</Numero>
+                            <Bairro>MOZARTINOPOLIS</Bairro>
+                            <CodigoMunicipio>1502152</CodigoMunicipio>
+                            <Uf>PA</Uf>
+                            <Cep>68537000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>9433525564</Telefone>
+                            <Email>nfe.servico@vale.com</Email>
+                        </Contato>
+                    </Tomador>
+                    <RegimeEspecialTributacao>6</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                    <IncentivoFiscal>2</IncentivoFiscal>
+                </InfDeclaracaoPrestacaoServico>
+            </DeclaracaoPrestacaoServico>
+        </InfNfse>
+    </Nfse>
+</CompNfse>

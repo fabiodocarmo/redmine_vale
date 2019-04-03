@@ -1,0 +1,119 @@
+<ConsultarNfseRpsResposta xmlns:tc="http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd" xmlns:ts="http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_simples.xsd" xmlns="http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_nfse_rps_resposta.xsd">
+  <CompNfse>
+    <tc:Nfse>
+      <tc:InfNfse>
+        <tc:Numero>215</tc:Numero>
+        <tc:CodigoVerificacao> 55 3E C5</tc:CodigoVerificacao>
+        <tc:DataEmissao>2015-12-02T17:48:01</tc:DataEmissao>
+        <tc:NaturezaOperacao>1</tc:NaturezaOperacao>
+        <tc:RegimeEspecialTributacao>1</tc:RegimeEspecialTributacao>
+        <tc:OptanteSimplesNacional>2</tc:OptanteSimplesNacional>
+        <tc:IncentivadorCultural>2</tc:IncentivadorCultural>
+        <tc:Competencia>201511</tc:Competencia>
+        <tc:NfseSubstituida>1</tc:NfseSubstituida>
+        <tc:OutrasInformacoes>&lt;br&gt; &amp;bull; .</tc:OutrasInformacoes>
+        <tc:Servico>
+          <tc:ItemListaServico>1406</tc:ItemListaServico>
+          <tc:CodigoCnae>3314799</tc:CodigoCnae>
+          <tc:CodigoTributacaoMunicipio>3314799</tc:CodigoTributacaoMunicipio>
+          <tc:Discriminacao>Código do serviço: 3002809 - Descrição do serviço: MONTAGEM PROTEÇÕES E REVESTIMENTO. Período Medição: 21.10.2015 a 20.11.15.
+
+Pedido: 4502288444
+FRS: 1001332266
+RF: 6200312495
+
+Local da prestação do serviço: Mina do Sossego PA 1502152/Canãa dos Carajás/PA
+
+"Mão de Obra aplicada sobre 50% do valor total da nota
+Base de Cálculo para retenção do I.N.S.S: R$ 182.860,17"
+
+
+</tc:Discriminacao>
+          <tc:MunicipioPrestacaoServico>5201405</tc:MunicipioPrestacaoServico>
+          <tc:Valores>
+            <tc:ValorServicos>365720.34</tc:ValorServicos>
+            <tc:ValorDeducoes>0</tc:ValorDeducoes>
+            <tc:ValorPis>2377.18</tc:ValorPis>
+            <tc:ValorCofins>10971.61</tc:ValorCofins>
+            <tc:ValorInss>20114.62</tc:ValorInss>
+            <tc:ValorIr>0</tc:ValorIr>
+            <tc:ValorCsll>3657.2</tc:ValorCsll>
+            <tc:IssRetido>2</tc:IssRetido>
+            <tc:OutrasRetencoes>0</tc:OutrasRetencoes>
+            <tc:BaseCalculo>365720.34</tc:BaseCalculo>
+            <tc:Aliquota>3</tc:Aliquota>
+            <tc:ValorLiquidoNfse>328599.73</tc:ValorLiquidoNfse>
+            <tc:ValorIssRetido>0</tc:ValorIssRetido>
+            <tc:ValorIss>10971.61</tc:ValorIss>
+            <tc:DescontoCondicionado>0</tc:DescontoCondicionado>
+            <tc:DescontoIncondicionado>0</tc:DescontoIncondicionado>
+          </tc:Valores>
+        </tc:Servico>
+        <tc:PrestadorServico>
+          <tc:IdentificacaoPrestador>
+            <tc:CpfCnpj>
+              <tc:Cnpj>12465470000100</tc:Cnpj>
+            </tc:CpfCnpj>
+            <tc:InscricaoMunicipal>482916</tc:InscricaoMunicipal>
+          </tc:IdentificacaoPrestador>
+          <tc:RazaoSocial>Meintec Engenharia e Consultoria Ltda</tc:RazaoSocial>
+          <tc:NomeFantasia>Meintec Engenharia e Consultoria Ltda</tc:NomeFantasia>
+          <tc:Endereco>
+            <tc:Endereco>Rua 41</tc:Endereco>
+            <tc:Complemento>LOTE 07 QUADRA27   </tc:Complemento>
+            <tc:Bairro>Jardim Bela Vista - Continuação</tc:Bairro>
+            <tc:Cidade>5201405</tc:Cidade>
+            <tc:Estado>GO</tc:Estado>
+            <tc:Cep>74912130</tc:Cep>
+          </tc:Endereco>
+          <tc:Contato>
+            <tc:Telefone>6281326677</tc:Telefone>
+          </tc:Contato>
+        </tc:PrestadorServico>
+        <tc:TomadorServico>
+          <tc:IdentificacaoTomador>
+            <tc:CpfCnpj>
+              <tc:Cnpj>33592510000901</tc:Cnpj>
+            </tc:CpfCnpj>
+          </tc:IdentificacaoTomador>
+          <tc:RazaoSocial>Vale S. A.</tc:RazaoSocial>
+          <tc:Endereco>
+            <tc:Endereco>VL do Sossego</tc:Endereco>
+            <tc:Numero>s/n</tc:Numero>
+            <tc:Bairro>Vila do Sossego</tc:Bairro>
+            <tc:Cidade>1502152</tc:Cidade>
+            <tc:Estado>PA</tc:Estado>
+            <tc:Cep>68537000</tc:Cep>
+          </tc:Endereco>
+          <tc:Contato></tc:Contato>
+        </tc:TomadorServico>
+        <tc:OrgaoGerador>
+          <tc:CodigoMunicipio>5201405</tc:CodigoMunicipio>
+          <tc:Uf>GO</tc:Uf>
+        </tc:OrgaoGerador>
+        <tc:ValorCredito>0</tc:ValorCredito>
+      </tc:InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+          <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+          <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+          <Reference URI="http://www.w3.org/TR/2000/REC-xhtml1-20000126/">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+            <DigestValue>/I6L4AkCcCaok/0ohrUjLHdTmRc=</DigestValue>
+          </Reference>
+        </SignedInfo>
+        <SignatureValue>
+        </SignatureValue>
+        <KeyInfo>
+          <X509Data>
+            <X509Certificate>
+            </X509Certificate>
+          </X509Data>
+        </KeyInfo>
+      </Signature>
+    </tc:Nfse>
+  </CompNfse>
+</ConsultarNfseRpsResposta>

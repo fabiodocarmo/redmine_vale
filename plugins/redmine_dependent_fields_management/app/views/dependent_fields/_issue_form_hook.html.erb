@@ -1,0 +1,51 @@
+<%= javascript_tag do %>
+  $(document).ready(function(){
+    <% custom_fields = CustomField.where(
+            id: DependentField.includes(:main_field)
+                .where(avaliable: true)
+                .where("(project_id = ? or project_id is null) and (tracker_id = ? or tracker_id is null) and dependent_type = 'sugestion'", issue.project_id, issue.tracker_id)
+                .select(:main_field_id)
+          ).pluck(:id) %>
+    <% custom_fields.each do |cf_id| %>
+      var get_<%= cf_id %>_suggestions = function() {
+        $.ajax({
+          url: '<%= suggestions_dependent_fields_path(project_id: issue.project_id, tracker_id: issue.tracker_id) %>',
+          data: {
+            id: '<%= cf_id %>',
+            value: $("#issue_custom_field_values_<%= cf_id %>").val()
+          }
+        }).done(function(data) {
+          for(var i=0; i < data.length; i++) {
+            $("#issue_custom_field_values_"+data[i][0]).val(data[i][1]).trigger("chosen:updated");
+          }
+        });
+      }
+
+      $("[name='issue[custom_field_values][<%= cf_id %>]']").change(get_<%= cf_id %>_suggestions);
+      get_<%= cf_id %>_suggestions();
+    <% end %>
+
+    <% custom_fields = CustomField.where(
+            id: DependentField.includes(:main_field)
+                .where(avaliable: true)
+                .where("(project_id = ? or project_id is null) and (tracker_id = ? or tracker_id is null) and (dependent_type = 'visibility' or dependent_type = 'value')", issue.project_id, issue.tracker_id)
+                .select(:main_field_id)
+            ).pluck(:id) %>
+
+    <% if Redmine::VERSION::MAJOR >= 3 %>
+      <% @update_form_url ||= update_issue_form_path(@project, @issue) %>
+    <% else %>
+      <% @update_form_url ||= project_issue_form_path(@project, id: @issue, format: 'js') %>
+    <% end %>
+
+    <% custom_fields.each do |cf_id| %>
+      $("[name='issue[custom_field_values][<%= cf_id %>]']").change(function() {
+        updateIssueFrom('<%= escape_javascript(@update_form_url) %>')
+      });
+
+      $("[name='issue[custom_field_values][<%= cf_id %>][]']").change(function() {
+        updateIssueFrom('<%= escape_javascript(@update_form_url) %>')
+      });
+    <% end %>
+  });
+<% end %>

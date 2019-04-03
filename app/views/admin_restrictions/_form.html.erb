@@ -1,0 +1,27 @@
+<%= error_messages_for 'admin_restriction' %>
+
+<div class="box tabular">
+  <p><%= f.text_field :name, :required => true %></p>
+
+  <h3><%= l(:label_restriction) %></h3>
+  <div class="box tabular" id="restriction">
+    <fieldset>
+      <% Redmine::AccessControl.restrictions.each do |restriction| %>
+        <label class="floating">
+        <%= check_box_tag 'admin_restriction[restrictions][]', restriction.name, (@admin_restriction.restrictions.include? restriction.name.to_s),
+              :id => "admin_restriction_restriction_#{restriction.name}" %>
+        <%= l_or_humanize(restriction.name, :prefix => 'restriction_') %>
+        </label>
+      <% end %>
+    </fieldset>
+  <br /><%= check_all_links 'restriction' %>
+  <%= hidden_field_tag 'admin_restriction[restrictions][]', '' %>
+</div>
+
+<%= javascript_tag do %>
+$(document).ready(function(){
+  $("#admin_restriction_restriction_manage_members").change(function(){
+    $("#manage_members_options").toggle($(this).is(":checked"));
+  }).change();
+});
+<% end %>

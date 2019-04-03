@@ -1,0 +1,10 @@
+<%= render :super %>
+
+<% if !issue.notify_creation_of.blank? && !users.first.external? %>
+  <fieldset><legend><%= l(:label_follow_issues) %></legend>
+  <% issue.notify_creation_of.each do |new_issue| %>
+    <p><%= link_to("#{new_issue.tracker.name} ##{new_issue.id}: #{new_issue.subject}", issue_url(new_issue)) %></p>
+    <br />
+  <% end %>
+  </fieldset>
+<% end %>

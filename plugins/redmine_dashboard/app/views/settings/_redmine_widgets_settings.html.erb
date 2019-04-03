@@ -1,0 +1,38 @@
+<table>
+  <tbody>
+    <tr>
+      <th> Permitir exportar gráficos?</th>
+      <td>
+        <%= select_tag 'settings[export_widgets]',
+        options_for_select([["Sim", true], ["Não", false]], settings['export_widgets']), :style => 'width:80px;height:25px' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th> Exibir legendas nos gráficos?</th>
+      <td>
+      	<%= select_tag 'settings[show_legend]', options_for_select([["Sim", true], ["Não", false]], settings['show_legend']), :style => 'width:80px;height:25px' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Base 64 da imagem de fundo</th>
+      <td>
+        <%= text_area_tag 'settings[cover_img]', settings['cover_img'] %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Base 64 do logo</th>
+      <td>
+        <%= text_area_tag 'settings[logo_img]', settings['logo_img'] %>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a href='http://www.base64-image.de/step-1.php'>http://www.base64-image.de/step-1.php</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

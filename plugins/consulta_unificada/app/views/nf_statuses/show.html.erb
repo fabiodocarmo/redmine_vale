@@ -1,0 +1,16 @@
+<div class="field">
+  <label> <b><%= l(:name_id_label) %>: </b></label><br />
+  <%= @status_id.name %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:label_copy_source) %>: </b></label><br />
+  <%= @status_id.source %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b><%= l(:warning_message_label)%>: </b></label><br />
+  <%= @status_id.warning_msg %><br /><br />
+</div>
+
+<%= link_to l(:button_back), nf_statuses_path %>

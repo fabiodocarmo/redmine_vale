@@ -1,0 +1,87 @@
+<p>
+  <%= @template %>
+</p>
+<p>
+  <%=
+  if @image_url.present?
+    image_tag @image_url
+  end %>
+</p>
+<style>
+table, th, td {
+ border: 1px solid black;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+tr{
+  font-size: 12px;
+}
+
+th {
+  background-color: #007e7a;
+  color: white;
+}
+</style>
+<div style="clear: both;">
+    <div class="autoscroll">
+      <h2>Lista de Pendências - <% if @is_own %>*Este email foi enviado somente para você.<%else %>*Este email foi enviado para todos os envolvidos e seus superiores até o nível <%= @level %><%end %>
+      </h2>
+      <table class="list resources">
+        <tr>
+          <th>ID Chamado</th>
+          <th>Tipo Chamado</th>
+          <th>Pendente desde</th>
+          <th>Pendente com</th>
+          <th>Dias pendentes</th>
+          <th>Núm. Notificações</th>
+          <th>Razão Social Fornecedor</th>
+          <th>CNPJ Fornecedor</th>
+        </tr>
+
+        <% @resources.each do |resource| %>
+            <tr>
+              <td>
+                <%= resource.issue_id %>
+              </td>
+              <td>
+                <%= Tracker.find_by_id(resource.tracker_id).name %>
+              </td>
+              <td>
+                <%= resource.created_at.strftime("%d/%m/%Y") %>
+              </td>
+              <td>
+                <%= User.find_by_id(resource.user_id).mail %>
+              </td>
+              <td>
+                <%= resource.phase_aging %>
+              </td>
+              <td>
+                <%= resource.sent_number %>
+              </td>
+              <td>
+                <%= resource.supplier_social_name %>
+              </td>
+              <td>
+                <%= resource.supplier_cnpj %>
+              </td>
+
+            </tr>
+        <% end %>
+        <td colspan="8">
+          <b>TOTAL: <%=@resources.size%> </b>
+        </td>
+      </table>
+    </div>
+
+    <br />
+</div>

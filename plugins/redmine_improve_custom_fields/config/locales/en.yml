@@ -1,0 +1,29 @@
+en:
+  field_big_size: Big size
+  field_hide_label: Hide Label
+  label_group_priority_plural: Group Priorities
+  tracker_add_group_priority: Add New Group Priority
+  remove_group_priority: Remove Group Priority
+  field_email_only_in_closed_status: Send email only in closed status
+  type_to_search: Type to search
+  group_priority:
+    author: 'Author Group'
+    enumeration: 'Priority'
+  improve_fields:
+    only_one_status_mode: How show status when have only one
+    parent_issue_id_mode: How show issue parent id
+    view_documents: Mostrar visualizador de documentos
+    use_hint: Use hint
+    select_empty_tracker: Select empty tracker
+    select_tracker: '--- Select Tracker ---'
+    normal: Normal
+    read_only: Read only
+    hide: Hide
+    label_autocomplete: autocomplete
+  field_tracker_description: 'Tracker description'
+  count_characters: '# Characters'
+  label_select_custom_field_plural: 'Selected Custom Fields'
+  link_to_visualize: Visualize
+  showing_label: Showing
+  of_label: of
+  field_countable: 'Contable'

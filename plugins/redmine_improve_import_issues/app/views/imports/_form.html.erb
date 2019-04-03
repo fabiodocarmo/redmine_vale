@@ -1,0 +1,15 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { default_projects: @default_projects,
+                                                import: @import,
+                                                import_trackers: @import_trackers,
+                                                import_custom_fields: @import_custom_fields,
+                                                import_templates: @import_templates} %>
+</div>
+
+<% include_calendar_headers_tags %>
+<%= javascript_include_tag "cocoon", plugin: 'redmine_improve_import_issues' %>
+<%= stylesheet_link_tag "cocoon", plugin: 'redmine_improve_import_issues' %>
+
+<%= javascript_include_tag "chosen.jquery.min", plugin: 'redmine_improve_import_issues' %>
+<%= javascript_include_tag "select_list_move", plugin: 'redmine_improve_import_issues' %>
+<%= stylesheet_link_tag "chosen", plugin: 'redmine_improve_import_issues' %>

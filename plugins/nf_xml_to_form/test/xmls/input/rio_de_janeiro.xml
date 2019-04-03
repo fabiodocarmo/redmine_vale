@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ConsultarNfseResposta
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse>
+                <InfNfse>
+                    <Numero>1072</Numero>
+                    <CodigoVerificacao>XCFK-GQBR</CodigoVerificacao>
+                    <DataEmissao>2015-12-01T11:32:44</DataEmissao>
+                    <NaturezaOperacao>1</NaturezaOperacao>
+                    <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                    <IncentivadorCultural>2</IncentivadorCultural>
+                    <Competencia>2015-12-01T00:00:00</Competencia>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>25200</ValorServicos>
+                            <IssRetido>2</IssRetido>
+                            <BaseCalculo>25200</BaseCalculo>
+                            <ValorLiquidoNfse>25200</ValorLiquidoNfse>
+                        </Valores>
+                        <ItemListaServico>0104</ItemListaServico>
+                        <CodigoTributacaoMunicipio>010403</CodigoTributacaoMunicipio>
+                        <Discriminacao>Nº RF: 6200310799
+CÓD SERVIÇO: 3007568 - SUPORTE PROJETO ERP - VALOR: R$ 25.200,00
+LOCAL DA PRESTAÇÃO DE SERVIÇOS: RJ 3304557/RIO DE JANEIRO/RJ
+
+EMPRESA ENQUADRADA NO SIMPLES NACIONAL</Discriminacao>
+                        <CodigoMunicipio>3304557</CodigoMunicipio>
+                    </Servico>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <Cnpj>06918521000109</Cnpj>
+                            <InscricaoMunicipal>4218140</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>3 M INFORMATICA LTDA</RazaoSocial>
+                        <NomeFantasia>3M INFORMATICA</NomeFantasia>
+                        <Endereco>
+                            <Endereco>AVN DAS AMERICAS 500, BLC 02 SAL 304</Endereco>
+                            <Numero>500</Numero>
+                            <Complemento>BLC 02 SAL 304</Complemento>
+                            <Bairro>BARRA DA TIJUCA</Bairro>
+                            <CodigoMunicipio>3304557</CodigoMunicipio>
+                            <Uf>RJ</Uf>
+                            <Cep>22640904</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>3576-1533</Telefone>
+                            <Email>financeiro@midia3.com.br</Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <TomadorServico>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cnpj>33592510000154</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>552798</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S.A</RazaoSocial>
+                        <Endereco>
+                            <Endereco>AVN DAS AMERICAS 700, BLC 8 LOJ 318</Endereco>
+                            <Numero>700</Numero>
+                            <Complemento>BLC 8 LOJ 318</Complemento>
+                            <Bairro>BARRA DA TIJUCA</Bairro>
+                            <CodigoMunicipio>3304557</CodigoMunicipio>
+                            <Uf>RJ</Uf>
+                            <Cep>22640100</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>34855908</Telefone>
+                            <Email>nfe@vale.com</Email>
+                        </Contato>
+                    </TomadorServico>
+                    <OrgaoGerador>
+                        <CodigoMunicipio>3304557</CodigoMunicipio>
+                        <Uf>RJ</Uf>
+                    </OrgaoGerador>
+                </InfNfse>
+            </Nfse>
+        </CompNfse>
+    </ListaNfse>
+</ConsultarNfseResposta>

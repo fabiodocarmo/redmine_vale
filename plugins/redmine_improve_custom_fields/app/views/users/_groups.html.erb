@@ -1,0 +1,28 @@
+<%= form_for(:user, :url => { :action => 'update' }, :html => {:method => :put}) do %>
+
+<%= link_to t('hide_unchecked'), "javascript:void(0);", class: "btn btn-primary", id: 'hide_unchecked' %>
+
+<div class="box">
+<% Group.givable.sort.each do |group| %>
+<label style="display: block;"><%= check_box_tag 'user[group_ids][]', group.id, @user.groups.to_a.include?(group), :id => nil %> <%= group %></label>
+<% end %>
+<%= hidden_field_tag 'user[group_ids][]', '' %>
+</div>
+<%= submit_tag l(:button_save) %>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var hide = false;
+    $('#hide_unchecked').on('click', function(){
+      labels = $('#tab-content-groups input:checkbox:not(:checked)').parent();
+      if (hide) {
+        labels.show();
+        hide = false;
+      } else {
+        labels.hide();
+        hide = true;
+      }
+    });
+  });
+</script>

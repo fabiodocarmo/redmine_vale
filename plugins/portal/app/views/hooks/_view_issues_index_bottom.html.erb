@@ -1,0 +1,5 @@
+<%= content_for :header_tags do %>
+  <% if Setting.plugin_portal[:auto_reload_issues] %>
+    <%= javascript_include_tag 'auto_reload.js', plugin: 'portal' %>
+  <% end %>
+<% end %>

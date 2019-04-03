@@ -1,0 +1,117 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse versao="1.00">
+      <InfNfse Id="nfse">
+         <Numero>281</Numero>
+         <CodigoVerificacao>768742979</CodigoVerificacao>
+         <DataEmissao>2015-10-13T10:13:00</DataEmissao>
+         <IdentificacaoRps>
+            <Numero></Numero>
+            <Serie></Serie>
+            <Tipo></Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps></DataEmissaoRps>
+         <NaturezaOperacao>1</NaturezaOperacao>
+         <OptanteSimplesNacional>1</OptanteSimplesNacional>
+         <IncentivadorCultural></IncentivadorCultural>
+         <Competencia>2015-10-13</Competencia>
+         <Servico>
+            <Valores>
+               <ValorServicos>1250.00</ValorServicos>
+               <ValorPis></ValorPis>
+               <ValorCofins></ValorCofins>
+               <ValorIr></ValorIr>
+               <ValorCsll></ValorCsll>
+               <IssRetido>2</IssRetido>
+               <ValorIss>0.00</ValorIss>
+               <BaseCalculo>1250.00</BaseCalculo>
+               <Aliquota>0.0387</Aliquota>
+               <ValorLiquidoNfse>1250.00</ValorLiquidoNfse>
+            </Valores>
+            <ItemListaServico>8.02</ItemListaServico>
+            <CodigoTributacaoMunicipio>859960400</CodigoTributacaoMunicipio>
+            <Discriminacao>Prestação de serviços de mão de obra especializada para realização de treinamento de "Rigger", nas dependências da IPS Serviços, em Guarulhos/SP.
+Período: 05/08/15 a 08/08/15.
+Participante: Bruno Lima Ferreira/ CPF: 086.940.987-50.
+Pedido de compra nº: 4502177708.
+
+Dados Bancários:
+Banco Santander 033
+Agência 0766
+Conta 130005143
+IPS SERVIÇOS DE RIGGING LTDA /EPP
+
+VENCIMENTO: 12/11/15.
+
+Valor sem Retenções: Empresa Optante pelo Simples Nacional.
+
+Valor aproximado total de tributos federais, estaduais e municipais conforme disposto na Lei R$ 207,12(16,57%) Fonte: IBPT.
+</Discriminacao>
+            <CodigoMunicipio>3518800</CodigoMunicipio>
+         </Servico>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>15066495000129</Cnpj>
+               <InscricaoMunicipal>206898</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>IPS SERVIÇOS COMERCIO E REPRESENTAÇÃO DE RIGGING LTDA EPP</RazaoSocial>
+            <NomeFantasia></NomeFantasia>
+            <Endereco>
+               <Endereco>RUA RONALDO</Endereco>
+               <Numero>225</Numero>
+               <Complemento>SALA 02</Complemento>
+               <Bairro>JARDIM SANTA MENA</Bairro>
+               <CodigoMunicipio></CodigoMunicipio>
+               <Uf></Uf>
+               <Cep>07096080</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone></Telefone>
+            </Contato>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33592510003765</Cnpj>
+               </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE S/A</RazaoSocial>
+            <Endereco>
+               <Endereco>AV. DE LIGACAO</Endereco>
+               <Numero>3580</Numero>
+               <Bairro>AGUAS CLARAS</Bairro>
+               <CodigoMunicipio></CodigoMunicipio>
+               <Uf></Uf>
+               <Cep>34000000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>3139162150</Telefone>
+               <Email>nfe.servico@vale.com</Email>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3518800</CodigoMunicipio>
+            <Uf>SP</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="NfseAssSMF_nfse">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#nfse">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>IDctIj4P0NsYgLf8VP2z0GJkveM=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>cOLhW920L/fn2jndH3pFd9LMsCFjQ/+h8TfmV5lcz8Qc33njBe3W39alrZTRPdpmn0CcaWG4bu2vvihRsX0HzDztPyBqUs9BF/YIdtKTfDfOlAA7heuaBo8FLaXcbI0TdGJNK5dbYEavbtrqP97ReEozKP/aEjaK8KUlS2KLXgZb5t9mM172l4DarhuVYBY9QTmuyvtlP1lv7OnjI9I+PnuSDKVEGeHZfQQH51EJSEOku4v/YWQkYh9wbVlzZj+JrWSWtkmexomO8cmP9DBq1lcU3lwPsWMyTYesE0xteRHG1KHYJakVH1wJcKu8zxdxmkbGyRASWFgAiJm9Iw2lPQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

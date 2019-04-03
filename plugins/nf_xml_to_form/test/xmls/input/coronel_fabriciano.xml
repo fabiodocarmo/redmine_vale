@@ -1,0 +1,101 @@
+<ConsultarNfseResposta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.abrasf.org.br/nfse">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="NFSe201600000000211">
+               <Numero>201600000000211</Numero>
+               <CodigoVerificacao>CFEK-M4VG</CodigoVerificacao>
+               <DataEmissao>2016-06-02T09:51:07</DataEmissao>
+               <NaturezaOperacao>1</NaturezaOperacao>
+               <OptanteSimplesNacional>1</OptanteSimplesNacional>
+               <IncentivadorCultural>2</IncentivadorCultural>
+               <Competencia>2016-06-01T00:00:00</Competencia>
+               <OutrasInformacoes>CONTRIBUINTE ME, EPP OU MEI/SIMPLES NACIONAL.
+</OutrasInformacoes>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>752.7000</ValorServicos>
+                     <IssRetido>2</IssRetido>
+                     <ValorIss>26.3400</ValorIss>
+                     <BaseCalculo>752.7000</BaseCalculo>
+                     <Aliquota>0.035000</Aliquota>
+                     <ValorLiquidoNfse>752.7000</ValorLiquidoNfse>
+                  </Valores>
+                  <ItemListaServico>1401</ItemListaServico>
+                  <CodigoCnae>4520007</CodigoCnae>
+                  <CodigoTributacaoMunicipio>1401</CodigoTributacaoMunicipio>
+                  <Discriminacao>01- Serviço revisão geral em radiador d'água.        516,75
+220Km- Serv. transp. radiadores.      1.0725 x 220 = 235,95
+
+SPS-6425
+
+Obs.: Serviços executados nas instalações da contratada e com garantia de 180 dias.
+
+C/ 30 dias.</Discriminacao>
+                  <CodigoMunicipio>3119401</CodigoMunicipio>
+               </Servico>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <Cnpj>42968677000168</Cnpj>
+                     <InscricaoMunicipal>50644</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>MM-RADIADORES E SERVICOS LTDA - ME</RazaoSocial>
+                  <NomeFantasia>MM-RADIADORES</NomeFantasia>
+                  <Endereco>
+                     <Endereco>Avenida Presidente Tancredo Neves</Endereco>
+                     <Numero>4234</Numero>
+                     <Bairro>Caladinho</Bairro>
+                     <CodigoMunicipio>3119401</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35171302</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>38427180</Telefone>
+                     <Email>mmradiserv@uol.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <TomadorServico>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510031548</Cnpj>
+                     </CpfCnpj>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S.A.</RazaoSocial>
+                  <Endereco>
+                     <Endereco>Praça Doutor João Paulo Pinheiro</Endereco>
+                     <Numero>S/N</Numero>
+                     <Bairro>Centro</Bairro>
+                     <CodigoMunicipio>3127701</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35010330</Cep>
+                  </Endereco>
+               </TomadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3119401</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+            </InfNfse>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+               <SignedInfo>
+                  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                  <Reference URI="#NFSe201600000000211">
+                     <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                     </Transforms>
+                     <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                     <DigestValue>yvRzkltyb476XQNCKbRdgBoRjsE=</DigestValue>
+                  </Reference>
+               </SignedInfo>
+               <SignatureValue>FMUFlLNJIvX97K5hLBzzA492Zm4HHVA4vn07sR3HTWINiGHsKpXc/+N/pZ+RthdjdwtckhBlvAMttFRAXNBXwYyLNRjjgS0lpCv8ZLg2X+OE9KUjmtnOD4zXC3pzYpmRLDG2nE4Dg4qsCzEUwsOjkPdD+P0P9tvtFx5Qev4Qw4CNpyhk33yOwhrTmcdTYxkUBrmE9yvWXiEhot1VIUFFDZjVfFln373aGp8a6KStUj544+SFjq7wXXCi17EIZW9qRVtjr3H1COqH5scLgEoGgyfBBDhR43IcglHjls7bRh+nAFkulGgwwjxzDQZ54bAANTqrl7wQKCsCPc8gZbfA5g==</SignatureValue>
+               <KeyInfo>
+                  <X509Data>
+                     <X509Certificate>MIIIBjCCBe6gAwIBAgIQIeDNjjdqvQNL2OHALGugKTANBgkqhkiG9w0BAQsFADCBhjELMAkGA1UEBhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwxSTBHBgNVBAsTQENvbXBhbmhpYSBkZSBUZWNub2xvZ2lhIGRhIEluZm9ybWFjYW8gZG8gRXN0YWRvIGRlIE1HIC0gUFJPREVNR0UxFzAVBgNVBAMTDkFDIFBST0RFTUdFIEczMB4XDTE1MDcxNjAwMDAwMFoXDTE2MDcxNDIzNTk1OVowgdkxCzAJBgNVBAYTAkJSMRMwEQYDVQQKFApJQ1AtQnJhc2lsMSIwIAYDVQQLFBlBdXRlbnRpY2FkbyBwb3IgQVIgSnVjZW1nMRswGQYDVQQLFBJBc3NpbmF0dXJhIFRpcG8gQTExFTATBgNVBAsUDElEIC0gODc3Mzg0NTEoMCYGA1UEAxMfTVVOSUNJUElPIERFIENPUk9ORUwgRkFCUklDSUFOTzEzMDEGCSqGSIb3DQEJARYkZmlzY2FsLnRyaWJ1dG9zQGZhYnJpY2lhbm8ubWcuZ292LmJyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi024KcewEbxgw8ib7jeNdQ611B5BSTum7tCdJ+QLG+2l/pNrfJoAAQ0siSaM/Dby9/He/dlKjFOi/Lzn9tC6zIQqSrBJtd/dG2AVxArbGZcqk/naLpXDRwjnvgWPGRjekA/eLG00jmK49SNpVsT2EObGtCWh8r+ME21uYxGTSjZTZzjyCJlJ7E2Hn8tvoB4QMuG8N9czaTZ4Ao7S+Xn8eehCoNLAI6CbZr3pKIVE7OJkm51uNwVKEGjDkhjl8z/7ipkALuozFG1Awb75UkABVDsNuS8duDHCb0sUrfgJXHVbLHsS470J3cNaQEtsb6s+jqQIO+BhpJA8bbSYKdd9cwIDAQABo4IDGTCCAxUwgccGA1UdEQSBvzCBvKA9BgVgTAEDBKA0BDIwNDAzMTk1NTY0MzIxMjY2NjUzMDAwMDAwMDAwMDAwMDAwMDAwTTI4ODQ1NTlTU1BNR6AhBgVgTAEDAqAYBBZST1NBTkdFTEEgTUVOREVTIEFMVkVToBkGBWBMAQMDoBAEDjE5ODc1MDQ2MDAwMTgyoBcGBWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEkZmlzY2FsLnRyaWJ1dG9zQGZhYnJpY2lhbm8ubWcuZ292LmJyMAkGA1UdEwQCMAAwHwYDVR0jBBgwFoAU1WycdcJFeDLu1BYVePffwH/oawswDgYDVR0PAQH/BAQDAgXgMHUGA1UdIARuMGwwagYGYEwBAgEPMGAwXgYIKwYBBQUHAgEWUmh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL0FDX1BST0RFTUdFL0RQQ19BQ19QUk9ERU1HRS5wZGYwggEJBgNVHR8EggEAMIH9MFOgUaBPhk1odHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ1BST0RFTUdFRzMvTGF0ZXN0Q1JMLmNybDBSoFCgToZMaHR0cDovL2ljcC1icmFzaWwub3V0cmFsY3IuY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ1BST0RFTUdFRzMvTGF0ZXN0Q1JMLmNybDBSoFCgToZMaHR0cDovL3JlcG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0NlcnRpc2lnbi9BQ1BST0RFTUdFRzMvTGF0ZXN0Q1JMLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwagYIKwYBBQUHAQEEXjBcMFoGCCsGAQUFBzAChk5odHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2NlcnRpZmljYWRvcy9BQ19QUk9ERU1HRV9HMy5wN2MwDQYJKoZIhvcNAQELBQADggIBAFKRdNSKzEOuqkvo6VQwrN2UEmgWtHfBL9/Q9CzEECWVzQYfe9dFtKv7LhywsdV2xBXDSgpwhwSj22SZvl5SKGXXcX9aaapu2tZQSoFrbsDewcg5u/7q7y47PYX1gINsNCJmOtdpbb+s7abRyGw+3WpKbTSxakc8Y1Db9IOP4Ojxv1rSsya9k9Pb3IBOMwdZXwl2QOSnHg8J8CTb1mq8QxrfKrp0JkBGp5AnUCL2C6djEOh5Y61Pd+j/EnHULmvl4kdcQ3nqACp85yvKSaGOXkBlxMIMwTG5M9oyQbUyaZfCwZCDv5OIyAIaOm37yFkxl2EuG6Bc9HxSjt3hd2BWzkh4Hj2AOrRCUmmIGNcZFBaXYRhE+rq9JFPm5RkHARZMVMrUbFsEHk/+A8Q71dT0eBOgw6zE4quv1TuZ+EiFmTvvy0/whOj+c26sCRFhQur0jn6Ux3o2QT6mQuR505mZO2jjapAhjmzUTqWBXp02Ur+DQaU2fda5YdGKP+mbdC9kuu5QECOv9Zqo5gRcQggAQ0VhHD7lpu/ul2f4MNMP3m9gW/6TyFyERFmUGTeHyfScu7yL6i9ctpGwBRVERDGgZZJw9EsM/zGkBd7+1JeuacFX9ZWpFSQCFPCHSw76eOw7aas9ndTXe61v8EiI7kAwLKe5ROey7K/vwxjDj1vTrymT</X509Certificate>
+                  </X509Data>
+               </KeyInfo>
+            </Signature>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarNfseResposta>

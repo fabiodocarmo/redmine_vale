@@ -1,0 +1,5 @@
+pt-BR:
+  label_default_language: "Idioma padrão"
+  label_default_language_note: "Este idioma não será traduzido, o próprio valor será utilizado."
+  label_locales_to_translate: "Idiomas a serem traduzidos"
+  field_is_possible_values_localizable: "Traduzir valores possíveis"

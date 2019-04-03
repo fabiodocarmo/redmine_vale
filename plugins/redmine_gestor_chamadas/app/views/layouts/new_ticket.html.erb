@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="<%= current_language %>">
+<head>
+<meta charset="utf-8" />
+<title><%=h html_title %></title>
+<meta name="description" content="<%= Redmine::Info.app_name %>" />
+<meta name="keywords" content="issue,bug,tracker" />
+<%= csrf_meta_tag %>
+<%= favicon %>
+<%= stylesheet_link_tag 'jquery/jquery-ui-1.11.0', 'application', :media => 'all' %>
+<%= stylesheet_link_tag 'rtl', :media => 'all' if l(:direction) == 'rtl' %>
+<%= javascript_heads %>
+<%= heads_for_theme %>
+<%= call_hook :view_layouts_base_html_head %>
+<!-- page specific tags -->
+<%= yield :header_tags -%>
+</head>
+<body class="<%=h body_css_classes %>">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="wrapper3">
+
+<div id="header">
+    <h1><%= page_header_title_without_project %></h1>
+</div>
+
+<div id="main" class="<%= sidebar_content? ? '' : 'nosidebar' %>">
+    <div id="sidebar">
+        <%= yield :sidebar %>
+        <%= view_layouts_base_sidebar_hook_response %>
+    </div>
+
+    <div id="content">
+        <%= render_flash_messages %>
+        <%= yield %>
+        <%= call_hook :view_layouts_base_content %>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span><%= l(:label_loading) %></span></div>
+<div id="ajax-modal" style="display:none;"></div>
+
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <%= link_to Redmine::Info.app_name, Redmine::Info.url %> &copy; 2006-2014 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<%= call_hook :view_layouts_base_body_bottom %>
+</body>
+</html>

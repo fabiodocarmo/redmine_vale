@@ -1,0 +1,15 @@
+en:
+  redmine_widget: 'Dashboard'
+  redmine_widget_filters: "Filters"
+  date:
+    formats:
+      month_year: "%B/%Y"
+  dashboard_filters:
+    range_date_from: From
+    range_date_to: To
+    time_segmentation: Time Segmentation
+    priority: Priority
+    daily: Daily
+    weekly: Weekly
+    monthly: Monthly
+    yearly: Yearly

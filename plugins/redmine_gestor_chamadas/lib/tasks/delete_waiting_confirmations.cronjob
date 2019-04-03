@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+REDMINE_HOME=$1
+
+LOG_PATH="$REDMINE_HOME/log/plugins/redmine_gestor_chamadas/lib/tasks"
+
+[ -d $LOG_PATH ] || mkdir -p $LOG_PATH
+
+LOG_FILE="$LOG_PATH/delete_waiting_confirmations.log"
+
+echo "============================================================" >> $LOG_FILE
+echo "$(date +"%Y%m%d %H:%M:%S") - Começando execução" >> $LOG_FILE
+
+cd $REDMINE_HOME
+
+RAILS_ENV=production bundle exec rake redmine:plugin:gestor_chamadas:delete_waiting_confirmations >> $LOG_FILE 2>> $LOG_FILE
+
+echo "$(date +"%Y%m%d %H:%M:%S") - Terminando execução" >> $LOG_FILE
+echo "============================================================" >> $LOG_FILE

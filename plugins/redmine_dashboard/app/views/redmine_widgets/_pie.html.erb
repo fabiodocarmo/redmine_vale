@@ -1,0 +1,10 @@
+<%= render 'simple', widget: widget, chart_type: 'pie', options: {
+  pie: {
+    allowPointSelect: true,
+    cursor: 'pointer',
+    dataLabels: {
+      enabled: true,
+      format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+    }
+  }
+}.to_json %>

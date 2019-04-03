@@ -1,0 +1,10 @@
+
+<%= javascript_tag do  %>
+  $('.list.issues>thead>tr').prepend('<th><span></span></th>');
+  $('.list.issues>tbody>tr').prepend('<td class="sla-status"></td>');
+<% end %>
+
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'sla_overdue_icon_flag', plugin: 'redmine_sla' %>
+<% end %>

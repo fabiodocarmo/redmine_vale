@@ -1,0 +1,17 @@
+<h1><%= l(:csv_converter) %></h1>
+<p><%= l(:csv_converter_description) %></p>
+<%= form_tag url_for(action: :convert, controller: :csv_converter, project_id: params[:project_id]), multipart: true, id: 'csv-converter-form' do %>
+    <%= file_field_tag :csv_filename, accept: 'text/csv' %>
+    <%= submit_tag l(:send_file) %>
+<% end %>
+<script>
+    $('#csv-converter-form').submit( function(){
+        $(this).hide().parent().append("<h2><%=l(:sending_tag)%></h2>");
+        window.setTimeout(
+            function() {
+                location.reload();
+            },
+            3000
+        );
+    });
+</script>

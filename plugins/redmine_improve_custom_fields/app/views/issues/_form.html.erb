@@ -1,0 +1,114 @@
+<%= labelled_fields_for :issue, @issue do |f| %>
+<%= call_hook(:view_issues_form_details_top, { :issue => @issue, :form => f }) %>
+
+<% if @issue.safe_attribute? 'is_private' %>
+<p style="float:right;">
+  <%= f.check_box :is_private, :no_label => true %><label class="inline" for="issue_is_private" id="issue_is_private_label"><%= l(:field_is_private) %></label>
+</p>
+<% end %>
+
+<% if Redmine::VERSION::MAJOR >= 3 %>
+  <% if @issue.safe_attribute?('project_id') && (!@issue.new_record? || @project.nil? || @issue.copy?) %>
+    <%  if @issue.allowed_target_projects.size > 1 || !Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_project_mode] || Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_project_mode] == 'normal' %>
+    <p><%= f.select :project_id, project_tree_options_for_select(@issue.allowed_target_projects, :selected => @issue.project), {:required => true},
+                  :onchange => "updateIssueFrom('#{escape_javascript update_issue_form_path(@project, @issue)}')" %></p>
+    <% else %>
+      <p><label><%= l(:field_project) %></label><%= @issue.project.name %></p>
+    <% end %>
+  <% end %>
+
+  <% if @issue.safe_attribute? 'tracker_id' %>
+    <% trackers = trackers_options_for_select(@issue) %>
+    <% if Setting.try(:plugin_redmine_improve_custom_fields)[:select_empty_tracker] && (trackers.size > 1 || !Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_tracker_mode] || Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_tracker_mode] == 'normal') %>
+      <p><%= f.select :tracker_id, trackers, {:required => true, prompt: t('improve_fields.select_tracker')},
+                      :onchange => "updateIssueFrom('#{escape_javascript update_issue_form_path(@project, @issue)}')" %> <%= content_tag(:span,'',id:  'show-tracker-description', class: 'icon icon-help', style: "margin-left:4px;cursor:pointer;") if (action_name == 'new' && !@issue.tracker.try(:description).blank?) %></p>
+    <% elsif trackers.size > 1 || !Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_tracker_mode] || Setting.try(:plugin_redmine_improve_custom_fields)[:only_one_tracker_mode] == 'normal' %>
+      <p><%= f.select :tracker_id, trackers, {:required => true},
+                      :onchange => "updateIssueFrom('#{escape_javascript update_issue_form_path(@project, @issue)}')" %> <%= content_tag(:span,'',id:  'show-tracker-description', class: 'icon icon-help', style: "margin-left:4px;cursor:pointer;") if (action_name == 'new' && !@issue.tracker.try(:description).blank?) %></p>
+    <% else %>
+      <p><label><%= l(:field_tracker) %></label><%= trackers.first.try(:first) %> <%= content_tag(:span,'',id:  'show-tracker-description', class: 'icon icon-help', style: "margin-left:4px;cursor:pointer;") if (action_name == 'new' && !@issue.tracker.try(:description).blank?) %></p>
+      <p style="display:none;"><%= f.select :tracker_id, trackers, {:required => true},
+                      :onchange => "updateIssueFrom('#{escape_javascript update_issue_form_path(@project, @issue)}')" %></p>
+    <% end %>
+
+    <% if !@issue.tracker.try(:description).blank? %>
+      <% if action_name == 'new' %>
+        <div class="wiki" id='tracker-description' style="display:none;">
+          <%= textilizable @issue.tracker, :description %>
+        </div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('#show-tracker-description').click(function() {
+              $('#tracker-description').toggle('fast');
+            });
+          });
+        </script>
+      <% end %>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <% if @issue.safe_attribute? 'project_id' %>
+  <p><%= f.select :project_id, project_tree_options_for_select(@issue.allowed_target_projects, :selected => @issue.project), {:required => true},
+                  :onchange => "updateIssueFrom('#{escape_javascript project_issue_form_path(@project, :id => @issue, :format => 'js')}')" %></p>
+  <% end %>
+
+  <% if @issue.safe_attribute? 'tracker_id' %>
+    <% if Setting.try(:plugin_redmine_improve_custom_fields)[:select_empty_tracker] %>
+      <p><%= f.select :tracker_id, @issue.project.trackers.collect {|t| [t.name, t.id]}, {:required => true, prompt: t('improve_fields.select_tracker')},
+                      :onchange => "updateIssueFrom('#{escape_javascript project_issue_form_path(@project, :id => @issue, :format => 'js')}')" %></p>
+    <% else %>
+      <p><%= f.select :tracker_id, @issue.project.trackers.collect {|t| [t.name, t.id]}, {:required => true},
+                      :onchange => "updateIssueFrom('#{escape_javascript project_issue_form_path(@project, :id => @issue, :format => 'js')}')" %></p>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @issue.safe_attribute? 'subject' %>
+<p><%= f.text_field :subject, :size => 80, :maxlength => 255, :required => true %></p>
+<% end %>
+
+<% if @issue.safe_attribute? 'description' %>
+<p>
+  <%= f.label_for_field :description, :required => (@issue.tracker_id ? @issue.required_attribute?('description') : true) %>
+  <%= link_to_function image_tag('edit.png'), '$(this).hide(); $("#issue_description_and_toolbar").show()' unless @issue.new_record? %>
+  <%= content_tag 'span', :id => "issue_description_and_toolbar", :style => (@issue.new_record? ? nil : 'display:none') do %>
+  <%= f.text_area :description,
+    :cols => 60,
+    :rows => (@issue.description.blank? ? 10 : [[10, @issue.description.length / 50].max, 100].min),
+    :accesskey => accesskey(:edit),
+    :class => 'wiki-edit',
+    :no_label => true,
+    :required => (true unless @issue.tracker_id),
+    :placeholder => @issue.tracker.try(:description_placeholder)
+  %>
+  <% end %>
+</p>
+<%= wikitoolbar_for 'issue_description' %>
+<% end %>
+
+<div id="attributes" class="attributes">
+  <% if @issue.tracker_id %>
+    <%= render :partial => 'issues/attributes' %>
+  <% end %>
+</div>
+
+<%= call_hook(:view_issues_form_details_bottom, { :issue => @issue, :form => f }) %>
+
+<% end %>
+
+<% heads_for_wiki_formatter %>
+
+<%= javascript_tag do %>
+$(document).ready(function(){
+  $("#issue_tracker_id, #issue_status_id").each(function(){
+    $(this).val($(this).find("option[selected=selected]").val());
+  });
+});
+<% end %>
+
+<%= content_for :header_tags do %>
+  <%= javascript_include_tag "inputmask", plugin: 'redmine_improve_custom_fields' %>
+  <%= javascript_include_tag "inputmask.numeric.extensions", plugin: 'redmine_improve_custom_fields' %>
+  <%= javascript_include_tag "masks", plugin: 'redmine_improve_custom_fields' %>
+<% end %>

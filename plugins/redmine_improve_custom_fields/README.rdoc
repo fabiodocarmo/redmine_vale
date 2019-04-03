@@ -1,0 +1,7 @@
+= Features
+- Custom Field with title/description size
+- Allow hide/read only status when only have one option
+- Allow config parent issue id to be read only on create subissue
+- Allow preview attachment in googgle drive viewer
+  - Warning: It's necessary add skip_before_filter :check_if_login_required, only: [:download] and remove read_authorize for download in AttachmentsController
+- Adding custom field description as text

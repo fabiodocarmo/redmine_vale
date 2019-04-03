@@ -1,0 +1,6 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { auto_issue: @auto_issue } %>
+</div>
+<% include_calendar_headers_tags %>
+<%= javascript_include_tag "cocoon", plugin: 'redmine_auto_generate_issue' %>
+<%= stylesheet_link_tag "auto_issue", plugin: 'redmine_auto_generate_issue' %>

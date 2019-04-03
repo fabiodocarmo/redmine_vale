@@ -1,0 +1,9 @@
+pt-BR:
+  config_id_sso: ID de cadastro no Portal SSO
+  disable_regular_login: Desabilitar login direto
+  disable_edit_user: Desabilitar edições de permissão/campos padrão de usuários
+  url_login_sso: URL de login do Portal SSO
+  url_validate_sso: URL de validação do Portal SSO
+  error_authentication: Ocorreu um problema durante a autenticação
+  app_id_fieldname_sso: Campo ID de App no Portal SSO
+  backurl_fieldname_sso: Campo Backurl no Portal SSO

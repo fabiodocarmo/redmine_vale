@@ -1,0 +1,12 @@
+<%= error_messages_for 'office_hour' %>
+<h1><%= t('office_hour.office_hour_list') %></h1>
+
+<%= render 'cruj_cruj_cruj/filters' %>
+
+<div class='contextual' style='float:left'>
+  <%= link_to t('office_hour.new_office_hour'), new_vsg_sla_office_hour_path, class: 'icon icon-add' %>
+  |
+  <%= link_to t('link.sla'), vsg_sla_slas_path %>
+</div>
+
+<%= render 'cruj_cruj_cruj/list_table' %>

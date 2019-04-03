@@ -1,0 +1,28 @@
+es:
+  field_big_size: 'Campo Grande'
+  field_hide_label: 'Esconder el Label'
+  label_group_priority_plural: Prioridades del Grupo
+  tracker_add_group_priority: Agregar nueva Prioridade del Grupo
+  remove_group_priority: Eliminar Prioridade del Grupo
+  field_email_only_in_closed_status: Enviar e-mail sólo en situaciones cerradas
+  type_to_search: Escribe para buscar
+  group_priority:
+    author: 'Author Group'
+    enumeration: 'Priority'
+  improve_fields:
+    only_one_status_mode: Cómo mostrar el estado cuando sólo hay una
+    parent_issue_id_mode: Cómo mostrar el id de la tarea padre
+    view_documents: Mostrar visor de documentos
+    use_hint: Usar pista
+    select_empty_tracker: Incluir tipo de tarea vacía
+    select_tracker: '--- Seleccione ---'
+    normal: Normal
+    read_only: Sólo Lectura
+    hide: Oculto
+    label_autocomplete: 'auto completar'
+  field_tracker_description: 'Descripción del tracker'
+  count_characters: '# Caracteres'
+  label_select_custom_field_plural: 'Campos personalizados seleccionados'
+  link_to_visualize: Visualizar
+  showing_label: Visualizando
+  of_label: de

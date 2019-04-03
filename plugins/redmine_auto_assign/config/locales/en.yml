@@ -1,0 +1,68 @@
+# English strings go here for Rails i18n
+en:
+  label_atribuicao_automaticas: Auto Assignment
+  column_invalid_rows: "The column value %{column} isn't valid in rows: %{rows}"
+  views:
+    pagination:
+      first: 'First'
+      last: 'Last'
+      previous: 'Previous'
+      next: 'Next'
+      truncate: '...'
+
+  auto_assignment_edit_success_message: Auto assignment sucessfully updated.
+  auto_assignment_create_success_message: Auto assignment sucessfully created.
+  import_success_message: Import sucessfully finished
+  access_delete_confirmation_message: Are you sure you want to delete this access?
+  no_auto_assignment_message: There are no auto assignments registered
+
+  no_file_to_import_error_message: You must select a file to import.
+  export_template_filename: Auto_Assignment_Import_Template.xlsx
+
+  redistribute_type_workload: Workload
+  redistribute_type_round: Round
+  redistribute_type_author: Author
+  redistribute_type_watcher: Watcher
+  redistribute_type_open: First to open
+  redistribute_type_me: Current User
+
+  status_from_label: Status from
+  status_to_label: Status to
+  auto_assignment_type_label: Auto assignment type
+  use_custom_field_label: Use custom field?
+  import_template_label: Import template
+  custom_field_value_label: Custom field value
+  redistribute_label: Redistribute
+
+  auto_assignment_edit_header: Edit auto assignment
+  auto_assignment_list_header: Auto assignment list
+  new_auto_assignment_header: New auto assignment
+  detail_auto_assignment_header: Detail of the auto assignment
+
+  link_to_new_auto_assignment: New auto assignment
+  all_projects_label: All Projects
+  tracker_label: Tracker
+  all_trackers_label: All Trackers
+  group_label: Group
+  weekend_group_label: Weekend Group
+  all_status_from_label: All Status From
+  custom_field_label: Custom Field
+  label_custom_field_value: Custom Field
+  label_use_custom_field: Use Custom Field?
+  second_custom_field_label: Second Custom Field
+  second_custom_field_value_label: Second Custom Field Value
+  user_custom_field_label: "User's custom field"
+  issue_user_custom_field_label: "Issue's user custom field"
+  label_status_from: Status From
+  label_status_to: Status To
+  label_redistribute: Redistribute
+  link_to_new_atribuicao_automatica: New Auto Assignment
+  export_template_label: Export Template
+  false_field: False
+  true_field: True
+  no_atribuicao_automatica_message: Auto Assignment list is empty
+  redistribute_type_assigned_to_watcher: Watcher
+  redistribute_type_author_manager: Author Manager
+  redistribute_type_assigned_to_manager: Assigned To Manager
+  redistribute_type_current_user_manager: Current User Manager
+  redistribute_type_custom_field_user_manager: User Manager Custom Field

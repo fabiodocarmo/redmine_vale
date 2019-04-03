@@ -1,0 +1,28 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:redmine_alerts_projects_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[redmine_alerts_projects]',
+        options_from_collection_for_select(Project.sorted.all, 'id', 'name', settings['redmine_alerts_projects']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:redmine_alerts_trackers_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[redmine_alerts_trackers]',
+        options_from_collection_for_select(Tracker.sorted.all, 'id', 'name', settings['redmine_alerts_trackers']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:redmine_alerts_roles_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[redmine_alerts_roles]',
+        options_from_collection_for_select(Role.sorted.all, 'id', 'name', settings['redmine_alerts_roles']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

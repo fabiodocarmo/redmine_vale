@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+    table, th, td {
+     border: 1px solid black;
+    }
+    th, td {
+
+      padding: 15px;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+    }
+
+    th {
+      height: 50px;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2}
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <% if @saved_issues %>
+      <% if @saved_issues[:success] %>
+      <h2><%= l(:notice_import_sucess) %></h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:250px;"><%= "Linhas inseridas" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><%= @saved_issues[:success].size %></td>
+            </tr>
+        </table>
+      <% end %>
+      <h2><%= l(:notice_import_error) %></h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:250px;"><%= "Mensagem de erro" %></th>
+            <th><%= "Linhas" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @saved_issues[:errors].each do |mensagem, linhas| %>
+            <tr>
+               <td><%= mensagem %></td>
+               <td><%= linhas.join(', ') %></td>
+            </tr>
+          <% end%>
+      </table>
+    <% end %>
+</html>

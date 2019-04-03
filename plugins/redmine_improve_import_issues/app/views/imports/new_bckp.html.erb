@@ -1,0 +1,66 @@
+<%= javascript_include_tag "chosen.jquery.min", plugin: 'redmine_improve_import_issues' %>
+<%= stylesheet_link_tag "chosen", plugin: 'redmine_improve_import_issues' %>
+<h2><%= l(:label_import_issues) %></h2>
+
+<%= form_tag(imports_path, :multipart => true) do %>
+  <fieldset class="box">
+    <legend><%= l(:label_select_file_to_import) %></legend>
+    <p>
+      <label><%= l(:label_file_type) %></label>
+      <%= select_tag :file_type,
+            options_for_select([[l(:label_type_xls), 'xls'], [l(:label_type_csv), 'csv']]) %>
+    </p>
+    <p>
+      <label><%= l(:label_project_identifier) %></label>
+      <%= select_tag :project_identifier,
+        options_for_select(Project.joins(:trackers).all.uniq), {:required => true} %>
+    </p>
+    <p>
+      <label><%= l(:label_tracker_identifier) %></label>
+      <%= select_tag :tracker_identifier,
+       options_for_select(Tracker.all.collect {|t| [t.name, t.id]}), {:required => true, :label => "Tipos de solicitação"} %>
+   </p>
+   <% if IssueCustomField.all.any? %>
+     <%= javascript_include_tag 'select_list_move', plugin: 'redmine_improve_import_issues' %>
+     <p>
+       <table class="query-columns">
+         <tr>
+           <td style="padding-left:0">
+             <b><%= l(:label_custom_field_plural) %></b>
+             <br />
+             <%= select_tag 'available_columns',
+                     options_for_select((IssueCustomField.all).map {|g| [ g.name, g.id ] }),
+                     :multiple => true, :size => 10, :style => "width:200px",
+                     :ondblclick => "moveOptions(this.form.available_columns, this.form.selected_columns);" %>
+           </td>
+           <td class="buttons">
+             <input type="button" value="&#8594;"
+              onclick="moveOptions(this.form.available_columns, this.form.selected_columns);" /><br />
+             <input type="button" value="&#8592;"
+              onclick="moveOptions(this.form.selected_columns, this.form.available_columns);" />
+           </td>
+           <td>
+             <b><%= l(:label_select_custom_field_plural)  %></b>
+             <br />
+             <%= select_tag 'custom_field_ids', IssueCustomField.all.order('custom_fields_trackers.position ASC, custom_fields.position'), multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.selected_columns, this.form.available_columns);" %>
+           </td>
+           <td class="buttons">
+             <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.selected_columns);" /><br />
+             <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.selected_columns);" /><br />
+             <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.selected_columns);" /><br />
+             <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.selected_columns);" />
+           </td>
+         </tr>
+       </table>
+   </p>
+   <% end %>
+    <p>
+      <%= file_field_tag 'file' %>
+    </p>
+  </fieldset>
+  <p><%= submit_tag l(:label_next).html_safe + " &#187;".html_safe, :name => nil %></p>
+<% end %>
+
+<% content_for :sidebar do %>
+    <%= render :partial => 'issues/sidebar' %>
+<% end %>

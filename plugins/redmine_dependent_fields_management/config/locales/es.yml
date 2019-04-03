@@ -1,0 +1,24 @@
+es:
+  label_dependent_fields: Campos dependientes
+  dependency_create_sucess_message: Dependencia entre campos creada con éxito.
+  dependency_edit_sucess_message: Dependencia entre campos alterada con éxito.
+  no_file_to_import_error_message: Debe seleccionar un archivo para importar.
+  import_success_message: Importación completada con éxito.
+  prohibited_message: impidieron que se guarde esta configuración
+  
+  dependency_type_label: Tipo de dependencia
+  main_field_label: Campo principal
+  expected_value_label: Valor del principal p/ validación del secundario
+  secondary_field_label: Campo secundario
+  non_nullable_secondary_field_label: Secundario non nulo
+  expected_secondary_field_label: Valor previsto del secundario
+  options_format_hint: (Sólo se permite un número de opciones en el formato valor1, valor2)
+
+  dependency_edit_header: Editar dependencia entre campos personalizados
+  dependency_new_header: Nueva dependencia entre campos personalizados
+  dependency_list_header: Lista de dependencias entre campos personalizados
+
+  dependency_new_label: Nueva dependencia entre campos personalizados
+  dependency_import_template_label: Importar modelo
+
+  dependency_delete_confirmation: ¿Está seguro de que quiere eliminar esta dependencia entre los campos personalizados?

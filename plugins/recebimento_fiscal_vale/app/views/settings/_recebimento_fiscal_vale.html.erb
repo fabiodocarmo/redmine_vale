@@ -1,0 +1,187 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('external_validation.base_url') %>:</th>
+      <td>
+        <%= text_field_tag 'settings[base_url]', settings['base_url']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('external_validation.retry_after') %>(s):</th>
+      <td>
+        <%= text_field_tag 'settings[retry_after]', settings['retry_after']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('external_validation.retry_num') %>(s):</th>
+      <td>
+        <%= text_field_tag 'settings[retry_num]', settings['retry_num']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('external_validation.user') %>:</th>
+      <td>
+        <%= select_tag 'settings[user]',
+                 options_from_collection_for_select(User.all, 'id', 'name', settings['user']), include_blank: '' %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3><%=t('status_change.settings_label')%></h3>
+<table>
+  <tbody>
+    <tr>
+      <th><%=t('status_change.old_status_id_label')%></th>
+      <td>
+        <%= number_field 'settings[status_change]', :old_status_id,
+                         options={min: 1, step:1, value: settings[:status_change][:old_status_id]} %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('status_change.status_id_label')%></th>
+      <td>
+        <%= number_field 'settings[status_change]', :status_id,
+                         options={min: 1, step:1, value: settings[:status_change][:status_id]} %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('status_change.days_label')%></th>
+      <td>
+        <%= number_field 'settings[status_change]', :days,
+                         options={min: 0, step:1, value: settings[:status_change][:days]} %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('status_change.hour_label')%></th>
+      <td>
+        <%= number_field 'settings[status_change]', :hour,
+                        options={min: 0, max: 23, value: settings[:status_change][:hour]} %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('status_change.minutes_label')%></th>
+      <td>
+        <%= number_field 'settings[status_change]', :minute,
+                        options={min: 0, max: 45, step: 15, value: settings[:status_change][:minute]} %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h3><%=t('order_type.settings_label')%></h3>
+<table>
+  <tbody>
+    <tr>
+      <th><%=t(:label_custom_field)%></th>
+      <td>
+        <%= select_tag 'settings[order_type][field]', options_from_collection_for_select(IssueCustomField.all, :id, :name, settings['order_type'].try('[]', 'field')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.missing_order_type')%></th>
+      <td>
+        <%= text_field_tag 'settings[order_type][default]', settings['order_type'].try('[]', 'default') %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.zpr_retention_status')%></th>
+      <td>
+        <%= select_tag 'settings[order_type][zpr_status]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['order_type'].try('[]', 'zpr_status')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.total_value')%></th>
+      <td>
+        <%= select_tag 'settings[order_type][total_value_cf_id]', options_from_collection_for_select(IssueCustomField.all, :id, :name, settings['order_type'].try('[]', 'total_value_cf_id')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.iss_base_value')%></th>
+      <td>
+        <%= select_tag 'settings[order_type][iss_base_value_cf_id]', options_from_collection_for_select(IssueCustomField.all, :id, :name, settings['order_type'].try('[]', 'iss_base_value_cf_id')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.inss_base_value')%></th>
+      <td>
+        <%= select_tag 'settings[order_type][inss_base_value_cf_id]', options_from_collection_for_select(IssueCustomField.all, :id, :name, settings['order_type'].try('[]', 'inss_base_value_cf_id')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=t('order_type.cf_divergences')%></th>
+      <td>
+        <%= select_tag 'settings[order_type][cf_divergences]', options_from_collection_for_select(IssueCustomField.all, :id, :name, settings['order_type'].try('[]', 'cf_divergences')), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('order_type.divergences')%>:</th>
+      <td>
+        <%= select_tag 'settings[order_type][divergences]',
+        options_from_collection_for_select(CustomFieldEnumeration.where(custom_field_id: settings['order_type'].try('[]', 'cf_divergences')), 'key', 'name', settings['order_type'].try('[]', 'divergences')), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= stylesheet_link_tag('chosen.css', plugin: 'redmine_external_validation') %>
+<%= javascript_include_tag('chosen.jquery.min.js', plugin: 'redmine_external_validation') %>
+<%= javascript_include_tag('ajax-chosen.min.js', plugin: 'redmine_external_validation') %>
+<script type="text/javascript">
+
+  var fix_chosen_css = function(chosen_element) {
+    var parent = $(chosen_element).siblings('.chosen-container');
+
+    if (parent.parent('td').length == 0) {
+      parent.css('position', 'absolute');
+      parent.css('display', 'block');
+      parent.parent().css('height', (parent.height()+10) + 'px');
+    } else {
+      parent.css('width', '100%');
+    }
+    parent.css('min-width', '236px');
+
+    var lastHeight = parent.height();
+    function checkForHeightChanges() {
+      if (parent.height() != lastHeight) {
+        parent.parent().css('height', (parent.height()+10) + 'px');
+        lastHeight = parent.height();
+      } else {
+        setTimeout(checkForHeightChanges, 500);
+      }
+    };
+    setTimeout(checkForHeightChanges, 500);
+  }
+
+  var make_chosen = function(elem) {
+    $(elem).chosen({inherit_select_classes: true, allow_single_deselect: true}).change(function(elem) {
+      var container = $(this).siblings('.chosen-container').parent();
+      if (container.length >= 0) {
+        container.css('height', $(this).siblings('.chosen-container').height());
+      }
+    });
+    fix_chosen_css(elem)
+  }
+
+  var update_chosen = function(chosen) {
+    input = $(chosen).parent().find('div.chosen-drop input[type=text]');
+    value = $(input).val();
+    $(chosen).trigger('chosen:updated');
+    $(input).val(value);
+  }
+
+  var make_select_elements_chosen = function (){
+    $('select').not("#relation_relation_type")
+        .not('.description')
+        .not('#project_quick_jump_box').each(function(index, elem){
+      make_chosen(elem);
+    });
+  }
+
+  make_select_elements_chosen();
+
+</script>

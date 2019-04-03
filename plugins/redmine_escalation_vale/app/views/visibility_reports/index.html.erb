@@ -1,0 +1,86 @@
+<h1><%= l(:visibility_reports) %></h1>
+<%= search_form_for @q do |f| %>
+  <fieldset style="display:table;border-spacing:10px;">
+    <% index_filter_attributes
+            .reject { |filter_attribute| exclude_index_filter_attributes.find { |eifa| (filter_attribute.is_a?(Array) ? filter_attribute[0] : filter_attribute ) =~ /#{eifa}/ } }
+            .in_groups_of(5, false).each do |filter_attributes| %>
+      <div class="fields" style="display:table-row">
+
+        <% filter_attributes.each do |filter_attribute| %>
+          <div class="field" style="display:table-cell">
+            <% attribute_name   = filter_attribute.is_a?(Array) ? filter_attribute[0] : filter_attribute %>
+            <% attribute_values = filter_attribute.is_a?(Array) ? filter_attribute[1] : [] %>
+
+            <label> <b><%= t(attribute_name) %>:</b></label><br />
+            <% if !attribute_values.blank? %>
+              <%= f.select attribute_name, attribute_values.map { |k,v| [v,k] }, { include_blank: t(:all_field), selected: params[:q] ? params[:q][attribute_name] : '' } %>
+
+            <% elsif attribute_name =~ /true/ %>
+              <%= f.select attribute_name, [[t(:true_field), 1], [t(:false_field), 0]], { include_blank: t(:all_field), selected: params[:q] ? params[:q][attribute_name] : '' } %>
+            <% elsif attribute_name =~ /cont/ %>
+              <%= f.search_field attribute_name %>
+            <% else %>
+              <%= render "#{attribute_name}_filter" %>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+
+    <%= f.submit %>
+  </fieldset>
+<% end %>
+
+<div style="float: right;">
+   <%= form_tag url_for(action: :export_template, controller: params[:controller], q: params[:q], filter: params[:filter]), style: 'margin-right: 10px' do %>
+     <%= submit_tag l(:export_label) %>
+   <% end %>
+</div>
+
+<div style="clear: both;">
+  <%if !@resources.empty? %>
+    <div class="autoscroll">
+      <table class="list resources">
+        <tr>
+          <% index_attributes.each do |index_attribute| %>
+            <% unless exclude_index_attributes.find { |eia| index_attribute =~ /#{eia}/ } %>
+              <th>
+                <%= l("label_#{index_attribute.is_a?(Array) ? index_attribute[0] : index_attribute}") %>
+              </th>
+            <% end %>
+          <% end %>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @resources.each do |resource| %>
+          <tr>
+            <% index_attributes.each do |index_attribute| %>
+              <% attribute_name = index_attribute.is_a?(Array)   ? index_attribute[0] : index_attribute %>
+              <% attribute_values = index_attribute.is_a?(Array) ? index_attribute[1] : [] %>
+
+              <% unless exclude_index_attributes.select { |eia| attribute_name =~ /#{eia}/ }.first %>
+                <td>
+                  <%= if index_attribute == :issue
+                        resource.try(:issue_id).to_i
+                      else
+                        format_field(resource.send(attribute_name), attribute_values)
+                      end =%>
+                </td>
+              <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <%= paginate @resources %>
+
+    <br />
+  <% else %>
+    <h3> <%= l("no_#{snake_case_model_name}_message")%> </h1>
+  <% end %>
+</div>
+<%= link_to l(:button_back), :controller => 'escalation', :action => 'index' %>

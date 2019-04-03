@@ -1,0 +1,35 @@
+ru:
+  search_request_failed: Поисковый запрос к сервису полнотекстового поиска не выполнен.
+  search_connection_refused: Не удается подключиться к сервису полнотекстового поиска.
+
+  label_attachment_content: Содержимое файла
+  label_search_quick_reference: Краткая справка по поиску
+  label_how_to_search: Как искать?
+
+  field_digest: MD5 дайджест
+
+  es:
+    word: Слово
+    phrase: Фраза
+    many_words: Несколько слов
+    wildcards: Подстановки
+    field: Поиск по определенному полю
+    regular_expression: Регулярное выражения
+    fuzziness: Нечеткий поиск
+    proximity_searches: Похожесть
+    ranges: Диапазон
+    boosting: Поднятие
+    boolean_operators: Булевы операторы
+    grouping: Группировка
+    reserved_characters: Зарезервированные символы
+    empty_query: Пустой запрос
+    available_fields: Доступные для поиска поля
+    attachments: Поиск по вложениям
+
+  views:
+    pagination:
+      first: "&laquo; Первая"
+      last: "Последняя &raquo;"
+      previous: "&lsaquo; Назад"
+      next: "Вперед &rsaquo;"
+      truncate: "..."

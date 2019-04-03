@@ -1,0 +1,56 @@
+language: ruby
+
+services:
+  - postgresql
+  - redis-server
+
+rvm:
+  - 1.9.3
+  - 2.0.0
+
+gemfile:
+  - $REDMINE_PATH/Gemfile
+
+env:
+  - REDMINE_VER=2.1.6 DB=postgresql
+  - REDMINE_VER=2.2.4 DB=postgresql
+  - REDMINE_VER=2.3.4 DB=postgresql
+  - REDMINE_VER=2.4.7 DB=postgresql
+  - REDMINE_VER=2.5.3 DB=postgresql
+  - REDMINE_VER=2.6.7 DB=postgresql
+  - REDMINE_VER=3.0.5 DB=postgresql
+  - REDMINE_VER=3.1.1 DB=postgresql
+
+matrix:
+  exclude:
+    - rvm: 2.0.0
+      env: REDMINE_VER=2.1.6 DB=postgresql
+      gemfile: $REDMINE_PATH/Gemfile
+    - rvm: 2.0.0
+      env: REDMINE_VER=2.2.4 DB=postgresql
+      gemfile: $REDMINE_PATH/Gemfile
+
+before_install:
+  - export ES_HOME=/usr/share/elasticsearch
+  - sudo wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.0.deb
+  - sudo service elasticsearch stop
+  - sudo dpkg -i elasticsearch-1.1.0.deb
+  - sudo $ES_HOME/bin/plugin -install elasticsearch/elasticsearch-mapper-attachments/2.0.0
+  - sudo service elasticsearch start
+  - sleep 3
+  - export PLUGIN_NAME=redmine_elasticsearch
+  - export REDMINE_PATH=$HOME/redmine
+  - svn co http://svn.redmine.org/redmine/tags/$REDMINE_VER $REDMINE_PATH
+  - ln -s $TRAVIS_BUILD_DIR $REDMINE_PATH/plugins/$PLUGIN_NAME
+  - cp config/database-$DB-travis.yml $REDMINE_PATH/config/database.yml
+  - git clone --depth=1 https://github.com/Undev/redmine_resque.git $REDMINE_PATH/plugins/redmine_resque
+  - echo "gem 'iconv'" >> $REDMINE_PATH/Gemfile
+  - cd $REDMINE_PATH
+
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake redmine:plugins:migrate
+
+script:
+  - bundle exec rake redmine:plugins:test NAME=$PLUGIN_NAME

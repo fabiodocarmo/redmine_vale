@@ -1,0 +1,27 @@
+/* buttons */
+input[type="submit"], button,
+.theme-Itau #redmine-dashboard-refresh-filters-button,
+.ui-dialog .ui-dialog-buttonpane button {
+  border: 0px;
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  color: #FFF;
+  background: #f58220;
+  padding: 8px 14px 8px 14px;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover,
+.theme-Itau #redmine-dashboard-refresh-filters-button:hover,
+.ui-dialog .ui-dialog-buttonpane button:hover {
+  background: #F59F28;
+}
+
+.buttons a,
+.buttons a:hover,
+.buttons a:focus {
+  text-decoration: none;
+}

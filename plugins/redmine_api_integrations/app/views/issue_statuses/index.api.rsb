@@ -1,0 +1,10 @@
+api.array :status do
+  @status.each do |status|
+    api.status do
+      api.id status.id
+      api.name status.name
+      api.is_closed status.is_closed.to_s
+    end
+  end
+end
+api.count @status.count

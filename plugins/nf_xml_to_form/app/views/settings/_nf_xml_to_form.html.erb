@@ -1,0 +1,475 @@
+<% @issue_custom_fields = IssueCustomField.all %>
+<% @issue_statuses = IssueStatus.all %>
+<%= content_for :header_tags do %>
+  <%= stylesheet_link_tag 'nf_xml_to_form.css', plugin: 'nf_xml_to_form'  %>
+<% end %>
+
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('form_to_xml.file_field') %>:</th>
+      <td style='width: 100%;'>
+        <%= select_tag 'settings[file_field]', options_from_collection_for_select(IssueCustomField.where(field_format: 'file'), 'id', 'name', settings['file_field']) %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:transport_converter_issues_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[transport_converter_issues]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['transport_converter_issues']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:transport_material_field_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[transport_material_field]', options_from_collection_for_select(IssueCustomField.where(field_format: 'file'), 'id', 'name', settings['transport_material_field']), include_blank: '' %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+<table>
+  <tr>
+    <th><%= l(:complete_with_zeroes_label) %>:</th>
+    <td>
+      <%= select_tag 'settings[complete_with_zeroes]',
+      options_from_collection_for_select(Tracker.all, 'id', 'name', settings['complete_with_zeroes']), include_blank: '', multiple: true %>
+    </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('external_validation.base_url') %>:</th>
+      <td>
+        <%= text_field_tag 'settings[base_url]', settings['base_url']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('external_validation.default_date_type') %>(s):</th>
+      <td>
+        <%= select_tag  'settings[default_date_type]', options_for_select([:created, :delivery], settings['default_date_type']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.base_date_created_id') %>:</th>
+      <td>
+        <%= select_tag 'settings[base_date_created_id]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'date'), :id, :name, settings['base_date_created_id']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.base_date_delivery_id') %>:</th>
+      <td>
+        <%= select_tag 'settings[base_date_delivery_id]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'date'), :id, :name, settings['base_date_delivery_id']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.due_date') %>:</th>
+      <td>
+        <%= select_tag 'settings[due_date]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'date'), :id, :name, settings['due_date']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.data_inicio_validade') %>(s):</th>
+      <td>
+        <%= select_tag  'settings[data_inicio_validade]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'date'), :id, :name,settings['data_inicio_validade']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.data_termino_validade') %>(s):</th>
+      <td>
+        <%= select_tag  'settings[data_termino_validade]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'date'), :id, :name, settings['data_termino_validade']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.indicativo_autoria') %>(s):</th>
+      <td>
+        <%= select_tag  'settings[indicativo_autoria]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'enumeration'), :id, :name, settings['indicativo_autoria']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.indicativo_deposito') %>(s):</th>
+      <td>
+        <%= select_tag  'settings[indicativo_deposito]', options_from_collection_for_select(@issue_custom_fields.where(field_format: 'enumeration'), :id, :name, settings['indicativo_deposito']), include_blank: true %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<br />
+<hr />
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('form_to_xml.dont_lock') %>:</th>
+      <td style='width: 100%;'>
+        <%= select_tag 'settings[dont_lock]', options_from_collection_for_select(@issue_custom_fields, 'id', 'name', settings['dont_lock']), multiple: true  %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<h3 class="xml-fields-container">
+  <%= t('form_to_xml.xml_converter') %>
+</h3>
+<table>
+  <thead>
+    <tr class="xml-fields-container">
+      <td><%= l('xml_converter.label_xml_tag') %></td>
+      <td><%= l(:label_custom_field) %></td>
+      <td><%= l(:label_required) %></td>
+      <td><%= l(:label_exclusive) %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+      field_names = ["numero_field", "codigo_verificacao_field", "data_emissao_field",
+                     "natureza_operacao_field", "optante_simples_nacional_field",
+                     "servico_valores_valor_servicos_field", "servico_valores_iss_retido_field",
+                     "servico_valores_valor_base_calculo_iss_field",
+                     "servico_valores_valor_aliquota_iss_field",
+                     "servico_valores_valor_liquido_nfse_field",
+                     "servico_item_lista_servico_field", "servico_codigo_tributacao_municipio",
+                     "servico_codigo_municipio", "construcao_civil_codigo_obra",
+                     "servico_uf", "prestador_cnpj", "prestador_inscricao_municipal",
+                     "prestador_razao_social", "prestador_codigo_municipio", "prestador_uf",
+                     "tomador_cnpj", "orgao_gerador_codigo_municipio", "orgao_gerador_uf",
+                     "pedido", "contrato", "frs", "rf", "servico_valores_valor_valor_pis",
+                     "servico_valores_valor_valor_cofins", "servico_valores_valor_valor_ir",
+                     "servico_valores_valor_valor_csll", "servico_valores_valor_valor_iss",
+                     "servico_valores_valor_valor_inss","email_prestador","telefone_prestador","endereco"]
+    %>
+
+    <% field_names.each do |fn|%>
+      <tr>
+        <th><%= t("nf_xml_controller.#{fn}") %></th>
+        <td>
+          <%= select_tag "settings[#{fn}]", options_from_collection_for_select(@issue_custom_fields, :id, :name, settings["#{fn}"]), include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][exclusive_trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['exclusive_trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<h3 class="xml-fields-container">
+  <%= t('form_to_xml.xml_transport_converter') %>
+</h3>
+<table>
+  <thead>
+    <tr>
+      <td><%= l('xml_converter.label_xml_tag') %></td>
+      <td><%= l(:label_custom_field) %></td>
+      <td><%= l(:label_required) %></td>
+      <td><%= l(:label_exclusive) %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+      field_names_transport = ["asn","coleta_int", "servico_valores_valor_valor_deducoes","servico_valores_valor_outros_descontos",
+                    "servico_quantidade","servico_unidade","servico_valor_desconto","servico_valor_issqn",
+                    "prestador_regime_especial_tributacao","prestador_municipio",
+                    "tomador_nome_fantasia","tomador_municipio","pedido_discriminacao","local_prestacao",
+                    "numero_rps","serie_rps","tipo_rps","data_emissao_rps","incentivador_cultural",
+                    "cep_prestador","cep_tomador"]
+    %>
+
+    <% field_names_transport.each do |fn|%>
+      <tr>
+        <th><%= t("nf_xml_controller.#{fn}") %></th>
+        <td>
+          <%= select_tag "settings[#{fn}]", options_from_collection_for_select(@issue_custom_fields, :id, :name, settings["#{fn}"]), include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][exclusive_trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['exclusive_trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<h3 class="xml-fields-container">
+  <%= t('form_to_xml.xml_material_converter') %>
+</h3>
+<table>
+  <thead>
+    <tr>
+      <td><%= l('xml_converter.label_xml_tag') %></td>
+      <td><%= l(:label_custom_field) %></td>
+      <td><%= l(:label_required) %></td>
+      <td><%= l(:label_exclusive) %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+      field_names_material = ["chave_acesso"]
+    %>
+
+    <% field_names_material.each do |fn|%>
+      <tr>
+        <th><%= t("nf_xml_controller.#{fn}") %></th>
+        <td>
+          <%= select_tag "settings[#{fn}]", options_from_collection_for_select(@issue_custom_fields, :id, :name, settings["#{fn}"]), include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][exclusive_trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['exclusive_trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<h3 class="xml-fields-container">
+  <%= t('form_to_xml.xml_cte_converter') %>
+</h3>
+<table>
+  <thead>
+    <tr>
+      <td><%= l('xml_converter.label_xml_tag') %></td>
+      <td><%= l(:label_custom_field) %></td>
+      <td><%= l(:label_required) %></td>
+      <td><%= l(:label_exclusive) %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+      field_names_cte = ["servico_valores_valor_valor_icms","servico_valores_valor_base_calculo_icms_field",
+                    "servico_valores_valor_aliquota_icms_field","chave_acesso_cte","inicio_prestacao",
+                    "termino_prestacao","prestador_inscricao_estadual","hora_emissao","numero_protocolo"]
+    %>
+
+    <% field_names_cte.each do |fn|%>
+      <tr>
+        <th><%= t("nf_xml_controller.#{fn}") %></th>
+        <td>
+          <%= select_tag "settings[#{fn}]", options_from_collection_for_select(@issue_custom_fields, :id, :name, settings["#{fn}"]), include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+        <td>
+          <%= select_tag "settings[option][#{fn}][exclusive_trackers]",
+          options_from_collection_for_select(Tracker.all, :id, :name, begin @settings[:option]["#{fn}".to_s]['exclusive_trackers'] rescue "" end), multiple: true, include_blank: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<hr />
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_base_calculo_inss_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_base_calculo_inss_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_base_calculo_inss_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_aliquota_inss_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_aliquota_inss_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_aliquota_inss_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_aliquota_pis_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_aliquota_pis_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_aliquota_pis_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_aliquota_cofins_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_aliquota_cofins_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_aliquota_cofins_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_aliquota_csll_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_aliquota_csll_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_aliquota_csll_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.servico_valores_valor_aliquota_ir_field') %>:</th>
+      <td>
+        <%= select_tag 'settings[servico_valores_valor_aliquota_ir_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['servico_valores_valor_aliquota_ir_field']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('nf_xml_controller.tolerancia_base_calculo') %>:</th>
+      <td>
+        <%= number_field_tag 'settings[base_value_tolerance]', settings['base_value_tolerance'], step: 0.01, min: 0 %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('nf_xml_controller.campo_data_a_ser_formatado_antes_do_bpm') %>:</th>
+      <td>
+        <%= select_tag 'settings[campo_data_a_ser_formatado_antes_do_bpm]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['campo_data_a_ser_formatado_antes_do_bpm']), include_blank: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('nf_xml_controller.divergencias') %>:</th>
+      <td>
+        <%= select_tag 'settings[divergences_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['divergences_field']), include_blank: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<table>
+  <thead>
+    <th colspan="2"><h4><%= t('auto_forward_job.title') %></h4></th>
+  </thead>
+  <tbody>
+    <tr>
+      <th><%= t('auto_forward_job.status_grc') %>:</th>
+      <td>
+        <%= select_tag 'settings[auto_forward_job.status_grc]', options_from_collection_for_select(@issue_statuses, :id, :name, settings['auto_forward_job.status_grc']), include_blank: true %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('auto_forward_job.status_robot') %>:</th>
+      <td>
+        <%= select_tag 'settings[auto_forward_job.status_robot]', options_from_collection_for_select(@issue_statuses, :id, :name, settings['auto_forward_job.status_robot']), include_blank: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<table>
+  <thead>
+  <th colspan="2"><h4><%= t('withheld_tax_job.title') %></h4></th>
+  </thead>
+  <tbody>
+  <tr>
+    <th><%= t('withheld_tax_job.is_withheld_field') %>:</th>
+    <td>
+      <%= select_tag 'settings[withheld_tax_job.is_withheld_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['withheld_tax_job.is_withheld_field']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('withheld_tax_job.withheld_tax_field') %>:</th>
+    <td>
+      <%= select_tag 'settings[withheld_tax_job.withheld_tax_field]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['withheld_tax_job.withheld_tax_field']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<%= javascript_include_tag('chosen.jquery.min.js', plugin: 'redmine_improve_custom_fields') %>
+<%= javascript_include_tag('ajax-chosen.min.js', plugin: 'redmine_improve_custom_fields') %>
+<script type="text/javascript">
+
+  var fix_chosen_css = function(chosen_element) {
+    var parent = $(chosen_element).siblings('.chosen-container');
+
+    if (parent.parent('td').length == 0) {
+      parent.css('position', 'absolute');
+      parent.css('display', 'block');
+      parent.parent().css('height', (parent.height()+10) + 'px');
+    } else {
+      parent.css('width', '100%');
+    }
+    parent.css('min-width', '236px');
+
+    var lastHeight = parent.height();
+    function checkForHeightChanges() {
+      if (parent.height() != lastHeight) {
+        parent.parent().css('height', (parent.height()+10) + 'px');
+        lastHeight = parent.height();
+      } else {
+        setTimeout(checkForHeightChanges, 500);
+      }
+    };
+    setTimeout(checkForHeightChanges, 500);
+  }
+
+  var make_chosen = function(elem) {
+    $(elem).chosen({inherit_select_classes: true, allow_single_deselect: true}).change(function(elem) {
+      var container = $(this).siblings('.chosen-container').parent();
+      if (container.length >= 0) {
+        container.css('height', $(this).siblings('.chosen-container').height());
+      }
+    });
+    fix_chosen_css(elem)
+  }
+
+  var update_chosen = function(chosen) {
+    input = $(chosen).parent().find('div.chosen-drop input[type=text]');
+    value = $(input).val();
+    $(chosen).trigger('chosen:updated');
+    $(input).val(value);
+  }
+
+  var make_select_elements_chosen = function (){
+    $('select').not("#relation_relation_type")
+        .not('.description')
+        .not('#project_quick_jump_box').each(function(index, elem){
+      make_chosen(elem);
+    });
+  }
+
+  make_select_elements_chosen();
+
+</script>

@@ -1,0 +1,8 @@
+api.array :admin_restrictions do
+  @admin_restrictions.each do |admin_restriction|
+    api.admin_restriction do
+      api.id admin_restriction.id
+      api.name admin_restriction.name
+    end
+  end
+end

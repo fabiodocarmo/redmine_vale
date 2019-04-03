@@ -1,0 +1,5 @@
+api.message t(:issue_edited)
+api.issue do
+  api.id @issue.id
+end
+api.changes @changes

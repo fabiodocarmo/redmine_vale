@@ -1,0 +1,9 @@
+<ul>
+  <% @dashboards.each do |dashboard| %>
+    <% if User.current.admin? || dashboard.redmine_widget.where(name_id: User.current.roles_for_project(@project).map(&:permissions).inject(&:concat)).count > 0 %>
+      <li>
+        <%= link_to dashboard.name, dashboard_widget_redmine_widgets_path(dashboard,dashboard_name:dashboard.name, project_id: @project.id) %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

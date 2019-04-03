@@ -1,0 +1,120 @@
+<CompNfse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Nfse versao="2.02">
+      <InfNfse Id="25982869000100_201600000000003">
+         <Numero>201600000000003</Numero>
+         <CodigoVerificacao>7683f78d4</CodigoVerificacao>
+         <DataEmissao>2016-06-01T10:46:51</DataEmissao>
+         <NfseSubstituida>201600000000002</NfseSubstituida>
+         <OutrasInformacoes>Lei 12741/2012: Mun: R$ 27,21; Est: R$ 0,00; Fed: R$ 33,11; Total: R$ 60,32.</OutrasInformacoes>
+         <ValoresNfse>
+            <BaseCalculo>907.08</BaseCalculo>
+            <Aliquota>3.00</Aliquota>
+            <ValorIss>27.21</ValorIss>
+            <ValorLiquidoNfse>837.69</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>25982869000100</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>5230</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>POLIKINI INDUSTRIA E COMERCIO LTDA</RazaoSocial>
+            <NomeFantasia>POLIKINI</NomeFantasia>
+            <Endereco>
+               <Endereco>RUA COLUMBITA</Endereco>
+               <Numero>481</Numero>
+               <Bairro>DISTRITO INDUSTRIAL I</Bairro>
+               <CodigoMunicipio>3131703</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <CodigoPais>1058</CodigoPais>
+               <Cep>35903054</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>3138393000</Telefone>
+               <Email>nfe@polikini.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3131703</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <InfDeclaracaoPrestacaoServico>
+               <Competencia>2016-06-01</Competencia>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>907.08</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>5.90</ValorPis>
+                     <ValorCofins>27.21</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>9.07</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>27.21</ValorIss>
+                     <Aliquota>3.00</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido>1</IssRetido>
+                  <ResponsavelRetencao>1</ResponsavelRetencao>
+                  <ItemListaServico>14.01</ItemListaServico>
+                  <CodigoTributacaoMunicipio>3314705</CodigoTributacaoMunicipio>
+                  <Discriminacao>SV003375 SERV. REBARBAMENTO CONJUNTO RODA -OC: 4502699326/10203,00 98,36 295,08SV004310 SERV. ENCHIMENTO SOLDA / RETIFICA (ALOJAMENTO BASE VALVULA) -OC: 4502699326/10103,00 204,00 612,00VENCIMENTO: 01/07/16 837,69014926 - MINA CAUE - FRS:1001627349 - CONTRATO:5900001830 - RF:6200371360 - 004 -RETENCAO 4,65% CONF.Lei n&#xBA; 13.137/2015 - SERVICO EXECUTADO NAS DEPENDENCIA DACONTRATADA - Valor Aproximado dos Tributos: R$ 167,35.</Discriminacao>
+                  <CodigoMunicipio>3131703</CodigoMunicipio>
+                  <CodigoPais>1058</CodigoPais>
+                  <ExigibilidadeISS>1</ExigibilidadeISS>
+                  <MunicipioIncidencia>3131703</MunicipioIncidencia>
+               </Servico>
+               <Prestador>
+                  <CpfCnpj>
+                     <Cnpj>25982869000100</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>5230</InscricaoMunicipal>
+               </Prestador>
+               <Tomador>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510016409</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>7870</InscricaoMunicipal>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S.A.</RazaoSocial>
+                  <Endereco>
+                     <Endereco>ESTRA SERRA ESMERIL - MINA CAUE</Endereco>
+                     <Numero>0</Numero>
+                     <Complemento>S/N</Complemento>
+                     <Bairro>ZONA RURAL DE ITABIRA</Bairro>
+                     <CodigoMunicipio>3131703</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35900900</Cep>
+                  </Endereco>
+               </Tomador>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivoFiscal>2</IncentivoFiscal>
+            </InfDeclaracaoPrestacaoServico>
+         </DeclaracaoPrestacaoServico>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="SMF_25982869000100_201600000000003">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#25982869000100_201600000000003">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>UZwWofIx0P0p0RRlhnweTalh/Ns=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>Fvzp82KdSyJx11CLAxqWNnw+3/eyNdzdWRDi/K33osZM6LKo/z7bMLQ8q0pQLw0PrjEFUnRaAm++xe/2tNjV3DLX8DlxnMzClPMl6Ua5bx332AKs0y3yTG13t/U4mfY5OO7krm6SyqnLI5RbU+6djXPXDkyr/Uh0xWet0n3y8vU4BVZ+TwkjhmFznHbLWjzxlUgISlraOjHrLCju9jZvpt9z/JDlr8gOlEdMVfWOgdW90osY58YM67LEWKuw3CHdSPErX4nQ96SeKMxdiKXvjJLxtILPkbvM4fco9FWBp2UwRd81inZGAqcc69FH1eHVGqMtLtUhlBpznlbPQhjq6w==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

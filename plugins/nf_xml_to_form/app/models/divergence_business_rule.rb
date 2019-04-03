@@ -1,0 +1,2 @@
+class DivergenceBusinessRule < BusinessRule
+end

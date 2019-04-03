@@ -1,0 +1,14 @@
+pt-BR:
+  project_module_default_custom_query: Busca padrão
+  permission_manage_default_query: Administre a busca padrão
+
+  # Labels for projects_default_queries column
+  field_query: Busca padrão
+
+  default_custom_query:
+    label_setting: Busca padrão
+    label_view_default_issues: Visualizar chamados padrões
+    label_queries_for_all_projects: Para todos os Projetos
+    label_queries_for_current_project: Para projeto atual
+
+    text_allowed_queries: Somente buscas públicas(visíveis para qualquer usuário)

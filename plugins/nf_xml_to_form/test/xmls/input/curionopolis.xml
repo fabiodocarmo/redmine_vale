@@ -1,0 +1,127 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="2600575100019413100568400000375">
+               <Numero>00000375</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{0621D56A-F853-4D70-8CCA-6622A30B4485}</CodigoControle>
+               <DataEmissao>2016-04-20T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>124181.95</BaseCalculo>
+                  <Aliquota>5.0000</Aliquota>
+                  <ValorIss>6209.10</ValorIss>
+                  <ValorLiquidoNfse>119835.58</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>26005751000194</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>131005684</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>BEMON ENGENHARIA E MONTAGENS LTDA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>RUA DA PAISAGEM</Endereco>
+                     <Numero>480</Numero>
+                     <Complemento>SALA 708</Complemento>
+                     <Bairro>VILA DA SERRA</Bairro>
+                     <CodigoMunicipio></CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>32546700</Telefone>
+                     <Email>bh@bemon.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>1502772</CodigoMunicipio>
+                  <Uf>PA</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2016-04-20</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>124181.95</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>4346.37</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>6209.10</ValorIss>
+                     <Aliquota>5.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>4329104</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao> Serviços de montagem, teste, comissionamento, operação assistida e treinamentos para o Sistema de Sinalização Distribuída da Linha Tronco da Vale-EFC.
+
+
+
+
+			 VENCIMENTO  	20/05/2016
+ CONTRATO: 5900020950
+  PEDIDO: 4502598000
+  FRS: 1001571485
+
+Venda de serviço efetuada com suspensão da exigência da Contribuição para o PIS/PASEP e da COFINS, conforme artigo 2º da Instrução Normativa RFB nº 758, de 25 de julho de 2007. Projeto aprovado e enquadrado ao REIDI pela Portaria do Ministério de Estado dos Transportes nº 335, de 9 de setembro de 2014. Pessoa jurídica adquirente habilitada ao REIDI conforme Ato Declaratório Executivo da Receita Federal do Brasil nº. 5, de 2 de fevereiro de 2015.
+
+ CEI:512120031276 	 CREA: 561478
+IMPOSTOS INCIDENTES CONF. TAB IBPT: 16,26%
+</Discriminacao>
+                  <CodigoMunicipio>1502772</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>26005751000194</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>131005684</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510042663</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>318338368</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>VALE S.A</RazaoSocial>
+                     <Endereco>
+                        <Endereco> PATIO DE CRUZAMENTO DE MARABA</Endereco>
+                        <Numero>S/N</Numero>
+                        <Complemento>KM738 E. F. CARAJAS</Complemento>
+                        <Bairro>INTERIOR</Bairro>
+                        <CodigoMunicipio>1504208</CodigoMunicipio>
+                        <Uf>PA</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>68508970</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone></Telefone>
+                        <Email>nfe.servico@vale.com</Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

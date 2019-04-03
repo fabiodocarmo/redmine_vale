@@ -1,0 +1,11 @@
+.sla-status{
+  background: green;
+}
+
+.almost-overdue-issue>.sla-status{
+  background: yellow;
+}
+
+.overdue-issue>.sla-status{
+  background: red;
+}

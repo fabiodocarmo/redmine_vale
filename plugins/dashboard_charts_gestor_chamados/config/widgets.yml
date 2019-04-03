@@ -1,0 +1,14 @@
+new_by_tracker_by_contact:
+  exclude_statuses: text
+  range_month: string
+weekly_progress_by_contact:
+  exclude_statuses: text
+  range_week: string
+  filters:
+    range_date: range_date
+wrong_issues_per_project:
+  answered_label: string
+  mistaken_forwarding_label: string
+customer_by_reopened_issues:
+  filters:
+    range_date: range_date

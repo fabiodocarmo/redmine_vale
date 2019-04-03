@@ -1,0 +1,31 @@
+<hr>
+<div id="grid_custom_field_show_tables">
+  <% @issue.grid_custom_field_values.each do |custom_field_value| %>
+    <%= content_tag("p", custom_field_value.custom_field.name+":", id: "p_grid_custom_field_" +custom_field_value.custom_field.id.to_s, class: "cf_" + custom_field_value.custom_field.id.to_s, style: "font-weight: bold") %>
+    <table class="list">
+      <thead>
+        <tr>
+          <% (sorted_grid_columns = custom_field_value.custom_field.sorted_grid_columns).each do |grid_column| %>
+            <th>
+              <%= grid_column.name %>
+            </th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% grid_values = @issue.custom_value_for(custom_field_value.custom_field).sorted_grid_values %>
+        <% grid_values.group_by(&:row).each do |row, values| %>
+          <tr>
+            <% values_grouped_by_columns = values.group_by(&:column) %>
+            <% sorted_grid_columns.each do |column| %>
+              <td><%= values_grouped_by_columns[column.id].try(:first).try(:value) %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>
+<% @grid_custom_field_included = true %>
+<%= stylesheet_link_tag "issues/grid_custom_field", plugin: "grid_custom_field" %>
+<%= render :partial => 'grid_custom_field_utils'%>

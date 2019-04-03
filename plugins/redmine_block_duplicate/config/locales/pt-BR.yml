@@ -1,0 +1,27 @@
+pt-BR:
+  label_block_duplicates: Bloqueio de duplicatas
+  block_duplicate_rule_edit_sucess_message: Regra de bloqueio de duplicatas editada com sucesso.
+  block_duplicate_rule_create_sucess_message: Regra de bloqueio de duplicatas criada com sucesso
+  block_duplicate_no_block_message: Não há regras de bloqueio de duplicatas cadastradas no sistema
+  block_duplicate_rule_delete_confirmation: Tem certeza que deseja deletar essa regra de bloqueio de duplicatas?
+
+  fields_to_consider_label: Campos a serem considerados
+  custom_fields_to_consider_label: Campos personalizados a serem considerados
+  statuses_to_consider_label: Situações a serem consideradas
+
+  all_statuses_label: Todas as situações
+
+  block_duplicates_edit_header: Editar regra de bloqueio de duplicatas
+  block_duplicates_list_header: Lista de regras de bloqueio de duplicatas
+  block_duplicates_new_header: Nova regra de bloqueio de duplicatas
+  block_duplicates_detail_header: Detalhes da regra de bloqueio de duplicatas
+
+  link_to_new_block_duplicates: Nova regra de bloqueio de duplicatas
+
+  duplicated_issue_alert: Duplica %{issues}, criados pelos usuários %{authors}, respectivamente. Por favor verifique os campos e tente novamente
+  prohibited_message: não permitiram que essa configuracao fosse salva
+  custom_field_different_from_parent: O campo  %{custom_field} tem que possuir o mesmo valor que no chamado original.
+  check_duplicated_field: Verifique o valor do campo %{custom_field}, pois ele pode estar duplicado em outro chamado.
+  label_duplicated_copies_enabled: Habilitar chamados copiados duplicados
+  verify_multiple_value: Verificar se os valores de %{custom_field} estão duplicados.
+  verify_empty_value: Verificar se os valores de %{custom_field} estão preenchidos.

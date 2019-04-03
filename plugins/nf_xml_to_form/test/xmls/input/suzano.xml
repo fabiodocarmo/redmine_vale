@@ -1,0 +1,203 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe versao="3.10" Id="NFe35151100536772003249550010002962241008273993">
+         <ide>
+            <cUF>35</cUF>
+            <cNF>00827399</cNF>
+            <natOp>Prest  serv tributado pelo ISSQN</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>296224</nNF>
+            <dhEmi>2015-11-06T00:00:00-02:00</dhEmi>
+            <dhSaiEnt>2015-11-06T00:00:00-02:00</dhSaiEnt>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>3552502</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>3</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>0</indFinal>
+            <indPres>9</indPres>
+            <procEmi>0</procEmi>
+            <verProc>LynasNFe</verProc>
+         </ide>
+         <emit>
+            <CNPJ>00536772003249</CNPJ>
+            <xNome>ECOLAB QUIMICA LTDA</xNome>
+            <xFant>Ecolab Suzano</xFant>
+            <enderEmit>
+               <xLgr>ROD. INDIO TIBIRIÇA</xLgr>
+               <nro>3201</nro>
+               <xBairro>RAFFO</xBairro>
+               <cMun>3552502</cMun>
+               <xMun>Suzano</xMun>
+               <UF>SP</UF>
+               <CEP>08655000</CEP>
+               <cPais>1058</cPais>
+               <xPais>Brasil</xPais>
+               <fone>1147454700</fone>
+            </enderEmit>
+            <IE>672138333114</IE>
+            <IM>36921</IM>
+            <CNAE>2099199</CNAE>
+            <CRT>3</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510022042</CNPJ>
+            <xNome>VALE S/A</xNome>
+            <enderDest>
+               <xLgr>AV. DANTE MICHELINE</xLgr>
+               <nro>5500</nro>
+               <xBairro>PQ INDUSTRIAL</xBairro>
+               <cMun>3205309</cMun>
+               <xMun>Vitória</xMun>
+               <UF>ES</UF>
+               <CEP>29090900</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>2733333247</fone>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>080266240</IE>
+            <IM>20224</IM>
+            <email>contratossaopaulo@nalco.com</email>
+         </dest>
+         <det nItem="10">
+            <prod>
+               <cProd>GEN SERVICE</cProd>
+               <cEAN></cEAN>
+               <xProd>GEN SERVICE</xProd>
+               <NCM>00</NCM>
+               <CFOP>6933</CFOP>
+               <uCom>UN</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>3840.0000000000</vUnCom>
+               <vProd>3840.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>UN</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>3840.0000000000</vUnTrib>
+               <indTot>0</indTot>
+               <xPed>.</xPed>
+            </prod>
+            <imposto>
+               <vTotTrib>547.20</vTotTrib>
+               <ISSQN>
+                  <vBC>3840.00</vBC>
+                  <vAliq>5.00</vAliq>
+                  <vISSQN>192.00</vISSQN>
+                  <cMunFG>3205309</cMunFG>
+                  <cListServ>14.02</cListServ>
+                  <vOutro>236.16</vOutro>
+                  <indISS>1</indISS>
+                  <indIncentivo>2</indIncentivo>
+               </ISSQN>
+               <PIS>
+                  <PISAliq>
+                     <CST>01</CST>
+                     <vBC>3840.00</vBC>
+                     <pPIS>1.65</pPIS>
+                     <vPIS>63.36</vPIS>
+                  </PISAliq>
+               </PIS>
+               <COFINS>
+                  <COFINSAliq>
+                     <CST>01</CST>
+                     <vBC>3840.00</vBC>
+                     <pCOFINS>7.60</pCOFINS>
+                     <vCOFINS>291.84</vCOFINS>
+                  </COFINSAliq>
+               </COFINS>
+            </imposto>
+            <infAdProd>&lt;![CDATA[- Trat de Agua Sist Refrigeracao FRS 1001270907 Pedido 4502219454 Contrato 5900003548]]&gt;</infAdProd>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>0.00</vBC>
+               <vICMS>0.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>0.00</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.00</vPIS>
+               <vCOFINS>0.00</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>3840.00</vNF>
+               <vTotTrib>547.20</vTotTrib>
+            </ICMSTot>
+            <ISSQNtot>
+               <vServ>3840.00</vServ>
+               <vBC>3840.00</vBC>
+               <vISS>192.00</vISS>
+               <vPIS>63.36</vPIS>
+               <vCOFINS>291.84</vCOFINS>
+               <dCompet>2015-11-06</dCompet>
+               <vOutro>236.16</vOutro>
+            </ISSQNtot>
+            <retTrib>
+               <vRetPIS>24.96</vRetPIS>
+               <vRetCOFINS>115.20</vRetCOFINS>
+               <vRetCSLL>38.40</vRetCSLL>
+               <vBCIRRF>3840.00</vBCIRRF>
+               <vIRRF>57.60</vIRRF>
+               <vBCRetPrev>3840.00</vBCRetPrev>
+               <vRetPrev>422.40</vRetPrev>
+            </retTrib>
+         </total>
+         <transp>
+            <modFrete>0</modFrete>
+         </transp>
+         <cobr>
+            <dup>
+               <nDup>1</nDup>
+               <dVenc>2015-12-06</dVenc>
+               <vDup>3168.00</vDup>
+            </dup>
+         </cobr>
+         <infAdic>
+            <infCpl>&lt;![CDATA[RETER: PIS 0,65% COFINS 3% CSLL 1%O serviço foi prestado no tomador do serviço. Retenção de ISS= R$192,00Imposto de Renda Retido na Fonte= R$57,60RETENÇÃO PARA PREVIDENCIA SOCIAL IN MPS/SRP Nº 971 de 13/11/2009= R$422,4** Cliente: 0150172498 ** Pedido do Cliente: . ** Pedido: 0004978581 ** C.L.: MI4 ** Distrito: NW421 ** Remessa: 0004978581    . CONDIÇÂO DE PAGAMENTO: dentro de 30 dias s/desconto]]&gt;</infCpl>
+         </infAdic>
+         <compra></compra>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe35151100536772003249550010002962241008273993">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>cy8FJFz3ytMR7lHPM+rFSJbrgsM=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>QCBsayRLTWBluR79HYcCdm2XKSYlDITp5yw5LR1LOu+QEgPFTj0z0yfo5McAfP6Yn4JsruB8C3K+qv5kTAyYKSsZliUkat822326zi9Zqza9EhWEkQWZi6tv97BQrz7U92LZx1ITNujJEMb6QdPlwmhA1TBxU72YY9oDXRl5kkwxGZ8eWK7A5GvQimUGVQ9uO9OmmVkRSSla8hAjHoDxV3hP701sevg7MhxJQI7k43KXhjFmzwNk4C3OddTXky2U64JWa+KWigjPiDRDbwQQQl1dpNAbADMGgiPe2Rhuns/I29djLQ9WKqpRZlsfwXXrUE32UBeUcdIEQQ5Zs/w2HQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe versao="3.10">
+      <infProt Id="Id135150691911285">
+         <tpAmb>1</tpAmb>
+         <verAplic>SP_NFE_PL_008f</verAplic>
+         <chNFe>35151100536772003249550010002962241008273993</chNFe>
+         <dhRecbto>2015-11-06T10:54:21-02:00</dhRecbto>
+         <nProt>135150691911285</nProt>
+         <digVal>cy8FJFz3ytMR7lHPM+rFSJbrgsM=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

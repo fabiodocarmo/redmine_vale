@@ -1,0 +1,17 @@
+<h1><%= l(:req_to_pay_upload) %></h1>
+<p><%= l(:req_to_pay_upload_description) %></p>
+<%= form_tag url_for(action: :upload, controller: :req_to_pay_upload, project_id: params[:project_id]), multipart: true, id: 'req_to_pay_upload-form' do %>
+    <%= file_field_tag :req_to_pay_upload_filename, accept: 'text/csv' %>
+    <%= submit_tag l(:send_file) %>
+<% end %>
+<script>
+    $('#req_to_pay_upload-form').submit( function(){
+        $(this).hide().parent().append("<h2><%=l(:sending_tag)%></h2>");
+        /*window.setTimeout(
+            function() {
+                location.reload();
+            },
+            3000
+        );*/
+    });
+</script>

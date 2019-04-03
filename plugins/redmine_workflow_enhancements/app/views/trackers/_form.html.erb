@@ -1,0 +1,19 @@
+<%= render :super %>
+
+<% content_for :header_tags do -%>
+  <%= stylesheet_link_tag "workflow_enhancements.css", :plugin => :redmine_workflow_enhancements %>
+<% end -%>
+
+<div class="splitcontentright">
+  <fieldset class="box" id="predef-statuses">
+    <legend><%= l(:label_issue_status_plural) %></legend>
+
+    <% IssueStatus.order(:name).each do |status| %>
+      <label>
+        <%= check_box_tag "tracker[predef_issue_status_ids][]", status.id,
+            @tracker.predef_issue_statuses.include?(status), :id => nil %>
+        <%= status.name %>
+      </label>
+    <% end %>
+  </fieldset>
+</div>

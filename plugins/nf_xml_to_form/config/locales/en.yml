@@ -1,0 +1,12 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  csv_converter: CSV to XML Converter
+  back: Back
+  csv_converter_description: Generates individual XML files for each invoice included in an CSV file.
+  csv_converter_error_message: An unexpected error has ocurred. Check the file.
+  csv_converter_invalid_file: Invalid file format.
+  csv_converter_no_file: Noo file selected.
+  csv_converter_error_reading_file: Error reading the file.
+  csv_converter_error_message: Something unexpected has ocurred. Check the selected file.
+  sending_tag: Sending...

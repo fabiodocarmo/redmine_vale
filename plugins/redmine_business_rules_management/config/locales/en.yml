@@ -1,0 +1,19 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  activerecord:
+    errors:
+      models:
+        business_rule:
+          attributes:
+            parameters:
+              wrong_number_of_parameters: 'Wrong number of parameters. %{actual_size} parameter(s) passed, %{expected_size} parameter(s) expected'
+              invalid_parameter_type: 'Invalid parameter type(s). Allowed types are: %{allowed_types}'
+              invalid_parameter_format: 'Invalid parameter format. Parameter must be a Hash with the following keys: %{allowed_keys}'
+            rule:
+              rule_invalid_expressions: 'contains invalid expressions'
+
+    attributes:
+      business_rule:
+        rule: Rule
+        parameters: Parameters

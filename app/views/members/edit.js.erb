@@ -1,0 +1,3 @@
+$('#ajax-modal').html('<%= escape_javascript(render :partial => 'members/edit_modal') %>');
+showModal('ajax-modal', '90%');
+showAndScrollToElement($('#ajax-modal').parent().id);

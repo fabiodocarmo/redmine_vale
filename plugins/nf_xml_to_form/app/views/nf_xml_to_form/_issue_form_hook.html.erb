@@ -1,0 +1,148 @@
+<% content_for :header_tags do %>
+  <%= javascript_include_tag "chosen-readonly.min", plugin: "nf_xml_to_form" %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+
+    var processFile = function(result) {
+
+      for (var cf_id in result) {
+        if (result[cf_id] !== "" && result[cf_id] !== undefined && result[cf_id] !== null && ($("#issue_custom_field_values_"+cf_id).data('chosen') === undefined || 0 != $('#issue_custom_field_values_'+cf_id+' option[value="'+result[cf_id]+'"]').length)) {
+          $("#issue_custom_field_values_"+cf_id).val(result[cf_id]);
+          if (<%= raw Setting.plugin_nf_xml_to_form['dont_lock'] || [] %>.indexOf(String(cf_id)) < 0 ) {
+            $("#issue_custom_field_values_"+cf_id).prop("readonly",true);
+            if ($("#issue_custom_field_values_"+cf_id).data('chosen') !== undefined) {
+              $("#issue_custom_field_values_"+cf_id).trigger('chosen:updated');
+              $("#issue_custom_field_values_"+cf_id).chosen().chosenReadonly(true);
+            }
+          }
+        } else {
+          $("#issue_custom_field_values_"+cf_id).prop("readonly", false);
+          if ($("#issue_custom_field_values_"+cf_id).data('chosen') !== undefined) {
+            $("#issue_custom_field_values_"+cf_id).chosen().chosenReadonly(false);
+          }
+        }
+      }
+    }
+
+    var updateXml = true;
+
+    $("#all_attributes").on('DOMNodeInserted', function (e) {
+      if (updateXml) {
+        updateXml = false;
+          var file_id = $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["file_field"] %>[type='hidden']").val();
+          if (file_id !== undefined && file_id !== "") {
+            var url = '<%= nf_to_xml_path %>/'+file_id + '?tracker=<%=@issue.tracker_id%>' + '&cf_xml=<%= Setting.plugin_nf_xml_to_form["file_field"]%>';
+            $.ajax(url, {
+              type: 'GET',
+              dataType : 'json',
+              success: function (result) {
+                processFile(result);
+              }
+            });
+          }
+          var file_id_2 = $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["transport_material_field"] %>[type='hidden']").val();
+          if (file_id_2 !== undefined && file_id_2 !== "") {
+            var url = '<%= nf_to_xml_path %>/'+file_id_2 + '?tracker=<%=@issue.tracker_id%>' + '&cf_xml=<%= Setting.plugin_nf_xml_to_form["transport_material_field"]%>';
+            $.ajax(url, {
+              type: 'GET',
+              dataType : 'json',
+              success: function (result) {
+                processFile(result);
+              }
+            });
+          }
+
+      }
+    });
+
+       function fillFormFromXml() {
+         function addInputFiles(inputEl) {
+          var clearedFileInput = $(inputEl).clone().val('');
+
+          if ($.ajaxSettings.xhr().upload && inputEl.files) {
+            uploadAndAttachFiles(inputEl.files, inputEl);
+          } else {
+            alert("Seu browser não possui compatibilidade com o preenchimento automático dos campos a partir do XML");
+          }
+        }
+
+        function uploadAndAttachFiles(files, inputEl) {
+          $.each(files, function() {addFile(inputEl, this, true);});
+        }
+
+        function addFile(inputEl, file, eagerUpload) {
+          ajaxUpload(file, 1, inputEl);
+        }
+
+        function ajaxUpload(file, attachmentId, inputEl) {
+          actualUpload(file, attachmentId, inputEl);
+        }
+
+        function actualUpload(file, attachmentId, inputEl) {
+          uploadBlob(file, '<%= nf_xml_index_path(format: :js, tracker: @issue.tracker_id)  %>&cf_xml='+$(inputEl).data("file_field_id"), attachmentId, {});
+        }
+
+        function uploadBlob(blob, uploadUrl, attachmentId, options) {
+          return $.ajax(uploadUrl, {
+            type: 'POST',
+            dataType : 'json',
+            contentType: 'application/octet-stream',
+            beforeSend: function(jqXhr, settings) {
+              settings.data = blob;
+            },
+            data: blob,
+            cache: false,
+            processData: false,
+            success: function (result) {
+
+              if(result.valid) {
+                processFile(result.xml_hash);
+
+                <% if Redmine::VERSION::MAJOR >= 3 %>
+                  <% @update_form_url ||= update_issue_form_path(@project, @issue) %>
+                <% else %>
+                  <% @update_form_url ||= project_issue_form_path(@project, id: @issue, format: 'js') %>
+                <% end %>
+
+                setTimeout(function() {
+                  updateIssueFrom('<%= escape_javascript(@update_form_url) %>');
+                  updateXml = true;
+                }, 1000);
+              }
+              else {
+                if (result.exclusivity_error) {
+                  alert('XML inválido!Verifique se o XML utilizado é condizente com o processo de nota fiscal utilizado.');
+                  location.reload(true);
+                } else {
+                  var alert_error = "XML Incorreto! \n";
+                  alert_error += " Não foram encontrados os seguintes campos no XML: \n";
+                  for (var val_id in result.validation_errors) {
+                    alert_error += "- "
+                    alert_error = alert_error.concat(result.validation_errors[val_id]);
+                    alert_error += "\n"
+                  }
+                alert(alert_error);
+                location.reload(true); // true -> reloads from server not from cache -->
+                }
+              }
+            },
+            error: function (jqxhr, status, errorThrown) {
+              alert("Failure, Unable to receive content")
+              alert(jqxhr.responseText);
+            }
+          });
+        }
+
+        addInputFiles(this);
+      }
+
+      $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["file_field"] %>[type='file']").data("file_field_id", <%= Setting.plugin_nf_xml_to_form["file_field"] %>);
+      $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["file_field"] %>[type='file']").on('change',fillFormFromXml);
+
+      $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["transport_material_field"] %>[type='file']").data("file_field_id", <%= Setting.plugin_nf_xml_to_form["transport_material_field"] %>);
+      $("#issue_custom_field_values_<%= Setting.plugin_nf_xml_to_form["transport_material_field"] %>[type='file']").on('change',fillFormFromXml);
+
+  });
+<% end %>

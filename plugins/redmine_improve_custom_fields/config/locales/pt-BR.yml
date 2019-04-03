@@ -1,0 +1,38 @@
+pt-BR:
+  field_big_size: 'Campo Grande'
+  field_hide_label: 'Esconder o Label'
+  label_group_priority_plural: Prioridades do Grupo
+  tracker_add_group_priority: Adicionar nova Prioridade do Grupo
+  remove_group_priority: Remover Prioridade do Grupo
+  field_email_only_in_closed_status: Enviar e-mail apenas em situações fechadas
+  type_to_search: Digite para buscar
+  field_tracker_description: 'Descrição do tracker'
+  count_characters: '# Caracteres'
+  label_select_custom_field_plural: 'Campos Customizados Selecionados'
+  link_to_visualize: Visualizar
+  showing_label: Exibindo
+  of_label: de
+  field_countable: 'Contável'
+  filter: Filtro
+  field_description_placeholder: 'Placeholder da descrição da Issue'
+  group_priority:
+    author: 'Author Group'
+    enumeration: 'Priority'
+  improve_fields:
+    only_one_status_mode: Como mostrar o Status quando existir somente um
+    parent_issue_id_mode: Como mostrar o id da tarefa pai
+    view_documents: Mostrar visualizador de documentos
+    use_hint: Usar dica
+    select_empty_tracker: Incluir tipo de tarefa vazio
+    select_tracker: '--- Selecione ---'
+    normal: Normal
+    read_only: Somente Leitura
+    hide: Oculto
+    label_autocomplete: 'auto completar'
+    filter_assign_to: Filtrar Atribuido Para
+    issue_status_buttons: Botões de mudança rápida de status
+    hide_empty_fields: Esconder campos em branco
+  field_auto_subject: Título Automático
+  field_mask: Máscara
+  hide_unchecked: 'Esconder não marcados'
+  field_custom_mask: 'Máscara Customizada'

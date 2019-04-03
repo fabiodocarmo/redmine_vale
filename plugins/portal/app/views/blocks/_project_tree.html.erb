@@ -1,0 +1,40 @@
+<% projects = Project.visible.sorted.active.includes(:enabled_modules, :trackers) %>
+
+<div class="">
+  <div class="">
+    <h2><%= l(:label_project_plural) %></h2>
+
+    <div class="search-box">
+      <%= text_field_tag 'search', '', id: 'project-search' %>
+    </div>
+  </div>
+  <div id="projects-index">
+    <%= render_project_hierarchy(projects) %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('#project-search').keyup(function() {
+    if ($('#project-search').val().length > 0) {
+      $("#projects-index .less").toggleClass("less").toggleClass("more");
+      $("#projects-index .more").hide();
+      $("#projects-index li.root").hide();
+      $("#projects-index li.child").hide();
+
+      $("#projects-index .projects.show").removeClass("show");
+      var funded_projects = $("#projects-index .project").filter(function() {
+        return $(this).parent().text().toLowerCase().indexOf($('#project-search').val().toLowerCase()) > -1
+      } );
+      funded_projects.show();
+      funded_projects.parents('ul.projects').addClass("show");
+      funded_projects.parents("li.child").show();
+      funded_projects.parents("li.root").show();
+    } else {
+      $("#projects-index .more").show();
+      $("#projects-index li.root").show();
+      $("#projects-index li.child").show();
+
+      $('#projects-index ul.projects').removeClass("show");
+    }
+  });
+</script>

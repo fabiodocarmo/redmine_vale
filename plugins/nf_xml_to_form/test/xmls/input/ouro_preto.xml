@@ -1,0 +1,124 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="83646547000196112623127800000069">
+               <Numero>00000069</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{75A1A143-2E98-478A-B089-6F43A1431274}</CodigoControle>
+               <DataEmissao>2015-12-01T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>298541.19</BaseCalculo>
+                  <Aliquota>5.0000</Aliquota>
+                  <ValorIss>14927.06</ValorIss>
+                  <ValorLiquidoNfse>298541.19</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>83646547000196</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>1126231278</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>GEOSOL GEOLOGIA E SONDAGENS S A</RazaoSocial>
+                  <Endereco>
+                     <Endereco>AVN SAO PAULO</Endereco>
+                     <Numero>442</Numero>
+                     <Complemento>SALA 01</Complemento>
+                     <Bairro>NOVA ESPERANCA 1</Bairro>
+                     <CodigoMunicipio>3146107</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>32400000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>2108-8000</Telefone>
+                     <Email>faturamento@geosol.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3146107</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2015-12-01</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>298541.19</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>14927.06</ValorIss>
+                     <Aliquota>5.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>4312600</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao>Perfuração de poços tubulares no período de 21.10.15 a 20.11.15 no município de Ouro Preto/MG.
+
+CT 5900001933
+Pedido 4502289713
+FR 1001336880
+N° de RF 6200312898
+Serv. 1469
+
+Perfuração de poços tubulares não se aplica a retenção INSS (Inst. normativa MPS/SRP n° 03 de 14.07.05) ART 170 anexo.
+
+Declaração em anexo ref. a não incidência da lei 10.833 de 29.12.03.
+</Discriminacao>
+                  <CodigoMunicipio>3146107</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>83646547000196</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>1126231278</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510000740</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>3011637895</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>VALE SA</RazaoSocial>
+                     <Endereco>
+                        <Endereco>ROD BR 040</Endereco>
+                        <Numero></Numero>
+                        <Complemento>KM 598</Complemento>
+                        <Bairro>MIGUEL BURNIER</Bairro>
+                        <CodigoMunicipio>3146107</CodigoMunicipio>
+                        <Uf>MG</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>35400000</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone></Telefone>
+                        <Email>soneli.santana@vale.com</Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

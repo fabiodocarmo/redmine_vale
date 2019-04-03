@@ -1,0 +1,6 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { resource: @resource } %>
+</div>
+
+<%= javascript_include_tag "cocoon", plugin: 'redmine_external_validation' %>
+<%= stylesheet_link_tag "cocoon"   , plugin: 'redmine_external_validation' %>

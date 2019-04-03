@@ -1,0 +1,78 @@
+<%= form_for(@resource, html: {id: 'auto_change_status_form'}) do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b>Projeto: </b></label><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_projects_label) %></b></label><br />
+    <%= f.check_box :all_projects %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Tracker: </b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_trackers_label) %></b></label><br />
+    <%= f.check_box :all_trackers %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Status From: </b></label><br />
+    <%= f.collection_select :status_from_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_status_from_label) %></b></label><br />
+    <%= f.check_box :all_status_from %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Status To: </b></label><br />
+    <%= f.collection_select :status_to_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:email_custom_field_label) %>:</b></label><br />
+    <%= f.collection_select :email_custom_field_id, IssueCustomField.order('name ASC'), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:subject_label) %>:</b></label><br />
+    <%= f.text_field :subject %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:body_label) %>:</b></label><br />
+    <%= f.text_area :body %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:send_attachments_label) %></b></label><br />
+    <%= f.check_box :send_attachments %><br /><br />
+  </div>
+
+  <% if f.object.id %>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%end%>
+<% end %>

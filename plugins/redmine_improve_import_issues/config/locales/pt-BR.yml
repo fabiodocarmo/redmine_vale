@@ -1,0 +1,10 @@
+pt-BR:
+  label_file_type: Tipo do arquivo
+  label_project_identifier: Projeto
+  label_tracker_identifier: Tipo de solicitação
+  label_import_template: Templates
+  label_save_template: Salvar template
+  import_issue_upload_finish: Importação de tarefas concluída
+  notice_import_queued: Importação de tickets enviado para a fila. Um email será enviado ao término do processo.
+  notice_import_error: Ocorreram erros durante a inserção
+  notice_import_sucess: Tickets inseridos

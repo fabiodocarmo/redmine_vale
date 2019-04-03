@@ -1,0 +1,60 @@
+ail#encoding: UTF-8
+<%= form_for(@resource) do |f| %>
+
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+      <ul>
+        <% @resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:label_hierarchy) %> </b></label>
+    <%= f.select :hierarchy, ['DE-2', 'DE-3', 'DE-4', 'Atribuído Para'] %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_min_sent) %> </b></label>
+    <%= f.number_field :min_sent, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_max_sent) %> </b></label>
+    <%= f.number_field :max_sent, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_area) %> </b></label>
+    <%= f.collection_select :area, VisibilityReport.select(:area).uniq.order('area ASC'), :area, :area, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_classification) %> </b></label>
+    <%= f.collection_select :classification, VisibilityReport.select(:classification).uniq.order('classification ASC'), :classification, :classification, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_email_template) %> </b></label>
+    <%= f.collection_select :email_template_id, EmailTemplate.all, :id, :name, include_blank: true %><br /><br />
+  </div>
+
+
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+
+  <br />
+  <%= link_to l(:button_back), request.referer %>
+
+<% end %>

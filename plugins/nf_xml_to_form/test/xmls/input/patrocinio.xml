@@ -1,0 +1,94 @@
+<ConsultarNfseResposta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ListaNfse xmlns="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd">
+      <CompNfse xmlns="http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd">
+         <Nfse>
+            <InfNfse>
+               <Numero>524</Numero>
+               <CodigoVerificacao>634D3B0B26</CodigoVerificacao>
+               <DataEmissao>2016-02-15T13:52:04.519</DataEmissao>
+               <IdentificacaoRps>
+                  <Numero>524</Numero>
+                  <Serie>E</Serie>
+                  <Tipo>1</Tipo>
+               </IdentificacaoRps>
+               <DataEmissaoRps>2016-02-15</DataEmissaoRps>
+               <NaturezaOperacao>1</NaturezaOperacao>
+               <RegimeEspecialTributacao>6</RegimeEspecialTributacao>
+               <OptanteSimplesNacional>1</OptanteSimplesNacional>
+               <IncentivadorCultural>2</IncentivadorCultural>
+               <Competencia>2016-02-15T00:00:00</Competencia>
+               <NfseSubstituida></NfseSubstituida>
+               <OutrasInformacoes>DOCUMENTO EMITIDO POR ME OU EPP OPTANTE PELO SIMPLES NACIONAL, NAO GERA DIREITO A CREDITO FISCAL DE IPI.   Voce pagou aproximadamente: R$ 39.01 de tributos federais R$ 8.85 de tributos municipais. Fonte: IBPT/FECOMERCIO MG MD-5: bb2abf87e7d065dd9a04d66ee9</OutrasInformacoes>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>290</ValorServicos>
+                     <IssRetido>2</IssRetido>
+                     <ValorIss>5.8</ValorIss>
+                     <BaseCalculo>290</BaseCalculo>
+                     <Aliquota>2</Aliquota>
+                     <ValorLiquidoNfse>290</ValorLiquidoNfse>
+                  </Valores>
+                  <ItemListaServico>14.03</ItemListaServico>
+                  <CodigoCnae>4530703</CodigoCnae>
+                  <CodigoTributacaoMunicipio>14.03</CodigoTributacaoMunicipio>
+                  <Discriminacao>SERVICOS REFORMA BASICA MOTORES/ C OMPRESSORES ISHIKAWAGINA</Discriminacao>
+                  <CodigoMunicipio>3148103</CodigoMunicipio>
+                  <ItensServico>
+                     <Descricao>SERVICOS REFORMA BASICA MOTORES/ C OMPRESSORES ISHIKAWAGINA</Descricao>
+                     <Quantidade>1</Quantidade>
+                     <ValorUnitario>290</ValorUnitario>
+                  </ItensServico>
+               </Servico>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <Cnpj>23409568000166</Cnpj>
+                     <InscricaoMunicipal>304</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>RETIFICADORA NACIONAL DE MOTORES LTDA</RazaoSocial>
+                  <NomeFantasia>RETIFICA NACIONAL</NomeFantasia>
+                  <Endereco>
+                     <Endereco>AVENIDA FARIA PEREIRA</Endereco>
+                     <Numero>314</Numero>
+                     <Complemento></Complemento>
+                     <Bairro>MORADA DO SOL</Bairro>
+                     <CodigoMunicipio>3148103</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>38740000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3438311918</Telefone>
+                     <Email>diretoria@retificanacional.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <TomadorServico>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510016409</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal></InscricaoMunicipal>
+                     <InscricaoEstadual></InscricaoEstadual>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S.A.</RazaoSocial>
+                  <Endereco>
+                     <Endereco>SERRA DO ESMERIL S/N</Endereco>
+                     <Numero></Numero>
+                     <Complemento></Complemento>
+                     <Bairro>ZONA RURAL</Bairro>
+                     <CodigoMunicipio>3131703</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35900900</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3138394000</Telefone>
+                     <Email>nfe@quadrem.net</Email>
+                  </Contato>
+               </TomadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3148103</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarNfseResposta>

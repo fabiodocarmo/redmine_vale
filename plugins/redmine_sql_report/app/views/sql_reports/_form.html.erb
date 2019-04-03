@@ -1,0 +1,122 @@
+<% filter_types = %w(string date id list) %>
+<%= form_for(@sql_report) do |f| %>
+  <% if @sql_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sql_report.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+
+      <ul>
+      <% @sql_report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:field_name) %>: </b></label><br />
+    <%= f.text_field :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:sql_label) %>: </b></label><br />
+    <%= f.text_area :sql, id: 'sql' %><br /><br />
+  </div>
+
+  <div id="filters">
+    <%= f.fields_for :filters, OpenStruct.new(@sql_report.filters) do |ff| %>
+      <% @sql_report.filters.each do |filter, type| %>
+        <div id="<%= filter %>" class="field">
+          <label> <b><%= filter %> </b></label><br />
+
+          <% if !type || filter_types.include?(type) %>
+            <%= ff.select filter, filter_types, value: type %>
+          <% else %>
+            <%= select_tag filter, options_for_select(filter_types, "list") %>
+            <%= ff.text_area filter, value: type %>
+          <% end %>
+
+        </div>
+      <% end %>
+    <% end %>
+    <br><br>
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>
+
+<script>
+  $(document).ready(function() {
+    function createDeleteList() {
+      var select = $(this);
+      var div = select.parent('.field');
+
+      if (select.attr('name').match(/report\[filters\]\[(.*)\]/)) {
+        var filter = select.attr('name').match(/report\[filters\]\[(.*)\]/)[1];
+      } else {
+        var filter = div.find('textarea').attr('name').match(/report\[filters\]\[(.*)\]/)[1];
+      }
+
+
+      if (select.val() == 'list') {
+        var list = $('<textarea id="list_'+filter+'" name="sql_report[filters]['+filter+']"></textarea>')
+        select.attr('name', '');
+        div.append(list)
+      } else {
+        select.attr('name', 'sql_report[filters]['+filter+']');
+        if($('#list_'+filter).length > 0) { $('#list_'+filter).remove() };
+      }
+    }
+
+    function createFilter(filter) {
+      var div = $("<div class='field'><div>");
+      div.append("<label><b>"+filter+"</b></label><br />");
+
+      select = $('<select id="sql_report_filters_'+filter+'" name="sql_report[filters]['+filter+']"></select>');
+
+      <% filter_types.each do |type| %>
+        select.append('<option value="<%= type %>"><%= type %></option>')
+      <% end %>
+
+      select.on('change', createDeleteList);
+
+      div.append(select)
+      div.append('<br /><br />')
+      return div;
+    }
+
+    $("#filters select").on('change', createDeleteList);
+
+    $("#sql").on('change', function() {
+      var tokens = $("#sql").val().split(/\s/);
+      var filters = [];
+
+      for (var i = 0; i < tokens.length; i++) {
+        var token_filter = tokens[i].match(/^:([a-z|_]+)$/);
+
+        if (token_filter) {
+          filters.push(token_filter[0]);
+        }
+      }
+
+      filters = $.unique(filters)
+
+      var filter_div = $("#filters");
+      filter_div.html("");
+
+      $.each(filters, function(i, value) {
+        filter_div.append(createFilter(value.split(':')[1]));
+      });
+
+      filter_div.append('<br />');
+    });
+
+  });
+</script>

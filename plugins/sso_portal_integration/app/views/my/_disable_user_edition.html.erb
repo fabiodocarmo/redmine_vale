@@ -1,0 +1,3 @@
+<% if Setting.plugin_sso_portal_integration[:disable_edit_user] == "true" %>
+  <%= javascript_include_tag "my/disable_user_edition", plugin: "sso_portal_integration" %>
+<% end %>

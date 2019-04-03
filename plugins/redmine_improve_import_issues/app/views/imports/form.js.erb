@@ -1,0 +1,1 @@
+$('#form_content').html('<%= escape_javascript(render :partial => 'imports/form_content', :layout => nil, :formats => [:html], :locals => { default_projects: @default_projects, import: @import, import_trackers: @import_trackers, import_custom_fields: @import_custom_fields, import_templates: @import_templates }) %>')

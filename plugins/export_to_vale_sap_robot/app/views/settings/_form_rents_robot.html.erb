@@ -1,0 +1,121 @@
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('label_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_tracker_id]', options_from_collection_for_select(Tracker.all, :id, :name, settings['rents_tracker_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_wating_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['rents_wating_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['rents_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['rents_success_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['rents_error_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<% @issue_custom_fields = IssueCustomField.all %>
+<table>
+  <tbody>
+    <tr>
+    <th><%= t('export_to_vale_sap_robot.postagem') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_postagem_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_postagem_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.empresa') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_empresa_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_empresa_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_fornecedor') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_cnpj_fornecedor_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_cnpj_fornecedor_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.emissao') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_emissao_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_emissao_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.vencimento') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_vencimento_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_vencimento_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_referencia_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_referencia_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.valor_total_nf') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_valor_total_nf_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_valor_total_nf_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.tipo_documento') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_tipo_documento_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_tipo_documento_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_pedido_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_pedido_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.frs') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_frs_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_frs_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.rf') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_rf_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_rf_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.pagamento') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_pagamento_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_pagamento_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.codigo_barras') %>:</th>
+    <td>
+      <%= select_tag 'settings[rents_codigo_barras_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['rents_codigo_barras_id']), include_blank: true %>
+    </td>
+  </tr>
+  
+  </tbody>
+</table>

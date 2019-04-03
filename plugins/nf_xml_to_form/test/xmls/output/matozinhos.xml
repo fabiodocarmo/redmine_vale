@@ -1,0 +1,121 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse versao="1.00">
+      <InfNfse Id="nfse">
+         <Numero>201500000000023</Numero>
+         <CodigoVerificacao>SN9Y-RFMU</CodigoVerificacao>
+         <DataEmissao>2015-09-29T16:10:59</DataEmissao>
+         <IdentificacaoRps>
+            <Numero></Numero>
+            <Serie></Serie>
+            <Tipo></Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps></DataEmissaoRps>
+         <NaturezaOperacao>2</NaturezaOperacao>
+         <OptanteSimplesNacional>1</OptanteSimplesNacional>
+         <IncentivadorCultural>2</IncentivadorCultural>
+         <Competencia>2015-09-01T00:00:00</Competencia>
+         <Servico>
+            <Valores>
+               <ValorServicos>356000.0000</ValorServicos>
+               <ValorPis></ValorPis>
+               <ValorCofins></ValorCofins>
+               <ValorIr></ValorIr>
+               <ValorCsll></ValorCsll>
+               <IssRetido>1</IssRetido>
+               <ValorIss></ValorIss>
+               <BaseCalculo>356000.0000</BaseCalculo>
+               <Aliquota>0.050000</Aliquota>
+               <ValorLiquidoNfse>331970.0000</ValorLiquidoNfse>
+            </Valores>
+            <ItemListaServico>7.02</ItemListaServico>
+            <CodigoTributacaoMunicipio>0702</CodigoTributacaoMunicipio>
+            <Discriminacao>Prestação de serviço de execução de recuperação do revestimento de trabalho do forno 8 na Planta II, unidade da Vale Manganês em Simões Filho-BA - Reforma Refratária AGO/15
+Medição referente ao  PERÍODO: 06/08/2015 A 31/08/2015.
+
+PC 4502135505
+FR 1001217050
+Valor Total da Medição = R$ 356.000,00
+
+
+Contribuinte ME, EPP, ou MEI / Simples Nacional. Não incidir dedução na fonte da Contribuição Social sobre o Lucro Líquido (CSLL), da Contribuição para o Financiamento da Seguridade Social (COFINS), e da Contribuição para  PIS/PASEP e IRRF, a que se refere o artigo 30 da Lei nº 10.833, de 29 de dezembro de 2003, que é regularmente inscrita no regime Especial Unificado de Arrecadação de Tributos e Contribuições devidos pelas Microempresas e Empresas de Pequeno Porte - Simples Nacional, de que trata o art. 12 da Lei Complementar nº 123, de 14 de dezembro de 2006. Informamos também que conforme inciso III, art. 126, da Instrução Normativa de 13/11/2009, a base de calculo de INSS é sobre 50% do valor referente a Mão de Obra e 50% referente a equipamentos e ferramentas próprios utilizados na obra.
+VALOR de M.O (base 50%) = R$ 178.000,00   --&gt; Valor de retenção de INSS (3,5% de 50%) = R$ 6.230,00
+EQUIPAMENTOS E FERRAMENTAL PRÓPRIOS (base 50%) = R$ 178.000,00
+
+Imposto de ISS conforme Tabela SIMPLES NACIONAL
+ANEXO IV (Vigência a Partir de 01.01.2012) conforme Resolução CGSN 117/2014
+
+LOCAL: Simões Filho/BA
+
+PAGAMENTO MEDIANTE DEPOSITO EM CONTA CORRENTE:
+  Banco do Brasil, Agência 3212-3 - Matozinhos MG, Conta Corrente: 28437-8
+  Banco do Itaú, Agência 3152 - Matozinhos MG, Conta Corrente: 32023-4
+FAVORECIDO: REFRASERV REVESTIMENTO REFRATÁRIO E ISOLAMENTO TÉRMICO LTDA</Discriminacao>
+            <CodigoMunicipio>2930709</CodigoMunicipio>
+         </Servico>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>20119745000181</Cnpj>
+               <InscricaoMunicipal>26275</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>REFRASERV - REVESTIMENTO REFRATARIO E ISOLAMENTO TERMICO LT</RazaoSocial>
+            <NomeFantasia>REFRASERV - REVESTIMENTO REFRATARIO E ISOLAMENTO TERMICO LTD</NomeFantasia>
+            <Endereco>
+               <Endereco>RUA BRASILIA</Endereco>
+               <Numero>1378</Numero>
+               <Complemento>LOJA 01</Complemento>
+               <Bairro>CRUZEIRO</Bairro>
+               <CodigoMunicipio>3141108</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <Cep>35720000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>3137126675</Telefone>
+            </Contato>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>15144306000199</Cnpj>
+               </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE MANGANES S.A.</RazaoSocial>
+            <Endereco>
+               <Endereco>RODOVIA BR 324</Endereco>
+               <Numero>Km 24</Numero>
+               <Bairro>CIA Sul</Bairro>
+               <CodigoMunicipio>2930709</CodigoMunicipio>
+               <Uf>BA</Uf>
+               <Cep>43700000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>07121095154</Telefone>
+               <Email>nfe.servico@vale.com</Email>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3141108</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="NfseAssSMF_nfse">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#nfse">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>IDctIj4P0NsYgLf8VP2z0GJkveM=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>cOLhW920L/fn2jndH3pFd9LMsCFjQ/+h8TfmV5lcz8Qc33njBe3W39alrZTRPdpmn0CcaWG4bu2vvihRsX0HzDztPyBqUs9BF/YIdtKTfDfOlAA7heuaBo8FLaXcbI0TdGJNK5dbYEavbtrqP97ReEozKP/aEjaK8KUlS2KLXgZb5t9mM172l4DarhuVYBY9QTmuyvtlP1lv7OnjI9I+PnuSDKVEGeHZfQQH51EJSEOku4v/YWQkYh9wbVlzZj+JrWSWtkmexomO8cmP9DBq1lcU3lwPsWMyTYesE0xteRHG1KHYJakVH1wJcKu8zxdxmkbGyRASWFgAiJm9Iw2lPQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

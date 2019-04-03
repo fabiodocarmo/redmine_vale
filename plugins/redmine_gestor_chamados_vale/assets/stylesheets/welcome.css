@@ -1,0 +1,73 @@
+
+div.projects {
+  width: 70%;
+  margin: auto;
+}
+
+div.project .project-title,
+div.project .father_projects {
+  clear: both;
+  position: relative;
+}
+
+div.children_projects{
+  margin-left: 2em;
+}
+
+div.project div.trackers div.tracker {
+
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1em;
+  display: inline-block;
+  /*    border: solid 1px green; */
+  position:relative;
+}
+
+div.folding-all-projects-buttons {
+  position: absolute;
+  right: 30px;
+}
+
+div.folding-project-buttons {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+div.tracker-title{
+  font-size: 17px;
+}
+
+div.tracker-desc {
+  display: inline-block;
+  top: 0px;
+  border: 0px solid #ccc;
+  padding: 4px 7px;
+  padding: 1em;
+  width: 80%
+}
+
+.tracker-left {
+  clear: left;
+
+}
+
+.collapse_project{
+  width: 65px;
+  height: 30px;
+  font-size: 75%;
+}
+
+.tracker-desc .more-text {
+  display: none;
+}
+
+.tracker-desc .description {
+  word-wrap: break-word;
+}
+
+.custom_icon{
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+}

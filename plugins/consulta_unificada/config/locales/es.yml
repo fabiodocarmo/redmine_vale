@@ -1,0 +1,24 @@
+es:
+    label_nf_statuses: Estado de las Facturas
+    link_to_nf: Consultar factura
+    link_to_deposito: Consultar depósito
+    link_to_edit: Editar
+
+    cnpj_cpf_field: CNPJ/CPF
+    invoice_number_field: Número de la factura
+
+    status_creation_sucess_message: Situación creada con éxito.
+    status_update_sucess_message: Situación editada con éxito.
+
+    warning_message_label: Mensaje de advertencia
+    id_label: id
+    name_id_label: Nombre ID
+    invoice_field_label: Factura Campo
+    system_url_label: URL del sistema de consulta unificada de factura
+
+    edit_status_header: Editar situación
+    invoice_status_list_header: Lista de situaciones de facturas
+    new_status_header: Nueva situación
+
+    invoice_status_caption: Situaciones de las facturas
+    prohibited_message: impidieron que se guarde esta configuración

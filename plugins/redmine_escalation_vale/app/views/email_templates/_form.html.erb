@@ -1,0 +1,48 @@
+#encoding: UTF-8
+<%= form_for(@resource) do |f| %>
+
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+      <ul>
+        <% @resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:template_name) %> </b></label>
+    <%= f.text_field :name, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:mail_subject) %> </b></label>
+    <%= f.text_field :subject, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:mail_image_url) %> </b></label>
+    <%= f.text_field :image_url, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:mail_body) %> </b></label>
+    <%= f.text_area :template, class: 'string_cf'%><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+
+  <br />
+<%= link_to l(:button_back), request.referer %>
+
+<% end %>

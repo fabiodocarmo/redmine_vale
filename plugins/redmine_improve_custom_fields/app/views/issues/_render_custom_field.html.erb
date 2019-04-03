@@ -1,0 +1,33 @@
+<p class="<%= big_size ? 'big-size' : '' %>">
+  <%= custom_field_tag_with_label :issue, value, required: @issue.required_attribute?(value.custom_field_id) %>
+  <% if value.custom_field.countable %>
+    <br>
+    <small class='counter' ><%= t('count_characters') %>: <span id='count_<%=  value.custom_field_id%>' class='count'></span><%= value.custom_field.max_length ? "/#{value.custom_field.max_length}" : '' %></small>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        Countable.live(document.getElementById("issue_custom_field_values_<%=  value.custom_field_id%>"), function (counter) {
+          var count = document.getElementById("count_<%= value.custom_field_id %>");
+          if (count !== null) {
+            count.innerHTML = counter.characters;
+          }
+        })
+      });
+    </script>
+  <% end %>
+
+  <% unless value.custom_field.mask.blank? %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var selector = document.getElementById("<%= custom_field_tag_id(:issue, value.custom_field) %>");
+      <% if value.custom_field.mask == "custom" %>
+        Inputmask("<%= value.custom_field.custom_mask %>").mask(selector);
+      <% else %>
+        Inputmask("<%= value.custom_field.mask %>").mask(selector);
+      <% end %>
+    });
+  </script>
+  <% end %>
+</p>
+<% if Setting.try(:plugin_redmine_improve_custom_fields)[:use_hint] && !value.custom_field.description.blank? %>
+  <p class='hint'><%= value.custom_field.description %></p>
+<% end %>

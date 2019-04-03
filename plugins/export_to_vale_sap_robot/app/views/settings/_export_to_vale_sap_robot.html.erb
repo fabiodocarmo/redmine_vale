@@ -1,0 +1,114 @@
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_cte_os_robot, partial: 'form_cte_os_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_nf_recibo_fatura_nd_robot, partial: 'form_nfse_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_danfe_nfse_robot, partial: 'form_danfe_nfse_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_transmission_companies_robot, partial: 'form_transmission_companies_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_telecom_companies_robot, partial: 'form_telecom_companies_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_danfe_companies_robot, partial: 'form_danfe_companies_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_utilities_robot, partial: 'form_utilities_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_invoice_robot, partial: 'form_invoice_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_priorities_robot, partial: 'form_priorities_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_rpa_robot, partial: 'form_rpa_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_rents_robot, partial: 'form_rents_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_measurement_robot, partial: 'form_measurement_robot'} %>
+
+<%= render :partial => 'template_fields',
+           locals: {settings: settings, title: :title_measurement2_robot, partial: 'form_measurement2_robot'} %>
+
+<%= content_for :header_tags do %>
+    <script type="text/javascript">
+      expand_collapse = function(elem) {
+        $(elem).parent().find('.template_fields').toggle()
+      }
+    </script>
+
+    <style>
+      div.template_fields {
+        display: none;
+      }
+
+      button.expand_collapse_button {
+        float: left;
+        margin-right: 1em;
+      }
+    </style>
+<% end %>
+
+<%= javascript_include_tag('chosen.jquery.min.js', plugin: 'redmine_improve_custom_fields') %>
+<%= javascript_include_tag('ajax-chosen.min.js', plugin: 'redmine_improve_custom_fields') %>
+<script type="text/javascript">
+
+  var fix_chosen_css = function(chosen_element) {
+    var parent = $(chosen_element).siblings('.chosen-container');
+
+    if (parent.parent('td').length == 0) {
+      parent.css('position', 'absolute');
+      parent.css('display', 'block');
+      parent.parent().css('height', (parent.height()+10) + 'px');
+    } else {
+      parent.css('width', '100%');
+    }
+    parent.css('min-width', '236px');
+
+    var lastHeight = parent.height();
+    function checkForHeightChanges() {
+      if (parent.height() != lastHeight) {
+        parent.parent().css('height', (parent.height()+10) + 'px');
+        lastHeight = parent.height();
+      } else {
+        setTimeout(checkForHeightChanges, 500);
+      }
+    };
+    setTimeout(checkForHeightChanges, 500);
+  }
+
+  var make_chosen = function(elem) {
+    $(elem).chosen({inherit_select_classes: true, allow_single_deselect: true}).change(function(elem) {
+      var container = $(this).siblings('.chosen-container').parent();
+      if (container.length >= 0) {
+        container.css('height', $(this).siblings('.chosen-container').height());
+      }
+    });
+    fix_chosen_css(elem)
+  }
+
+  var update_chosen = function(chosen) {
+    input = $(chosen).parent().find('div.chosen-drop input[type=text]');
+    value = $(input).val();
+    $(chosen).trigger('chosen:updated');
+    $(input).val(value);
+  }
+
+  var make_select_elements_chosen = function (){
+    $('select').not("#relation_relation_type")
+        .not('.description')
+        .not('#project_quick_jump_box').each(function(index, elem){
+      make_chosen(elem);
+    });
+  }
+
+  make_select_elements_chosen();
+
+</script>

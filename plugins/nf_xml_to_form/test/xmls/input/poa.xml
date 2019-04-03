@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse versao="1.00">
+      <InfNfse Id="nfse">
+         <Numero>201600000000144</Numero>
+         <CodigoVerificacao>2edcf12e</CodigoVerificacao>
+         <DataEmissao>2016-03-01T15:58:45</DataEmissao>
+         <IdentificacaoRps>
+            <Numero>149</Numero>
+            <Serie>1</Serie>
+            <Tipo>1</Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps>2016-03-01</DataEmissaoRps>
+         <NaturezaOperacao>1</NaturezaOperacao>
+         <OptanteSimplesNacional>2</OptanteSimplesNacional>
+         <IncentivadorCultural>2</IncentivadorCultural>
+         <Competencia>2016-03-01T00:00:00</Competencia>
+         <Servico>
+            <Valores>
+               <ValorServicos>17613.00</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>114.50</ValorPis>
+               <ValorCofins>528.41</ValorCofins>
+               <ValorInss>0.00</ValorInss>
+               <ValorIr>264.21</ValorIr>
+               <ValorCsll>176.15</ValorCsll>
+               <IssRetido>2</IssRetido>
+               <ValorIss>352.26</ValorIss>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <BaseCalculo>17613.00</BaseCalculo>
+               <Aliquota>0.02</Aliquota>
+               <ValorLiquidoNfse>16529.73</ValorLiquidoNfse>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <ItemListaServico>1.07</ItemListaServico>
+            <CodigoTributacaoMunicipio>10700100</CodigoTributacaoMunicipio>
+            <Discriminacao>MANUTENCAO DO SISTEMA KLASSMATT
+ - Valor do Servico: R$ 3.450,50
+MANUTENCAO DO SISTEMA KLASSMATT
+ - Valor do Servico: R$ 3.450,50
+HOSTING
+ - Valor do Servico: R$ 6.695,00
+DESENVOLVIMENTO MELHORIA DE SISTEMA
+ - Valor do Servico: R$ 1.390,50
+DESENVOLVIMENTO MELHORIA DE SISTEMA
+ - Valor do Servico: R$ 1.390,50
+HELP DESK
+ - Valor do Servico: R$ 618,00
+HELP DESK
+ - Valor do Servico: R$ 618,00
+
+REFERENTE FEV/2016
+PAGAMENTO: BANCO DO BRASIL
+AG: 0883.4 C/C: 26467.9
+VENCIMENTO 21/03/2016
+RF: 6200341349
+CONTRATO: 5900008514
+FRS: 1001497209
+PEDIDO/ITEM: 4502479610/00010
+IR Retido na Fonte: (1,50 %) R$ 264,21
+PIS: (0,65 %) R$ 114,50 / Cofins: (3,00 %) R$ 528,41 / CSLL: (1,00 %) R$ 176,15 / ISS:  R$ 352,26
+Valor Liquido(Servico): R$ 16.529,73
+Val Aprox Tributos Federais R$ 2368,94
+Val Aprox Tributos Municipais R$ 352,26
+
+Fonte: IBPT/FECOMERCIO RS ca7gi3</Discriminacao>
+            <CodigoMunicipio>4314902</CodigoMunicipio>
+         </Servico>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>03467109000121</Cnpj>
+               <InscricaoMunicipal>22608923</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>INTEGRA CONSULTORIA S/S LTDA - EPP</RazaoSocial>
+            <NomeFantasia>INTEGRA TECNOLOGIA</NomeFantasia>
+            <Endereco>
+               <Endereco>R   GOMES DE FREITAS</Endereco>
+               <Numero>350</Numero>
+               <Bairro>JAR ITU SABARA</Bairro>
+               <CodigoMunicipio>4314902</CodigoMunicipio>
+               <Uf>RS</Uf>
+               <Cep>91380000</Cep>
+            </Endereco>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33592510000154</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>00552798</InscricaoMunicipal>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE S.A.</RazaoSocial>
+            <Endereco>
+               <Endereco>Rua Avenida Graca Aranha</Endereco>
+               <Numero>26</Numero>
+               <Bairro>Centro</Bairro>
+               <CodigoMunicipio>3304557</CodigoMunicipio>
+               <Uf>RJ</Uf>
+               <Cep>20030001</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>2134855689</Telefone>
+               <Email>eurico.carneiro@vale.com</Email>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>4314902</CodigoMunicipio>
+            <Uf>RS</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="NfseAssSMF_nfse">
+         <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" />
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+            <ds:Reference URI="#nfse">
+               <ds:Transforms>
+                  <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+               </ds:Transforms>
+               <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+               <ds:DigestValue>pp5/xfyFitUC43DK8VxLT66hsZs=</ds:DigestValue>
+            </ds:Reference>
+         </ds:SignedInfo>
+         <ds:SignatureValue>RJQPFSh/7anCvlj6ExEr5spPuP33mcb4boxp/J8wDYO+5abzepjIGfl4O2MNLpMfpeT9fM6xU8uG
+HF5RrBeG4z1ifYY9e2JnC1aJXGySewwjj5/ANztnx3f3r3FyrXsXdOt7jgTddveuUg6OleoeINl5
+kHHxE8cSVNVtud3UF6Q4ByYic6uBsUMsxeTOgkurkoh4m3p2L5apvngaeCICAfNY+k0jDIsVw9Qc
++nxg7OYhPN9SnnbD5MXbrWApW3qanoJHhf9YH0SxyuoGbMCWMQtWRxoTSNlZlYix9zUmDYl+P6G+
+pHuuF9/1gWUSGRoHKyOPoqi5HxLP2gerJwTepw==</ds:SignatureValue>
+         <ds:KeyInfo>
+            <ds:X509Data>
+               <ds:X509Certificate>MIIIbTCCBlWgAwIBAgIQJmaNu6dCzo79iR+ewbdDxDANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc0MB4X
+DTE1MTIyODAwMDAwMFoXDTE2MTIyNjIzNTk1OVowggEDMQswCQYDVQQGEwJCUjETMBEGA1UEChQK
+SUNQLUJyYXNpbDELMAkGA1UECBMCUlMxFTATBgNVBAcUDFBvcnRvIEFsZWdyZTE2MDQGA1UECxQt
+U2VjcmV0YXJpYSBkYSBSZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRYwFAYDVQQLFA1S
+RkIgZS1DTlBKIEExMTgwNgYDVQQLFC9BdXRlbnRpY2FkbyBwb3IgQ2VydGlzaWduIENlcnRpZmlj
+YWRvcmEgRGlnaXRhbDExMC8GA1UEAxMoTVVOSUNJUElPIERFIFBPUlRPIEFMRUdSRTo5Mjk2MzU2
+MDAwMDE2MDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANHu5bST/jpaUe86+5IzHgvE
+fErmZwcR4/EVJtgdngJQtXer6WtEDcCEJCTbvsTJ4IEF4nIBIlvZGnE6uxztT5cTL20FeEQ6ot/V
+K88tnUgelj+ruaRW7vXbyj4PP1CaCA9lz24bSZj1j0gTrGAMRs7oiFIBYBWNCnnUgAkmzNxv6vhk
+f4LUpbkdbNQmlXCZQ/b4AkR+RVO7hDKS0/+Cq7566pY7+OysjqkJi3jkMXe0Hm3mQQYcUY2Qnqyl
+ONzi3t4eYcFybZ9j2S6OnonYnpgUUmkXoVtncDxCQX9pgYE7tmTBLfChsdOe9Tv/Q9oModrVWswP
+f5tQQ+QB/ebl1eECAwEAAaOCA2QwggNgMIHJBgNVHREEgcEwgb6gPQYFYEwBAwSgNAQyMjQxMDE5
+NTUyMDA0MzQ2NTA3MjAwMDAwMDAwMDAwMDAwMDAxMDA1ODg4OTI4U1NQUlOgJgYFYEwBAwKgHQQb
+Sk9TRSBBTEJFUlRPIFJFVVMgRk9SVFVOQVRJoBkGBWBMAQMDoBAEDjkyOTYzNTYwMDAwMTYwoBcG
+BWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEhYWRyaWFuYS5yb2RyaWd1ZXNAcHJvY2VtcGEuY29tLmJy
+MAkGA1UdEwQCMAAwHwYDVR0jBBgwFoAULpHq1m3lslmC3DiFKXY0FlY80D4wDgYDVR0PAQH/BAQD
+AgXgMH8GA1UdIAR4MHYwdAYGYEwBAgEMMGowaAYIKwYBBQUHAgEWXGh0dHA6Ly9pY3AtYnJhc2ls
+LmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL0FDX0NlcnRpc2lnbl9SRkIvRFBDX0FD
+X0NlcnRpc2lnbl9SRkIucGRmMIIBFgYDVR0fBIIBDTCCAQkwV6BVoFOGUWh0dHA6Ly9pY3AtYnJh
+c2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2VydGlzaWduUkZCRzQvTGF0
+ZXN0Q1JMLmNybDBWoFSgUoZQaHR0cDovL2ljcC1icmFzaWwub3V0cmFsY3IuY29tLmJyL3JlcG9z
+aXRvcmlvL2xjci9BQ0NlcnRpc2lnblJGQkc0L0xhdGVzdENSTC5jcmwwVqBUoFKGUGh0dHA6Ly9y
+ZXBvc2l0b3Jpby5pY3BicmFzaWwuZ292LmJyL2xjci9DZXJ0aXNpZ24vQUNDZXJ0aXNpZ25SRkJH
+NC9MYXRlc3RDUkwuY3JsMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCBmwYIKwYBBQUH
+AQEEgY4wgYswXwYIKwYBBQUHMAKGU2h0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIv
+cmVwb3NpdG9yaW8vY2VydGlmaWNhZG9zL0FDX0NlcnRpc2lnbl9SRkJfRzQucDdjMCgGCCsGAQUF
+BzABhhxodHRwOi8vb2NzcC5jZXJ0aXNpZ24uY29tLmJyMA0GCSqGSIb3DQEBCwUAA4ICAQBDTgUI
+PjRmxy+AdDlrk3egmtZNPDutp9ESutbK8MOauhiMResSjDU5lKB1GTLnLD1Z10ZGbjlqO2/ihbUR
++HaSA15m+BDrAsG2wt1Z73MwFSvMyaWpVjPE4kuJPw/nZ8UjhGWnG/8vUDOD0S3ehkFvm6VLQdQt
+7Lt8sxZdsa3nNKpDA4+4jmr7YcEPxsK5iMSM89y5k9CKro3aW7byZrUA3ZAqVRzEcOIl5gbrkscf
+1iCnBWUhPyWD8D+4joydYaDu+XvHZIwccbFvesgHugafvIE7JBbbrGuAW4pc35+hKOiVUuBtyVOJ
+5Wkjute4pGxZok7D+jx2/aGcVmYTUIahYVFSi3LOqvNhXOn323kHepr8qud6AMKl9745pgs6pGxr
+/AOTKbU9luQnNa9yLF++WX0b06klRXXiVSoBWGUSN6nloRSMZJZQsLO1JzkkNbYOTlt0XQ++EGB7
+98lqVDwm6L9EjAwS2EdUg/n3Roi8vkb1kPWMSwOgxbyo9D2A/c8h8zekgJpDRJcRH+hUVfHxrUXH
+4YIHVaxCn9lJzE2A6a6eN91Eag6i3R1iT2MAX7myYgY78pTLZjExneGFcMQcASmg+duzpLZueC5A
+W88GDqTuHe30xUiTKDvkdird1l42I68Qzp1+OEO3wcVDxsZv52FPoKa/zYP5mtgKGpwNAg==</ds:X509Certificate>
+            </ds:X509Data>
+         </ds:KeyInfo>
+      </ds:Signature>
+   </Nfse>
+</CompNfse>

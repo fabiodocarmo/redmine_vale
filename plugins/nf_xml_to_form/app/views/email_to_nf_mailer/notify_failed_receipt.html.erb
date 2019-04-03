@@ -1,0 +1,13 @@
+<div>
+  <h1>Obrigado por enviar sua nota fiscal,</h1>
+  <p>
+    Mas infelizmente tivemos os seguintes problemas:
+  </p>
+  <div>
+    <ul>
+      <% @issue.errors.full_messages.each do |full_message| %>
+        <li><%= full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+api.array :errors do
+  api.error "Forbidden"
+end 

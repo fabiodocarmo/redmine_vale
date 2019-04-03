@@ -1,0 +1,21 @@
+api.custom_field do
+  api.id                @custom_field.id
+  api.name              @custom_field.name
+  api.field_format      @custom_field.field_format
+  api.min_length        @custom_field.min_length
+  api.max_length        @custom_field.max_length
+  api.default_value     @custom_field.default_value
+  api.is_filter         @custom_field.is_filter.to_s
+
+  values = @custom_field.possible_values
+  if values.present?
+    api.array :possible_values do
+      values.each do |label, value|
+        api.possible_value do
+          api.value value || label
+        end
+      end
+    end
+    api.count_values      values.count
+  end
+end

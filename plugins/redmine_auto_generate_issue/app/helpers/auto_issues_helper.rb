@@ -1,0 +1,2 @@
+module AutoIssuesHelper
+end

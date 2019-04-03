@@ -1,0 +1,110 @@
+<%= form_for(@resource) do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:label_project) %>:</b></label><br />
+    <%= f.collection_select :project_id, Project.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_projects_label) %></b></label><br />
+    <%= f.check_box :all_projects %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_tracker) %>:</b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_trackers_label) %></b></label><br />
+    <%= f.check_box :all_trackers %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_group) %>:</b></label><br />
+    <%= f.collection_select :group_id, Group.order('lastname ASC'), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:weekend_group_label) %>: </b></label><br />
+    <%= f.collection_select :weekend_group_id, Group.order('lastname ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:status_from_label) %>: </b></label><br />
+    <%= f.collection_select :status_from_id, IssueStatus.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:all_status_from_label) %></b></label><br />
+    <%= f.check_box :all_status_from %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:status_to_label) %>:</b></label><br />
+    <%= f.collection_select :status_to_id, IssueStatus.order('name ASC'), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:auto_assignment_type_label) %>:</b></label><br />
+    <%= f.select :redistribute, AtribuicaoAutomatica::REDISTRIBUTE_TYPE.map { |k,v| [v,k] }, {include_blank: true} %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:use_custom_field_label) %></b></label><br />
+    <%= f.check_box :use_custom_field %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_custom_field) %>:</b></label><br />
+    <%= f.collection_select :custom_field_id, IssueCustomField.order('name ASC'), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:custom_field_value_label) %>:</b></label><br />
+    <%= f.text_field :custom_field_value %><br /><br />
+  </div>
+
+  <% if Setting.plugin_redmine_auto_assign['two_custom_fields_available'] %>
+    <div class="field">
+      <label> <b><%= l(:second_custom_field_label) %>: </b></label><br />
+      <%= f.collection_select :second_custom_field_id, IssueCustomField.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= l(:second_custom_field_value_label) %>: </b></label><br />
+      <%= f.text_field :second_custom_field_value %><br /><br />
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:user_custom_field_label) %>:</b></label><br />
+    <%= f.collection_select :user_custom_field_id, UserCustomField.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:issue_user_custom_field_label) %>:</b></label><br />
+    <%= f.collection_select :issue_user_custom_field_id, IssueCustomField.order('name ASC'), :id, :name, include_blank: true %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>

@@ -1,0 +1,52 @@
+pt-BR:
+  activerecord:
+    messages:
+      less_than_created_on:  "%{field_name} deve ser menor que a data de criação do chamado"
+      tax_rate_equals_zero:  "%{rate_field_name} igual a zero com %{value_field_name} maior que zero"
+      tax_value_equals_zero: "%{value_field_name}  igual a zero com %{rate_field_name} maior que zero"
+      tax_base_value_greater_than_service_value: "%{tax_base_value_field_name} maior que %{service_value_field_name}. Conferir %{tax_rate_field_name} e %{tax_value_field_name}"
+      less_than_end_date: "%{field_name} deve ser menor que a %{target_field_name}"
+      invalid_deposit_value: "O valor do campo %{deposit_field_name} só pode ser Sim caso o valor do campo %{authorship_field_name} seja Próprio contribuinte"
+      inconsistent_withheld_option_and_value: "O valor do campo \"%{withheld_tax_cf_name}\" não pode ser zero se o valor do campo \"%{is_withheld_cf_name}\" é \"Sim\"."
+
+  auto_forward_job:
+    title: 'Job de encaminhamento automático'
+    status_grc: 'Situação para cadastro via GRC'
+    status_robot: 'Situação para cadastro via Robô'
+
+  withheld_tax_job:
+    title: 'Job de validação de imposto retido (se é retido, não pode ser nulo)'
+    is_withheld_field: 'Campo que define se o imposto é retido'
+    withheld_tax_field: 'Campo com o valor do imposto retido'
+
+  xml_converter:
+    label_xml_tag: Tag do XML
+
+  csv_converter: Conversor de CSV para XML
+  back: Voltar
+  csv_converter_description: Emite arquivos XML individuais para cada nota incluída em um arquivo CSV.
+  csv_converter_error_message: Algo inesperado ocorreu. Verifique o arquivo.
+  csv_converter_invalid_file: Formato de arquivo inválido.
+  csv_converter_no_file: Nenhum arquivo selecionado.
+  csv_converter_error_reading_file: Erro ao ler o arquivo.
+  permission_csv_converter: Converter notas em CSV para XML.
+  sending_tag: Enviando...
+  transport_converter_issues_label: Selecione os chamados que usarão o conversor de xml de transportes
+  transport_material_field_label: Selecione o campo usado para a leitura da Chave de Acesso dos formulários de Frete
+  complete_with_zeroes_label: Selecione os chamados que precisam que o campo de número de documento fiscal seja completado com zeros
+  label_exclusive: Exclusivo
+  xml_to_nf:
+    mailer:
+      notify_receipt: '%{issue_id} - Sua nota fiscal foi recebida com sucesso'
+      notify_failed_receipt: 'Tivemos problemas em receber sua nota fiscal'
+  email_to_nf_job_edit_success_message: Exec Job - Email To NF editado com sucesso
+  label_address: Endereço
+  label_port: Porta
+  label_user_name: Usuário
+  label_password: Senha
+  label_openssl_verify_mode: TLS
+  project_label: Projeto
+  tracker_label: Tipo da Tarefa
+  pdf_custom_field_label: Campo Customizado - PDF
+  xml_custom_field_label: Campo Customizado - XML
+  always_save_label: Sempre salvar a tarefa

@@ -1,0 +1,9 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Sheet") do |sheet|
+  sheet.add_row @result.columns
+  @result.each do |row|
+    sheet.add_row(row.map do |col,val|
+      @result.column_types[col].send(:type_cast, val)
+    end)
+  end
+end

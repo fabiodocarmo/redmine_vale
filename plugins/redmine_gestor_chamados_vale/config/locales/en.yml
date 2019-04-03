@@ -1,0 +1,11 @@
+en:
+  field_project: Responsible Area
+  label_helpdesk_customer_profile: Supplier profile
+  label_helpdesk_show_contact_card: View supplier profile
+  field_has_invoice: Has invoice
+  hide_areas_label: Hide Areas
+  show_areas_label: Show Areas
+  hide_label: Hide
+  show_label: Show
+  read_more_label: Read more...
+  read_less_label: Read less...

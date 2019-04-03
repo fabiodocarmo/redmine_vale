@@ -1,0 +1,47 @@
+<style type="text/css">
+.email {
+  color: #007E7A;
+}
+.email:hover {
+  color: #ECB11F;
+  pointer-events:all;
+  cursor: hand;
+  cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+
+$('p.other-formats').first().append('' +
+        '<span id="export_to_email">' +
+        '<span class="email">E-mail</span>' +
+        '</span>');
+$('#export_to_email').click(function(){
+  $.ajax({
+    url: "/issues/export_to_email/export_csv",
+    type: 'GET',
+    dataType: 'json',
+    xhrFields: { 'withCredentials': true },
+    crossDomain: true
+  }).success(show_msg)
+  .error(function(xhr, status, error) {
+    console.log(error);
+    console.log(xhr);
+  });
+});
+
+var show_msg = function(){
+  showModal('export-to-mail', '350px');
+  return false;
+}
+</script>
+
+<div id="export-to-mail" style="display:none;">
+  <h3 class="title"><%= l(:field_mail) %></h3>
+   <p><%= l(:csv_export_message) %></p>
+   <button id="button" name="button" value="OK" type="button"><%= l(:ok_label) %></button>
+   <script type="text/javascript">
+    $('#button').click(function(){
+      hideModal(this);
+    });
+   </script>
+</div>

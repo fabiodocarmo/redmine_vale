@@ -1,0 +1,21 @@
+<h2><%= t('sla_report.report') %></h2>
+
+<% include_calendar_headers_tags %>
+
+<%= form_tag vsg_sla_sla_reports_path(project_id: @project.id, format: :xlsx), method: :get do |f| %>
+  <%= hidden_field_tag 'project_id', @project.id  %>
+  <div class="field">
+    <label><%= t('sla_report.start_on') %></label><br>
+    <%= date_field_tag 'sla_report[start_on]', '', id: 'start_on' %>
+    <%= calendar_for('start_on') %>
+  </div>
+  <br>
+  <div class="field">
+    <label><%= t('sla_report.closed_on') %></label><br>
+    <%= date_field_tag 'sla_report[closed_on]', '', id: 'closed_on' %>
+    <%= calendar_for('closed_on') %>
+  </div>
+  <br>
+  <br>
+  <%= submit_tag(t('sla_report.export')) %>
+<% end %>

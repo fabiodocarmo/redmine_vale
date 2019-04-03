@@ -1,0 +1,120 @@
+<CompNfse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Nfse>
+      <InfNfse id="57334237001106_201500000001216">
+         <Numero>201500000001216</Numero>
+         <CodigoVerificacao>ee144f12</CodigoVerificacao>
+         <DataEmissao>2015-11-06T12:57:55</DataEmissao>
+         <NaturezaOperacao>1</NaturezaOperacao>
+         <OptanteSimplesNacional>2</OptanteSimplesNacional>
+         <IncentivadorCultural>2</IncentivadorCultural>
+         <Competencia>2015-11-06T00:00:00</Competencia>
+         <NfseSubstituida>0</NfseSubstituida>
+         <OutrasInformacoes>Lei 12741/2012: Mun: R$ 2.546,63; Est: R$ 0,00; Fed: R$ 1.859,04;
+Total: R$ 4.405,67.</OutrasInformacoes>
+         <Servico>
+            <Valores>
+               <ValorServicos>50932.56</ValorServicos>
+               <ValorDeducoes>0</ValorDeducoes>
+               <ValorPis>331.06</ValorPis>
+               <ValorCofins>1527.98</ValorCofins>
+               <ValorInss>0</ValorInss>
+               <ValorIr>0</ValorIr>
+               <ValorCsll>509.33</ValorCsll>
+               <IssRetido>2</IssRetido>
+               <ValorIss>2546.63</ValorIss>
+               <ValorIssRetido>0</ValorIssRetido>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <BaseCalculo>50932.56</BaseCalculo>
+               <Aliquota>5.00</Aliquota>
+               <ValorLiquidoNfse>48564.19</ValorLiquidoNfse>
+               <DescontoIncondicionado>0</DescontoIncondicionado>
+               <DescontoCondicionado>0</DescontoCondicionado>
+            </Valores>
+            <ItemListaServico>14.01</ItemListaServico>
+            <CodigoCnae>0</CodigoCnae>
+            <CodigoTributacaoMunicipio>7112000</CodigoTributacaoMunicipio>
+            <Discriminacao>PRESTA&#xC7;AO DE SERVI&#xC7;OS DE RECUPERA&#xC7;AO E MANUTEN&#xC7;&#xC3;O DO LOTE DE VINTE CABE&#xC7;OTES E CORPOS DOS CARROS DE GRELHA DA DIPE								
+CONTRATO: 5900010322								
+N &#xBA; PEDIDO/ITEM : 4502205249/00010								
+N&#xBA; FRS: 1001265631								
+N&#xBA; RF: 6200298634								
+PER&#xCD;ODO DE MEDI&#xC7;&#xC3;O: 21/09/2015 A 20/10/2015								
+								
+ISSQN DEVIDO NO LOCAL DO ESTABELECIMENTO PRESTADOR CONFORME ARTIGO 3&#xBA; DA LC 116/2003. SERVI&#xC7;O PRESTADO EM GUARAPARI - ES.								
+SERVI&#xC7;OS DE MANUTEN&#xC7;&#xC3;O N&#xC3;O EST&#xC3;O SUJEITOS A RETEN&#xC7;&#xD5;ES DO IRRF.								
+ART 0820140109664 CONFORME LEI N&#xBA; 6.496, DE 07 DE DEZEMBRO DE 1977.								
+DADOS BANCARIOS: BANCO ITAU, AGENCIA 1430 CC 13-461-7								
+Valor aproximado dos tributos: 9.193,33 (18,05%) - Fonte IBPT								
+								
+</Discriminacao>
+            <CodigoMunicipio>3202405</CodigoMunicipio>
+         </Servico>
+         <ValorCredito>0</ValorCredito>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>57334237001106</Cnpj>
+               <InscricaoMunicipal>256445</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>OUTOTEC TECNOLOGIA BRASIL LTDA</RazaoSocial>
+            <NomeFantasia></NomeFantasia>
+            <Endereco>
+               <Endereco>AV PASCHOAL DEL PUPO</Endereco>
+               <Numero>0</Numero>
+               <Complemento>SETOR A</Complemento>
+               <Bairro>CONDADOS</Bairro>
+               <CodigoMunicipio>3202405</CodigoMunicipio>
+               <Uf>ES</Uf>
+               <Cep>29209075</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone></Telefone>
+               <Email>NFELETRONICA.GUARAPARI@OUTOTEC.COM</Email>
+            </Contato>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33592510022042</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal></InscricaoMunicipal>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE S.A</RazaoSocial>
+            <Endereco>
+               <Endereco>DANTE MICHELINI</Endereco>
+               <Numero>5500</Numero>
+               <Complemento>PONTA DE TUBAR&#xC3;O</Complemento>
+               <Bairro>PARQUE INDUSTRIAL</Bairro>
+               <CodigoMunicipio>3205309</CodigoMunicipio>
+               <Uf>ES</Uf>
+               <Cep>29090900</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>27 33336205 </Telefone>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3202405</CodigoMunicipio>
+            <Uf>ES</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="SMF_57334237001106_201500000001216">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>dUxJOOUOJ0yqGpdHtM2KiU3n9WQ=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>BxUlanaYTT5NbPRmCmlLFGtkWktNLwPP+KDeGUEdX4QwQvMXmXECT3I3mZzidAbkbwqwCvqR6xXzxBMASEO3Lvu1IbOmDxrpxaC8AqamHAQrd90foum2H6RNwjT2BYVhp6AM37jkPYPIcmm+aF9hnc0pEGd91cp+HQEVnYxDRqoCZnoyArZttTwFiBaxQgfmHrtjAz4Vf8AVyLT7NTkpBvE33U49bZhVgZR5sprM7vbRfZTa5geZY7ePZM0xfPOzHnjidG3tAHa3ly/UFwSY837Ch0l2wa6z6bHnoGAcJIfVGyxxtyKsFJ+h95vJq8YmxL7UETzwizL4kvetaL/uHA==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIGRjCCBS6gAwIBAgIQZkMxDHO94KEQSyrvr1dVvTANBgkqhkiG9w0BAQUFADCBtTELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2UgYXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykxMDEvMC0GA1UEAxMmVmVyaVNpZ24gQ2xhc3MgMyBTZWN1cmUgU2VydmVyIENBIC0gRzMwHhcNMTEwODI5MDAwMDAwWhcNMTIwODI4MjM1OTU5WjCCAS0xCzAJBgNVBAYTAkJSMRcwFQYDVQQIEw5Fc3Bpcml0byBTYW50bzESMBAGA1UEBxQJR3VhcmFwYXJpMR0wGwYDVQQKFBRHdWFyYXBhcmkgUHJlZmVpdHVyYTEMMAoGA1UECxQDUE1HMTgwNgYDVQQLEy9UZXJtcyBvZiB1c2UgYXQgd3d3LmNlcnRpc2lnbi5jb20uYnIvcnBhIChjKSAwNDE+MDwGA1UECxM1QXV0aGVudGljYXRlZCBieSBDZXJ0aXNpZ24gQ2VydGlmaWNhZG9yYSBEaWdpdGFsIExUREExJzAlBgNVBAsTHk1lbWJlciwgVmVyaVNpZ24gVHJ1c3QgTmV0d29yazEhMB8GA1UEAxQYbmZzZS5ndWFyYXBhcmkuZXMuZ292LmJyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtuUZy9Racpo9vRq2MV0lRyY3Iqx47br+w7OmRLhXuBqZ1w63uqWH7zDQTavWqxFyg5/FPzE1kcdIw9Gefd88NBSOpn3JHozVbC1JoVrkThpBijY3CMQktCDcAigkvZnIbk62W47ryV46MJODN0wEZqL0n64uc/0ZsrRIeemcG4IjEL4tM/za9IJYlu0BgillATfGqfhW7sfW2lMtHG2IO/gFhRPQaj6lyx9uPXsq2Oq94EkS4FMXlXJpTUNPzPpJVckP582oJt020GkcZ1V49+TpfGoNMIMccNsLy8MAMFqCdVBNn581n6g1g0xmiTVdkei0jFoLs71OBStfA66mbQIDAQABo4IB1TCCAdEwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwRQYDVR0fBD4wPDA6oDigNoY0aHR0cDovL1NWUlNlY3VyZS1HMy1jcmwudmVyaXNpZ24uY29tL1NWUlNlY3VyZUczLmNybDBIBgNVHSAEQTA/MD0GC2CGSAGG+EUBBxcDMC4wLAYIKwYBBQUHAgEWIGh0dHBzOi8vd3d3LmNlcnRpc2lnbi5jb20uYnIvcnBhMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAfBgNVHSMEGDAWgBQNRFwWU0TBgn4dIKsl9AFj2L55pTB2BggrBgEFBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLnZlcmlzaWduLmNvbTBABggrBgEFBQcwAoY0aHR0cDovL1NWUlNlY3VyZS1HMy1haWEudmVyaXNpZ24uY29tL1NWUlNlY3VyZUczLmNlcjBuBggrBgEFBQcBDARiMGChXqBcMFowWDBWFglpbWFnZS9naWYwITAfMAcGBSsOAwIaBBRLa7kolgYMu9BSOJsprEsHiyEFGDAmFiRodHRwOi8vbG9nby52ZXJpc2lnbi5jb20vdnNsb2dvMS5naWYwDQYJKoZIhvcNAQEFBQADggEBAJ9JKwHJZww0zplh+GRpRvVDXfefK/WpwUyvROAHaU86MOy522gUAv9t2kINjHQDbm0SRw1CmIY8H/7QSUNmvT/ubqSP2WQLA2mWbcX3rKFq65GM6UgVBNqPGgwciG05WEFm8C3PYChmkjBDeB7zPU733RgkI3e7/jn49bmHxXXaVxxMOQVM7DjiQtHnB8vpDWaK6O0/sm2yKUSTLOo+a4TK3+3G6DiLD5rKkZAcaYOITXW48OCWGopDR1TQ8liR0FgFPPCeVwGMGkIuu4oMbVYdL6K1daifIRhfssP0M+zoHNbPYf0OtN6ZIH2aiV01V9Y3w9VQ1oJpQ4tO/uLuAGo=</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

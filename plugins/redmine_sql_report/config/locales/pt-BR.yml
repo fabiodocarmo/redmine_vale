@@ -1,0 +1,22 @@
+pt-BR:
+  sql_reports: 'Relatórios'
+  label_sql_reports: 'Relatórios SQL'
+
+  report_create_sucess_message: Relatório criado com sucesso
+  report_edit_sucess_message: Relatório editado com sucesso
+  generate_label: Gerar
+  sql_label: SQL
+  id_label: id
+  report_label: Relatório
+
+  report_edit_header: Editar Relatório
+  report_list_header: Lista de Relatórios
+  report_new_header: Novo Relatório
+  report_detail_header: Detalhar Relatório
+
+  link_to_new_report: Novo Relatório
+
+  delete_access_confirmation_message: Tem certeza que deseja deletar esse acesso?
+  no_aproval_register_message: Não há Aprovações cadastradas no sistema
+  prohibited_message: não permitiram que essa configuracao fosse salva
+  email_will_be_send_when_finish: 'Quando o arquivo terminar de ser processado, um e-mail será enviado'

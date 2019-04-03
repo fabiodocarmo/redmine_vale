@@ -1,0 +1,5 @@
+<ul>
+  <% @related_issues.each do |ri| %>
+    <li><%= link_to("#{ri.tracker.name} ##{ri.id}: #{ri.subject}", issue_url(ri)) %></li>
+  <% end %>
+</ul>

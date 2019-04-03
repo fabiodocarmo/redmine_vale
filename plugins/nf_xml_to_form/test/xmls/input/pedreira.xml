@@ -1,0 +1,112 @@
+<ns2:CompNfse xmlns:ns2="http://www.abrasf.org.br/nfse.xsd">
+   <ns2:Nfse versao="2.01">
+      <ns2:InfNfse Id="2709396GC34PL3X8AO7SBYQ7I3EU085U">
+         <ns2:Numero>1234</ns2:Numero>
+         <ns2:CodigoVerificacao>GF8LOXLRX</ns2:CodigoVerificacao>
+         <ns2:DataEmissao>2015-12-04T13:13:36</ns2:DataEmissao>
+         <ns2:OutrasInformacoes>Val. Aprox. Tributos: Federal (13,45%) R$424,14 Estadual (0,00%) R$0,00 Municipal (3,86%) R$121,72</ns2:OutrasInformacoes>
+         <ns2:ValoresNfse>
+            <ns2:BaseCalculo>3153.48</ns2:BaseCalculo>
+            <ns2:Aliquota>2.00</ns2:Aliquota>
+            <ns2:ValorIss>63.07</ns2:ValorIss>
+            <ns2:ValorLiquidoNfse>3153.48</ns2:ValorLiquidoNfse>
+         </ns2:ValoresNfse>
+         <ns2:PrestadorServico>
+            <ns2:IdentificacaoPrestador>
+               <ns2:CpfCnpj>
+                  <ns2:Cnpj>05591590000198</ns2:Cnpj>
+               </ns2:CpfCnpj>
+               <ns2:InscricaoMunicipal>34000006814</ns2:InscricaoMunicipal>
+            </ns2:IdentificacaoPrestador>
+            <ns2:RazaoSocial>RIBCO DO BRASIL IMPORT EXPORT LTDA ME</ns2:RazaoSocial>
+            <ns2:NomeFantasia>RIBCO GROUP DO BRASIL</ns2:NomeFantasia>
+            <ns2:Endereco>
+               <ns2:Endereco>BENEDITO DONATTI</ns2:Endereco>
+               <ns2:Numero>00379</ns2:Numero>
+               <ns2:Complemento>379-B</ns2:Complemento>
+               <ns2:Bairro>VALE VERDE I</ns2:Bairro>
+               <ns2:CodigoMunicipio>3537107</ns2:CodigoMunicipio>
+               <ns2:Uf>SP</ns2:Uf>
+               <ns2:CodigoPais>1058</ns2:CodigoPais>
+               <ns2:Cep>13920000</ns2:Cep>
+            </ns2:Endereco>
+            <ns2:Contato>
+               <ns2:Telefone>0038524856</ns2:Telefone>
+               <ns2:Email>vendas@ribcodobrasil.com.br</ns2:Email>
+            </ns2:Contato>
+         </ns2:PrestadorServico>
+         <ns2:OrgaoGerador>
+            <ns2:CodigoMunicipio>3537107</ns2:CodigoMunicipio>
+            <ns2:Uf>SP</ns2:Uf>
+         </ns2:OrgaoGerador>
+         <ns2:DeclaracaoPrestacaoServico>
+            <ns2:InfDeclaracaoPrestacaoServico>
+               <ns2:Rps>
+                  <ns2:IdentificacaoRps>
+                     <ns2:Numero>1234</ns2:Numero>
+                     <ns2:Serie>1</ns2:Serie>
+                     <ns2:Tipo>1</ns2:Tipo>
+                  </ns2:IdentificacaoRps>
+                  <ns2:DataEmissao>2015-12-04</ns2:DataEmissao>
+                  <ns2:Status>1</ns2:Status>
+               </ns2:Rps>
+               <ns2:Competencia>2015-12-04</ns2:Competencia>
+               <ns2:Servico>
+                  <ns2:Valores>
+                     <ns2:ValorServicos>3153.48</ns2:ValorServicos>
+                     <ns2:ValorDeducoes>0.00</ns2:ValorDeducoes>
+                     <ns2:ValorPis>0.00</ns2:ValorPis>
+                     <ns2:ValorCofins>0.00</ns2:ValorCofins>
+                     <ns2:ValorInss>0.00</ns2:ValorInss>
+                     <ns2:ValorIr>0.00</ns2:ValorIr>
+                     <ns2:ValorCsll>0.00</ns2:ValorCsll>
+                     <ns2:OutrasRetencoes>0.00</ns2:OutrasRetencoes>
+                     <ns2:ValorIss>63.07</ns2:ValorIss>
+                     <ns2:Aliquota>2.00</ns2:Aliquota>
+                     <ns2:DescontoIncondicionado>0.00</ns2:DescontoIncondicionado>
+                     <ns2:DescontoCondicionado>0.00</ns2:DescontoCondicionado>
+                  </ns2:Valores>
+                  <ns2:IssRetido>2</ns2:IssRetido>
+                  <ns2:ItemListaServico>14.02</ns2:ItemListaServico>
+                  <ns2:CodigoTributacaoMunicipio>0000140000002</ns2:CodigoTributacaoMunicipio>
+                  <ns2:Discriminacao>SERVICO DE MANUTENCAO, LIMPEZA E AJUSTE DE COMPONENTES ELETRONICOS INTERNO DE ETILOMETRO AS-IV. SERVICO DE VERIFICACAO JUNTO AO INMETRO. AUTORIZACAO SIMPLIFICADA DE SERVICOS: 3565. ORDEM DE SERVICO: 4070, 3964. ETILOMETRO AS - IV SN: 093697, 093696. DADOS BANCARIOS BANCO DO BRASIL AG: 2427-9 C/C&#13;\s\n 13458-9. Valor Aproximado dos Tributos: R$ 581,82 (18,45 % Fonte: IBPT.)</ns2:Discriminacao>
+                  <ns2:CodigoMunicipio>3537107</ns2:CodigoMunicipio>
+                  <ns2:CodigoPais>1058</ns2:CodigoPais>
+                  <ns2:ExigibilidadeISS>1</ns2:ExigibilidadeISS>
+                  <ns2:MunicipioIncidencia>3537107</ns2:MunicipioIncidencia>
+               </ns2:Servico>
+               <ns2:Prestador>
+                  <ns2:CpfCnpj>
+                     <ns2:Cnpj>05591590000198</ns2:Cnpj>
+                  </ns2:CpfCnpj>
+                  <ns2:InscricaoMunicipal>34000006814</ns2:InscricaoMunicipal>
+               </ns2:Prestador>
+               <ns2:Tomador>
+                  <ns2:IdentificacaoTomador>
+                     <ns2:CpfCnpj>
+                        <ns2:Cnpj>33592510022042</ns2:Cnpj>
+                     </ns2:CpfCnpj>
+                     <ns2:InscricaoMunicipal>008.687-5</ns2:InscricaoMunicipal>
+                  </ns2:IdentificacaoTomador>
+                  <ns2:RazaoSocial>VALE S.A.</ns2:RazaoSocial>
+                  <ns2:Endereco>
+                     <ns2:Endereco>AV. DANTE MICHELINE</ns2:Endereco>
+                     <ns2:Numero>5500</ns2:Numero>
+                     <ns2:Bairro>PONTA DE TUBARAO</ns2:Bairro>
+                     <ns2:CodigoMunicipio>3205309</ns2:CodigoMunicipio>
+                     <ns2:Uf>ES</ns2:Uf>
+                     <ns2:Cep>29090900</ns2:Cep>
+                  </ns2:Endereco>
+                  <ns2:Contato>
+                     <ns2:Telefone>2733334774</ns2:Telefone>
+                     <ns2:Email>adriana.freitas@vale.com</ns2:Email>
+                  </ns2:Contato>
+               </ns2:Tomador>
+               <ns2:RegimeEspecialTributacao>0</ns2:RegimeEspecialTributacao>
+               <ns2:OptanteSimplesNacional>2</ns2:OptanteSimplesNacional>
+               <ns2:IncentivoFiscal>2</ns2:IncentivoFiscal>
+            </ns2:InfDeclaracaoPrestacaoServico>
+         </ns2:DeclaracaoPrestacaoServico>
+      </ns2:InfNfse>
+   </ns2:Nfse>
+</ns2:CompNfse>

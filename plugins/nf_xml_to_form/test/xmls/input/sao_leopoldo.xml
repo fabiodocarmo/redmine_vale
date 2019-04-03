@@ -1,0 +1,120 @@
+<ConsultarNfseResposta xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse>
+                <InfNfse>
+                    <Numero>2015137</Numero>
+                    <CodigoVerificacao>53673163</CodigoVerificacao>
+                    <DataEmissao>2015-10-21T13:20:02.000-02:00</DataEmissao>
+                    <IdentificacaoRps>
+                        <Numero>2015137</Numero>
+                        <Serie>NF</Serie>
+                        <Tipo>0</Tipo>
+                    </IdentificacaoRps>
+                    <NaturezaOperacao>63</NaturezaOperacao>
+                    <RegimeEspecialTributacao>0</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                    <IncentivadorCultural>0</IncentivadorCultural>
+                    <Competencia>2015-10-21T00:00:00.000-02:00</Competencia>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>35784.83</ValorServicos>
+                            <ValorDeducoes>0</ValorDeducoes>
+                            <ValorPis>232.6</ValorPis>
+                            <ValorCofins>1073.54</ValorCofins>
+                            <ValorInss>0</ValorInss>
+                            <ValorIr>536.77</ValorIr>
+                            <ValorCsll>357.85</ValorCsll>
+                            <IssRetido>2</IssRetido>
+                            <ValorIss>1431.39</ValorIss>
+                            <ValorIssRetido>1431.39</ValorIssRetido>
+                            <OutrasRetencoes>0</OutrasRetencoes>
+                            <BaseCalculo>35784.83</BaseCalculo>
+                            <Aliquota>0.04</Aliquota>
+                            <ValorLiquidoNfse>32152.68</ValorLiquidoNfse>
+                            <DescontoIncondicionado>0</DescontoIncondicionado>
+                            <DescontoCondicionado>0</DescontoCondicionado>
+                        </Valores>
+                        <ItemListaServico>1701</ItemListaServico>
+                        <CodigoCnae>4321500</CodigoCnae>
+                        <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                        <Discriminacao>SERVIÇOS DETECÇÃO DE DESCARGAS ATMOSFÉRICAS E PLUVIÔMETRO PARA MONITORAMENTO ELETRÔNICO DAS PRECIPITAÇÕES NOS PROJETOS DA CAPITAL ITABIRA.
+
+PROJETO ITABIRA-RC5349846-DETECÇÃO DE DESCARGAS ATMOSFÉRICAS
+CONTRATO:5900010943
+FRS:1001255561
+PEDIDO:4502196917
+
+VALOR APROXIMADO DOS TRIBUTOS R$ 6.595,14(18,43%)FONTE:IBPT
+
+
+DADOS BANCÁRIOS PARA DEPÓSITO
+BANCO BRADESCO
+AGENCIA: 3152-6
+CONTA: 122514-6</Discriminacao>
+                        <CodigoMunicipio>3131703</CodigoMunicipio>
+                    </Servico>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <Cnpj>03256663000160</Cnpj>
+                            <InscricaoMunicipal>337865</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>SP PARA RAIOS SISTEMA DE PROTECAO LTDA</RazaoSocial>
+                        <NomeFantasia>HINNDELET ENGENHARIA</NomeFantasia>
+                        <Endereco>
+                            <Endereco>RUA SILVIO ROMERO</Endereco>
+                            <Numero>140</Numero>
+                            <Complemento>-</Complemento>
+                            <Bairro>SAO JOSE</Bairro>
+                            <CodigoMunicipio>4318705</CodigoMunicipio>
+                            <Uf>RS</Uf>
+                            <Cep>93040060</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>5135934212</Telefone>
+                            <Email>nfe@pararaioshinndelet.com.br </Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <TomadorServico>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cpf></Cpf>
+                                <Cnpj>33592510016409</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal>452694</InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S A</RazaoSocial>
+                        <Endereco>
+                            <Endereco>AREA SERRA DO ESMERIL</Endereco>
+                            <Numero>SN</Numero>
+                            <Complemento></Complemento>
+                            <Bairro>ZONA RURAL</Bairro>
+                            <CodigoMunicipio>3131703</CodigoMunicipio>
+                            <Uf>MG</Uf>
+                            <Cep>35901190</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone></Telefone>
+                            <Email></Email>
+                        </Contato>
+                    </TomadorServico>
+                    <IntermediarioServico>
+                        <RazaoSocial>SP PARA RAIOS SISTEMA DE PROTECAO LTDA</RazaoSocial>
+                        <CpfCnpj>
+                            <Cnpj>03256663000160</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>337865</InscricaoMunicipal>
+                    </IntermediarioServico>
+                    <OrgaoGerador>
+                        <CodigoMunicipio>4318705</CodigoMunicipio>
+                        <Uf>RS</Uf>
+                    </OrgaoGerador>
+                    <ContrucaoCivil></ContrucaoCivil>
+                </InfNfse>
+            </Nfse>
+        </CompNfse>
+    </ListaNfse>
+    <ListaMensagemRetorno>
+        <MensagemRetorno></MensagemRetorno>
+    </ListaMensagemRetorno>
+</ConsultarNfseResposta>

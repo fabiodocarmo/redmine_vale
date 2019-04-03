@@ -1,0 +1,8 @@
+<br />
+<h1>Upload do relatório Req To Pay</h1>
+<p>Processamento concluído</p>
+<p><%="#{@updated_ids.length} #{['chamado','atualizado'].map{|s|s.pluralize(@updated_ids.length)}.join(' ')}"%></p>
+<% @updated_ids.sort.each do |id| %>
+  <%= link_to(id, issue_url(id)) %>
+<% end %>
+<br />

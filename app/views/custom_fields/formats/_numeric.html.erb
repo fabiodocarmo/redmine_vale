@@ -1,0 +1,8 @@
+<%= render :partial => 'custom_fields/formats/regexp', :locals => {:f => f, :custom_field => custom_field} %>
+<p><%= f.text_field(:default_value) %></p>
+<p><%= f.text_field :url_pattern, :size => 50, :label => :label_link_values_to %></p>
+<p>
+  <label for="custom_field_min_length"><%=l(:label_min_max_value)%></label>
+  <%= f.text_field :min_value, :size => 5, :no_label => true %> -
+  <%= f.text_field :max_value, :size => 5, :no_label => true %>
+</p>

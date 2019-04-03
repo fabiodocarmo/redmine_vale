@@ -1,0 +1,146 @@
+<script type="text/javascript">
+$(document).ready(function() {
+  var linha = 0;
+
+  var th = document.createElement('th');
+  th.innerHTML = "#";
+  $('table[id^="grid_custom_field_table"] th:first-child' ).before(th);
+  var td = document.createElement('td');
+  td.innerHTML = '1';
+  td.style.backgroundColor = 'white';
+  td.style.color = 'black';
+  $('table[id^="grid_custom_field_table"] td:first-child').before(td);
+  $('table[id^="grid_custom_field_table"] td:first-child').prop('id', 'rowNumber');
+
+  $('div[id^="grid_pop_up"]').each(function(){
+    $(this).find('td').each(function(){
+      if(!$(this).children().is('button') && $(this).children().attr('id') != undefined){
+        if(linha < parseInt($(this).children().attr('id').split('_')[5])){
+          linha = parseInt($(this).children().attr('id').split('_')[5]);
+        }
+      }
+    });
+    linha = parseInt(linha) + 1;
+    $(this).bind(
+      'dialogclose',
+      function(event){
+        var form = $(this).closest('form').attr('id');
+        $(this).dialog('destroy');
+        $(this).appendTo('#'+form).hide();
+      }
+    );
+    if($(this).next().is('button')){
+      $(this).next('button').appendTo($(this).prev('p'));
+    }
+    if($(this).next().is('br')){
+      $(this).next('br').appendTo($(this).prev('p'));
+    }
+    if($(this).next().is('em')){
+      $(this).next('em').appendTo($(this).prev('p'));
+    }
+  });
+
+  $('button[id^="grid_custom_field_show"]').click(function(event){
+    var id_grid_show = $(this).attr('id');
+    id_grid_show = id_grid_show.split("_");
+    id_grid_show = id_grid_show[4];
+    var modal = true;
+    if($(this).parents('ul:first').length > 0){
+      modal = false;
+    }
+    $('#grid_pop_up_'+id_grid_show).dialog({
+      autoOpen: false,
+      minWidth: 1200,
+      height: 'auto',
+      minHeight: 400,
+      maxHeight: 600,
+      modal: modal
+    });
+    $('#grid_pop_up_'+id_grid_show).dialog('open');
+    event.preventDefault();
+    check_lines($('#grid_pop_up_'+id_grid_show));
+    updateRowNumbers($('#grid_pop_up_'+id_grid_show));
+  });
+
+  $('button[id^=grid_custom_field_add_row]').on("click", function(){
+    var update_string = function(str, pos, val, sep) {
+      str = str.split(sep)
+      str[pos] = val
+      return str.join(sep)
+    }
+
+    var update_row_attribute = function(column, row, pos, attr, sep) {
+      $(column).children().attr(attr, update_string($(column).children().attr(attr), pos, row, sep))
+    }
+
+    var grid = $(this).parents('div:first');
+    var row = grid.find('table[id^=grid_custom_field_table]').find('tbody tr:first').clone();
+    row.attr('id', linha);
+    grid.find('table[id^=grid_custom_field_table]').find('tbody tr:last').after(row);
+    updateRowNumbers(grid);
+    grid.find('table[id^=grid_custom_field_table]').find('tbody tr:last').find('td').each(function(){
+      if(!$(this).find('button').length){
+        if ($(this).children(':first').attr('id')) {
+
+          update_row_attribute(this, linha, 2, 'name', '][')
+          update_row_attribute(this, linha, 5, 'id', '_')
+
+          if($(this).closest('table').find('th').eq($(this).index()).attr('class') != undefined){
+            if($(this).children(':first').is('textarea')){
+              $(this).children(':first').text($(this).closest('table').find('th').eq($(this).index()).attr('class'));
+            }else{
+              $(this).children(':first').val($(this).closest('table').find('th').eq($(this).index()).attr('class'));
+            }
+          } else {
+            if($(this).children(':first').is('textarea')){
+              $(this).children(':first').text('');
+            }else{
+              $(this).children(':first').val('');
+            }
+          }
+
+        }
+      }else{
+        $(this).find('button').attr('disabled', false);
+      }
+    });
+    linha = parseInt(linha)+1;
+    check_lines(grid);
+
+    $('.ui-datepicker-trigger').remove();
+    $('.date_cf').removeClass('hasDatepicker').datepicker(datepickerOptions);
+  });
+
+  $('table[id^=grid_custom_field_table]').on('click', 'button', function(){
+    var grid_delete = $(this).parents('div:first');
+    $(this).closest('tr').remove();
+    check_lines(grid_delete);
+    updateRowNumbers(grid_delete);
+  });
+
+  function check_lines(grid){
+    if(grid.find('table[id^=grid_custom_field_table]').find('tbody tr').length == 1){
+      grid.find('table[id^=grid_custom_field_table]').find('tbody tr:first td:last').find('button').attr('disabled', true);
+    }else{
+      grid.find('table[id^=grid_custom_field_table]').find('tbody tr:first td:last').find('button').attr('disabled', false);
+    }
+    <% if (Setting.plugin_grid_custom_field[:max_number_rows] != "")%>
+      if(grid.find('table[id^=grid_custom_field_table]').find('tbody tr').length >= <%= Setting.plugin_grid_custom_field[:max_number_rows].to_i %>){
+        document.querySelector('button[id^=grid_custom_field_add_row]').style.visibility = 'hidden';
+      }else{
+        document.querySelector('button[id^=grid_custom_field_add_row]').style.visibility = 'visible';
+      }
+    <%end%>
+  }
+
+  function updateRowNumbers(grid){
+    var numLinha = 0;
+    grid.find('table[id^=grid_custom_field_table] tbody td[id=rowNumber]').each(function(){
+      numLinha = numLinha + 1;
+      $(this).text(numLinha);
+    });
+  }
+
+  $('input[type=submit]').show()
+});
+</script>

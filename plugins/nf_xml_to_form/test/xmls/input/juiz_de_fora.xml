@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse versao="1.00">
+      <InfNfse Id="nfse">
+         <Numero>201600000000707</Numero>
+         <CodigoVerificacao>becba9e1</CodigoVerificacao>
+         <DataEmissao>2016-02-03T15:46:01</DataEmissao>
+         <IdentificacaoRps>
+            <Numero>12078</Numero>
+            <Serie>A</Serie>
+            <Tipo>1</Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps>2016-02-03</DataEmissaoRps>
+         <NaturezaOperacao>1</NaturezaOperacao>
+         <OptanteSimplesNacional>2</OptanteSimplesNacional>
+         <IncentivadorCultural>2</IncentivadorCultural>
+         <Competencia>2016-02-03T14:33:22</Competencia>
+         <Servico>
+            <Valores>
+               <ValorServicos>26000.00</ValorServicos>
+               <ValorPis>169.00</ValorPis>
+               <ValorCofins>780.00</ValorCofins>
+               <ValorInss>2860.00</ValorInss>
+               <ValorIr>390.00</ValorIr>
+               <ValorCsll>260.00</ValorCsll>
+               <IssRetido>2</IssRetido>
+               <ValorIss>1300.00</ValorIss>
+               <BaseCalculo>26000.00</BaseCalculo>
+               <Aliquota>0.05</Aliquota>
+               <ValorLiquidoNfse>21541.00</ValorLiquidoNfse>
+            </Valores>
+            <ItemListaServico>14.01</ItemListaServico>
+            <CodigoTributacaoMunicipio>140100300</CodigoTributacaoMunicipio>
+            <Discriminacao>Servico de Manut. de Janeiro 2016 .No fat: 5596582836 . Contrato: 0552062485  Retencao para a Previdencia Social . INSS 11% . R$2860,00 Retencao cfe. Lei 10.833 03.PIS COF CSLL Retencao cfe. Dec. 3.000 99  RIR  . IRPJ. BOLETIM 31 APROVADO N� DE PEDIDO: 4502427323 FRS:  1001457914   RF: 62003234178 CONTRATO No: 5900006606 SERVICO PRESTADO EM ITABIRA MG</Discriminacao>
+            <CodigoMunicipio>3136702</CodigoMunicipio>
+         </Servico>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>90347840003052</Cnpj>
+               <InscricaoMunicipal>075122006</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>THYSSENKRUPP ELEVADORES S/A</RazaoSocial>
+            <NomeFantasia>THYSSENKRUPP ELEVADORES S/A</NomeFantasia>
+            <Endereco>
+               <Endereco>RUA DR PAULO JAPIASSU COELHO</Endereco>
+               <Numero>721</Numero>
+               <Bairro>CASCATINHA</Bairro>
+               <CodigoMunicipio>3136702</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <Cep>36033310</Cep>
+            </Endereco>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33592510016409</Cnpj>
+               </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE SA</RazaoSocial>
+            <Endereco>
+               <Endereco>EST SERRA DO ESMERIL SN</Endereco>
+               <Numero>0</Numero>
+               <Complemento>SN</Complemento>
+               <Bairro>SERRA DO ESMERIL</Bairro>
+               <CodigoMunicipio>3131703</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <Cep>35900661</Cep>
+            </Endereco>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3136702</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="NfseAssSMF_nfse">
+         <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments" />
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+            <ds:Reference URI="#nfse">
+               <ds:Transforms>
+                  <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+               </ds:Transforms>
+               <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+               <ds:DigestValue>u9AsW5AkI2OVdx8x5veAUN6BNzA=</ds:DigestValue>
+            </ds:Reference>
+         </ds:SignedInfo>
+         <ds:SignatureValue>qptASHFPaRNzTth2EwXw8kKBuJFpwftuQM+rn1Ynrt3blOGde4clgL5ouH3sWNHWuRa4zGiNEOu3mQ4d+V0OqluKedbwPTWYpyVoMMA4xldvMcNVB0nGO9AyZybdmHWBohhcjgQKGdze+LcpiRayKdKzEj6nA1ypYHrtATTtWOJY12zV+hl29LAsgK4aA9ZNitLkONKuAQ1Q7ChAvq14J14VU6VJ2paf3PeP+ptVif/95mPRMYN6Rw77F2bBZjUAQMArTTKoKKo8TJUH3bdtsBbwOaw9k5LSgoGcuOOnQVb2GI8DmKWpIFdY74RPACtIwubTr9sHQ2Y+Plv0Dk//VA==</ds:SignatureValue>
+         <ds:KeyInfo>
+            <ds:X509Data>
+               <ds:X509Certificate>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</ds:X509Certificate>
+            </ds:X509Data>
+         </ds:KeyInfo>
+      </ds:Signature>
+   </Nfse>
+</CompNfse>

@@ -1,0 +1,3 @@
+<% if @issue.show_satisfaction_survey? == true && @issue.author == User.current%>
+  <p><%= link_to l(:satisfaction_survey), new_satisfaction_survey_path(@issue.id, "0") %></p>
+<% end %>

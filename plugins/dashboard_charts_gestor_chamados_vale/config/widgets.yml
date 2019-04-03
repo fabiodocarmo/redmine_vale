@@ -1,0 +1,11 @@
+aging_n1_n2:
+  aging: text
+answered_by_level_by_contact:
+  exclude_statuses: text
+  range_month: string
+answered_by_level_sla:
+  exclude_statuses: text
+  range_day: string
+  filters:
+    tracker: tracker
+    range_date: range_date

@@ -1,0 +1,40 @@
+<h2><%= l(:label_home) %></h2>
+
+<% if Setting.plugin_portal[:enable_system_box_notification] == "true" %>
+<% if User.current.language == "pt-BR" && !(Setting.plugin_portal[:system_box_notification_ptbr] == "") %>
+<div class="flash warning" id="system_news" style="background: #FFEBC1;">
+    <%=  textilizable(Setting.plugin_portal[:system_box_notification_ptbr])%>
+</div>
+<% elsif User.current.language == "es" && !(Setting.plugin_portal[:system_box_notification_es] == "") %>
+<div class="flash warning" id="system_news" style="background: #FFEBC1;">
+  <%=  textilizable(Setting.plugin_portal[:system_box_notification_es])%>
+</div>
+<% elsif User.current.language == "en" && !(Setting.plugin_portal[:system_box_notification_en] == "") %>
+<div class="flash warning" id="system_news" style="background: #FFEBC1;">
+  <%=  textilizable(Setting.plugin_portal[:system_box_notification_en])%>
+</div>
+<% end %>
+<% end %>
+
+<div class="splitcontentleft">
+  <%= call_hook(:view_welcome_index_left, projects: @projects) %>
+</div>
+
+<div class="splitcontentright">
+  <%= call_hook(:view_welcome_index_right, projects: @projects) %>
+</div>
+
+<% content_for :header_tags do %>
+<%= auto_discovery_link_tag(:atom, {:controller => 'news', :action => 'index', :key => User.current.rss_key, :format => 'atom'},
+                                   :title => "#{Setting.app_title}: #{l(:label_news_latest)}") %>
+<%= auto_discovery_link_tag(:atom, {:controller => 'activities', :action => 'index', :key => User.current.rss_key, :format => 'atom'},
+                                   :title => "#{Setting.app_title}: #{l(:label_activity)}") %>
+<% end %>
+<%= content_for :header_tags do %>
+  <%= stylesheet_link_tag "portal.css", plugin: 'portal'  %>
+  <%= javascript_include_tag 'portal.js', plugin: 'portal' %>
+
+  <% if Setting.plugin_portal[:auto_reload_welcome] %>
+    <%= javascript_include_tag 'auto_reload.js', plugin: 'portal' %>
+  <% end %>
+<% end %>

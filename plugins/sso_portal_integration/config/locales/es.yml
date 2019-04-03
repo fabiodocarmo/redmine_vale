@@ -1,0 +1,9 @@
+es:
+  config_id_sso: ID de catastro en el Portal SSO
+  disable_regular_login: Desactivar login directo
+  disable_edit_user: Desactivar edición de permiso/campo por defecto del usuário
+  url_login_sso: Enderezo de login do Portal SSO
+  url_validate_sso: Enderezo de validación do Portal SSO
+  error_authentication: Se produjo un problema durante la autenticación
+  app_id_fieldname_sso: Campo ID de App en el Portal SSO
+  backurl_fieldname_sso: Campo Backurl en el Portal SSO

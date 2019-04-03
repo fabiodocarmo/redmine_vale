@@ -1,0 +1,33 @@
+<%= form_for(@resource) do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= t('project_label') %>: </b></label><br />
+    <%= f.collection_select :project_id, Project.all.order(:name), :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('tracker_label') %>: </b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all.order(:name), :id, :name %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>

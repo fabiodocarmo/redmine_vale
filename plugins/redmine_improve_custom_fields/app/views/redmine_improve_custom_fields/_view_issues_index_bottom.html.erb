@@ -1,0 +1,15 @@
+<script type="text/javascript">
+  <% IssueCustomField.where("mask is not null or mask != ''").each do |custom_field| %>
+    <% unless custom_field.mask.blank? %>
+      for (var i = 0; i < $("td.cf_<%= custom_field.id %>").length; i++) {
+        if ($("td.cf_<%= custom_field.id %>")[i].innerHTML !== "") {
+          $("td.cf_<%= custom_field.id %>")[i].innerHTML = Inputmask.format($("td.cf_<%= custom_field.id %>")[i].innerHTML, { alias: "<%= custom_field.mask %>"});
+        }
+      }
+    <% end %>
+  <% end %>
+</script>
+<%= content_for :header_tags do %>
+  <%= javascript_include_tag "inputmask", plugin: 'redmine_improve_custom_fields' %>
+  <%= javascript_include_tag "masks", plugin: 'redmine_improve_custom_fields' %>
+<% end %>

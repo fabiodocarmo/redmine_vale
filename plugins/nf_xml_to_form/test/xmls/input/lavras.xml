@@ -1,0 +1,61 @@
+<GovDigital>
+    <emissao>
+        <nf-e>
+            <prestacao>2015-12-14</prestacao>
+            <exigibilidade>1</exigibilidade>
+            <retido>2</retido>
+            <municipioIncidencia>3138203</municipioIncidencia>
+            <atividade>20013-14.01</atividade>
+            <aliquota>0.02790</aliquota>
+            <prestador>
+                <documento>16887162000123</documento>
+                <nome>UNIERG SOLUCOES LTDA -ME</nome>
+                <cep>37200000</cep>
+                <logradouro>R. JOAO BATISTA GATTINI</logradouro>
+                <numero>105</numero>
+                <bairro>FATIMA</bairro>
+                <estado>MG</estado>
+                <municipio>Lavras</municipio>
+                <pais>Brasil</pais>
+                <telefone>3821-0666 (CONTAB.CHRISTINA)</telefone>
+                <email>contabilidadechristina@yahoo.com.br</email>
+            </prestador>
+            <regime>Simples</regime>
+            <tomador>
+                <documento>33592510000154</documento>
+                <nome>CIA VALE DO RIO DOCE</nome>
+                <cep>20005900</cep>
+                <logradouro>Av. GRACA ARANHA</logradouro>
+                <numero>26</numero>
+                <complemento></complemento>
+                <bairro>CENTRO</bairro>
+                <estado>RJ</estado>
+                <municipio>Rio de Janeiro</municipio>
+                <pais>Brasil</pais>
+                <inscEst>80.495072</inscEst>
+            </tomador>
+            <itens>
+                <item>
+                    <atividade>20013-14.01</atividade>
+                    <descricao>REQ 11663964,  PEDIDO 4502326268,  FRS 1001373780. Manutenção corretiva no
+sistema de vedação do eixo da turbina UG04 da PCH Nova Mauricio executado no período de 06/11 à 20/11.</descricao>
+                    <aliquota>0.02790</aliquota>
+                    <valorUn>48265.180000</valorUn>
+                    <quantidade>1.000000</quantidade>
+                    <valor>48265.18</valor>
+                </item>
+            </itens>
+            <obs>Esta Nota não acoberta o trânsito de mercadorias.
+
+Valor aprox dos tributos R$ 8.711,86 (18,05 %) Fonte: IBPT</obs>
+            <deducoes></deducoes>
+            <senha>31P3.3XO2.79W4.HHKZ</senha>
+            <numero>48</numero>
+            <serie>ELETRÔNICA</serie>
+            <valorTotal>48265.18</valorTotal>
+            <valorBase>48265.18</valorBase>
+            <valorImposto>1346.60</valorImposto>
+            <valorLiquido>48265.18</valorLiquido>
+        </nf-e>
+    </emissao>
+</GovDigital>

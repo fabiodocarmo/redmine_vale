@@ -1,0 +1,48 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%=l(:config_id_sso)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['config_id_sso'] %>" name="settings[config_id_sso]" >
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:disable_regular_login)%>:</th>
+      <td>
+        <%= select_tag 'settings[disable_regular_login]',
+        options_for_select([[l(:general_text_Yes), 'true'], [l(:general_text_No), 'false']], settings['disable_regular_login']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:disable_edit_user)%>:</th>
+      <td>
+        <%= select_tag 'settings[disable_edit_user]',
+        options_for_select([[l(:general_text_Yes), 'true'], [l(:general_text_No), 'false']], settings['disable_edit_user']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:url_login_sso)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['url_login_sso'] %>" name="settings[url_login_sso]" >
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:url_validate_sso)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['url_validate_sso'] %>" name="settings[url_validate_sso]" >
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:app_id_fieldname_sso)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['app_id_fieldname_sso'] %>" name="settings[app_id_fieldname_sso]" >
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:backurl_fieldname_sso)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['backurl_fieldname_sso'] %>" name="settings[backurl_fieldname_sso]" >
+      </td>
+    </tr>
+  </tbody>
+</table>

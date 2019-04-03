@@ -1,0 +1,64 @@
+<% filters =  @widgets.flat_map do |w|
+ REDMINE_DASHBOARD_PLUGINS_CONFIG[w.name_id] ? (REDMINE_DASHBOARD_PLUGINS_CONFIG[w.name_id][:filters] || []).concat(w.custom_field_ids.map { |cf_id| "custom_field_#{cf_id}" }) : []
+end.uniq %>
+
+<% unless filters.blank? %>
+  <div id="redmine-dashboard-filters">
+    <h2> <%= t('redmine_widget_filters') %></h2>
+    <form id='filters' >
+      <% filters.each do |k| %>
+        <div class='redmine_widget_filter'>
+          <% if k == 'date' %>
+            <label for='<%= "filter_#{k}" %>'><%= t("dashboard_filters.filter_#{k}") %></label>
+            <%= text_field_tag "filters[#{k}]", '', id: "filter_#{k}", readonly: true %>
+            <%= calendar_for("filter_#{k}") %>
+          <% elsif k == 'range_date' %>
+            <label for='<%= "filter_range_date_from" %>'><%= t("dashboard_filters.range_date_from") %></label>
+            <%= date_field_tag "filters[range_date_from]", Time.zone.now.to_date - 1.month, id: "filter_range_date_from" %>
+            <%= calendar_for("filter_range_date_from") %>
+            <label for='<%= "filter_range_date_to" %>'><%= t("dashboard_filters.range_date_to") %></label>
+            <%= date_field_tag "filters[range_date_to]", Time.zone.now.to_date, id: "filter_range_date_to" %>
+            <%= calendar_for("filter_range_date_to") %>
+          <% elsif k == 'tracker_id' %>
+            <label for='<%= "filter_tracker" %>'><%= t("label_tracker") %></label>
+            <%= select_tag('filters[tracker_id]',
+                  options_from_collection_for_select(Tracker.joins(:projects)
+                          .where('projects.lft >= ? and projects.rgt <= ?', @project.lft, @project.rgt)
+                          .uniq, :id, :name),
+                  include_blank: true) %>
+          <% elsif k == 'time_segmentation' %>
+            <label for='<%= "filter_time_segmentation" %>'><%= t("dashboard_filters.time_segmentation") %></label>
+            <%= select_tag('filters[time_segmentation]',
+                  options_for_select([[t("dashboard_filters.daily"), :day],
+                                     [t("dashboard_filters.weekly"), :week],
+                                     [t("dashboard_filters.monthly"), :month],
+                                     [t("dashboard_filters.yearly"), :year]])) %>
+          <% elsif k == 'priority_id' %>
+           <label for='<%= "filters[#{k}]" %>'><%= t("field_priority")  %></label>
+           <%= select_tag("filters[#{k}]",
+                 options_from_collection_for_select(IssuePriority.all, :id, :name),
+                 include_blank: true) %>
+          <% elsif k == 'situation' %>
+           <label for='<%= "filters[#{k}]" %>'><%= t("dashboard_filters.#{k}") %></label>
+           <%= select_tag("filters[#{k}]",
+                 options_for_select([["Open", :open],
+                                    ["Closed", :closed]])) %>
+          <% elsif k == 'group' %>
+            <label for='<%= "filters[#{k}]" %>'><%= t("dashboard_filters.#{k}") %></label>
+            <%= select_tag("filters[#{k}]",
+                  options_from_collection_for_select(Project.find_by_id(params[:project_id])
+                              .principals.where(type: "Group"), :id, :name),
+                  include_blank: true) %>
+          <% elsif !k.match(/custom_field_(\d+)/).nil? %>
+            <% custom_field = CustomField.find_by_id(k.match(/custom_field_(\d+)/)[1]) %>
+            <label for='<%= "filters[#{k}]" %>'><%= custom_field.name %></label>
+            <%= select_tag("filters[#{k}]", options_for_select(custom_field.possible_values), include_blank: true) %>
+          <% end %>
+          <%= call_hook(:add_filters_to_widget, {type: k }) %>
+          <%= hidden_field_tag "project_id", @project.id %>
+        </div>
+      <% end %>
+      <%= link_to t('apply_filter'), 'javascript:void(0);', class: "btn btn-primary", id: 'redmine-dashboard-refresh-filters-button' %>
+    </form>
+  </div>
+<% end %>

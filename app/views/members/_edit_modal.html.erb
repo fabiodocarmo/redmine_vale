@@ -1,0 +1,13 @@
+<h3 class="title"><%= "#{l(:label_member_edit)} - #{@member.principal.name}" %></h3>
+
+<%= form_for(@member,
+             {:as => :membership, :remote => true,
+              :url => membership_path(@member),
+              :method => :put}
+    ) do |f| %>
+    <%= render :partial => 'edit_form' %>
+    <p class="buttons">
+      <%= submit_tag l(:button_save), :class => "small", :onclick => "hideModal(this);" %>
+      <%= submit_tag l(:button_cancel), :name => nil, :onclick => "hideModal(this);", :type => 'button' %>
+    </p>
+<% end %>

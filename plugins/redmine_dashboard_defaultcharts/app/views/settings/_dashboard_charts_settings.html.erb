@@ -1,0 +1,42 @@
+<table>
+  <tbody>
+    <tr>
+      <th>Status Aguardando Confirmação:</th>
+      <td>
+        <%= select_tag 'settings[waiting_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['waiting_status']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th>Status Novo:</th>
+      <td>
+        <%= select_tag 'settings[new_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['new_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Status Em Andamento:</th>
+      <td>
+        <%= select_tag 'settings[doing_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['doing_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Status Respondido:</th>
+      <td>
+        <%= select_tag 'settings[answered_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['answered_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Quantidade de ftes por dia:</th>
+      <td>
+        <input type="text" value="<%= settings['num_fte'] %>" name="settings[num_fte]" >
+      </td>
+    </tr>
+
+  </tbody>
+</table>

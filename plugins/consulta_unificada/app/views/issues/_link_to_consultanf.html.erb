@@ -1,0 +1,8 @@
+<div>
+	<p>
+		<%= link_to l(:link_to_deposito), retrieve_url_to_consultanf_path(@issue), :target => "_blank", :class => 'link' if @issue.show_url_deposito? %>
+	</p>
+	<p>
+		<%= link_to l(:link_to_nf), retrieve_url_to_consultanf_path(@issue), :target => "_blank", :class => 'link' if @issue.show_url_nf? and @issue.has_valid_nf? %>
+	</p>
+</div>

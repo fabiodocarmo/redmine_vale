@@ -1,0 +1,50 @@
+<h1><%= l(:block_duplicates_list_header) %></h1>
+
+<p>
+  <%= link_to l(:link_to_new_block_duplicates), new_block_duplicate_path %>
+</p>
+
+<%if !@block_duplicates.empty? %>
+  <div class="autoscroll">
+    <table class="list issues">
+      <tr>
+        <th><%= l(:label_project) %></th>
+        <th><%= l(:label_tracker) %></th>
+        <th><%= l(:label_custom_field_plural) %></th>
+        <th><%= l(:label_issue_status_plural) %></th>
+        <th><%= l(:label_duplicated_copies_enabled) %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @block_duplicates.each do |block_duplicate| %>
+        <tr>
+          <% unless block_duplicate.blank? && block_duplicate.project.blank? && block_duplicate.tracker.blank? %>
+            <td><%= block_duplicate.find_project_id.map do |proj|
+                "#{proj.name}"
+              end.join('<br/>').html_safe %></td>
+            <td><%= block_duplicate.find_tracker_id.map do |track|
+                "#{track.name}"
+              end.join('<br/>').html_safe %></td>
+            <td><%= block_duplicate.find_custom_fields.map do |cf|
+                "#{cf.id} - #{cf.name}"
+              end.join('<br/>').html_safe %></td>
+            <td><%= statuses = block_duplicate.find_statuses
+                    statuses.present? ? statuses.map(&:name).join('<br/>').html_safe : l(:all_statuses_label)
+            %></td>
+            <td><%= block_duplicate.copy_flag%>
+          <% end %>
+
+          <td><%= link_to l(:label_details), block_duplicate %></td>
+          <td><%= link_to l(:button_edit), edit_block_duplicate_path(block_duplicate) %></td>
+          <td><%= link_to l(:button_delete), block_duplicate, confirm: l(:block_duplicate_rule_delete_confirmation), method: :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <br />
+<% else %>
+  <h1><%= l(:block_duplicate_no_block_message) %></h1>
+<% end %>

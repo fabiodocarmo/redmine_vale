@@ -1,0 +1,18 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Custom Field: </b></label><br />
+    <%= f.collection_select :custom_field_id, f.object.external_validation.try(:tracker) && ! f.object.external_validation.all_trackers ? (f.object.external_validation.tracker.custom_fields) : IssueCustomField.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Field Name: </b></label><br />
+    <%= f.text_field :field_name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Columns (for grid custom fields): </b></label><br />
+    <%= f.collection_select :column_grid_id, IssueCustomField.where(id: CustomFieldsGridColumn.select(:grid_column_id)), :id, :name, {include_blank: true } %><br /><br />
+  </div>
+
+  <%= link_to_remove_association t("external_validation_remove_external_validation_query"), f %>
+</div>

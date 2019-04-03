@@ -1,0 +1,114 @@
+[submodule "plugins/consulta_unificada"]
+	path = plugins/consulta_unificada
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.consultaunificada.git
+[submodule "plugins/dashboard_charts_gestor_chamados"]
+	path = plugins/dashboard_charts_gestor_chamados
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.dashboardcharts.git
+[submodule "plugins/dashboard_charts_gestor_chamados_vale"]
+	path = plugins/dashboard_charts_gestor_chamados_vale
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.dashboardchartsvale.git
+[submodule "plugins/redmine_default_custom_query"]
+	path = plugins/redmine_default_custom_query
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.defaultcustomquery.git
+[submodule "plugins/redmine_gestor_chamados_vale"]
+	path = plugins/redmine_gestor_chamados_vale
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.gestorchamadosvale.git
+[submodule "plugins/redmine_gestor_chamadas"]
+	path = plugins/redmine_gestor_chamadas
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.gestordechamados.git
+[submodule "plugins/redmine_dependent_fields_management"]
+	path = plugins/redmine_dependent_fields_management
+	url = https://projects.visagio.com/visagio-redmine-fieldcorrelation.git
+[submodule "plugins/export_to_email"]
+	path = plugins/export_to_email
+	url = https://projects.visagio.com/visagio-redmine-export2email.git
+[submodule "plugins/redmine_auto_assign"]
+	path = plugins/redmine_auto_assign
+	url = https://projects.visagio.com/visagio-redmine-auto-assigner.git
+[submodule "plugins/redmine_improve_custom_fields"]
+	path = plugins/redmine_improve_custom_fields
+	url = https://projects.visagio.com/visagio-redmine_improvedfields.git
+[submodule "plugins/redmine_approvals"]
+	path = plugins/redmine_approvals
+	url = https://projects.visagio.com/visagio-redmine-approval.git
+[submodule "plugins/redmine_auto_generate_issue"]
+	path = plugins/redmine_auto_generate_issue
+	url = https://projects.visagio.com/visagio-redmine-autoissuecreator.git
+[submodule "plugins/redmine_block_duplicate"]
+	path = plugins/redmine_block_duplicate
+	url = https://projects.visagio.com/visagio-redmine-block-duplicates.git
+[submodule "plugins/redmine_sla"]
+	path = plugins/redmine_sla
+	url = https://projects.visagio.com/visagio-redmine-sla.git
+[submodule "plugins/redmine_auto_change_status"]
+	path = plugins/redmine_auto_change_status
+	url = https://projects.visagio.com/visagio-redmine-autostatuschanger.git
+[submodule "plugins/redmine_sql_report"]
+	path = plugins/redmine_sql_report
+	url = https://projects.visagio.com/visagio-redmine-sqlreport.git
+[submodule "plugins/bpm_integration"]
+	path = plugins/bpm_integration
+	url = https://github.com/visagio/redmine_bpm_integration.git
+[submodule "plugins/redmine_extended_watchers"]
+	path = plugins/redmine_extended_watchers
+	url = https://github.com/visagio/redmine_extended_watchers.git
+[submodule "plugins/redmine_workflow_enhancements"]
+	path = plugins/redmine_workflow_enhancements
+	url = https://github.com/visagio/redmine_workflow_enhancements.git
+[submodule "plugins/redmine_dashboard"]
+	path = plugins/redmine_dashboard
+	url = https://projects.visagio.com/visagio-redmine-dashboard.git
+[submodule "plugins/redmine_dashboard_defaultcharts"]
+	path = plugins/redmine_dashboard_defaultcharts
+	url = https://projects.visagio.com/visagio-redmine-dashboard-defaultcharts.git
+[submodule "plugins/portal"]
+	path = plugins/portal
+	url = https://github.com/visagio/portal.git
+[submodule "plugins/redmine_external_email"]
+	path = plugins/redmine_external_email
+	url = https://github.com/visagio/redmine_external_email.git
+[submodule "plugins/label_custom_field"]
+	path = plugins/label_custom_field
+	url = https://projects.visagio.com/visagio-redmine-labelcustomfield.git
+[submodule "plugins/grid_custom_field"]
+	path = plugins/grid_custom_field
+	url = https://projects.visagio.com/visagio-redmine-gridcustomfield.git
+[submodule "plugins/redmine_workflow_hidden_fields"]
+	path = plugins/redmine_workflow_hidden_fields
+	url = https://github.com/visagio/redmine_workflow_hidden_fields.git
+[submodule "plugins/redmine_file_custom_field"]
+	path = plugins/redmine_file_custom_field
+	url = https://github.com/visagio/redmine_file_custom_field.git
+[submodule "plugins/localizable"]
+	path = plugins/localizable
+	url = https://github.com/visagio/redmine_localizable.git
+[submodule "plugins/redmine_exec_job"]
+	path = plugins/redmine_exec_job
+	url = https://github.com/visagio/redmine_exec_job.git
+[submodule "plugins/redmine_custom_field_enumeration_enhancements"]
+	path = plugins/redmine_custom_field_enumeration_enhancements
+	url = https://github.com/visagio/redmine_custom_field_enumeration_enhancements.git
+[submodule "plugins/sso_portal_integration"]
+	path = plugins/sso_portal_integration
+	url = https://projects.visagio.com/visagio-vale-disu-gestorchamados.sso-portal-integration.git
+[submodule "plugins/redmine_resque"]
+	path = plugins/redmine_resque
+	url = https://github.com/visagio/redmine_resque.git
+[submodule "plugins/redmine_elasticsearch"]
+	path = plugins/redmine_elasticsearch
+	url = https://github.com/visagio/redmine_elasticsearch.git
+[submodule "plugins/redmine_business_rules_management"]
+	path = plugins/redmine_business_rules_management
+	url = https://github.com/visagio/redmine_business_rules_management.git
+[submodule "plugins/redmine_alerts"]
+	path = plugins/redmine_alerts
+	url = https://projects.visagio.com/visagio/alerts.git
+[submodule "plugins/redmine_external_validation"]
+	path = plugins/redmine_external_validation
+	url = https://projects.visagio.com/visagio/redmine-external-validation.git
+[submodule "plugins/nf_xml_to_form"]
+	path = plugins/nf_xml_to_form
+	url = https://projects.visagio.com/visagio/redmine-recebimento-fiscal.git
+[submodule "plugins/redmine_escalation_vale"]
+	path = plugins/redmine_escalation_vale
+	url = https://projects.visagio.com/visagio/vale-disu-gestorchamados.escalation-vale.git

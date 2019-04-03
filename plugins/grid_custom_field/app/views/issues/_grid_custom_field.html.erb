@@ -1,0 +1,5 @@
+<% unless @grid_custom_field_included %>
+  <%= stylesheet_link_tag "issues/grid_custom_field", plugin: "grid_custom_field" %>
+  <%= render :partial => 'grid_custom_field_utils'%>
+  <% @grid_custom_field_included = true %>
+<% end %>

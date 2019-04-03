@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <h2><%= t(:export_robot_template) %></h2>
+    <%= form_tag url_for(action: :create, controller: params[:controller], project_id: params[:project_id]), style: 'margin-right: 10px' do %>
+      <%= submit_tag l(:export_template_label) %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2><%= t(:import_cte_os_succes_log) %></h2>
+    <%= form_tag url_for(action: :update_ok, controller: params[:controller], project_id: params[:project_id]), multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:import_template_label) %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2><%= t(:import_cte_os_error_log) %></h2>
+    <%= form_tag url_for(action: :update_error, controller: params[:controller], project_id: params[:project_id]), multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:import_template_label) %>
+    <% end %>
+  </div>
+
+
+</div>

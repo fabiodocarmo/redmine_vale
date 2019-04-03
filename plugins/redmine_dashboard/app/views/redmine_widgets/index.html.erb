@@ -1,0 +1,69 @@
+<%= render 'filters' %>
+
+<div id="redmine-widget-dashboard">
+  <% @widgets.each do |widget| %>
+    <% if User.current.allowed_to?(widget.name_id.to_sym, @project) %>
+      <%= render 'widget', widget: widget %>
+    <% end %>
+  <% end %>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "application.css", plugin: "redmine_dashboard" %>
+  <%= javascript_include_tag "highcharts.js", plugin: "redmine_dashboard" %>
+  <% if Setting.plugin_redmine_dashboard[:export_widgets] %>
+    <%= javascript_include_tag "exporting.js", plugin: "redmine_dashboard" %>
+    <%= javascript_include_tag "offline-exporting.js", plugin: "redmine_dashboard" %>
+
+  <% end %>
+
+  <script type="text/javascript">
+    var simpleChartBuider = function() {
+      return function(widget_id, url, type, title, plotOptions) {
+        var final_url = url+'?'+$("#filters").serialize()+'&widget_id='+widget_id;
+        $.ajax({
+          url: final_url
+        }).done(function(data) {
+          $('#'+widget_id+'_chart').highcharts({
+            chart: {
+              type: type
+            },
+            title: {
+              text: title
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+              categories: data['x'],
+              crosshair: true
+            },
+            tooltip: {
+              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+              '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+              footerFormat: '</table>',
+              shared: true,
+              useHTML: true
+            },
+            plotOptions: plotOptions,
+            series: data['dataset'],
+            exporting: {
+              enabled: true,
+              chartOptions: {
+                plotOptions: {
+                    series: {
+                        dataLabels: {
+                            enabled: true
+                        }
+                    }
+                },
+                fallbackToExportServer: false
+              }
+            }
+          });
+        });
+      }
+    }();
+  </script>
+<% end %>

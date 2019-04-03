@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    errors:
+      models:
+        business_rule:
+          attributes:
+            parameters:
+              wrong_number_of_parameters: 'Número incorreto de parâmetros. %{actual_size} parâmetro(s) passado(s), %{expected_size} parâmetro(s) esperado(s)'
+              invalid_parameter_type: 'Tipo(s) de parâmetro(s) inválido(s). São permitidos os seguintes tipos: %{allowed_types}'
+              invalid_parameter_format: 'Formato de parâmetro incorreto. Parâmetro deve ser um Hash com as seguintes chaves: %{allowed_keys}'
+            rule:
+              rule_invalid_expressions: 'contém expressão(ões) inválida(s)'
+
+    attributes:
+      business_rule:
+        rule: Regra
+        parameters: Parâmetros

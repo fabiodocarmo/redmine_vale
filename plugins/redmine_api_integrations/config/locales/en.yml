@@ -1,0 +1,49 @@
+# English strings go here for Rails i18n
+en:
+  confirm_delete_api_integration: 'Do you realy want delete this entry?'
+  no_api_integration_message: 'No rules have been created yet'
+  link_to_new_api_integration: 'New rule'
+  action_open: 'Open'
+  action_save: 'Save'
+  action_relation_closed: 'Related issue closed'
+  label_action: 'Action'
+  save_prohibited: 'prohibited this configuration from being saved:'
+  project: 'Project:'
+  tracker: 'Tracker'
+  action: 'Action:'
+  export_template_label: 'Export Template'
+  role_name_cont: 'Role contains'
+  action_eq: 'Action Equals'
+  new_api_integrations_title: 'New API Integration title'
+  api_integrations_list: 'API integrations list'
+  false_field: 'False'
+  true_field: 'True'
+  redmine_api_integrations: 'API-SCP de integração'
+  api_integrations: "API-SCP Integration"
+  mail_is_required: "Mail parameter is required"
+  author_is_required: "Author_id parameter is required"
+  id_is_required: "ID parameter is required"
+  id_not_found: "ID not found"
+  issue_created: "Issue successfully created"
+  watcher_added: "Watcher added to issue"
+  watcher_not_exists: "Watcher does not exist in list"
+  watcher_empty: "User does not exist"
+  watcher_removed: "Watcher removed of issue"
+  wrong_tracker: "tracker_id does not exists in rules"
+  issue_edited: "Issue edited"
+  not_in_list: "is not included in the list"
+  field_setted: "Setted field"
+  the_field: "The field"
+  has_been_changed_from: "has been changed from"
+  value_to: "to"
+  issue_copy_to: "The issue was copied"
+  updated_issue_at: "Updated issue - "
+  note_added: "Note added"
+  status_changed: "Status changed"
+  created_by: "Created by:"
+  description_label: "DESCRIPTION:"
+  status_label: "STATUS:"
+  project_label: "PROJECT:"
+  custom_field_api_integration: "Custom Fields outside the Service Center scope"
+  child_issue_open: "There is already an open child issue for this issue"
+  change_status_not_allowed: "Change status not allowed in workflow"

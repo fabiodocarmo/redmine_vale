@@ -1,0 +1,269 @@
+es:
+  messages:
+    not_same_project: "No pertenece al mismo entorno"
+ # Active Record
+  activerecord:
+    errors:
+      messages:
+        earlier_than_minimum_start_date: "no puede ser anterior %{date} debido a las peticiones anteriores"
+        record_invalid: "registro inválido"
+        not_a_date: "Fecha no sigue el formato válido aaaa-mm-dd"
+  helpdesk_ticket:
+    new_ticket: Nueva Petición
+  contact:
+    email: Email
+  date:
+    formats:
+      month_year: "%B/%Y"
+
+  field_hint: Consejo
+  field_dont_copy: No copiar en Service Center
+  field_value_field: Contabilizar valor del campo
+  label_search_for_watchers: Buscar otros observadores para añadir
+  label_helpdesk_previous_tickets: Peticiones anteriores
+  field_contact_first_name: Primer nombre
+  notice_no_issue_selected: "Ninguna petición seleccionada! Por favor, compruebe las peticiones que desea editar."
+  error_issue_not_found_in_project: 'La petición no se ha encontrado o no pertenece a este entorno'
+  mail_subject_reminder: "%{count} petición(es) de fecha prevista para los próximos %{days} días"
+  mail_body_reminder: "%{count} petición(s) para usted de fecha prevista para los próximos %{days} días:"
+  field_issue: Petición
+  field_is_closed: Petición cerrada
+  field_assignable: Las peticiones pueden ser asignados a este rol
+  setting_issues_export_limit: Llímite de exportación de las peticiones
+  setting_cross_project_issue_relations: Permitir relacionar peticiones entre entornos
+  setting_issue_list_default_columns: Columnas estandár visible en la lista de peticiones
+  project_module_issue_tracking: Gestión de Peticiones
+  label_issue: Petición
+  label_issue_new: Nueva Petición
+  label_issue_plural: Peticiones
+  label_issue_view_all: Ver todas las peticiones
+  label_issues_by: "Peticiones por %{value}"
+  label_issue_added: Petición añadido
+  label_issue_updated: Petición actualizado
+  label_tracker: Tipo de petición
+  label_tracker_plural: Tipos de peticiones
+  label_issue_status: Situação do chamado
+  label_issue_status_plural: Situación de las peticiones
+  label_reported_issues: Peticiones reportados
+  label_assigned_to_me_issues: Mis peticiones
+  label_roadmap_no_issues: No hay peticiones para esta versión
+  label_watched_issues: Peticiones observadas
+  label_related_issues: Peticiones relacionadas
+  text_workflow_edit: Seleccione un rol y una especie de petición a editar el flujo de trabajo
+  text_tip_issue_begin_day: Petición inicia en este día
+  text_tip_issue_end_day: Petición termina en este día
+  text_tip_issue_begin_end_day: Petición inicia e termina neste dia
+  text_issue_added: "Petición %{id} incluida (por %{author})."
+  text_issue_updated: "Petición %{id} enmendada (por %{author})."
+  text_issue_category_destroy_question: "Algunas peticiones (%{count}) están asignadas a esta categoría. ¿Lo que quiere hacer?"
+  text_user_mail_option: "Para entornos (no seleccionados), sólo recibirá las notificaciones acerca de lo que estás viendo o está implicado (por ejemplo: Las peticiones de los que es autor o que se le ha asignado)"
+  text_no_configuration_data: "Roles, tipos de peticiones, situación de la petición y flujo de trabajo no se han configurado. Es muy recomendable cargar los valores estandár. Podrá modificar estos valores así que cargadas"
+  text_issues_destroy_confirmation: '¿Está seguro de que quiere eliminar la(s) petición(es) seleccionada(s)?'
+  text_destroy_time_entries_question: "%{hours} horas de trabajo se registraron en las peticiones que se van a suprimir. ¿Lo que se quiere hacer? "
+  text_reassign_time_entries: 'Asignar horas reportadas a esta petición:'
+  default_issue_status_resolved: Resuelto
+  default_issue_status_closed: Cerrado
+  default_issue_status_rejected: Disminuido
+  enumeration_issue_priorities: Prioridad de las peticiones
+  enumeration_doc_categories: Categorías de documentos
+  permission_edit_issues: Editar peticiones
+  permission_add_issues: Añadir peticiones
+  permission_manage_categories: Administrar las categorías de peticiones
+  permission_move_issues: Mover petición
+  permission_manage_issue_relations: Administrar las relaciones de peticiones
+  permission_delete_issues: Eliminar petición
+  text_repository_usernames_mapping: "Selecciona o actualiza los usuarios del sistema mapeando para cada usuario que se encuentra en el repositorio de registro. Los usuarios con el mismo nombre de usuario o email en el sistema y el repositorio son mapeados automáticamente"
+  error_can_not_reopen_issue_on_closed_version: Um chamado atribuído a uma versão fechada não pode ser reaberto
+  setting_issue_done_ratio: Calcular el porcentaje de conclusión de la petición
+  setting_issue_done_ratio_issue_status: Usar la situación de petición
+  error_issue_done_ratios_not_updated: El porcentaje de conclusión de las peticiones no se ha actualizado.
+  error_workflow_copy_target: Por favor, seleccione los tipos de peticiones y roles de destino
+  setting_issue_done_ratio_issue_field: Utilice el campo de la petición
+  error_workflow_copy_source: Por favor, seleccione los tipos de peticiones y roles de origen
+  label_update_issue_done_ratios: Actualización de porcentaje de finalización de las peticiones
+  permission_view_issues: Ver peticiones
+  label_display_used_statuses_only: Mostrar sólo las situaciones que se utilizan para este tipo de petición
+  error_unable_delete_issue_status: No se pudo eliminar la situación de la petición
+  error_can_not_delete_tracker: Este tipo de petición se asigna a algunas peticiones y no se puede excluirse.
+  label_additional_workflow_transitions_for_assignee: Transiciones adicionales permitidos cuando el usuario es responsable de la petición
+  label_issues_visibility_own: Petición creada y asignada al usuario
+  field_issues_visibility: Visibilidad de las peticiones
+  label_issues_visibility_all: Todas las peticiones
+  permission_set_own_issues_private: Cambie propias peticiones para el público o privado
+  permission_set_issues_private: Cambie peticiones para el público o privado
+  label_issues_visibility_public: Todas las peticiones no privados
+  notice_issue_successful_create: Petición %{id} creada.
+  setting_issue_group_assignment: Permitir atribuciones de peticiones a grupos
+  setting_default_issue_start_date_to_creation_date: Usar fecha actual como fecha de inicio para nuevas peticiones
+  label_x_issues:
+    zero:  0 peticiones
+    one:   1 petición
+    other: "%{count} peticiones"
+  setting_commit_cross_project_ref: Permitir solicitudes de todos los otros ambientes sean referenciadas y resueltas
+  label_any_issues_in_project: cualquier petición en el entorno
+  label_any_issues_not_in_project: cualquier petición que no está en el entorno
+  label_no_issues_in_project: se peticiones en el entorno
+  label_issue_tracking: Peticiones
+
+  warning_deletion_unconfirmed_tickets: Esta petición será eliminado si no se ha confirmado en %{days} días.
+
+
+
+#button_copy: Encaminar
+  #label_copied_to: Encaminar para
+  #label_copied_from: Encaminar de
+  #field_project: Área responsable
+  #label_helpdesk_blacklist: Correos permitidos
+  button_archive: Archivar
+  satisfaction_survey: Búsqueda de satisfacción
+
+  activerecord:
+    errors:
+      template:
+        header:
+      messages:
+        satisfaction_comment: Utilice el campo de comentarios para informarnos lo que la izquierda insatisfecho con nuestro servicio
+        forward_same_project: Debe cambiar el área de resolución en el encaminamiento de la petición
+        reopen_not_allowed: 'No se puede reabrir esta petición porque la petición #%{îssue} tiene una petición hija abierta.'
+
+
+  link_sucessfully_updated_message: Link actualizado correctamente.
+  link_sucessfully_created_message: Link creado correctamente.
+  expiration_date_error_message: No es posible verificar esta petición. El plazo para la confirmación ha sido superado.
+  confirmation_email_sent_message: Un email de confirmación ha sido enviado.
+  ticket_sucessfully_created_message: Email confirmó con éxito, se evaluará su petición, gracias.
+  satisfaction_message: Utilice el campo de comentarios para informarnos lo que la izquierda insatisfecho con nuestro servicio.
+  satisfaction_missing: Por favor, seleccione el nivel de satisfacción
+  satisfaction_issue_reopened: Por favor, seleccione un motivo de insatisfacción para informarnos la razón principal de la insatisfacción
+  answer_sucessfully_sent_message: Respuesta enviada.
+  no_confirmation_message: 'La petición # %{issue_id} se eliminará por falta de confirmación'
+  journal_notes_positive_message: Petición fue archivado porque el usuario se siente satisfecho con el servicio..
+  journal_notes_neutral_message: Petición fue archivado, pero el usuario no se sintió satisfecho con el servicio.
+  journal_notes_negative_message: Petición fue abierto de nuevo ya que el usuario no se sintió satisfecho con el servicio.
+  journal_notes_feedback_request_missing: Por favor, seleccione el nivel de satisfacción
+  journal_notes_feedback_request_message: Utilice el campo de comentarios para informarnos lo que la izquierda insatisfecho con nuestro servicio.
+  journal_notes_feedback_request_message_reopened: Por favor, seleccione un motivo de insatisfacción para informarnos la razón principal de la insatisfacción
+  no_faqs_registered_message: No hay FAQS registrados en el sistema
+  in_case_of_doubts_message: Para preguntas acerca de este problema, visite el FAQ en
+  inform_valid_email_explanation_message: Por favor, introduzca un email válido. Una confirmación de este mensaje será enviado al email dado. Si esto no es validado, no será admisible su petición.
+  comma_separator_message: Separar email con comas
+
+  param_ticket_should_be_set_exception: Param 'ticket' debe establecerse
+  contact_should_have_email_exception: El contacto debe tener email
+  new_tickets_default_priority_exception: Debe establecer la prioridad predeterminada de las nuevas peticiones
+
+  first_name_error_param: Primer nombre
+  email_error_param: Email
+  confirm_email_error_param: Confirmar Email
+  email_doesnt_match_error: no coincide
+  no_permission_error: sin permiso para abrir las peticiones
+
+  comments_label:  Comentarios
+  confirm_email_label: Confirmar email
+  send_answer_copy_to_label: Enviar una copia de la respuesta a la
+  submit_with_new_issue_label: Enviar y abrir nueva petición
+  yes_label: Sí
+  no_label: No
+  hours_label: hora(s)
+  minutes_label: minuto(s)
+  reopen_issue_label: Deseo volver a abrir la petición
+  comments_field_label: Utilice el campo que aparece a continuación para comentar sobre nuestro servicio
+
+  issue_creation_permission_settings_label: Proporcionar creación de peticiones en los siguientes proyectos
+  issue_creation_permission_settings_message: Si sólo hay un marcado, el campo del proyecto no ficará disponible para el usuario anónimo en la creación de petición.
+  project_wiki_settings_label: Proyecto Wiki del proveedor
+  project_faq_settings_label: Proyecto FAQ del proveedor
+  status_waiting_settings_label: Estado Pendiente de confirmación
+  exclude_waiting_after_settings_label: Eliminar Pendiente de confirmación después de
+  status_new_settings_label: Estado Nuevo
+  status_doing_settings_label: Estado En proceso
+  status_answered_settings_label: Estado Contestado
+  status_archived_settings_label: Estado Archivado
+  status_canceled_settings_label: Estado Cancelado
+  status_unconfirmed_archived_settings_label: Estado Archivado sin confirmación
+  default_issue_priority_settings_label: Prioridad predeterminada de las nuevas peticiones
+  answered_priority_settings_label: Prioridad respondida
+  normal_priority_settings_label: Prioridad Normal
+  high_priority_settings_label: Prioridad Alta
+  enable_archive_issue_settings_label: Habilitar archivo de peticiones
+  auto_archive_after_settings_label: Archivar automáticamente después de
+  satisfaction_survey_days_settings_label: ¿Cuántos días antes del archivamiento de la petición la Encuesta de Satisfacción debe ser enviada?
+  auto_archive_with_comments_settings_label: ¿Archivar automáticamente las peticiones con los comentarios de los usuarios anónimos después de la finalización?
+  mistaken_status_settings_label: Estado Enrutamiento incorrecto
+  copy_issue_when_forward_settings_label: Crear nueva petición para encaminar
+  mistaken_notify_settings_label: Cambiar la prioridad cuando el enrutamiento es inadecuada
+  increase_priority_forwarded_settings_label: Cambiar la prioridad después de resolver la petición encaminada
+  rollback_forwarding_config_settings_label: Asignar a responsable anterior cuando el enrutamiento es inadecuada
+  enable_satisfaction_survey_settings_label: Habilitar encuesta de satisfacción
+  enable_involved_mailing_settings_label: Habilitar el envío de email a todos los usuarios involucrados
+  reopen_status_to_settings_label: Abrir de nuevo la petición a estado abajo
+  trackers_reopen_disabled_settings_label: Desactivar la reapertura para los tipos de peticiones abajo
+  projects_attachments_field_hided_settings_label: Ocultar el campo de archivos del proyecto(s)
+  email_list_behavior_settings_label: Comportamiento de la lista de email
+  customer_field_settings_label: Campo CPF-CNPJ do Proveedor
+  social_name_settings_label: Campo Razón social do Proveedor
+  assign_to_field_settings_label: Asignar tareas automáticamente de acuerdo con el campo
+  forward_same_project_settings_label: Prohibir el encaminamiento de las peticiones a un mismo proyecto
+
+  faq_link_edit_header: Editar Link a FAQs
+  faq_link_list_header: Lista de links a FAQs
+  faq_link_new_header: Nuevo link a FAQ
+  faq_link_detail_header: Detallando Control de Acceso
+
+  link_to_new_faq: Nuevo FAQ
+  link_to_confirmation: Un link de confirmación
+
+  satisfaction_question_edit_header: Editar Razón de Satisfacción
+  satisfaction_question_list_header: Lista de Razones de Satisfacción
+  satisfaction_question_new_header: Nueva Motivo de satisfacción
+  satisfaction_question_detail_header: Detallando Control de Acceso
+  link_to_new_satisfaction_question: Link a la nueva Razón de satisfacción
+  satisfaction_create_sucess_message: Razón de Insatisfacción creado con éxito
+  satisfaction_edit_sucess_message: Razón de Insatisfacción editado con éxito
+  no_file_to_import_error_message: Debe seleccionar un archivo para importar.
+  label_question: Razón en Portugués
+  label_question_en: Razão em Inglés
+  label_question_es: Razão em Español
+  label_reopen_enabled: ¿Reabertura Activada?
+  import_success_message: Importación completada con éxito.
+  satisfaction_reasons: ¿Cuál es la razón principal de su insatisfacción?
+
+  delete_access_confirmation: ¿Está seguro de que quiere eliminar este acceso?
+  delete_issue_notification_message: 'No hemos recibido la confirmación de la apertura de la petición # %{issue_id}. Por favor, haga clic en el link %{link_to}. Sólo cuando se accede a ella, su petición será transferida a un operador. De lo contrario, se cerrará automáticamente en %{days_count} día(s).'
+  no_supplier_notification_message: Si no se ha completado, el proveedor se identifica con el sufijo de email(@dominio.com.br)
+  satisfaction_survey_reminder_message: 'La petición será archivada en %{days_count} día(s). Responde a la encuesta disponible en el link %{link_to} hasta este plazo.'
+  satisfaction_survey_mail_title: 'Encuesta de la petición # %{issue_id}'
+  answer_satisfaction_survey_message: 'Si necesita reabrir la petición, responda a la encuesta en el link'
+  prohibited_message: impidieron que se guarde esta configuración
+
+  dear_text: Estimado,
+
+  satisfaction_label: Satisfacción
+  satisfaction_survey_header: Búsqueda de Satisfacción
+  satisfaction_survey_question: ¿Está satisfecho con el servicio de la petición?
+  totally_satisfied: Completamente Satisfecho
+  totally_dissatisfied: Completamente Insatisfecho
+  satisfaction_explanation_reopen: Las notas abajo de 6 permiten la reapertura de la petición.
+  satisfaction_explanation_no_reopen:  Las notas por encima de 7 no permiten la reapertura de la petición .
+
+  consider_new_area_forward_option: Considerar encaminamiento a la nueva área
+  consider_resposible_forward_option: Considere encaminamiento la posibilidad sólo el nuevo responsable
+  black_list_option: Lista Negra
+  white_list_option: Lista Blanca
+
+  field_archivable: Archivable
+
+  satisfaction_survey_already_answered: 'Encuesta de satisfacción ya ha respondido'
+  enable_closing_child_issues_label: 'Habilitar el cierre automático de peticiones hijas para los siguientes peticiones'
+  enable_only_one_child_issue_label: 'Habilitar sólo un hijo para los siguientes peticiones'
+  unable_copy_closed: 'No se puede reenviar peticiones cerradas'
+  disable_copy_from_closed_issues: 'Deshabilitar el reenvío de peticiones cerradas a los siguientes tipos de peticiones'
+  one_child_issue_error: 'La petición ya tiene una petición hija asociada y con el estado abierto. Para crear una nueva petición hija asociada a esta petición, ninguna petición hija puede estar con el estado abierto.'
+  redirect_copy_error: 'La petición del tipo %{tracker} sólo se puede enviar a las seguientes áreas: %{projects}'
+  redirect_copy_error_label: 'Bloquear enrutamiento para áreas en las que no existen las siguientes peticiones'
+
+  not_assigned: Not Assigned
+  enable_priority_cascade: '¿Habilitar cascada de prioridad?'
+  not_possible_to_update_because_parent_closed: 'No es posible actualizar este problema, porque su padre está cerrado'
+  response_question: "Orientación presentada al finalizar la llamada no responde"
+  url_satisfaction_survey: "URL de la encuesta de satisfacción"

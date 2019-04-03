@@ -1,0 +1,17 @@
+pt-BR:
+  customer_by_issue_number:
+    title: Top 10 Fornecedores - Por quantidade de chamados
+  customer_by_issue_value:
+    title: Top 10 Fornecedores - Por valor do chamado
+  performance_by_project:
+    title: Produtividade - Áreas resolvedoras
+  weekly_progress_by_contact:
+    title: Progresso Semanal
+
+  permission_customer_by_issue_number: Top 10 Fornecedores - Por quantidade de chamados
+  permission_customer_by_issue_value: Top 10 Fornecedores - Por valor do chamado
+  permission_performance_by_project: Produtividade - Áreas resolvedoras
+
+  dashboard_filters:
+    range_date_from: De
+    range_date_to: Até

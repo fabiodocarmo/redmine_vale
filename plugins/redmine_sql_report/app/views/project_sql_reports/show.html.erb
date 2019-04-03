@@ -1,0 +1,25 @@
+<h1><%= l(:report_label)%>: <%= t("report.#{@sql_report.name}") %></h1>
+<% include_calendar_headers_tags %>
+<%= form_tag generate_sql_report_path(id: @sql_report.id, project_id: @project.id, format: 'xlsx'), method: :get do %>
+  <% @sql_report.filters.each do |filter, type| %>
+    <% if params.keys.include?(filter) || filter == 'nested_projects_ids' %>
+      <%= hidden_field_tag "filters[#{filter}]", params[filter] %>
+    <% elsif type == 'id' %>
+      <label><%= t("filter_#{filter}") %></label><br><br>
+      <%= select_tag "filters[#{filter}]", options_from_collection_for_select(filter_list(filter), 'id', string_method_filter(filter)), include_blank: '' %>
+    <% elsif type == 'string' %>
+      <label><%= t("filter_#{filter}") %></label><br><br>
+      <%= text_field_tag "filters[#{filter}]" %>
+    <% elsif type == 'date' %>
+      <label><%= t("filter_#{filter}") %></label><br><br>
+      <%= date_field_tag "filters[#{filter}]", '', id: filter %>
+      <%= calendar_for(filter) %>
+    <% else %>
+      <label><%= t("filter_#{filter}") %></label><br><br>
+      <%= select_tag "filters[#{filter}]", options_for_select(type.split(/\r\n/)), include_blank: '' %>
+    <% end %>
+    <br><br>
+  <% end %>
+
+  <%= submit_tag(l(:generate_label)) %>
+<% end %>

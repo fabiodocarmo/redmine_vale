@@ -1,0 +1,244 @@
+<%= form_for(sla, html: {id: 'sla_form'}) do |f| %>
+  <% if sla.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sla.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% sla.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset class="box">
+    <div class="field">
+      <label> <b><%= t('sla.name') %>: </b></label><br />
+      <%= f.text_field :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.projects') %>: </b></label><br />
+      <%= f.collection_select 'project_ids', Project.joins(:trackers).all.uniq, :id, :name, {:name => 'sla[project_ids][]'}, {:multiple => true} %><br /><br />
+      <%= f.check_box 'all_projects', {onchange: 'updateForm();'} %>
+      <label><%= t('sla.all_projects') %></label><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.trackers') %>: </b></label><br />
+      <%= f.collection_select 'tracker_ids', (sla.all_projects ? Tracker.all : Tracker.joins(:projects).where(projects: {id: sla.project_ids })).uniq, :id, :name, {:name => 'sla[tracker_ids][]'}, {:multiple => true}
+   %><br /><br />
+     <%= f.check_box 'all_trackers' %>
+     <label><%= t('sla.all_trackers') %></label><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.issue_statuses') %>: </b></label><br />
+      <%= f.collection_select 'issue_status_ids', (sla.all_trackers ? IssueStatus.all : IssueStatus.joins(:workflows).where(workflows: {tracker_id: sla.tracker_ids })).uniq, :id, :name, {:name => 'sla[issue_status_ids][]'}, {:multiple => true}
+   %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.enumeration') %>: </b></label><br />
+      <%= f.collection_select 'enumeration_ids', IssuePriority.all, :id, :name, {:name => 'sla[enumeration_ids][]'}, {:multiple => true}
+   %><br /><br />
+       <%= f.check_box 'all_enumerations' %>
+       <label><%= t('sla.all_enumerations') %></label><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.user') %>: </b></label><br />
+      <%= f.collection_select 'user_ids', Principal.all.where(type: "Group"), :id, :name, {:name => 'sla[user_ids][]'}, {:multiple => true}
+   %><br /><br />
+     <%= f.check_box 'all_groups' %>
+     <label><%= t('sla.all_groups') %></label><br /><br />
+    </div>
+
+    <div class="field">
+      <%= f.check_box 'use_custom_field' %>
+      <label><%= t('sla.use_custom_field') %></label><br /><br />
+      <label> <b><%= t('sla.main_custom_field') %>: </b></label><br />
+      <%= f.collection_select 'main_custom_field_id', IssueCustomField.all, :id, :name %><br /><br />
+      <label> <b><%= t('sla.main_custom_field_value') %>: </b></label><br />
+      <%= f.text_field :main_custom_field_value %><br /><br />
+    </div>
+
+
+    <div class="field">
+      <label> <b><%= t('sla.office_hour') %>: </b></label><br />
+      <%= f.collection_select 'office_hour_id', VsgSla::OfficeHour.all, :id, :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.due_date_custom_field') %>: </b></label><br />
+      <%= f.collection_select 'custom_field_id', IssueCustomField.all, :id, :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.manual_date_select') %>: </b></label><br />
+      <%= f.check_box :manual_date_select %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.sla') %>: </b></label><br />
+      <%= f.number_field :sla, step: :any %><br /><br />
+    </div>
+
+  </fieldset>
+  <fieldset class="box">
+    <div class="field">
+      <label> <b><%= t('sla.change_status_after_due_time') %>: </b></label><br />
+      <%= f.check_box 'change_status_after_due_time' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.due_status') %>: </b></label><br />
+      <%= f.collection_select 'due_status_id', IssueStatus.all, :id, :name, {:name => 'sla[issue_status_ids][]'} %><br /><br />
+    </div>
+  </fieldset>
+
+
+  <fieldset class="box">
+    <legend><%= t('sla.notify_overdue') %></legend>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_overdue_hour') %>: </b></label><br />
+      <%= f.text_field 'notify_overdue_hour' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_overdue_author') %>: </b></label><br />
+      <%= f.check_box 'notify_overdue_author' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_overdue_assign_to') %>: </b></label><br />
+      <%= f.check_box 'notify_overdue_assign_to' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_overdue_group') %>: </b></label><br />
+      <%= f.check_box 'notify_overdue_group' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.overdue_group_id') %>: </b></label><br />
+      <%= f.collection_select 'overdue_group_id', Group.all, :id, :name %><br /><br />
+    </div>
+  </fieldset>
+
+  <fieldset class="box">
+    <legend><%= t('sla.notify_inactivity') %></legend>
+    <div class="field">
+      <label> <b><%= t('sla.notify_inactivity_hour') %>: </b></label><br />
+      <%= f.text_field 'notify_inactivity_hour' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_inactivity_author') %>: </b></label><br />
+      <%= f.check_box 'notify_inactivity_author' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_inactivity_assign_to') %>: </b></label><br />
+      <%= f.check_box 'notify_inactivity_assign_to' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_inactivity_group') %>: </b></label><br />
+      <%= f.check_box 'notify_inactivity_group' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.inactivity_group_id') %>: </b></label><br />
+      <%= f.collection_select 'inactivity_group_id', Group.all, :id, :name %><br /><br />
+    </div>
+  </fieldset>
+
+  <fieldset class="box">
+    <legend><%= t('sla.notify_open_time') %></legend>
+    <div class="field">
+      <label> <b><%= t('sla.notify_open_time_hour') %>: </b></label><br />
+      <%= f.text_field 'notify_open_time_hour' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_open_time_author') %>: </b></label><br />
+      <%= f.check_box 'notify_open_time_author' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_open_time_assign_to') %>: </b></label><br />
+      <%= f.check_box 'notify_open_time_assign_to' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.notify_open_time_group') %>: </b></label><br />
+      <%= f.check_box 'notify_open_time_group' %><br /><br />
+    </div>
+
+    <div class="field">
+      <label> <b><%= t('sla.open_time_group_id') %>: </b></label><br />
+      <%= f.collection_select 'open_time_group_id', Group.all, :id, :name %><br /><br />
+    </div>
+  </fieldset>
+
+  <% if f.object.id %>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%end%>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  function check_all(checkbox, select){
+    if($(checkbox).is(":checked")){
+      $(select+" option").prop('selected', true);
+      $(select).attr("disabled", true);
+    }else{
+      $(select+" option").prop('selected', false);
+      $(select).attr("disabled", false);
+    }
+  }
+
+  function updateForm() {
+    $.ajax({
+      url: "<%= vsg_sla_slas_form_form_path(format: 'js', id: params[:id]) %>",
+      method: 'POST',
+      data: $('#sla_form').serialize()
+    });
+  }
+
+  $("#vsg_sla_sla_all_projects").change(function(){
+    check_all("#vsg_sla_sla_all_projects", "#vsg_sla_sla_project_ids");
+    updateForm();
+  });
+  $("#vsg_sla_sla_all_trackers").change(function(){
+    check_all("#vsg_sla_sla_all_trackers", "#vsg_sla_sla_tracker_ids");
+    updateForm();
+  });
+  $("#vsg_sla_sla_all_enumerations").change(function(){
+    check_all("#vsg_sla_sla_all_enumerations", "#vsg_sla_sla_enumeration_ids")
+  });
+  $("#vsg_sla_sla_all_groups").change(function(){
+    check_all("#vsg_sla_sla_all_groups", "#vsg_sla_sla_user_ids")
+  });
+
+
+  $("#sla_form select").chosen();
+
+  $("#vsg_sla_sla_project_ids").on('change', function() {
+    updateForm();
+  });
+  $("#vsg_sla_sla_tracker_ids").on('change', function() {
+    updateForm();
+  });
+
+  $("#sla_form select").attr('autocomplete', false);
+});
+</script>

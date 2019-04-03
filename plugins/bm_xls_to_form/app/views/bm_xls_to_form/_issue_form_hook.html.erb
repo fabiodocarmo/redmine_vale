@@ -1,0 +1,472 @@
+<% content_for :header_tags do %>
+  <%= javascript_include_tag "chosen-readonly.min", plugin: "bm_xls_to_form" %>
+<% end %>
+
+<%= javascript_tag do %>
+
+    //Plugin Célula de Contratos
+
+    var grid_id_global = <%= Setting.plugin_bm_xls_to_form["grid_field"].to_i %>;    
+
+    //Se o status for "Novo Chamado" e existe a grid de linhas do chamado, oculto o título
+    //O título é re-exibido quando o BM é enviado
+      if ( ($("#issue_status_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["status_newissue"].to_i %>) && ( ($("#issue_tracker_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["tracker_id"].to_i %>) ) ) {          
+        $('#issue_subject').hide();
+        $('label[for="issue_subject"]').hide();        
+      }
+
+
+
+      function gridXToOk(){
+        //Se o tracker for o de BM, então mudo o "X" das grid para "ok"
+        if ( ($("#issue_tracker_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["tracker_id"].to_i %>) )  {          
+          $( "span[class^='ui-button-icon-primary ui-icon ui-icon-closethick']" ).each(function( index ) {
+            $(this).removeClass();
+            $(this).text('Ok');
+          });
+
+          $( "button[class^='ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close']" ).each(function( index ) {
+            $(this).attr('title', 'Ok');
+            $(this).width(35);
+            $(this).css('width',35);
+          });
+          
+        }
+      }
+
+      if ( ($("#issue_tracker_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["tracker_id"].to_i %>) ){
+        setInterval(gridXToOk, 100);
+      }
+
+
+
+    function gridReadOnly(grid_id){      
+
+      $( "*[id^='grid_custom_field_delete_row_']" ).each(function( index ) {
+      var idGrid = $(this).context.id.split('_');
+      idGrid = idGrid[idGrid.length - 1];
+      if(idGrid == grid_id) //Se o botão pertencer à grid de linhas do contrato, então desabilito-o
+      $(this).prop('disabled', true);
+      });
+      //Desabilito o primeiro botão porque ele escapa o laço acima
+      $("#grid_custom_field_delete_row_"+grid_id).prop('disabled', true);
+
+      $("#grid_custom_field_add_row_" + grid_id).prop('disabled', true); //Desabilito o botão para adicionar linhas
+
+      var id_base = "issue_custom_field_values_" + grid_id + "_";
+        $( "*[id^="+id_base+"]" ).each(function( index ) {
+            $(this).prop('readonly', true);
+      });
+
+      //Oculto as imagens do datepicker
+      var gid = "grid_custom_field_table_"+grid_id;
+      var jquerystr = "table[id=\"" + gid + "\"] img";
+      $(jquerystr).hide();
+  }
+
+    function gridLinhasCTReadonly(){
+      var id_base = "issue_custom_field_values_" + grid_id_global + "_";
+        $( "*[id^="+id_base+"]" ).each(function( index ) {
+            $(this).prop('readonly', true);
+      });
+    }    
+
+
+    function fillFRSDataAndLockGrid(grid_id_object, grid_id_frs_data, frs_number_field){      
+      var qtdFRS = $("#grid_custom_field_table_" + grid_id_frs_data + " > tbody > tr").length;
+      var qtdLinhasGrid = $("#grid_custom_field_table_" + grid_id_object + " > tbody > tr").length;      
+
+      var id_base = "issue_custom_field_values_" + grid_id_frs_data + "_" ; 
+      var frsList = []; 
+
+      $( "*[id^="+id_base+"]" ).each(function( index ) {
+        var idNumber = $(this).context.id.split('_');
+        idNumber = idNumber[idNumber.length - 1];
+        if (idNumber == frs_number_field)
+          frsList.push($(this).val());
+      });
+
+      if(qtdFRS>qtdLinhasGrid){
+        while(qtdFRS>qtdLinhasGrid){
+            qtdLinhasGrid += 1;
+            $("#grid_custom_field_add_row_" + grid_id_object).click(); //Botão que adiciona linha
+        }
+    }
+
+    //Preencho as linhas da outra grid
+    id_base = "issue_custom_field_values_" + grid_id_object + "_" ; 
+    var i = 0;
+    $( "*[id^="+id_base+"]" ).each(function( index ) {
+        var idNumber = $(this).context.id.split('_');
+        idNumber = idNumber[idNumber.length - 1];
+        if (idNumber == frs_number_field){
+          if($(this).val != frsList[i])
+            $(this).val(frsList[i]);
+          $(this).prop('readonly', true);
+          i++;
+        }
+      });
+
+    //Desabilito a opção de excluir linhas e adicionar linhas
+    $( "*[id^='grid_custom_field_delete_row_']" ).each(function( index ) {
+      var idGrid = $(this).context.id.split('_');
+      idGrid = idGrid[idGrid.length - 1];
+      if(idGrid == grid_id_object) //Se o botão pertencer à grid de linhas do contrato, então desabilito-o
+      $(this).prop('disabled', true);
+      });
+      //Desabilito o primeiro botão porque ele escapa o laço acima
+      $("#grid_custom_field_delete_row_"+grid_id_object).prop('disabled', true);
+
+      $("#grid_custom_field_add_row_" + grid_id_object).prop('disabled', true); //Desabilito o botão para adicionar linhas
+
+
+    }
+
+    function autofillGridLinesBM(){
+      var grid_id_frs_data = <%= Setting.plugin_bm_xls_to_form["grid_frs_data"].to_i %> ; 
+      var grid_id_object = 0; //Grid do status atual
+      var frs_number_field = <%= Setting.plugin_bm_xls_to_form["frs_number_field"].to_i %>;
+
+      if ($("#issue_status_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["frs_approval_status"].to_i %>){              
+        grid_id_object = <%= Setting.plugin_bm_xls_to_form["grid_frs_approval_date"].to_i %> ; 
+      }
+
+      if ($("#issue_status_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["rf_sent_status"].to_i %>){              
+        grid_id_object = <%= Setting.plugin_bm_xls_to_form["grid_rf_data"].to_i %> ; 
+      }
+
+      if (grid_id_object == 0) //Não estamos num status referente ao processo do BM
+        return;
+
+      gridReadOnly(grid_id_frs_data);
+      
+      fillFRSDataAndLockGrid(grid_id_object, grid_id_frs_data, frs_number_field);
+    }
+
+    setInterval(autofillGridLinesBM, 100);
+
+    //Verifica se o status é "Atribuir Novamente". Se for, apaga o anexo do BM.
+    if ($("#issue_status_id").find(":selected").val() == <%= Setting.plugin_bm_xls_to_form["status_clearfields"].to_i %>){
+        //Apago o arquivo do Boletim de Medição
+        $('#issue_custom_field_values_'+<%= Setting.plugin_bm_xls_to_form["file_field"].to_i %>).val('');$('#tag_id').hide();
+
+        //Apago o texto dos campos do formulário
+        <%
+          field_names = ["razaosocial_field", "cnpj_field", "numerofornsap_field",
+                         "numerocontrato_field", "emailliberacao_field",
+                         "empresacontratante_field", "numeroempresacont_field",
+                         "vigencia_field",
+                         "npedidoenitem_field",
+                         "nomeaprovador_field",
+                         "numeroaprovador_field", "localprestacao_field",
+                         "periodoreferencia_field", "descricaoservico_field",
+                         "valor_field"]
+        %>
+        <% field_names.each do |fieldname|%>
+          $('#issue_custom_field_values_'+<%= Setting.plugin_bm_xls_to_form[fieldname].to_i %>).val('');
+        <% end %>
+
+        //Apago as linhas do contrato
+        var grid_id = <%= Setting.plugin_bm_xls_to_form["grid_field"].to_i %>;
+
+        //Deleto todas as linhas da grid até sobrar só uma
+        var qtdLinhasGrid = $("#grid_custom_field_table_" + grid_id + " > tbody > tr").length;
+        if(qtdLinhasGrid>1)
+            while(qtdLinhasGrid>1){
+                $("#grid_custom_field_delete_row_"+grid_id).click();
+                qtdLinhasGrid-=1;
+            }
+
+        //Limpo todas as colunas da linha que sobrou na grid
+        var id_base = "issue_custom_field_values_" + grid_id + "_";
+        $( "*[id^="+id_base+"]" ).each(function( index ) {
+            $(this).val('');
+        });
+
+        //Torno as linhas readonly
+        gridLinhasCTReadonly();
+
+    }
+
+  var thread_running = false;
+  var thread_instance;
+
+  $("#grid_custom_field_add_row_" + <%= Setting.plugin_bm_xls_to_form["grid_field"].to_i %>).prop('disabled', true);
+
+  function desabilitarExcluirLinhas(){
+    var grid_id = grid_id_global;
+
+    $( "*[id^='grid_custom_field_delete_row_']" ).each(function( index ) {
+    var idGrid = $(this).context.id.split('_');
+    idGrid = idGrid[idGrid.length - 1];
+    if(idGrid == grid_id) //Se o botão pertencer à grid de linhas do contrato, então desabilito-o
+    $(this).prop('disabled', true);
+    });
+    //Desabilito o primeiro botão porque ele escapa o laço acima
+    $("#grid_custom_field_delete_row_"+grid_id).prop('disabled', true);
+
+    $("#grid_custom_field_add_row_" + grid_id).prop('disabled', true); //Desabilito o botão para adicionar linhas
+
+  }
+
+    function gridLinhasCTReadonly(){
+      var id_base = "issue_custom_field_values_" + grid_id_global + "_";
+        $( "*[id^="+id_base+"]" ).each(function( index ) {
+            $(this).prop('readonly', true);
+      });
+    }
+
+    desabilitarExcluirLinhas();
+    gridLinhasCTReadonly();
+
+    function tratarGrid(cf_id, result, grid_id){
+    var qtdLinhas = result[cf_id].length;
+    if(qtdLinhas<=0){
+        console.log("Nenhum objeto para adicionar na grid");
+        return;
+    };
+
+    grid_id_global = grid_id;
+
+    $("#grid_custom_field_add_row_" + grid_id).prop('disabled', true); //Desabilito o botão para adicionar linhas
+
+    $("#grid_custom_field_show_"+grid_id).click();
+
+    //Deleto todas as linhas da grid até sobrar só uma
+    var qtdLinhasGrid = $("#grid_custom_field_table_" + grid_id + " > tbody > tr").length;
+    if(qtdLinhasGrid>1)
+        while(qtdLinhasGrid>1){
+            $("#grid_custom_field_delete_row_"+grid_id).click();
+            qtdLinhasGrid-=1;
+        }
+
+    $(".ui-button-text").parent().click();
+
+    /*
+    Se o objeto for referente à grid, precisamos encontrar todos os custom fields dela
+    */
+    var id_base = "issue_custom_field_values_" + grid_id + "_";
+    var idList = [];
+    var indexOfGridLine = 0;
+    var gridLinexIndexes = [];
+
+    $( "*[id^="+id_base+"]" ).each(function( index ) {
+      var idNumber = $(this).context.id.split('_');
+      indexOfGridLine = idNumber[idNumber.length - 2];
+      idNumber = idNumber[idNumber.length - 1];
+      if(idList.indexOf(idNumber)<0)
+      idList.push(idNumber);
+    });
+
+    /*
+    Verifico se a quantidade de linhas a serem preenchidas está disponível
+    Caso não esteja, crio quantas linhas forem necessárias
+    */
+
+    qtdLinhasGrid = $("#grid_custom_field_table_" + grid_id + " > tbody > tr").length;
+
+    if(qtdLinhas>qtdLinhasGrid){
+        while(qtdLinhas>qtdLinhasGrid){
+            qtdLinhasGrid += 1;
+            $("#grid_custom_field_add_row_" + grid_id).click(); //Botão que adiciona linha
+        }
+    }
+
+    //Recupero os índices das linhas da grid
+    $( "*[id^="+id_base+"]" ).each(function( index ) {
+      var idNumber = $(this).context.id.split('_');
+      indexOfGridLine = idNumber[idNumber.length - 2];
+      if (gridLinexIndexes.indexOf(indexOfGridLine) < 0)
+        gridLinexIndexes.push(indexOfGridLine);
+    });
+
+    var i=0;
+    var j=indexOfGridLine;
+    
+    for(k=0; k<qtdLinhas; k++){
+      j = gridLinexIndexes[k];      
+      var linhaContrato = result[cf_id][k];
+      for(i=0; i<idList.length; i++){
+          $("#"+id_base + j + "_" + idList[i]).val(linhaContrato[i]);
+          $("#"+id_base + j + "_" + idList[i]).prop('readonly', true);
+      }
+      j++;
+    }
+
+    /*
+    Desabilito os botões para excluir linhas
+    */
+    if(thread_running){
+        clearInterval(thread_instance);
+        thread_running = false;
+    }
+
+    thread_running = true;
+    thread_instance = setInterval(desabilitarExcluirLinhas, 100);
+
+  }
+
+  $(document).ready(function() {
+
+    var processFile = function(result) {
+        var grid_id = <%= Setting.plugin_bm_xls_to_form["grid_field"].to_i %>;
+
+        //Defino o título do chamado com base no nome do arquivo
+        var id_base='issue_custom_field_values_'+ <%= Setting.plugin_bm_xls_to_form["file_field"].to_i %> ;
+        $( "*[id^="+id_base+"]" ).each(function( index ) {
+          var filename = $(this).val();
+          var f2 = filename.toLowerCase();
+
+          if(f2.indexOf('.xl') < 0)
+             return;
+
+          var indexBegin = filename.lastIndexOf('\\')+1;
+          
+          if(indexBegin<0)
+             indexBegin = filename.lastIndexOf('/');
+          filename = filename.substring(indexBegin, f2.lastIndexOf('.xl'));
+          
+          $('#issue_subject').val(filename);
+          $('#issue_subject').show();
+          $('label[for="issue_subject"]').show();        
+        });
+
+
+        for (var cf_id in result) {
+            if (result[cf_id] !== undefined && /*result[cf_id] !== "" && result[cf_id] !== null &&*/ ($("#issue_custom_field_values_"+cf_id).data('chosen') === undefined || 0 != $('#issue_custom_field_values_'+cf_id+' option[value="'+result[cf_id]+'"]').length))
+            {
+
+                if(cf_id == grid_id){ //Tratamento especial da grid
+                    tratarGrid(cf_id, result, grid_id);
+
+                } else { //Custom fields que não são grid                    
+                    $("#issue_custom_field_values_"+cf_id).val(result[cf_id]);
+                    if (cf_id != <%= Setting.plugin_bm_xls_to_form["moeda_field"].to_i %>){
+                      $("#issue_custom_field_values_"+cf_id).prop("readonly", true);                      
+                    }                    
+                }
+            } else {
+
+                if(cf_id == grid_id){ //Tratamento especial da grid
+                    tratarGrid(cf_id, result, grid_id);
+                } else {
+                    if (cf_id != <%= Setting.plugin_bm_xls_to_form["moeda_field"].to_i %>){
+                      $("#issue_custom_field_values_"+cf_id).prop("readonly", true);                      
+                    }
+                    if ($("#issue_custom_field_values_"+cf_id).data('chosen') !== undefined) {
+                        $("#issue_custom_field_values_"+cf_id).chosen().chosenReadonly(true);
+                    }
+                }
+            }
+        }
+    }
+
+    var updateXml = true;
+
+    $("#all_attributes").on('DOMNodeInserted', function (e) {
+      if (updateXml) {
+        updateXml = false;
+        var file_id = $("#issue_custom_field_values_<%= Setting.plugin_bm_xls_to_form["file_field"] %>[type='hidden']").val();
+
+        if (file_id !== undefined && file_id !== "") {
+          var url = '<%= bm_to_xls_path %>/'+file_id;
+          $.ajax(url, {
+            type: 'GET',
+            dataType : 'json',
+            success: function (result) {
+              processFile(result);
+            }
+          });
+        }
+      }
+    });
+
+
+    $("#issue_custom_field_values_<%= Setting.plugin_bm_xls_to_form["file_field"] %>[type='file']").on('change', function() {
+      function addInputFiles(inputEl) {
+        var clearedFileInput = $(inputEl).clone().val('');
+
+        if ($.ajaxSettings.xhr().upload && inputEl.files) {
+          uploadAndAttachFiles(inputEl.files, inputEl);
+        } else {
+          alert("Seu browser não possui compatibilidade com o preenchimento automático dos campos a partir do Boletim de Medição");
+        }
+      }
+
+      function uploadAndAttachFiles(files, inputEl) {
+        $.each(files, function() {addFile(inputEl, this, true);});
+      }
+
+      function addFile(inputEl, file, eagerUpload) {
+        ajaxUpload(file, 1, inputEl);
+      }
+
+      function ajaxUpload(file, attachmentId, inputEl) {
+        actualUpload(file, attachmentId, inputEl);
+      }
+
+      function actualUpload(file, attachmentId, fileSpan, inputEl) {
+        uploadBlob(file, '<%= bm_xls_path(format: :js)  %>', attachmentId, {});
+      }
+
+      var showCarregando = false;
+      var threadShowCarregando = 0;
+
+      function showLoading(){        
+        if(showCarregando){
+          if ($('#ajax-indicator').is(":hidden"))
+            $('#ajax-indicator').show();
+        }
+        else {
+          $('#ajax-indicator').hide();
+          clearInterval(threadShowCarregando);
+        }
+      }   
+
+
+      function uploadBlob(blob, uploadUrl, attachmentId, options) {
+        return $.ajax(uploadUrl, {
+          type: 'POST',
+          dataType : 'json',
+          contentType: 'application/octet-stream',
+          beforeSend: function(jqXhr, settings) {
+            settings.data = blob;
+            showCarregando = true;
+            threadShowCarregando = setInterval(showLoading, 100);                    
+          },
+          data: blob,
+          cache: false,
+          processData: false,
+          success: function (result) {
+            if(result) {
+              
+              showCarregando = false;
+              processFile(result);
+
+              <% if Redmine::VERSION::MAJOR >= 3 %>
+                <% @update_form_url ||= update_issue_form_path(@project, @issue) %>
+              <% else %>
+                <% @update_form_url ||= project_issue_form_path(@project, id: @issue, format: 'js') %>
+              <% end %>
+
+            }
+            else {
+              showCarregando = false;
+              alert('Boletim de Medição inválido!\nVerifique se o boletim está no padrão e possui os campos preenchidos.');
+              $('form').remove();
+              location.reload();
+            }
+          },
+          error: function (jqxhr, status, errorThrown) {
+            showCarregando = false;
+            alert('Boletim de Medição inválido!\nVerifique se o boletim está no padrão e possui os campos preenchidos.');
+            location.reload();
+            //alert(jqxhr.responseText);
+          }
+        });
+      }
+
+      addInputFiles(this);
+    });
+  });
+<% end %>

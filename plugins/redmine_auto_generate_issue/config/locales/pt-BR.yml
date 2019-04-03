@@ -1,0 +1,17 @@
+# English strings go here for Rails i18n
+pt-BR:
+  edit: 'Editar'
+  delete: 'Deletar'
+  confirm_delete_auto_issue: 'Você realmente quer deletar a entrada?'
+  auto_issue_list: 'Lista de Tarefas Automáticas'
+  new_auto_issue: 'Nova Tarefa Automática'
+  empty_auto_issues: 'Lista em Branco'
+  new_auto_issue_title: 'Nova Tarefa Automática'
+  edit_auto_issue_title: 'Editar tarefa automática'
+  label_follow_issues: 'Próximas Solicitações'
+  description_available_groups: "Observadores Permitidos"
+  description_selected_groups: "Observadores Selecionados"
+  auto_issue:
+    create_success: 'Criação automática de tarefas configurada com sucesso'
+  title_cont: 'Título contém'
+  label_title: 'Título'

@@ -1,0 +1,9 @@
+<div>
+  <%= button_tag '+/-', type: 'button', onclick: 'expand_collapse(this)', class: 'expand_collapse_button' %>
+  <h3> <%= t(title) %> </h3>
+
+  <div class="template_fields">
+    <%= render partial: partial, locals: {settings: settings} %>
+  </div>
+</div>
+<hr style="height:3px; margin-bottom:30px;"/>

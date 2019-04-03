@@ -1,0 +1,16 @@
+# English strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  edit: 'Edit'
+  delete: 'Delete'
+  confirm_delete_auto_issue: 'Do you realy want delete this entry?'
+  auto_issue_list: 'Auto Issue List'
+  new_auto_issue: 'New Auto Issue'
+  empty_auto_issues: 'Empty List'
+  new_auto_issue_title: 'New Auto Issue'
+  edit_auto_issue_title: 'Edit auto issue'
+  label_follow_issues: 'Next Issues'
+  description_available_groups: "Available Watchers"
+  description_selected_groups: "Selected Watchers"
+  auto_issue:
+    create_success: 'Auto Issue crated with success'

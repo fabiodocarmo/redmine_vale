@@ -1,0 +1,283 @@
+<% @trackers = Tracker.all
+   @issue_custom_fields = IssueCustomField.all %>
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.nfse_rf_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_rf_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['nfse_rf_tracker']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.recibo_fatura_nd_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[recibo_fatura_nd_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['recibo_fatura_nd_tracker']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.nfse_sps_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_sps_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['nfse_sps_tracker']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.recibo_fatura_nd_sps_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[recibo_fatura_nd_sps_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['recibo_fatura_nd_sps_tracker']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.nfse_sedex_rf_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_sedex_rf_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['nfse_sedex_rf_tracker']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.nfse_sedex_sps_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_sedex_sps_tracker]', options_from_collection_for_select(@trackers, :id, :name, settings['nfse_sedex_sps_tracker']), include_blank: true %>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br />
+<div style="margin-left:30px;">
+  <h4> NFSE Statuses </h4>
+  <table>
+    <tbody>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[nfse_wating_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['nfse_wating_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[nfse_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['nfse_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[nfse_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['nfse_success_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[nfse_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['nfse_error_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<div style="margin-left:30px;">
+  <h4> GRC Statuses </h4>
+  <table>
+    <tbody>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[grc_waiting_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['grc_waiting_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[grc_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['grc_success_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[grc_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['grc_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.grc_error_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[grc_error_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['grc_error_status_id']), include_blank: true %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+        <td>
+          <%= select_tag 'settings[grc_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['grc_error_robot_status_id']), include_blank: true %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_vale') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_cnpj_vale]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_cnpj_vale']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_fornecedor') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_cnpj_fornecedor]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_cnpj_fornecedor']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.data_fatura') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_data_fatura]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_data_fatura']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.nfse_referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_referencia]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_referencia']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.recibo_fatura_nd_referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_referencia_recibo_fatura_nd]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_referencia_recibo_fatura_nd']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.montante') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_montante]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_montante']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.numero_pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[sps_numero_pedido]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['sps_numero_pedido']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.numero_rf') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_numero_rf]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_numero_rf']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.grid_linhas_pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[sps_grid_linhas_pedido]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['sps_grid_linhas_pedido']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.campos_linhas_pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[sps_campos_linhas_pedido]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['sps_campos_linhas_pedido']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.recibo_fatura_nd_tipo_documento') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_tipo_documento_recibo_fatura_nd]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_tipo_documento_recibo_fatura_nd']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.inscricao_municipal') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_inscricao_municipal]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_inscricao_municipal']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.municipio') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_municipio]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_municipio']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.texto') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_texto]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_texto']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.data_basica') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_data_basica]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_data_basica']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.base_de_calculo_iss') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_base_calculo_iss]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_base_calculo_iss']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.base_de_calculo_inss') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_base_calculo_inss]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_base_calculo_inss']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.aliquota_iss') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_aliquota_iss]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_aliquota_iss']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.aliquota_inss') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_aliquota_inss]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_aliquota_inss']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.optante_simples') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_optante_simples]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_optante_simples']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.sedex_tipo_nota') %>:</th>
+    <td>
+      <%= select_tag 'settings[sedex_tipo_nota]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['sedex_tipo_nota']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('export_to_vale_sap_robot.de_x_para_codigo_municipio_vs_nome') %>:</th>
+      <td>
+        <%= select_tag 'settings[nfse_codigo_municipio_vs_nome]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_codigo_municipio_vs_nome']), include_blank: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.MIRO') %>:</th>
+    <td>
+      <%= select_tag 'settings[nfse_miro]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['nfse_miro']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<hr />
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.tax_decimal_precision') %>:</th>
+    <td>
+      <%= number_field_tag 'settings[nfse_tax_decimal_precision]', settings['nfse_tax_decimal_precision'] %>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,44 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+	<NFe xmlns="http://www.portalfiscal.inf.br/nfe"><infNFe Id="NFe35151061077327000156550010007919111690010734" versao="3.10"><ide><cUF>35</cUF><cNF>69001073</cNF><natOp>PRESTACAO DE SERVICO</natOp><indPag>1</indPag><mod>55</mod><serie>1</serie><nNF>791911</nNF><dhEmi>2015-10-09T10:45:28-03:00</dhEmi><dhSaiEnt>2015-10-09T10:45:29-03:00</dhSaiEnt><tpNF>1</tpNF><idDest>2</idDest><cMunFG>3509205</cMunFG><tpImp>2</tpImp><tpEmis>1</tpEmis><cDV>4</cDV><tpAmb>1</tpAmb><finNFe>1</finNFe><indFinal>0</indFinal><indPres>9</indPres><procEmi>0</procEmi><verProc>2.4.11.2</verProc></ide><emit><CNPJ>61077327000156</CNPJ><xNome>SKF DO BRASIL LTDA</xNome><xFant>SKF DO BRASIL LTDA</xFant><enderEmit><xLgr>RODOVIA ANHANGUERA</xLgr><nro>S/N</nro><xCpl>KM 30</xCpl><xBairro>POLVILHO</xBairro><cMun>3509205</cMun><xMun>CAJAMAR</xMun><UF>SP</UF><CEP>07790190</CEP><cPais>1058</cPais><xPais>BRASIL</xPais><fone>1144488200</fone></enderEmit><IE>241021849112</IE><IM>2928</IM><CNAE>2949299</CNAE><CRT>3</CRT></emit><dest><CNPJ>33592510022042</CNPJ><xNome>VALE S.A.</xNome><enderDest><xLgr>AVE DANTE MICHELINI</xLgr><nro>5500</nro><xCpl>PONTA DE TUBAR</xCpl><xBairro>JARDIM CAMBURI</xBairro><cMun>3205309</cMun><xMun>VITORIA</xMun><UF>ES</UF><CEP>29090000</CEP><cPais>1058</cPais><xPais>BRASIL</xPais></enderDest><indIEDest>1</indIEDest><IE>080266240</IE><IM>0086875</IM></dest><det nItem="1"><prod><cProd>14.06</cProd><cEAN></cEAN><xProd>Instalacao e montagem de aparelhos, maquinas e equipamentos, inclusive montagem</xProd><NCM>00</NCM><CFOP>6933</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>115043.6700000000</vUnCom><vProd>115043.67</vProd><cEANTrib></cEANTrib><uTrib>UN</uTrib><qTrib>1.0000</qTrib><vUnTrib>115043.6700000000</vUnTrib><indTot>1</indTot><xPed>item: 450214431</xPed><nItemPed>0</nItemPed></prod><imposto><vTotTrib>2300.87</vTotTrib><ISSQN><vBC>115043.67</vBC><vAliq>2.00</vAliq><vISSQN>2300.87</vISSQN><cMunFG>3509205</cMunFG><cListServ>14.06</cListServ><indISS>1</indISS><cServico>14.06</cServico><cMun>3509205</cMun><cPais>1058</cPais><indIncentivo>2</indIncentivo></ISSQN><PIS><PISAliq><CST>01</CST><vBC>115043.67</vBC><pPIS>1.65</pPIS><vPIS>1898.22</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>115043.67</vBC><pCOFINS>7.60</pCOFINS><vCOFINS>8743.31</vCOFINS></COFINSAliq></COFINS></imposto><infAdProd>14.06 INSTAL DE EQUIP (RS) 15D0033552-0001- FRS 101231623 Contrato 5900028989 Pedido/item: 4502144314/00010 FRS 1001231623 RF 6200289843 Periodo: 21/08 a 20/09/2015 BM Requisicao 11504392 Cod. Serv. 3003946 -sistema automacao, sist. de integ, etc Coord. Wagner Niero</infAdProd></det><total><ICMSTot><vBC>0.00</vBC><vICMS>0.00</vICMS><vICMSDeson>0.00</vICMSDeson><vBCST>0.00</vBCST><vST>0.00</vST><vProd>0.00</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>115043.67</vNF><vTotTrib>2300.87</vTotTrib></ICMSTot><ISSQNtot><vServ>115043.67</vServ><vBC>115043.67</vBC><vISS>2300.87</vISS><vPIS>1898.22</vPIS><vCOFINS>8743.31</vCOFINS><dCompet>2015-10-09</dCompet></ISSQNtot><retTrib></retTrib></total><transp><modFrete>9</modFrete></transp><cobr><dup><nDup>1</nDup><dVenc>2015-11-23</dVenc><vDup>115043.67</vDup></dup></cobr><infAdic><infCpl>Cliente  18022 SAO PAULO - CLIENTE VALE Wagner Niero Retencao de PIS 0.00, COFINS 0.00 E CSLL 0.00 Nro Request = 2015-10-09-10.42.36.5880000552300</infCpl></infAdic></infNFe><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI="#NFe35151061077327000156550010007919111690010734"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>3FdJRIIMDXSlrkiVi7J158A9PcI=</DigestValue></Reference></SignedInfo><SignatureValue>l9q/eizabaaH+1jeWvYuccAR3KuotkpYG/8vIB3SmbeuFz+DrlzoGKwtcm/2C2tcPAHs7NeTJwwE
++JEwcgzOiYaO9gjr3lzYpv1ww51K17kN+sx8dm4fOy2Naw08kbNLbIifLkPGOxxpQ7IfwErJgQIW
+uD6MQ7HW9Nl1/PT9BNfKIMIsOr3BnarO/rAgRsffJagoF9mKE0zBmJapKaaqp+NBjuI8x2aVlznL
+sKmXQsgRSrlm8KdBQIJNbdJZeJd1c4f0JRcRq8C6ZXz7oES8Qa+WdZYyN5YK1ffMwj8Rs2RD5Mq4
+P+2ofgJZJnXsc1nsmFa3HNb6iTRdBDrjYuYbag==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIIMDCCBhigAwIBAgIQOoWlSOYuxXW56RpRbpAfwDANBgkqhkiG9w0BAQsFADB0MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDEtMCsGA1UECxMkQ2VydGlzaWduIENlcnRpZmljYWRv
+cmEgRGlnaXRhbCBTLkEuMSEwHwYDVQQDExhBQyBDZXJ0aXNpZ24gTXVsdGlwbGEgRzUwHhcNMTUw
+OTAzMDAwMDAwWhcNMTYwOTAxMjM1OTU5WjCBvTELMAkGA1UEBhMCQlIxEzARBgNVBAoUCklDUC1C
+cmFzaWwxITAfBgNVBAsUGEF1dGVudGljYWRvIHBvciBBUiBGYWNzaTEbMBkGA1UECxQSQXNzaW5h
+dHVyYSBUaXBvIEExMRUwEwYDVQQLFAxJRCAtIDg5OTE1OTMxGzAZBgNVBAMTElNLRiBETyBCUkFT
+SUwgTFREQTElMCMGCSqGSIb3DQEJARYWYWRyaWFuYS5zYW50b3NAc2tmLmNvbTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBANtefj5tiFvx/i6FgjOdpTmBYxvTTfmzhFfk8dh9tN5B7Jf4
++TEq7Z92NY/EKccDN9/fLVUrHIDlAnJu30spVksn9sRLyJPNLUO3nkP/JAOQfW4XATsB4lIuUIv7
+S0+PZe9UERjGC1ZXFpfDG4v/byJUCzZAXeH/0a7lcKp2OkEuPQxmuAUgRSRHwJmwL9jQgL17u5Xi
+CnT+rbJd/PuKPCnI7QD4GsTMJNWB3Hi1IQV01GfdgxcGMpG6bAH2DBQTaPZbJDXg551XNgkmoEzP
+ygrNXj38mD3MAKCD2YImgD/8RHiKZxGidc2RleOHeEPVyjQiIbZtu9knhkXKn9bWKTMCAwEAAaOC
+A3IwggNuMIG4BgNVHREEgbAwga2gOAYFYEwBAwSgLwQtMjYwODE5NjMwMzk4MjQ4NDg2MzAwMDAw
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwoCUGBWBMAQMCoBwEGlBBVUxPIENFU0FSIERFIFNPVVNBIEFC
+UkVVoBkGBWBMAQMDoBAEDjYxMDc3MzI3MDAwMTU2oBcGBWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEW
+YWRyaWFuYS5zYW50b3NAc2tmLmNvbTAJBgNVHRMEAjAAMB8GA1UdIwQYMBaAFJ1Qz73/JMqvsTPr
+F+JCeo5pKo5TMA4GA1UdDwEB/wQEAwIF4DCBiQYDVR0gBIGBMH8wfQYGYEwBAgELMHMwcQYIKwYB
+BQUHAgEWZWh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9yaW8vZHBj
+L0FDX0NlcnRpc2lnbl9NdWx0aXBsYS9EUENfQUNfQ2VydGlTaWduTXVsdGlwbGEucGRmMIIBJQYD
+VR0fBIIBHDCCARgwXKBaoFiGVmh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVw
+b3NpdG9yaW8vbGNyL0FDQ2VydGlzaWduTXVsdGlwbGFHNS9MYXRlc3RDUkwuY3JsMFugWaBXhlVo
+dHRwOi8vaWNwLWJyYXNpbC5vdXRyYWxjci5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2VydGlz
+aWduTXVsdGlwbGFHNS9MYXRlc3RDUkwuY3JsMFugWaBXhlVodHRwOi8vcmVwb3NpdG9yaW8uaWNw
+YnJhc2lsLmdvdi5ici9sY3IvQ2VydGlzaWduL0FDQ2VydGlzaWduTXVsdGlwbGFHNS9MYXRlc3RD
+UkwuY3JsMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCBoAYIKwYBBQUHAQEEgZMwgZAw
+ZAYIKwYBBQUHMAKGWGh0dHA6Ly9pY3AtYnJhc2lsLmNlcnRpc2lnbi5jb20uYnIvcmVwb3NpdG9y
+aW8vY2VydGlmaWNhZG9zL0FDX0NlcnRpc2lnbl9NdWx0aXBsYV9HNS5wN2MwKAYIKwYBBQUHMAGG
+HGh0dHA6Ly9vY3NwLmNlcnRpc2lnbi5jb20uYnIwDQYJKoZIhvcNAQELBQADggIBAGdJcuWB9hNB
+zfbbfkGiC9oV5Mb7+aYx5WqCzOCltdV7vMuAwEa0cKL/1+MUiI42wIsYVbpYksqEypZAT8n+T58F
+Wa+GZ+AY9SZbWKhcOe4ywDf2NZkkZeYYNMuT0yv70nvvhD/hhzASahr+cc2M+Iq3GWz8/avLCVJt
+ASZKtZg+nArardSMm+O7qm+Blu3YEDruw4w88LEwidv68RugXgbXgsEPv08+oONa4iFO+zCZBNrn
+mbikHiRfLEZYMyfbqmvQOe7vDxr9feDJVaUhDF3LsIATGiFxBSu3shpZasvjZiCvPkrlSqL6evlH
+5ti/hRzBWutiC+/itJ0Utm4Y2dHd/oL7pKpyU7T/QsMzXCJQFC8jf0flL+Ylaf/SVMp4Elz/Yl7q
+etSPDjBfE0mXaf1nzJCsSMy5g22MX1JlHOJ5N3mnrTKCE5bpvRe8a565rhKb5pqMU2DKJCtz4luM
+HJy0cBsylmLbHMUZOqKrwXHuFbVbnTxaSIALqKBh7uk/WnX7brPqDf/tvJC1qaHwE4eOoT5OC7iv
+DaWRVqQnB1al3AEx14F+QBW0gODx2IPZh+crjEElzpjytGc0cyOVe6le88DbQQ5YRqY7VwR7GDgn
+Wb1zB5qZd/1uAVX3tcom0lWShEA+b120SiB7ekhcQWMYHVeVKUoA75v4bq5Qisgf</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao="3.10">
+	<infProt><tpAmb>1</tpAmb><verAplic>SP_NFE_PL_008f</verAplic><chNFe>35151061077327000156550010007919111690010734</chNFe><dhRecbto>2015-10-09T10:45:38-03:00</dhRecbto><nProt>135150630818864</nProt><digVal>3FdJRIIMDXSlrkiVi7J158A9PcI=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe>
+</nfeProc>

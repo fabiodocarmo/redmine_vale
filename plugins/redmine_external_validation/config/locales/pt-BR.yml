@@ -1,0 +1,57 @@
+pt-BR:
+
+  redmine_external_validations_list: Validações Externas
+  link_to_new_external_validation: Adicionar regra de Validação Externa
+  no_external_validation_message: Nenhuma regra de validação externa cadastrada
+
+  new_external_validation_title: Nova regra de Validação Externa
+  label_trigger: Evento para disparar a regra
+  label_configuration: Configurações gerais
+
+  success_status_label: Situação do chamado em caso de sucesso
+  not_found_status_label: Situação do chamado caso o documento não seja encontrado na base de validações
+  not_found_message_label: Mensagem exibida caso documento não seja encontrado
+  message_custom_field_label: Campo personalizado que armazenará mensagens de validação
+
+  label_queries: Configuração das consultas na API
+  external_validation_remove_external_validation_query: Remover regra de consulta
+  external_validation_add_external_validation_queries: Adicionar regra de consulta
+
+  label_roles: Configuração das Regras de Validação
+  external_validation_remove_external_validation_role: Remover regra de validação
+  external_validation_add_external_validation_roles: Adicionar regra de validação
+
+  desviation_field_label: Campo com as Divergências
+  add_desviation_key_label: Chave da divergência adicionada
+  remove_desviation_key_label: Chave da divergência removida
+  new_status_label: Novo Status
+  change_found_issue_label: Alterar tarefa encontrada
+  search_statuses_label: Buscar pelos status
+  status_label: Status a ser buscado
+
+  po_iva_grid_custom_field_label: Grid de Pedidos com IVA
+  item_column_label: Coluna de Item
+  iva_item_column_label: Coluna de Item com IVA
+  item_column_api_label: Coluna de Item na API
+  po_column_label: Coluna de Pedido
+  iva_po_column_label: Coluna de Pedido com IVA
+  po_column_api_label: Coluna de Pedido na API
+  iva_value_column_label: Coluna de Valor com IVA
+  value_column_label: Coluna de Valor
+  iva_column_api_label: Coluna de IVA na API
+  iva_column_label: Coluna de IVA no Grid
+  lookup_table_name_label: Tabela Lookup de IVA
+  lookup_iva_column_label: Coluna de IVA na tabela lookup
+  lookup_value_column_label: Coluna de Valor na tabela lookup
+
+  cnpj_field_label: CNPJ
+  lc_field_label: Lei Complementar Federal
+  city_field_label: Município do Prestador
+  notification_field_label: Notificação
+  cepom_found_value_label: Valor CEPOM encontrado
+  cepom_not_found_value_label: Valor CEPOM não encontrado
+  exclude_city_codes_label: Excluir os seguintes códigos de município
+  exclude_lc_codes_label: Excluir as seguintes leis complementares
+  not_on_cepom_message_label: Mensagem caso não esteja de CEPOM
+  not_found_lc_message_label: Mensagem caso a Lei Complementar não esteja no CEPOM
+  on_cepom_message_label: Mensagem de sucesso CEPOM

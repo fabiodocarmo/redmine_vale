@@ -1,0 +1,27 @@
+# English strings go here for Rails i18n
+en:
+  label_approvals: Approval
+  approvals:
+    list: Approval's List
+    new_approval: New Approval
+    import_empty_file: File is blank
+    import_template: Import
+    export_template: Export
+    import_successful: Successful Import
+  label_sign: Sign
+  label_value: Value
+  label_level: Level
+  label_level_below: Level Below
+  sign_eq: Sign
+  value_cont: Value Cont
+  level_cont: Level Cont
+  level_below_cont: Level Below Cont
+  no_approval_message: 'Approval List is Empty'
+  link_to_new_approval: New Approval
+  edit_approval: Edit Approval
+  id_label: id
+  project_label: Project
+  sign_label: Sign
+  value_label: Value
+  level_label: Level
+  level_below_label: Level Below

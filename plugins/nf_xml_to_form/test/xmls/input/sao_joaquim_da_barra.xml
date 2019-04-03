@@ -1,0 +1,104 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+    <Nfse versao="2.01">
+        <InfNfse Id="762572WXIJXSR7STQ186CJQI1NBBN2GC">
+            <Numero>177</Numero>
+            <CodigoVerificacao>70A6VLBP7</CodigoVerificacao>
+            <DataEmissao>2016-04-15T13:07:56</DataEmissao>
+            <OutrasInformacoes>Val. Aprox. Tributos:</OutrasInformacoes>
+            <ValoresNfse>
+                <BaseCalculo>185071.49</BaseCalculo>
+                <Aliquota>3.00</Aliquota>
+                <ValorIss>5552.14</ValorIss>
+                <ValorLiquidoNfse>185071.49</ValorLiquidoNfse>
+            </ValoresNfse>
+            <PrestadorServico>
+                <IdentificacaoPrestador>
+                    <CpfCnpj>
+                        <Cnpj>07075505000164</Cnpj>
+                    </CpfCnpj>
+                    <InscricaoMunicipal>10044</InscricaoMunicipal>
+                </IdentificacaoPrestador>
+                <RazaoSocial>CORFAL POLIURETANO PEÇAS E EQUIPAMENTOS LTDA.</RazaoSocial>
+                <NomeFantasia>CORFAL POLIURETANO</NomeFantasia>
+                <Endereco>
+                    <Endereco>AVENIDA ACESSO A ANHANGUERA</Endereco>
+                    <Numero>00000</Numero>
+                    <Complemento>ROD. ANGELO SCARELLI S/Nº - VICINAL</Complemento>
+                    <Bairro>DISTRITO INDUSTRIAL</Bairro>
+                    <CodigoMunicipio>3549409</CodigoMunicipio>
+                    <Uf>SP</Uf>
+                    <CodigoPais>1058</CodigoPais>
+                    <Cep>14600000</Cep>
+                </Endereco>
+                <Contato>
+                    <Telefone></Telefone>
+                    <Email></Email>
+                </Contato>
+            </PrestadorServico>
+            <OrgaoGerador>
+                <CodigoMunicipio>3549409</CodigoMunicipio>
+                <Uf>SP</Uf>
+            </OrgaoGerador>
+            <DeclaracaoPrestacaoServico>
+                <InfDeclaracaoPrestacaoServico>
+                    <Competencia>2016-04-15</Competencia>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>185071.49</ValorServicos>
+                            <ValorDeducoes>0.00</ValorDeducoes>
+                            <ValorPis>0.00</ValorPis>
+                            <ValorCofins>0.00</ValorCofins>
+                            <ValorInss>0.00</ValorInss>
+                            <ValorIr>0.00</ValorIr>
+                            <ValorCsll>0.00</ValorCsll>
+                            <OutrasRetencoes>0.00</OutrasRetencoes>
+                            <ValorIss>5552.14</ValorIss>
+                            <Aliquota>3.00</Aliquota>
+                            <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                            <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+                        <IssRetido>2</IssRetido>
+                        <ResponsavelRetencao>1</ResponsavelRetencao>
+                        <ItemListaServico>14.05</ItemListaServico>
+                        <CodigoTributacaoMunicipio>0000140000005</CodigoTributacaoMunicipio>
+                        <Discriminacao>TERCEIRIZACAO DE SERVIÇOS - SUPRIMENTOS. SERVIÇO DE REFORMA DO TROMMEL-185.071,49 </Discriminacao>
+                        <CodigoMunicipio>3549409</CodigoMunicipio>
+                        <ExigibilidadeISS>1</ExigibilidadeISS>
+                        <MunicipioIncidencia>3549409</MunicipioIncidencia>
+                    </Servico>
+                    <Prestador>
+                        <CpfCnpj>
+                            <Cnpj>07075505000164</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>10044</InscricaoMunicipal>
+                    </Prestador>
+                    <Tomador>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+<Cnpj>33592510000901</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal></InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S.A</RazaoSocial>
+                        <Endereco>
+                            <Endereco>VILA DO SOSSEGO</Endereco>
+                            <Numero>S/N</Numero>
+                            <Complemento>VILA DO SOSSEGO</Complemento>
+                            <Bairro>VILA DO SOSSEGO</Bairro>
+                            <CodigoMunicipio>1502152</CodigoMunicipio>
+                            <Uf>PA</Uf>
+                            <Cep>68537000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>9455032400</Telefone>
+                            <Email>nfe@quadrem.net</Email>
+                        </Contato>
+                    </Tomador>
+                    <RegimeEspecialTributacao>0</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                    <IncentivoFiscal>2</IncentivoFiscal>
+                </InfDeclaracaoPrestacaoServico>
+            </DeclaracaoPrestacaoServico>
+        </InfNfse>
+    </Nfse>
+</CompNfse>

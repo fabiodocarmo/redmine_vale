@@ -1,0 +1,18 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b><%= t('working_day.week_day') %>: </b></label><br />
+    <%= f.select :week_day, VsgSla::WorkingDay::WEEK_DAY.map {|r| [t(r), r]} %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('working_day.start_time') %>: </b></label><br />
+    <%= f.time_select :start_time %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('working_day.end_time') %>: </b></label><br />
+    <%= f.time_select :end_time %><br /><br />
+  </div>
+
+  <%= link_to_remove_association t("office_hour.office_hour_remove_working_day"), f %>
+</div>

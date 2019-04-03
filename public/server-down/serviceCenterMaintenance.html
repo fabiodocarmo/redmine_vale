@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Service Center</title>
+		<link id="favicon" rel="shortcut icon" type="image/ico" href="/server-down/favicon.png" />
+		
+		<style type="text/css">
+			h1{
+				font-family: "Lato", Helvetika, Calibri, Arial, sans-serif;
+				font-size: 2.5em;
+				text-align: center;
+				padding-bottom: 0.5em;
+				padding-top:1.3em; 
+				color: darkcyan;
+				width: 100%;
+
+			}
+			
+			h2{
+				font-family: courier, courier-new, sans-serif;
+				font-size: 0.25em;
+			}
+			
+			.message p{
+				font-family: "Open Sans", sans-serif;
+				padding-bottom:0.125em; 
+				width:100%;
+				text-align: center;
+				font-size: 1.0em;
+				font-weight: bold;
+				color: #5e5d55;
+			}
+			
+			img#img-maintenance {
+				display: block;
+				margin-left: auto;
+				margin-right: auto; 
+				padding-bottom:0.938em; 
+
+			}
+			
+			img#img-logo-vale{
+				position: absolute;
+				left: 0.75em;
+				top: 1.0em;
+				
+			}			
+		</style>			
+	</head>
+	
+	<body>
+		<div>
+			<img id="img-logo-vale" alt="Logotipo da Vale" height="68" width="176" src="/server-down/logovale.png" />
+			<h1>Service Center</h1>
+
+		</div>
+			<img id="img-maintenance" alt="Servidor em manutenção" src="/server-down/icone.png" />
+
+		<div class="message">
+			<p>Estamos em manutenção. Por favor, retorne mais tarde. Desculpe-nos pelo inconveniente. </p>
+
+			<p>We are currently under maintenance, please come back later. We apologize for any inconvenience. </p>
+			
+			<p>Estamos en mantenimiento, regresa pronto. Disculpe las molestias.</p>
+		
+		</div>
+
+	</body>
+
+	<script>
+		var req = new XMLHttpRequest();
+		req.open('GET', document.location, false);
+		req.send(null);
+		var contextPath = req.getResponseHeader("Application-Context-Path");
+
+		var favicon = document.getElementById("favicon");
+		var logoImg = document.getElementById("img-logo-vale");
+		var maintenanceImg = document.getElementById("img-maintenance");
+
+		if (contextPath != null) {
+			favicon.href       = contextPath + favicon.href       
+			logoImg.src        = contextPath + logoImg.src        
+			maintenanceImg.src = contextPath + maintenanceImg.src 
+		}
+
+	</script>
+
+
+</html>

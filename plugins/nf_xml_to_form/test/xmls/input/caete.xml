@@ -1,0 +1,121 @@
+<CompNfse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Nfse versao="2.02">
+      <InfNfse Id="43626407000646_201600000000053">
+         <Numero>201600000000053</Numero>
+         <CodigoVerificacao>48e99c24c</CodigoVerificacao>
+         <DataEmissao>2016-04-05T15:36:25</DataEmissao>
+         <OutrasInformacoes>Lei 12741/2012: Mun: R$ 2933,89; Est: R$ 0,00; Fed: R$ 9046,17; Total: R$ 11980,06.</OutrasInformacoes>
+         <ValoresNfse>
+            <BaseCalculo>97796.39</BaseCalculo>
+            <Aliquota>3.00</Aliquota>
+            <ValorIss>2933.89</ValorIss>
+            <ValorLiquidoNfse>97796.39</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>43626407000646</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>547986</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>SCHENCK PROCESS EQUIPAMENTOS INDUSTRIAIS LTDA.</RazaoSocial>
+            <Endereco>
+               <Endereco>AV. MILTON CAMPOS</Endereco>
+               <Numero>100</Numero>
+               <Complemento>A</Complemento>
+               <Bairro>CHARLES CHARNEAUX</Bairro>
+               <CodigoMunicipio>3110004</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <CodigoPais>01058</CodigoPais>
+               <Cep>34800000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>3136523335</Telefone>
+               <Email>ajordana@schenckprocess.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3110004</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <InfDeclaracaoPrestacaoServico>
+               <Competencia>2016-04-05</Competencia>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>97796.39</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>2933.89</ValorIss>
+                     <Aliquota>3.00</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido>2</IssRetido>
+                  <ItemListaServico>14.01</ItemListaServico>
+                  <CodigoTributacaoMunicipio>3311200</CodigoTributacaoMunicipio>
+                  <Discriminacao>SERVICO DE MONTAGEM REVESTIMENTO MOINHO KMTL - FABRICAPV: 800963OC: 4502537421 / 00010FRS: 100155881RF: 620035485CONTRATO: 5900035298LOCAL: MG 3146107/OURO PRETO / MGCOBRAN&#xC7;A EM CARTEIRA: Favor efetuar cr&#xE9;dito em conta corrente no Banco: Bradesco  Ag.: 3.396-0 C/C 152.476-3 - ou ligue: (11) 3152-5453 - </Discriminacao>
+                  <CodigoMunicipio>3146107</CodigoMunicipio>
+                  <CodigoPais>1058</CodigoPais>
+                  <ExigibilidadeISS>1</ExigibilidadeISS>
+                  <MunicipioIncidencia>3110004</MunicipioIncidencia>
+               </Servico>
+               <Prestador>
+                  <CpfCnpj>
+                     <Cnpj>43626407000646</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>547986</InscricaoMunicipal>
+               </Prestador>
+               <Tomador>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510000740</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>.</InscricaoMunicipal>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S/A</RazaoSocial>
+                  <Endereco>
+                     <Endereco>ROD. BR 040</Endereco>
+                     <Numero>KM 598</Numero>
+                     <Bairro>MIGUEL BURNIER</Bairro>
+                     <CodigoMunicipio>3146107</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35400000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3137494007</Telefone>
+                     <Email>nfe@quadrem.com</Email>
+                  </Contato>
+               </Tomador>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivoFiscal>2</IncentivoFiscal>
+            </InfDeclaracaoPrestacaoServico>
+         </DeclaracaoPrestacaoServico>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="SMF_43626407000646_201600000000053">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#43626407000646_201600000000053">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>gqh0ihs+j0tv7wW2cMRbbKq1SEw=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>e0RjjkLjkzUo+coLAe8ZqNwb4lvY/x1zMD9qI6ElrvDk459u3hw6noqJValJcSzevsJtxufLP+cltpYWbJJDw/I0axhuu3x81ulzU8u3l/bMh+jCs7pKwfv6ZVXCbHnZ1bKVnP1xOsbZ1lmAATEw6e9vawyw0cmoT9rS5TsQqD7YCGIU6f7ElrnbtWkxOXd3ra0OMbER5uWDpqy1RSuO0d09XqrhsTHIZDRyYWhIKk5u5FLXYLT2Xdb1zlnt4GMTdmPD43yEZqxUaXZaCwK4Lmd0qnvG7WWd2+0/6wF8P8rV7B0TZkE0vZJwe6i0ZCeqvUMUKYRX58Qs9cET6R+mtg==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

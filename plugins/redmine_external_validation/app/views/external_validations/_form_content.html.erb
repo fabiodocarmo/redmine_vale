@@ -1,0 +1,135 @@
+<%= form_for(resource, html: {id: 'external_validation_form'}) do |f| %>
+  <% if resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resource.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset><legend><%= l(:label_trigger) %></legend>
+    <div class="field">
+      <label><b>Projeto: </b></label><br />
+      <%= f.collection_select :project_id, Project.joins(:trackers).all.uniq, :id, :name, include_blank: true %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b><%= l(:all_projects_label) %></b></label><br />
+      <%= f.check_box :all_projects %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b>Tracker: </b></label><br />
+      <%= f.collection_select :tracker_id, (resource.all_projects ? Tracker.all : Tracker.joins(:projects).where(projects: {id: resource.project_id })).uniq, :id, :name, include_blank: true %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b><%= l(:all_trackers_label) %></b></label><br />
+      <%= f.check_box :all_trackers %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b>Status From: </b></label><br />
+      <%= f.collection_select :status_from_id, IssueStatus.all, :id, :name, include_blank: true %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b><%= l(:all_status_from_label) %></b></label><br />
+      <%= f.check_box :all_status_from %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b>Status To: </b></label><br />
+      <%= f.collection_select :status_to_id, IssueStatus.all, :id, :name %><br /><br />
+    </div>
+  </fieldset>
+
+  <fieldset><legend><%= l(:label_configuration) %></legend>
+    <div class="field">
+      <label><b><%= l(:success_status_label) %>:</b></label><br />
+      <%= f.collection_select :success_status_id, IssueStatus.all, :id, :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b><%= l(:not_found_status_label) %>:</b></label><br />
+      <%= f.collection_select :not_found_status_id, IssueStatus.all, :id, :name %><br /><br />
+    </div>
+    <div class="field">
+      <label><b><%= l(:not_found_message_label) %>:</b></label><br />
+      <%= f.text_area :not_found_message %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b><%= l(:message_custom_field_label) %>: </b></label><br />
+      <%= f.collection_select :message_custom_field_id, f.object.tracker && ! f.object.all_trackers ? (f.object.tracker.custom_fields.where(field_format: 'text')) : IssueCustomField.where(field_format: 'text').all, :id, :name %><br /><br />
+    </div>
+
+    <div class="field">
+      <label><b>Divergências: </b></label><br />
+      <%= f.collection_select :errors_custom_field_id, f.object.tracker && ! f.object.all_trackers ? (f.object.tracker.custom_fields.where(field_format: 'enumeration')) : IssueCustomField.where(field_format: 'enumaration').all, :id, :name %><br /><br />
+    </div>
+  </fieldset>
+
+  <fieldset><legend><%= l(:label_queries) %></legend>
+    <%= f.fields_for :external_validation_queries do |external_query| %>
+      <%= render 'external_validation_queries_fields', f: external_query %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association t('external_validation_add_external_validation_queries'), f, :external_validation_queries,
+        partial: 'external_validation_queries_fields' %>
+    </div>
+  </fieldset>
+
+  <fieldset><legend><%= l(:label_roles) %></legend>
+    <%= f.fields_for :external_validation_roles do |external_role| %>
+      <%= render 'external_validation_roles_fields', f: external_role %>
+    <% end %>
+
+    <div class="links">
+      <%= link_to_add_association t('external_validation_add_external_validation_roles'), f, :external_validation_roles,
+        partial: 'external_validation_roles_fields' %>
+    </div>
+  </fieldset>
+
+  <% if f.object.id %>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%end%>
+<% end %>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    function updateForm() {
+      $.ajax({
+        url: "<%= external_validations_form_form_path(format: 'js', id: params[:id]) %>",
+        method: 'POST',
+        data: $('#external_validation_form').serialize()
+      });
+    }
+    $('#external_validation_project_id').on('change', function() {
+      updateForm();
+    });
+
+    $('#external_validation_tracker_id').on('change', function() {
+      updateForm();
+    });
+    $('#external_validation_all_projects').on('change', function() {
+      updateForm();
+    });
+    $('#external_validation_all_trackers').on('change', function() {
+      updateForm();
+    });
+
+  });
+</script>

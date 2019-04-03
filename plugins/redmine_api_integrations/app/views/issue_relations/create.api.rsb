@@ -1,0 +1,4 @@
+api.status do
+  api.issue @child_issue.id
+  api.parent_issue @issue.id
+end

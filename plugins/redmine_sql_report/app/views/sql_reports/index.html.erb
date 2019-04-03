@@ -1,0 +1,34 @@
+<h1><%= l(:report_list_header) %></h1>
+
+<p>
+  <%= link_to l(:link_to_new_report), new_sql_report_path %>
+</p>
+
+<%if !@sql_reports.empty? %>
+  <div class="autoscroll">
+    <table class="list issues">
+      <tr>
+        <th><%= l(:id_label)%></th>
+        <th><%= l(:field_name) %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @sql_reports.each do |sql_report| %>
+        <tr>
+          <td><%= sql_report.id %></td>
+          <td><%= sql_report.name %></td>
+
+          <td><%= link_to l(:label_details), sql_report %></td>
+          <td><%= link_to l(:button_edit), edit_sql_report_path(sql_report) %></td>
+          <td><%= link_to l(:button_delete), sql_report, confirm: l(:delete_access_confirmation_message), method: :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <br />
+<% else %>
+  <h1><%= l(:no_aproval_register_message) %></h1>
+<% end %>

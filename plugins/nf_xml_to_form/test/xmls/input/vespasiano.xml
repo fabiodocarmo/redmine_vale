@@ -1,0 +1,143 @@
+<notas>
+   <item id="694363">
+      <numero>20153049</numero>
+      <codigo_verificacao>56658ee7</codigo_verificacao>
+      <data_emissao>2015-12-07 11:51:35.2</data_emissao>
+      <status>ABERTA</status>
+      <competencia><![CDATA[201512]]></competencia>
+      <natureza_operacao><![CDATA[1]]></natureza_operacao>
+      <regime_especial_tributacao><![CDATA[0]]></regime_especial_tributacao>
+      <optante_simples_nacional><![CDATA[2]]></optante_simples_nacional>
+      <incentivador_cultural>2</incentivador_cultural>
+      <nfs_substituida></nfs_substituida>
+      <numero_rps><![CDATA[12345678]]></numero_rps>
+      <data_emissao_rps>2015-11-07 11:51:35.2</data_emissao_rps>
+      <outras_informacoes>
+<![CDATA[]]>
+      </outras_informacoes>
+      <servico>
+         <valores>
+            <valor_servico>R$2.833,42</valor_servico>
+            <valor_deducao>R$0,00</valor_deducao>
+            <valor_pis>R$18,42</valor_pis>
+            <valor_confins>R$85,00</valor_confins>
+            <valor_inss>R$0,00</valor_inss>
+            <valor_ir>R$42,50</valor_ir>
+            <valor_csll>R$28,33</valor_csll>
+            <base_calculo>R$2.833,42</base_calculo>
+            <aliquota_servico>2.00</aliquota_servico>
+            <valor_iss>R$56,67</valor_iss>
+            <valor_liquido_nfse>R$2.659,17</valor_liquido_nfse>
+            <outras_retencoes>R$0,00</outras_retencoes>
+            <iss_retido>2</iss_retido>
+            <valor_iss_retido>R$0,00</valor_iss_retido>
+            <valor_desconto_incondicionado></valor_desconto_incondicionado>
+            <valor_desconto_condicionado>R$0,00</valor_desconto_condicionado>
+         </valores>
+         <item_lista_servico>17.05</item_lista_servico>
+         <codigo_tributacao_municipio>17.09</codigo_tributacao_municipio>
+         <discriminacao><![CDATA[Contrato 4600008703 / Pedido 4502282375 / Folha 1001325627 / Período Novembro/2015 Valor: R$2.833,42]]></discriminacao>
+         <observacao>
+<![CDATA[OBSERVAÇÕES
+
+ VENCIMENTO: 06/01/16
+SERV PREST EM VESPASIANO / SUBITEM 17.09 LEI NR 116/03
+RET CONF LEI 10833 4,65% BASE DE CALC RET FED 4,65% CONF LEI 10.833/03
+
+LOCAL DE PRESTAÇÃO DO(S) SERVIÇO(S)
+
+3171204 - VESPASIANO - MG
+
+]]>
+         </observacao>
+         <municipio_prestacao_servico><![CDATA[3171204]]></municipio_prestacao_servico>
+         <descricao_item_lista_servico>
+<![CDATA[]]>
+         </descricao_item_lista_servico>
+         <descricao_municipio>
+<![CDATA[VESPASIANO]]>
+         </descricao_municipio>
+         <uf_municipio>MG</uf_municipio>
+         <codigo_cnae>7120100</codigo_cnae>
+         <descricao_cnae>
+<![CDATA[7120100 - Testes e an?lises t?cnicas]]>
+         </descricao_cnae>
+      </servico>
+      <prestacao_servico>
+         <identificacao_prestador>
+            <cnpj>02417115000101</cnpj>
+            <inscricao_municipal>9014310</inscricao_municipal>
+         </identificacao_prestador>
+         <razao_social><![CDATA[SGS GEOSOL LABORATÓRIOS LTDA]]></razao_social>
+         <nome_fantasia><![CDATA[SGS GEOSOL LABORATÓRIOS LTDA]]></nome_fantasia>
+         <endereco>
+            <logradouro><![CDATA[ROD MG 010]]></logradouro>
+            <numero>SN</numero>
+            <complemento><![CDATA[KM 24,5]]></complemento>
+            <bairro><![CDATA[ANGICOS]]></bairro>
+            <codigo_municipio>3171204</codigo_municipio>
+            <descricao><![CDATA[Vespasiano]]></descricao>
+            <uf>MG</uf>
+            <cep>33200000</cep>
+         </endereco>
+         <contato>
+            <telefone>3130450201</telefone>
+            <email>faturamento@sgsgeosol.com.br</email>
+         </contato>
+      </prestacao_servico>
+      <tomador_servico>
+         <identificacao_tomador>
+            <cpf_cnpj>15144306000199</cpf_cnpj>
+            <inscricao_municipal> </inscricao_municipal>
+            <inscricao_estadual> </inscricao_estadual>
+         </identificacao_tomador>
+         <razao_social><![CDATA[VALE MANGANES S.A]]></razao_social>
+         <endereco>
+            <lograrouro><![CDATA[ROD BR 324 ]]></lograrouro>
+            <numero>SN</numero>
+            <complemento><![CDATA[KM 24]]></complemento>
+            <bairro><![CDATA[AGUA COMPRIDA ]]></bairro>
+            <codigo_municipio>2930709</codigo_municipio>
+            <uf>BA</uf>
+            <cep>43700000</cep>
+            <contato>
+               <telefone>2222222222</telefone>
+               <email>0</email>
+            </contato>
+         </endereco>
+      </tomador_servico>
+      <intermediario_servico>
+         <razao_social></razao_social>
+         <cpf_cnpj> </cpf_cnpj>
+         <inscricao_municipal></inscricao_municipal>
+      </intermediario_servico>
+      <orgao_gerador>
+         <codigo_municipio>3171204</codigo_municipio>
+         <uf>MG</uf>
+      </orgao_gerador>
+      <construcao_civil>
+         <codigo_obra> </codigo_obra>
+         <art> </art>
+      </construcao_civil>
+      <signature id="">
+         <signed_info>
+            <canonicalization_method algorithm=""></canonicalization_method>
+            <signature_method algorithm=""></signature_method>
+            <reference uri="">
+               <transforms>
+                  <transforms algorithm=""></transforms>
+                  <transforms algorithm=""></transforms>
+               </transforms>
+               <digest_method algorithm=""></digest_method>
+               <digest_value algorithm=""></digest_value>
+            </reference>
+         </signed_info>
+         <signature_value></signature_value>
+         <key_info>
+            <X509_data>
+               <X509_certificate></X509_certificate>
+            </X509_data>
+         </key_info>
+      </signature>
+   </item>
+</notas>

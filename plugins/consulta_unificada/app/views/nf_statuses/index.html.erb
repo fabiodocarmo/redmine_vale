@@ -1,0 +1,54 @@
+<h1><%= l(:invoice_status_list_header) %></h1>
+
+<style type="text/css">
+  label,  input {
+    display: block;
+    float: left;
+  }
+
+  label {
+    text-align: right;
+    width: 50px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  fieldset {
+    border: solid 1px #000;
+  }
+
+  br {
+    clear: left;
+  }
+</style>
+
+<% unless @nf_statuses.blank? %>
+  <div class="autoscroll">
+    <table class="list issues">
+      <tr>
+        <th><%= l(:id_label) %></th>
+        <th><%= l(:field_name) %></th>
+        <th><%= l(:field_status) %></th>
+
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @nf_statuses.each do |nf_status| %>
+        <tr>
+          <td><%= nf_status.id %></td>
+          <td><%= nf_status.name %></td>
+          <td><%= nf_status.status %></td>
+
+          <td>
+            <%= link_to l(:label_details), nf_statuses_path(nf_status) %>
+          </td>
+          <td>
+            <%= link_to l(:link_to_edit) , edit_nf_status_path(nf_status) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+<% end %>

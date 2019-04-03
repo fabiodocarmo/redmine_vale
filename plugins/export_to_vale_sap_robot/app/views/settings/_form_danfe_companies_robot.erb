@@ -1,0 +1,114 @@
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('label_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_tracker_id]', options_from_collection_for_select(Tracker.all, :id, :name, settings['danfe_tracker_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_wating_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['danfe_wating_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['danfe_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['danfe_success_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['danfe_error_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<% @issue_custom_fields = IssueCustomField.all %>
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_referencia_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_referencia_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.valor_total_nf') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_valor_total_nf_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_valor_total_nf_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.cnpj_fornecedor') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_cnpj_fornecedor_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_cnpj_fornecedor_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_pedido_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_pedido_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.emissao') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_emissao_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_emissao_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.vencimento') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_vencimento_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_vencimento_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.tipo_cadastro') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_tipo_cadastro_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_tipo_cadastro_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.empresa') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_empresa_id]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_empresa_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.codigo_barras') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_codigo_barras]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_codigo_barras']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.chave_acesso') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_chave_acesso]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_chave_acesso']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.postagem') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_postagem]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_postagem']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.tipo_documento') %>:</th>
+    <td>
+      <%= select_tag 'settings[danfe_tipo_documento]', options_from_collection_for_select(@issue_custom_fields, :id, :name, settings['danfe_tipo_documento']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+en:
+  label_dependent_fields: Dependent Fields
+  dependency_create_sucess_message: Dependency between fields sucessfully created.
+  dependency_edit_sucess_message: Dependency between fields sucessfully updated.
+  no_file_to_import_error_message: You must select a file to import.
+  import_success_message: Import sucessfully finished.
+  prohibited_message: prohibited this configuration from being saved
+  
+  dependency_type_label: Dependency type
+  main_field_label: Main field
+  expected_value_label: Main field expected value for 2nd field validation
+  secondary_field_label: Secondary field
+  non_nullable_secondary_field_label: Non null secondary field
+  expected_secondary_field_label: 2nd field expected value
+  options_format_hint: (Allowed only a number of options in the format value1, value2)
+
+  dependency_edit_header: Edit dependency between custom fields
+  dependency_new_header: New dependency between custom fields
+  dependency_list_header: List of dependencies between custom fields
+
+  dependency_new_label: New dependency between custom fields
+  dependency_import_template_label: Import template
+
+  dependency_delete_confirmation: Are you sure you want to delete this dependency between custom fields?

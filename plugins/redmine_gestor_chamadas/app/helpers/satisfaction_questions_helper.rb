@@ -1,0 +1,2 @@
+module SatisfactionQuestionsHelper
+end

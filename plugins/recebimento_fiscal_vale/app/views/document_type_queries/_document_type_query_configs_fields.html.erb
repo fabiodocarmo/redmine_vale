@@ -1,0 +1,13 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Tipo documento </b></label><br />
+    <%= f.text_field :document_type %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Status Sucesso</b></label><br />
+    <%= f.collection_select :status_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <%= link_to_remove_association "document_type_query_remove_document_type_query_config", f %>
+</div>

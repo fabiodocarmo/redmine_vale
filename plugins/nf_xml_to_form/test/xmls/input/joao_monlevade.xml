@@ -1,0 +1,90 @@
+<CompNfse xmlns:ii="urn:IssIntel">
+  <ii:Nfse>
+    <ii:InfNfse>
+      <ii:Numero>201500000100318</ii:Numero>
+      <ii:CodigoVerificacao>77f99d231</ii:CodigoVerificacao>
+      <ii:DataEmissao>2015-12-17T16:44:54</ii:DataEmissao>
+      <ii:IdentificacaoRps></ii:IdentificacaoRps>
+      <ii:NaturezaOperacao>1</ii:NaturezaOperacao>
+      <ii:RegimeEspecialTributacao>0</ii:RegimeEspecialTributacao>
+      <ii:OptanteSimplesNacional>2</ii:OptanteSimplesNacional>
+      <ii:IncentivadorCultural>0</ii:IncentivadorCultural>
+      <ii:Competencia>2015-12-01T00:00:00</ii:Competencia>
+      <ii:OutrasInformacoes>A autenticidade desta NFeA pode ser verificada no site https://joaomonlevade-mg.issintel.com.br/.
+Esta NFeA foi emitida com respaldo na Lei no 04/2010
+</ii:OutrasInformacoes>
+      <ii:Servico>
+        <ii:Valores>
+          <ii:ValorServicos>71021.86</ii:ValorServicos>
+          <ii:ValorDeducoes>28408.74</ii:ValorDeducoes>
+          <ii:ValorIss>2130.66</ii:ValorIss>
+          <ii:IssRetido>2</ii:IssRetido>
+          <ii:ValorIssRetido>0.0</ii:ValorIssRetido>
+          <ii:BaseCalculo>42613.12</ii:BaseCalculo>
+          <ii:Aliquota>0.05</ii:Aliquota>
+          <ii:ValorLiquidoNfse>71021.86</ii:ValorLiquidoNfse>
+        </ii:Valores>
+        <ii:ItemListaServico>14.05</ii:ItemListaServico>
+        <ii:CodigoCnae>2539-0/01-01</ii:CodigoCnae>
+        <ii:Discriminacao>SERVIÇO DE REVESTIMENTO PELO PROCESSO DE VULCANIZAÇÃO A QUENTE COM BORRACHA NATURAL. VALOR = R$ 71.021,86&#13;
+&#13;
+PEDIDO: 4502322633&#13;
+LOCAL DE ENTREGA: MINA BRUCUTU&#13;
+REVESTIMENTO NAS CALHAS - DC 1179 E DC 1190&#13;
+&#13;
+CONDIÇÃO DE PAGAMENTO: 30 DIAS.&#13;
+&#13;
+INFORMAMOS QUE O ISS SERÁ  RECOLHIDO PELO PRESTADOR DE SERVIÇO CONTÉCNICA.</ii:Discriminacao>
+        <ii:CodigoMunicipio>3136207</ii:CodigoMunicipio>
+      </ii:Servico>
+      <ii:PrestadorServico>
+        <ii:IdentificacaoPrestador>
+          <ii:Cnpj>86393774000145</ii:Cnpj>
+          <ii:InscricaoMunicipal>760</ii:InscricaoMunicipal>
+        </ii:IdentificacaoPrestador>
+        <ii:RazaoSocial>CONTECNICA FABRICACOES LTDA</ii:RazaoSocial>
+        <ii:NomeFantasia>CONTECNICA FABRICACOES LTDA</ii:NomeFantasia>
+        <ii:Endereco>
+          <ii:Endereco>RUA GAZANIA</ii:Endereco>
+          <ii:Numero>630</ii:Numero>
+          <ii:Bairro>CAMPOS ELISEOS</ii:Bairro>
+          <ii:CodigoMunicipio>3136207</ii:CodigoMunicipio>
+          <ii:Uf>MG</ii:Uf>
+          <ii:Cep>35931193</ii:Cep>
+        </ii:Endereco>
+        <ii:Contato>
+          <ii:Telefone>3138525422</ii:Telefone>
+          <ii:Email>fiscal@contecnica.ind.br</ii:Email>
+        </ii:Contato>
+      </ii:PrestadorServico>
+      <ii:TomadorServico>
+        <ii:IdentificacaoTomador>
+          <ii:CpfCnpj>
+            <ii:Cnpj>33592510044798</ii:Cnpj>
+          </ii:CpfCnpj>
+        </ii:IdentificacaoTomador>
+        <ii:RazaoSocial>Vale S.A. - Brucutu</ii:RazaoSocial>
+        <ii:Endereco>
+          <ii:Endereco>SERRA DO MACHADO</ii:Endereco>
+          <ii:Numero>S/N</ii:Numero>
+          <ii:Bairro>ZONA RURAL</ii:Bairro>
+          <ii:CodigoMunicipio>3161908</ii:CodigoMunicipio>
+          <ii:Uf>MG</ii:Uf>
+          <ii:Cep>35970000</ii:Cep>
+        </ii:Endereco>
+        <ii:Contato>
+          <ii:Telefone>3138336366</ii:Telefone>
+          <ii:Email>nfe.servico@vale.com</ii:Email>
+        </ii:Contato>
+      </ii:TomadorServico>
+      <ii:IntermediarioServico>
+        <ii:CpfCnpj></ii:CpfCnpj>
+      </ii:IntermediarioServico>
+      <ii:OrgaoGerador>
+        <ii:CodigoMunicipio>3136207</ii:CodigoMunicipio>
+        <ii:Uf>MG</ii:Uf>
+      </ii:OrgaoGerador>
+      <ii:ConstrucaoCivil></ii:ConstrucaoCivil>
+    </ii:InfNfse>
+  </ii:Nfse>
+</CompNfse>

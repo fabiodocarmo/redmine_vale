@@ -1,0 +1,7 @@
+<script type="text/javascript">
+  simpleChartBuider('<%= widget.name_id %>', '<%= redmine_dashboard_widget_path(widget.source_plugin, widget.name_id) %>', '<%= chart_type %>', '<%= t("#{widget.name_id}.title") %>', <%= raw options %>);
+
+  $('#redmine-dashboard-refresh-filters-button').on('click', function() {
+    simpleChartBuider('<%= widget.name_id %>', '<%= redmine_dashboard_widget_path(widget.source_plugin, widget.name_id) %>', '<%= chart_type %>', '<%= t("#{widget.name_id}.title") %>', <%= raw options %>);
+  });
+</script>

@@ -1,0 +1,4 @@
+<p><%= t(:dear_user) %></p>
+<p><%= t(:notify_overdue_mail) %></p>
+
+<p><%= link_to("#{@issue.tracker.name} ##{@issue.id}: #{@issue.subject}", issue_url(@issue)) %></p>

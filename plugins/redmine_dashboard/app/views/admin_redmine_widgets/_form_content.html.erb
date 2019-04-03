@@ -1,0 +1,130 @@
+<%= form_for(widget, url: {controller: :admin_redmine_widgets, action: action}, html: {id: 'widget_form'}) do |f| %>
+  <% if widget.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(widget.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+        <% widget.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :id %>
+
+  <div class="field">
+    <label> <b>Nome do Plugin fonte: </b></label><br />
+    <%= f.select :source_plugin, REDMINE_DASHBOARD_PLUGINS.keys, { include_blank: true}, onchange: 'updateForm();' %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Nome ID: </b></label><br />
+
+    <%= f.select :name_id, REDMINE_DASHBOARD_PLUGINS[widget.source_plugin] || [], {}, onchange: 'updateForm();' %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Dashboard: </b></label><br />
+    <%= f.collection_select :dashboard_widget_id, DashboardWidget.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Prioridade: </b></label><br />
+    <%= f.text_field :priority %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b> Filtrar dados por projeto? </b>
+      <%= f.check_box :select_projects, :id => "select_projects" %>
+    </label><br /><br />
+  </div>
+
+  <div id="projects" class="field">
+    <label> <b>Projetos: </b></label><br />
+    <%= f.select :project_ids,  Project.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true},{:multiple => true} %> <br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b> Filtrar dados por custom_field? </b>
+      <%= check_box_tag :select_custom_fields, 1,f.object.custom_fields.count > 0,:id => "select_custom_fields" %>
+    </label><br /><br />
+  </div>
+
+  <div id="custom_fields" class="field">
+    <label> <b>Custom Fields: </b></label><br />
+    <%= f.select :custom_field_ids,  CustomField.all.collect {|p| [ p.name, p.id ] }, {:include_blank => false}, {:multiple => true} %> <br /><br />
+  </div>
+
+  <%= f.fields_for :config, OpenStruct.new(widget.config) do |ff| %>
+    <% unless REDMINE_DASHBOARD_PLUGINS_CONFIG[widget.name_id].blank? %>
+      <% REDMINE_DASHBOARD_PLUGINS_CONFIG[widget.name_id].each do |attr, type| %>
+        <% unless attr == 'filters' %>
+          <div id="<%= attr %>" class="field">
+            <label> <b><%= t("#{widget.name_id}.config.#{attr}") %>: </b></label><br />
+            <% if type == "string" %>
+              <%= ff.text_field attr.to_sym %>
+            <% elsif type == "text" %>
+              <%= ff.text_area attr.to_sym %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>
+
+
+<script>
+  function updateForm() {
+    $.ajax({
+      url: '<%= dashboard_upate_form_path %>',
+      type: 'POST',
+      data: $('#widget_form').serialize()
+    });
+  }
+
+  $( document ).ready(function() {
+    if($('#select_projects').prop( "checked" )){
+      $('#projects').show();
+    }else{
+      $('#projects').hide();
+    }
+
+  });
+
+  $('#select_projects').change(function(){
+    if(this.checked){
+      $('#projects').show();
+    }else{
+      $('#projects').hide();
+    }
+  });
+
+  $( document ).ready(function() {
+    if($('#select_custom_fields').prop( "checked" )){
+      $('#custom_fields').show();
+    }else{
+      $('#custom_fields').hide();
+    }
+
+  });
+
+  $('#select_custom_fields').change(function(){
+    if(this.checked){
+      $('#custom_fields').show();
+    }else{
+      $('#custom_fields').hide();
+    }
+  });
+</script>

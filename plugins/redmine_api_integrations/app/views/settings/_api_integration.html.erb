@@ -1,0 +1,25 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('api_integration.settings.scp_host') %>:</th>
+      <td>
+        <input type="text" value="<%= settings['scp_host'] %>" name="settings[scp_host]">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr />
+<br>
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:custom_field_api_integration) %>:</th>
+      <td>
+        <%= select_tag 'settings[custom_field_api_integration]',
+        options_from_collection_for_select(IssueCustomField.where(field_format: 'list'), 'id', 'name', settings['custom_field_api_integration']), multiple: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

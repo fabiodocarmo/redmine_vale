@@ -1,0 +1,27 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Data Base: </b></label><br />
+    <%= f.date_select :base_date %><br /><br />
+  </div>
+
+  <% if Redmine::VERSION::MAJOR >= 3 %>
+    <div class="field">
+      <label> <b>Hora: </b></label><br />
+      <%= f.text_field :hour %><br /><br />
+      <small>Timezone: <%= Time.zone.name %></small>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b>A cada: </b></label><br />
+    <%= f.text_field :each_day %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Ativo: </b></label><br />
+    <%= f.check_box :active %><br /><br />
+  </div>
+
+
+  <%= link_to_remove_association "auto_issue_remove_trigger", f %>
+</div>

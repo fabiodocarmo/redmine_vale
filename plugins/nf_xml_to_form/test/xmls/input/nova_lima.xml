@@ -1,0 +1,114 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="1982147900015512028002300000289">
+               <Numero>00000289</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{3BD4B4A8-473D-49F9-AB00-8A98990B8B18}</CodigoControle>
+               <DataEmissao>2015-10-07T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>2000.00</BaseCalculo>
+                  <Aliquota>5.0000</Aliquota>
+                  <ValorIss>100.00</ValorIss>
+                  <ValorLiquidoNfse>2000.00</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>19821479000155</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>120280023</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>LAGE &amp; FILHOS LTDA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>AVN TORONTO</Endereco>
+                     <Numero>308</Numero>
+                     <Complemento></Complemento>
+                     <Bairro>JARDIM CANADA</Bairro>
+                     <CodigoMunicipio>3144805</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3135416004</Telefone>
+                     <Email>lage@lagefilhos.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3144805</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2015-10-07</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>2000.00</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>100.00</ValorIss>
+                     <Aliquota>5.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>0017401</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao>SERVIÇO DE INSTALAÇÃO DE ESTAÇÃO DE TRATAMENTO DE ESGOTO SANITÁRIO PARA 10 PESSOAS NA MINA DA MUTUCA.
+</Discriminacao>
+                  <CodigoMunicipio>3144805</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>19821479000155</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>120280023</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510003501</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>131390413</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>VALE S.A</RazaoSocial>
+                     <Endereco>
+                        <Endereco>RUA SEM DENOMINAÇÃO</Endereco>
+                        <Numero>SN</Numero>
+                        <Complemento>FAZENDA DA MUTUCA</Complemento>
+                        <Bairro>CADASTRO INTERNO</Bairro>
+                        <CodigoMunicipio>3144805</CodigoMunicipio>
+                        <Uf>MG</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>34000000</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone>3132899569</Telefone>
+                        <Email>nfe@quadrem.net</Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

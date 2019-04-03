@@ -1,0 +1,45 @@
+pt-BR:
+  label_dependent_fields: Campos Dependentes
+  dependency_create_sucess_message: Dependencia entre os campos criada com sucesso.
+  dependency_edit_sucess_message: Dependencia entre campos alterada com sucesso.
+  no_file_to_import_error_message: É necessário selecionar um arquivo para importar.
+  import_success_message: Importação concluída com sucesso.
+  prohibited_message: não permitiram que essa configuracao fosse salva
+
+  dependency_type_label: Tipo de dependência
+  main_field_label: Campo principal
+  expected_value_label: Valor do principal p/ validação do secundário
+  secondary_field_label: Campo Secundário
+  non_nullable_secondary_field_label: Secundário não nulo
+  expected_secondary_field_label: Valor esperado no secundário
+  options_format_hint: (Permitido um conjunto de opções no formato valor 1, valor2)
+
+  dependency_edit_header: Editar dependencia entre campos customizados
+  dependency_new_header: Nova dependência entre campos customizados
+  dependency_list_header: Lista de Dependência entre Campos Customizados
+
+  dependency_new_label: Nova Dependência entre Campos Customizados
+  dependency_import_template_label: Template para Importação
+
+  dependency_delete_confirmation: Tem certeza que deseja deletar essa dependência entre campos customizados?
+
+  label_avaliable: "Ativo"
+
+  label_dependent_type: "Tipo de dependência"
+  label_main_field: "Campo principal"
+  label_main_field_value: "Valor do principal"
+  label_secondary_field: "Campo Secundário"
+  label_not_nullable: "Secundário não nulo"
+  label_secondary_field_value: "Valor esperado no secundário"
+
+  dependent_type_visibility: "Visibilidade"
+  dependent_type_value: "Valor"
+  dependent_type_sugestion: "Sugestão"
+
+  avaliable_true: "Ativo?"
+  not_nullable_true: "Secundário não nulo?"
+  dependent_type_eq: "Tipo de dependência contém"
+  main_field_name_cont: "Nome do campo principal contém"
+  main_field_value_cont: "Valor do campo principal contém"
+  secondary_field_name_cont: "Nome do campo secundário contém"
+  secondary_field_value_cont: "Valor do campo secundário contém"

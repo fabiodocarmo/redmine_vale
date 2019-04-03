@@ -1,0 +1,102 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('form_to_xml.file_field') %>:</th>
+      <td style='width: 100%;'>
+        <%= select_tag 'settings[file_field]', options_from_collection_for_select(IssueCustomField.where(field_format: 'file').all, 'id', 'name', settings['file_field'])  %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<hr />
+
+<table>
+  <tbody>
+    <th><%= l(:nfs_xml_configuration) %>:</th>
+  </tbody>
+</table>
+<br />
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('form_to_xml.xml_format') %>:</th>
+      <td style='width: 100%;'>
+        <%= text_area_tag 'settings[xml_format]', settings['xml_format'], style: 'height: 800px'  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('form_to_xml.sender_email') %>:</th>
+      <td style='width: 100%;'>
+        <%= text_field_tag 'settings[sender_email]', settings['sender_email']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('form_to_xml.notify_email') %>:</th>
+      <td style='width: 100%;'>
+        <%= text_field_tag 'settings[notify_email]', settings['notify_email']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('form_to_xml.nf_rf') %>:</th>
+      <td style='width: 100%;'>
+        <%= select_tag 'settings[nf_rf]', options_from_collection_for_select(IssueCustomField.all, 'id', 'name', settings['nf_rf'])  %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+<hr />
+
+<table>
+  <tbody>
+    <th><%= l(:transport_xml_configuration) %>:</th>
+  </tbody>
+</table>
+
+<br />
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:transport_converter_issues_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[transport_converter_issues]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['transport_converter_issues']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= t('form_to_xml.transport_xml_format') %>:</th>
+      <td style='width: 100%;'>
+        <%= text_area_tag 'settings[transport_xml_format]', settings['transport_xml_format'], style: 'height: 800px'  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('form_to_xml.transport_notify_email') %>:</th>
+      <td style='width: 100%;'>
+        <%= text_field_tag 'settings[transport_notify_email]', settings['transport_notify_email']  %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= t('form_to_xml.transport_title') %>:</th>
+      <td style='width: 100%;'>
+        <%= select_tag 'settings[transport_title]', options_from_collection_for_select(IssueCustomField.all, 'id', 'name', settings['transport_title'])  %>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,136 @@
+<%= form_for(@auto_issue, html: {id: 'auto_issue_form'}) do |f| %>
+  <% if @auto_issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(auto_issue.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% auto_issue.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b>Projeto: </b></label><br />
+    <%= f.collection_select :project_id, Project.all.reject { |p| p.trackers.blank? }, :id, :name, {include_blank: true}, {onchange: 'updateForm();'} %><br /><br />
+  </div>
+
+  <% if @auto_issue.project %>
+    <!-- true -->
+    <div class="field">
+      <label> <b>Tracker: </b></label><br />
+      <%= f.collection_select :tracker_id, @auto_issue.project.trackers, :id, :name, {include_blank: true}, {onchange: 'updateForm();'} %><br /><br />
+    </div>
+
+    <% if @auto_issue.tracker %>
+      <div class="field">
+        <label> <b>Assigned to: </b></label><br />
+        <p><%= f.select :principal_id, principals_options_for_select(@auto_issue.project.assignable_users, f.object.principal), include_blank: true %></p>
+      </div>
+
+      <div class="field">
+        <label> <b>Author: </b></label><br />
+        <p><%= f.select :author_id, principals_options_for_select(User.all, f.object.author), include_blank: true %></p>
+      </div>
+
+      <div class="field">
+        <label> <b>Status: </b></label><br />
+        <%= f.collection_select :issue_status_id, @auto_issue.tracker.issue_statuses, :id, :name %><br /><br />
+      </div>
+
+      <div class="field">
+        <label> <b>Title: </b></label><br />
+        <%= f.text_field :title %><br /><br />
+      </div>
+
+      <div class="field">
+        <label> <b>Description: </b></label><br />
+        <%= f.text_area :description %><br /><br />
+      </div>
+
+      <%= f.fields_for :custom_values do |custom_value| %>
+        <%= render 'custom_values_fields', f: custom_value %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association t('auto_issue_add_custom_values'), f, :custom_values,
+          partial: 'custom_values_fields' %>
+      </div>
+
+      <div class="field">
+        <label><b><%= t('auto_issue.copy_attachments') %>: </b></label><br />
+        <%= f.check_box :copy_attachments %><br /><br />
+      </div>
+
+      <%= javascript_include_tag 'select_list_move', plugin: 'redmine_auto_generate_issue' %>
+      <p>
+        <table class="query-columns">
+          <tr>
+            <td style="padding-left:0">
+              <%= label_tag "available_group", l(:description_available_groups) %>
+              <br />
+              <%= select_tag 'available_columns',
+                      options_for_select((Group.all - Group.where(id: @auto_issue.watcher_ids)).map {|g| [ g.name, g.id ] }),
+                      :multiple => true, :size => 10, :style => "width:200px",
+                      :ondblclick => "moveOptions(this.form.available_columns, this.form.selected_columns);" %>
+            </td>
+            <td class="buttons">
+              <input type="button" value="&#8594;"
+               onclick="moveOptions(this.form.available_columns, this.form.selected_columns);" /><br />
+              <input type="button" value="&#8592;"
+               onclick="moveOptions(this.form.selected_columns, this.form.available_columns);" />
+            </td>
+            <td>
+              <%= label_tag "selected_groups", l(:description_selected_groups) %>
+              <br />
+              <%= f.collection_select :watcher_ids, Group.where(id: @auto_issue.watcher_ids), :id, :name, {}, id: 'selected_columns',
+                  multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.selected_columns, this.form.available_columns);" %>
+            </td>
+          </tr>
+        </table>
+        <script type="text/javascript">
+          $( document ).ready(function() {
+            $('#auto_issue_form').attr('onsubmit', 'selectAllOptions("selected_columns");');
+          });
+        </script>
+      </p>
+
+      <div class="field">
+        <label> <b>Type: </b></label><br />
+        <%= f.select :type, AutoIssue.trigger_types.map {|r| [r, r]}, {}, disabled: f.object.id, onchange: 'updateForm();' %>
+        <% if f.object.id %>
+          <%= f.hidden_field :type, value: f.object.type %>
+        <% end %>
+      </div>
+
+      <% if f.object.type %>
+        <%= render f.object.type.underscore, { f: f } %>
+      <% end %>
+
+      <% if f.object.id %>
+        <div class="actions">
+          <%= f.submit l(:button_update) %>
+        </div>
+      <%else%>
+        <div class="actions">
+          <%= f.submit l(:button_create) %>
+        </div>
+      <%end%>
+    <% end %>
+  <% end %>
+  <script>
+    function selectAllOptions(id) {
+      $('#'+id).find('option').prop('selected', true);
+    }
+
+    function updateForm() {
+      selectAllOptions("selected_columns");
+      $.ajax({
+        url: "<%= auto_issues_form_form_path(format: 'js', type: params[:type], id: params[:id]) %>",
+        method: 'POST',
+        data: $('#auto_issue_form').serialize()
+      });
+    }
+  </script>
+<% end %>

@@ -1,0 +1,50 @@
+# Portuguese strings go here for Rails i18n
+pt-BR:
+  confirm_delete_api_integration: 'Tem certeza que deseja apagar esta regra?'
+  no_api_integration_message: 'Nenhuma regra foi criada ainda'
+  link_to_new_api_integration: 'Nova regra'
+  action_open: 'Abrir'
+  action_save: 'Salvar'
+  action_relation_closed: 'Tarefa relacionada fechada'
+  label_action: 'Ação'
+  save_prohibited: 'impedimento para salvar essa configuração'
+  project: 'Projeto'
+  tracker: 'Tipo de Chamado'
+  action: 'Ação'
+  export_template_label: 'Exportar Template'
+  role_name_cont: 'Papel contém'
+  action_eq: 'Ação do Tipo'
+  use_custom_field_true: 'Utiliza Campos Personalizados'
+  new_api_integration_title: 'Nova Regra'
+  api_integrations_list: 'Listas de regras da integração da API'
+  false_field: 'Não'
+  true_field: 'Sim'
+  redmine_api_integrations: 'API-SCP de integração'
+  api_integrations: 'API-SCP de integração'
+  mail_is_required: "Parâmetro mail é obrigatório"
+  author_is_required: "Parâmetro author_id é obrigatório"
+  id_is_required: "Parâmetro ID é obrigatório"
+  id_not_found: "ID não encontrado"
+  issue_created: "Chamado criado com sucesso"
+  watcher_added: "Observador adicionado ao chamado"
+  watcher_not_exists: "Watcher não existe na lista"
+  watcher_empty: "Usuário não existe"
+  watcher_removed: "Observador removido do chamado"
+  wrong_tracker: "tracker_id não existe nas regras"
+  issue_edited: "Chamado editado"
+  not_in_list: "não está incluso na lista"
+  field_setted: "Campo alterado"
+  the_field: "O campo"
+  has_been_changed_from: "foi alterado de"
+  value_to: "para"
+  issue_copy_to: "O chamado foi encaminhado"
+  updated_issue_at: "Chamado atualizado - "
+  note_added: "Nota adicionada"
+  status_changed: "Situação alterada"
+  created_by: "Criado por:"
+  description_label: "DESCRIÇÃO:"
+  status_label: "SITUAÇÃO:"
+  project_label: "ÁREA:"
+  custom_field_api_integration: "Custom Fields fora do escopo do Service Center"
+  child_issue_open: "Para esse chamado já existe um chamado filho aberto"
+  change_status_not_allowed: "Alteração de situação não permitida no fluxo de trabalho"

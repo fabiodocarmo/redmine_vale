@@ -1,0 +1,40 @@
+<div>
+  <div>
+    <h2><%= t(:import_grc_report) %></h2>
+    <%= form_tag url_for(action: :import_grc_report, controller: params[:controller], project_id: params[:project_id]), multipart: true, style: 'margin-right: 10px' do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:import_report) %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2><%= t(:import_grc_robot_success_log) %></h2>
+    <%= form_tag url_for(action: :update_grc_robot_ok, controller: params[:controller], project_id: params[:project_id]), multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:import_log) %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2><%= t(:import_grc_robot_error_log) %></h2>
+    <%= form_tag url_for(action: :update_grc_robot_error, controller: params[:controller], project_id: params[:project_id]), multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:import_log) %>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2><%= t(:send_to_nfse_robot) %></h2>
+    <%= form_tag url_for(action: :update_send_to_nfse_robot, controller: params[:controller], project_id: params[:project_id]), multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag l(:send_file) %>
+    <% end %>
+  </div>
+
+</div>

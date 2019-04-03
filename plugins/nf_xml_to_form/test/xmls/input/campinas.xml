@@ -1,0 +1,195 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe versao="3.10" Id="NFe35150905509256000142550550000051741000347568">
+         <ide>
+            <cUF>35</cUF>
+            <cNF>00034756</cNF>
+            <natOp>Venda de Merc Adq e/ou Receb de Terceiros</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>55</serie>
+            <nNF>5174</nNF>
+            <dhEmi>2015-09-24T11:20:38-03:00</dhEmi>
+            <dhSaiEnt>2015-09-24T11:21:11-03:00</dhSaiEnt>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>3509502</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>8</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>0</indFinal>
+            <indPres>1</indPres>
+            <procEmi>0</procEmi>
+            <verProc>2014.6</verProc>
+         </ide>
+         <emit>
+            <CNPJ>05509256000142</CNPJ>
+            <xNome>Blue Tec Industrial S.A.</xNome>
+            <xFant>Blue Tec Industrial</xFant>
+            <enderEmit>
+               <xLgr>Avenida Comendador Aladino Selmi</xLgr>
+               <nro>4630</nro>
+               <xCpl>Galpao: 12 - Mezanino</xCpl>
+               <xBairro>Vila San Martin</xBairro>
+               <cMun>3509502</cMun>
+               <xMun>CAMPINAS</xMun>
+               <UF>SP</UF>
+               <CEP>13069096</CEP>
+               <cPais>1058</cPais>
+               <xPais>Brasil</xPais>
+               <fone>4132998142</fone>
+            </enderEmit>
+            <IE>244900018111</IE>
+            <IM>957437</IM>
+            <CNAE>4789099</CNAE>
+            <CRT>3</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510007590</CNPJ>
+            <xNome>VALE S/A</xNome>
+            <enderDest>
+               <xLgr>ESTRADA VICINAL PICADAO</xLgr>
+               <nro>S/N</nro>
+               <xCpl>KM 22</xCpl>
+               <xBairro>ZONA RURAL</xBairro>
+               <cMun>1505437</cMun>
+               <xMun>OURILANDIA DO NORTE</xMun>
+               <UF>PA</UF>
+               <CEP>68390000</CEP>
+               <cPais>1058</cPais>
+               <xPais>Brasil</xPais>
+               <fone>9433284110</fone>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>152804862</IE>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>3458</cProd>
+               <cEAN></cEAN>
+               <xProd>IBUTTON - 06 GRAVADOR DE DADOS</xProd>
+               <NCM>85423291</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>UN</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>53.4400000000</vUnCom>
+               <vProd>53.44</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>UN</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>53.4400000000</vUnTrib>
+               <indTot>1</indTot>
+               <xPed>LINHA 12</xPed>
+            </prod>
+            <imposto>
+               <vTotTrib>17.86</vTotTrib>
+               <ICMS>
+                  <ICMS00>
+                     <orig>0</orig>
+                     <CST>00</CST>
+                     <modBC>3</modBC>
+                     <vBC>53.44</vBC>
+                     <pICMS>7.00</pICMS>
+                     <vICMS>3.74</vICMS>
+                  </ICMS00>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPINT>
+                     <CST>53</CST>
+                  </IPINT>
+               </IPI>
+               <PIS>
+                  <PISAliq>
+                     <CST>01</CST>
+                     <vBC>53.44</vBC>
+                     <pPIS>1.65</pPIS>
+                     <vPIS>0.88</vPIS>
+                  </PISAliq>
+               </PIS>
+               <COFINS>
+                  <COFINSAliq>
+                     <CST>01</CST>
+                     <vBC>53.44</vBC>
+                     <pCOFINS>7.60</pCOFINS>
+                     <vCOFINS>4.06</vCOFINS>
+                  </COFINSAliq>
+               </COFINS>
+            </imposto>
+            <infAdProd>Ped. compra: LINHA 12</infAdProd>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>53.44</vBC>
+               <vICMS>3.74</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>53.44</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.88</vPIS>
+               <vCOFINS>4.06</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>53.44</vNF>
+               <vTotTrib>17.86</vTotTrib>
+            </ICMSTot>
+         </total>
+         <transp>
+            <modFrete>1</modFrete>
+         </transp>
+         <cobr>
+            <fat>
+               <nFat>5.174</nFat>
+               <vOrig>53.44</vOrig>
+               <vLiq>53.44</vLiq>
+            </fat>
+            <dup>
+               <nDup>5.174/01</nDup>
+               <dVenc>2015-10-26</dVenc>
+               <vDup>53.44</vDup>
+            </dup>
+         </cobr>
+         <infAdic>
+            <infCpl>CRT: 03; ; Pedido 4502075679; Ordem de compra: 4502075679</infCpl>
+         </infAdic>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe35150905509256000142550550000051741000347568">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>p2+UlrkjedKH7krZrH3vIAGn3BQ=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>KB71b9Wyv1HAbChNnDwf2E9SFT2hs6f+chhsKF3tIsjhNkoEXugsnVArLn81WPNWqQoMJFqeZIOi6jNCzibMNV5QRU6U2OVjL9wVlVuaZjxYkraBd3gQJN5Vz8DerVBv9Y1DHIxwmxQ6ulDm8S1V2AHrLkK5ZbF3GCGnUoz2qASBoFWRvGiSN/hMPQ6HLPy8E2z/cKWBD+/FYvUrR/7o/3+SIIgP/YkM64mQhzy7BFv8xhh5pFJMCAy9UY4yAgiqwo+ciRhVzOaVXiX9JNd+Hx6BWqovjnybhKa/GYwczQR7POCW3jtntz0oHUeZJ2hns9XC612uFSflQoLyg/dsAQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIIUDCCBjigAwIBAgIQR6+fjr+o+YlByQuDrorjLzANBgkqhkiG9w0BAQsFADB0MQswCQYDVQQGEwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDEtMCsGA1UECxMkQ2VydGlzaWduIENlcnRpZmljYWRvcmEgRGlnaXRhbCBTLkEuMSEwHwYDVQQDExhBQyBDZXJ0aXNpZ24gTXVsdGlwbGEgRzUwHhcNMTUwMjEwMDAwMDAwWhcNMTYwMjA5MjM1OTU5WjCB2zELMAkGA1UEBhMCQlIxEzARBgNVBAoUCklDUC1CcmFzaWwxNjA0BgNVBAsULUF1dGVudGljYWRvIHBvciBBdXRvcmlkYWRlIGRlIFJlZ2lzdHJvIENOQiBTUDEbMBkGA1UECxQSQXNzaW5hdHVyYSBUaXBvIEExMRUwEwYDVQQLFAxJRCAtIDc3NTA5NTkxIDAeBgNVBAMTF0JMVUUgVEVDIElORFVTVFJJQUwgUyBBMSkwJwYJKoZIhvcNAQkBFhp3YWduZXIuc291emFAc2FzY2FyLmNvbS5icjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIgIZIWpLPegLer+3I5Svz9hoQsQfPNd4GuvSKcpU+7BPrIHY6JezmWSw0qd10NumfIfz/okESPkuwL6Edgz1Tn3KMm0QpIgeqgukG4Isky/BmgsvC5WOqrhhYjxJ4+G206o/i2Du+2jHXaAIO7OaFZ/ovSm49iTojw67tP9YoAncPg2i0sfCBt3l7w2Le07jQ6dwhcb4FMHwvBtyihLJHZng9j2b2XpgQcSzRyPr+eVX46TsiRLUZFx1OwiLnK+J0zX3Medfpg/P36bNMy6wagEBfJ11uSz6vinwBnjGGsV8QadKrELnTSKXrZwz7MdDkoH3l0j+S5WpFPH23ZX2dcCAwEAAaOCA3QwggNwMIG6BgNVHREEgbIwga+gPQYFYEwBAwSgNAQyMDkwMzE5ODMzMTI2MDk4MzgwMzAwMDAwMDAwMDAwMDAwMDAwMDMzOTUwNzAyU1NQU1CgHgYFYEwBAwKgFQQTREFOSUxPIERPTkFUSSBQRVJFWqAZBgVgTAEDA6AQBA4wNTUwOTI1NjAwMDE0MqAXBgVgTAEDB6AOBAwwMDAwMDAwMDAwMDCBGndhZ25lci5zb3V6YUBzYXNjYXIuY29tLmJyMAkGA1UdEwQCMAAwHwYDVR0jBBgwFoAUnVDPvf8kyq+xM+sX4kJ6jmkqjlMwDgYDVR0PAQH/BAQDAgXgMIGJBgNVHSAEgYEwfzB9BgZgTAECAQswczBxBggrBgEFBQcCARZlaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9kcGMvQUNfQ2VydGlzaWduX011bHRpcGxhL0RQQ19BQ19DZXJ0aVNpZ25NdWx0aXBsYS5wZGYwggElBgNVHR8EggEcMIIBGDBcoFqgWIZWaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNpZ25NdWx0aXBsYUc1L0xhdGVzdENSTC5jcmwwW6BZoFeGVWh0dHA6Ly9pY3AtYnJhc2lsLm91dHJhbGNyLmNvbS5ici9yZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNpZ25NdWx0aXBsYUc1L0xhdGVzdENSTC5jcmwwW6BZoFeGVWh0dHA6Ly9yZXBvc2l0b3Jpby5pY3BicmFzaWwuZ292LmJyL2xjci9DZXJ0aXNpZ24vQUNDZXJ0aXNpZ25NdWx0aXBsYUc1L0xhdGVzdENSTC5jcmwwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMIGgBggrBgEFBQcBAQSBkzCBkDBkBggrBgEFBQcwAoZYaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9jZXJ0aWZpY2Fkb3MvQUNfQ2VydGlzaWduX011bHRpcGxhX0c1LnA3YzAoBggrBgEFBQcwAYYcaHR0cDovL29jc3AuY2VydGlzaWduLmNvbS5icjANBgkqhkiG9w0BAQsFAAOCAgEARfU0xvLJqZsLcOqES1WiUzMWsYclHF4RBdrdmUyIAXpLR8ltGo94KPiowWIfQ1fhK1ZFqEA0nyfo3jAglFuC4nTa2Jc8VokUWTXFhMnOOYa1tmO0OcrOzhZvz19gIMPNHxq5Lcp9WwL1oBGWz6lvlRYYX/QrOTvP/BRn9wajzTxofiqrdl6dJOJ7hJxXy8QMdfqjoGpLgKbvhShgOURO5oXszSkJq9oR1DUaO9uJwMjnVaX1IVCm5fi3GfIjkqOBFCanMYX3VMkqGfO3m8gqzqO89R0smNxBjtaL/ZUfTEGkEvp22Y+94ShBZ8TqVgdohZHU6ySUtdc+5VCrpd2hg0qT39QUI8y1LcLaMId2uBXlKuudxbOif+5Q+K/jaRL0lcUwVGYYKye6Bn+rv2UeEPr6HSuNC6qBA6CRVyHmz9yO19nB1rEcXUnrRY76FB+tyUjJJDxPk2R1aPS4pkwdupfufyTe2+BLvnSsV8ilgU0m3LTbovAaqSh4MjmqJN/1g4qgQ46+Jv9IYJkIwR7x1ew89oizDkZLCN6sClW+FO4moFumQVQarQNP3CgnPxp9rTAU9KN3lp8jgy4BPszcuZzJHka/8VcPIsPCV/f1gK6m10ZhS6mc+zGB/80v996unyaGzL7NnRQKHvGF6SoHyuJ6V6WOP7vRe55IPs3qTaI=</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+      <infProt>
+         <tpAmb>1</tpAmb>
+         <verAplic>SP_NFE_PL_008f</verAplic>
+         <chNFe>35150905509256000142550550000051741000347568</chNFe>
+         <dhRecbto>2015-09-24T11:21:14-03:00</dhRecbto>
+         <nProt>135150594648898</nProt>
+         <digVal>p2+UlrkjedKH7krZrH3vIAGn3BQ=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

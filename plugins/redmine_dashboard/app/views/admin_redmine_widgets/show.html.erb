@@ -1,0 +1,21 @@
+<div class="field">
+  <label> <b>Nome ID: </b></label><br />
+  <%= @widget.name_id %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b>Nome do Plugin fonte: </b></label><br />
+  <%= @widget.source_plugin %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b>Dashboard: </b></label><br />
+  <%= @widget.dashboard_widget.name %><br /><br />
+</div>
+
+<div class="field">
+  <label> <b>Prioridade: </b></label><br />
+  <%= @widget.priority %><br /><br />
+</div>
+
+<%= link_to 'Voltar', redmine_widgets_settings_path %>

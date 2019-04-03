@@ -1,0 +1,7 @@
+{
+  "validations": [
+    { "id": 1, "composite-id-1": 1, "composite-id-2": 1, "title": "json-server-1", "author": "typicode-1" },
+    { "id": 2, "composite-id-1": 1, "composite-id-2": 2, "title": "json-server-2", "author": "typicode-2" },
+    { "id": 3, "composite-id-1": 2, "composite-id-2": 1, "title": "json-server-3", "author": "typicode-3" }
+  ]
+}

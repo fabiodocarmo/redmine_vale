@@ -1,0 +1,45 @@
+<%= javascript_tag do %>
+  $(document).ready(function(){
+    $("#table-role").hide()
+    $("#table-tracker").hide()
+    $("#table-project").hide()
+    $("#table-issue_status").hide()
+    $("#table-custom_field").hide()
+    $("#table-enumeration").hide()
+    $("#table-tracker_description").hide()
+    $("#table-cf_description").hide()
+    $("#table-default_values").hide()
+    $("#table-possible_values").hide()
+
+    $("#role").click(function(){
+        $("#table-role").toggle()
+    });
+    $("#tracker").click(function(){
+        $("#table-tracker").toggle()
+    });
+    $("#project").click(function(){
+        $("#table-project").toggle()
+    });
+    $("#issue_status").click(function(){
+        $("#table-issue_status").toggle()
+    });
+    $("#custom_field").click(function(){
+        $("#table-custom_field").toggle()
+    });
+    $("#enumeration").click(function(){
+        $("#table-enumeration").toggle()
+    });
+    $("#possible_values").click(function(){
+        $("#table-possible_values").toggle()
+    });
+    $("#tracker_description").click(function(){
+        $("#table-tracker_description").toggle()
+    });
+    $("#cf_description").click(function(){
+        $("#table-cf_description").toggle()
+    });
+    $("#default_values").click(function(){
+        $("#table-default_values").toggle()
+    });
+  });
+<% end %>

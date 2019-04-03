@@ -1,0 +1,14 @@
+<fieldset class="box">
+  <legend><%= l(:label_role_plural) %> <%= toggle_checkboxes_link('.roles-selection input') %></legend>
+  <div class="roles-selection">
+    <% @roles.each do |role| %>
+        <label class="membership-role">
+          <%= check_box_tag('membership[role_ids][]',
+                            role.id, @member.roles.include?(role),
+                            :id => nil,
+                            :disabled => !@member.role_editable?(role)) %> <%= role %>
+        </label>
+    <% end %>
+  </div>
+  <%= hidden_field_tag 'membership[role_ids][]', '', :id => nil %>
+</fieldset>

@@ -1,0 +1,389 @@
+<%= javascript_include_tag 'settings/satisfaction_survey_settings.js', plugin: "redmine_gestor_chamadas" %>
+<%= javascript_include_tag 'settings/forward_settings.js', plugin: "redmine_gestor_chamadas" %>
+<%= javascript_include_tag 'settings/archive_settings.js', plugin: "redmine_gestor_chamadas" %>
+
+<table>
+  <tbody>
+    <tr>
+      <th><%= l(:issue_creation_permission_settings_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[projects]',
+                       options_from_collection_for_select(Project.all, 'id', 'name', settings['projects']), include_blank: '', multiple: true %>
+    	  <br /><small><%l(:issue_creation_permission_settings_message)%></small>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:project_wiki_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[wiki_project]',
+        options_from_collection_for_select(Project.all, 'id', 'name', settings['wiki_project']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:project_faq_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[faq_project]',
+        options_from_collection_for_select(Project.all, 'id', 'name', settings['faq_project']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:status_waiting_settings_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[waiting_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['waiting_status']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:exclude_waiting_after_settings_label) %>:</th>
+      <td>
+        <input type="text" value="<%= settings['after_days'] %>" name="settings[after_days]" > dias
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:url_satisfaction_survey) %>:</th>
+      <td>
+        <input type="text" value="<%= settings['url_satisfaction_survey'] %>" name="settings[url_satisfaction_survey]" >
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:status_new_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[new_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['new_status']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= l(:status_doing_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[doing_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['doing_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:status_answered_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[answered_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['answered_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:status_archived_settings_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[archived_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['archived_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:status_canceled_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[canceled_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['canceled_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:status_unconfirmed_archived_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[not_confirmed_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['not_confirmed_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:default_issue_priority_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[create_priority]',
+        options_from_collection_for_select(IssuePriority.all, 'id', 'name', settings['create_priority']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:answered_priority_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[answered_priority]',
+        options_from_collection_for_select(IssuePriority.all, 'id', 'name', settings['answered_priority']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:normal_priority_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[normal_priority]',
+        options_from_collection_for_select(IssuePriority.all, 'id', 'name', settings['normal_priority']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:high_priority_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[high_priority]',
+        options_from_collection_for_select(IssuePriority.all, 'id', 'name', settings['high_priority']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:projects_attachments_field_hided_settings_label) %>?</th>
+      <td>
+        <%= select_tag 'settings[projects_attachments_field_hided]',
+        options_from_collection_for_select(Project.all.sort, 'id', 'name', settings['projects_attachments_field_hided']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:enable_archive_issue_settings_label) %>?</th>
+      <td>
+        <%= select_tag 'settings[enable_archive_issue]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['enable_archive_issue']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:auto_archive_after_settings_label) %>:</th>
+      <td>
+        <input id="settings_archive_after_days" type="text" value="<%= settings['archive_after_days'] %>" name="settings[archive_after_days]" >
+        dias
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:satisfaction_survey_days_settings_label) %></th>
+      <td>
+        <%= number_field_tag 'settings[mail_satisfaction_survey_after_days]', settings['mail_satisfaction_survey_after_days'].to_i, min:1 %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:auto_archive_with_comments_settings_label) %></th>
+      <td>
+        <%= select_tag 'settings[archive_with_comments_after_closed]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['archive_with_comments_after_closed']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:mistaken_status_settings_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[mistaken_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['mistaken_status']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:copy_issue_when_forward_settings_label) %></th>
+      <td>
+        <%= select_tag 'settings[copy_issue_when_forward]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['copy_issue_when_forward']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:mistaken_notify_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[mistaken_notify]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['mistaken_notify']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:increase_priority_forwarded_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[increase_priority_forwarded]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['increase_priority_forwarded']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:rollback_forwarding_config_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[mistaken_change_assigned]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['mistaken_change_assigned']), include_blank: '' %>
+        <%= select_tag 'settings[rollback_forwarding_config]',
+        options_for_select([[l(:consider_new_area_forward_option), 'project'], [l(:consider_resposible_forward_option), 'assigned_to']], settings['rollback_forwarding_config']), include_blank: '' %>
+      </td>
+
+    <tr>
+      <th><%= l(:enable_satisfaction_survey_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[enable_satisfaction_survey]',
+        options_for_select([[l(:yes_label), 'true'], [l(:no_label), 'false']], settings['enable_satisfaction_survey']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:reopen_status_to_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[reopen_status_to]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['reopen_status_to']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:trackers_reopen_disabled_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[trackers_reopen_disabled]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['trackers_reopen_disabled']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:enable_closing_child_issues_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[closing_child_issues_enabled]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['closing_child_issues_enabled']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:enable_only_one_child_issue_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[enable_only_one_child]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['enable_only_one_child']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:redirect_copy_error_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[redirect_copy_error]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['redirect_copy_error']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:email_list_behavior_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[email_list_behavior]',
+        options_for_select([[l(:black_list_option), 'black_list'], [l(:white_list_option), 'white_list']], settings['email_list_behavior']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:customer_field_settings_label) %>:</th>
+
+      <td>
+        <%= select_tag 'settings[customer_field]',
+        options_from_collection_for_select(CustomField.all, 'id', 'name', settings['customer_field']), include_blank: '' %>
+        <br /><small><%= l(:no_supplier_notification_message) %></small>
+      </td>
+
+    </tr>
+
+    <tr>
+      <th><%= l(:social_name_settings_label) %>:</th>
+
+      <td>
+        <%= select_tag 'settings[social_name]',
+        options_from_collection_for_select(CustomField.all, 'id', 'name', settings['social_name']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:assign_to_field_settings_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[assign_to_field]',
+        options_from_collection_for_select(CustomField.all, 'id', 'name', settings['assign_to_field']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:forward_same_project_settings_label) %>:</th>
+      <td>
+        <%#select_tag 'settings[forward_same_project]', options_for_select([[l(:yes_label), true], [l(:no_label), false]], settings['forward_same_project']), include_blank: '' %>
+        <%= hidden_field_tag('settings[forward_same_project]', "false") %>
+        <%= check_box_tag('settings[forward_same_project]', "true", (settings['forward_same_project'] == "true" ? true : false)) %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Desabilitar edição de chamados arquivados?</th>
+      <td>
+        <%= select_tag 'settings[disable_archived_edit]',
+        options_for_select([['Sim', 'true'], ['Não', 'false']], settings['disable_archived_edit']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th>Habilitar descrição de tipos de chamados na tela de aprentação do projeto?</th>
+      <td>
+        <%= select_tag 'settings[enable_tracker_description_in_projects_show]',
+        options_for_select([['Sim', 'true'], ['Não', 'false']], settings['enable_tracker_description_in_projects_show']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:disable_copy_from_closed_issues) %>:</th>
+      <td>
+        <%= select_tag 'settings[disable_copy_from_closed_issues]',
+        options_from_collection_for_select(Tracker.all, 'id', 'name', settings['disable_copy_from_closed_issues']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:validate_issue_id_field_label) %>:</th>
+
+      <td>
+        <%= select_tag 'settings[issue_id_field]',
+        options_from_collection_for_select(CustomField.all, 'id', 'name', settings['issue_id_field']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:enable_priority_cascade) %></th>
+      <td>
+        <%= select_tag 'settings[cascade_priority]',
+        options_for_select([['Sim', 'true'], ['Não', 'false']], settings['cascade_priority']), include_blank: '' %>
+      </td>
+    </tr>
+    </br>
+    </br>
+    <tr>
+      <th colspan="2"><h3 style="font-weight: bold;"> <%=l(:change_status_in_copy) %></h3></th>
+    </tr>
+    </br>
+    </br>
+
+    <tr>
+      <th><%= l(:enable_change_status_in_copy_label) %></th>
+      <td>
+        <%= select_tag 'settings[enable_change_status_in_copy]',
+        options_for_select([['Sim', 'true'], ['Não', 'false']], settings['enable_change_status_in_copy']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:enable_auto_change_in_child_reopen) %></th>
+      <td>
+        <%= select_tag 'settings[enable_auto_change_in_child_reopen]',
+        options_for_select([['Sim', 'true'], ['Não', 'false']], settings['enable_auto_change_in_child_reopen']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:change_status_copy_trackers_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[change_status_copy_trackers]',
+        options_from_collection_for_select(Tracker.all.sorted, 'id', 'name', settings['change_status_copy_trackers']), include_blank: '', multiple: true %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:change_copied_status_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[copied_status_to]',
+        options_from_collection_for_select(IssueStatus.all.sorted, 'id', 'name', settings['copied_status_to']), include_blank: '' %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= l(:change_answered_status_label) %>:</th>
+      <td>
+        <%= select_tag 'settings[answered_status_to]',
+        options_from_collection_for_select(IssueStatus.all.sorted, 'id', 'name', settings['answered_status_to']), include_blank: '' %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,278 @@
+pt-BR:
+  messages:
+    not_same_project: "não pertence ao mesmo ambiente"
+ # Active Record
+  activerecord:
+    errors:
+      messages:
+        earlier_than_minimum_start_date: "não pode ser anterior à %{date} devido aos chamados anteriores"
+        record_invalid: "registro inválido"
+        not_a_date: "Data não segue o formato válido aaaa-mm-dd"
+  helpdesk_ticket:
+    new_ticket: Novo chamado
+  contact:
+    email: Email
+  date:
+    formats:
+      month_year: "%B/%Y"
+
+  field_hint: Dica
+  field_dont_copy: Não copiar no gestor de chamados
+  field_value_field: Contabilizar valor do campo
+  label_search_for_watchers: Procurar por outros observadores para adicionar
+  label_helpdesk_previous_tickets: Chamados anteriores
+  field_contact_first_name: Primeiro Nome
+  notice_no_issue_selected: "Nenhum chamado selecionado! Por favor, marque os chamados que você deseja editar."
+  error_issue_not_found_in_project: 'O chamado não foi encontrado ou não pertence a este ambiente'
+  mail_subject_reminder: "%{count} chamado(s) com data prevista para os próximos %{days} dias"
+  mail_body_reminder: "%{count} chamado(s) para você com data prevista para os próximos %{days} dias:"
+  field_issue: Chamado
+  field_is_closed: Chamado fechado
+  field_assignable: Chamados podem ser atribuídos a este papel
+  setting_issues_export_limit: Limite de exportação dos chamados
+  setting_cross_project_issue_relations: Permitir relacionar chamados entre ambientes
+  setting_issue_list_default_columns: Colunas padrão visíveis na lista de chamados
+  project_module_issue_tracking: Gerenciamento de Chamados
+  label_issue: Chamado
+  label_issue_new: Novo Chamado
+  label_issue_plural: Chamados
+  label_issue_view_all: Ver todos os chamados
+  label_issues_by: "Chamados por %{value}"
+  label_issue_added: Chamado adicionado
+  label_issue_updated: Chamado atualizado
+  label_tracker: Tipo de chamado
+  label_tracker_plural: Tipos de chamados
+  label_issue_status: Situação do chamado
+  label_issue_status_plural: Situação dos chamados
+  label_reported_issues: Chamados criados por mim
+  label_assigned_to_me_issues: Chamados pendentes do meu atendimento
+  label_roadmap_no_issues: Sem chamados para esta versão
+  label_watched_issues: Chamados observados
+  label_related_issues: Chamados relacionados
+  text_workflow_edit: Selecione um papel e um tipo de chamado para editar o fluxo de trabalho
+  text_tip_issue_begin_day: chamdo inicia neste dia
+  text_tip_issue_end_day: chamado termina neste dia
+  text_tip_issue_begin_end_day: chamado inicia e termina neste dia
+  text_issue_added: "Chamado %{id} incluído (por %{author})."
+  text_issue_updated: "Chamado %{id} alterado (por %{author})."
+  text_issue_category_destroy_question: "Alguns chamados (%{count}) estão atribuídos a esta categoria. O que você deseja fazer?"
+  text_user_mail_option: "Para ambientes (não selecionados), você somente receberá notificações sobre o que você está observando ou está envolvido (ex. chamados dos quais você é o autor ou que estão atribuídos a você)"
+  text_no_configuration_data: "Os Papéis, tipos de chamados, situação de chamados e fluxos de trabalho não foram configurados ainda.\nÉ altamente recomendado carregar as configurações padrão. Você poderá modificar estas configurações assim que carregadas."
+  text_issues_destroy_confirmation: 'Você tem certeza que deseja excluir o(s) chamados(s) selecionado(s)?'
+  text_destroy_time_entries_question: "%{hours} horas de trabalho foram registradas nos chamados que você está excluindo. O que você deseja fazer?"
+  text_reassign_time_entries: 'Atribuir horas reportadas para este chamado:'
+  default_issue_status_resolved: Resolvido
+  default_issue_status_closed: Fechado
+  default_issue_status_rejected: Rejeitado
+  enumeration_issue_priorities: Prioridade dos chamados
+  enumeration_doc_categories: Categorias de documento
+  permission_edit_issues: Editar chamados
+  permission_add_issues: Adicionar chamados
+  permission_manage_categories: Gerenciar categorias de chamados
+  permission_move_issues: Mover chamados
+  permission_manage_issue_relations: Gerenciar relacionamentos de chamados
+  permission_delete_issues: Excluir chamados
+  text_repository_usernames_mapping: "Seleciona ou atualiza os usuários do sistema mapeando para cada usuário encontrado no log do repositório.\nUsuários com o mesmo login ou e-mail no sistema e no repositório serão mapeados automaticamente."
+  error_can_not_reopen_issue_on_closed_version: Um chamado atribuído a uma versão fechada não pode ser reaberto
+  setting_issue_done_ratio: Calcular o percentual de conclusão do chamado
+  setting_issue_done_ratio_issue_status: Usar a situação do chamado
+  error_issue_done_ratios_not_updated: O percentual de conclusão dos chamados não foi atualizado.
+  error_workflow_copy_target: Por favor, selecione os tipos de chamado e os papéis alvo
+  setting_issue_done_ratio_issue_field: Use o campo do chamado
+  error_workflow_copy_source: Por favor, selecione um tipo de chamado e papel de origem
+  label_update_issue_done_ratios: Atualizar percentual de conclusão dos chamados
+  permission_view_issues: Ver chamados
+  label_display_used_statuses_only: Somente exibir situações que são usadas por este tipo de chamado
+  error_unable_delete_issue_status: Não foi possível excluir situação do chamado
+  error_can_not_delete_tracker: Este tipo de chamado está atribuído a alguns(s) chamado(s) e não pode ser excluído.
+  label_additional_workflow_transitions_for_assignee: Transições adicionais permitidas quando o usuário é o responsável pelo chamado
+  label_issues_visibility_own: Chamados criados ou atribuídos ao usuário
+  field_issues_visibility: Visibilidade dos chamados
+  label_issues_visibility_all: Todas os chamados
+  permission_set_own_issues_private: Alterar os próprias chamados para públicos ou privados
+  permission_set_issues_private: Alterar chamados para públicas ou privadas
+  label_issues_visibility_public: Todas os chamados não privadas
+  notice_issue_successful_create: Chamado %{id} criado.
+  setting_issue_group_assignment: Permitir atribuições de chamados a grupos
+  setting_default_issue_start_date_to_creation_date: Usar data corrente como data inicial para novos chamados
+  label_x_issues:
+    zero:  0 chamados
+    one:   1 chamado
+    other: "%{count} chamados"
+  setting_commit_cross_project_ref: Permitir que chamados de todos os outros ambientes sejam refenciados e resolvidos
+  label_any_issues_in_project: qualquer chamado do ambiente
+  label_any_issues_not_in_project: qualquer chamado que não está no ambiente
+  label_no_issues_in_project: sem chamados no ambiente
+  label_issue_tracking: Chamados
+
+  warning_deletion_unconfirmed_tickets: Este chamado será apagado caso não seja confirmado em %{days} dias.
+
+  #button_copy: Encaminhar
+  #label_copied_to: Encaminhado para
+  #label_copied_from: Encaminhado de
+  #field_project: Área Responsável
+  #label_helpdesk_blacklist: Emails permitidos
+  button_archive: Arquivar
+  satisfaction_survey: Pesquisa de satisfação
+
+  activerecord:
+    errors:
+      template:
+        header:
+      messages:
+        satisfaction_comment: Por favor utilize o campo de comentários para nos informar o que o deixou insatisfeito com nosso atendimento
+        forward_same_project: É necessário trocar de área resolvedora no encaminhamento do chamado
+        reopen_not_allowed: 'Não é possível reabrir esse chamado pois o chamado pai #%{issue} possui um chamado filho em aberto'
+        reopen_not_allowed_father_not_answered: 'Não é possível reabrir esse chamado pois o chamado pai #%{issue} não está na situação #%{status}'
+
+  link_sucessfully_updated_message: Link atualizado com sucesso.
+  link_sucessfully_created_message: Link criado com sucesso.
+  expiration_date_error_message: Não foi possível confirmar este chamado. O prazo de confirmação já foi excedido
+  confirmation_email_sent_message: Um email de confirmação foi enviado.
+  ticket_sucessfully_created_message: Email confirmado com sucesso, seu chamado será avaliado, muito obrigado.
+  satisfaction_message: Por favor utilize o campo de comentários para nos informar o que o deixou insatisfeito com nosso atendimento.
+  satisfaction_missing: Por favor selecione um grau de satisfação
+  satisfaction_issue_reopened: Por favor selecione um motivo de insatisfação para nos informar o principal motivo da insatisfação
+  answer_sucessfully_sent_message: Resposta enviada com sucesso.
+  no_confirmation_message: 'O chamado # %{issue_id} será deletado por falta de confirmação'
+  journal_notes_positive_message: Chamado arquivado pois o usuário se sentiu satisfeito com o atendimento.
+  journal_notes_neutral_message: Chamado arquivado, porém o usuário não se sentiu satisfeito com o atendimento.
+  journal_notes_negative_message: Chamado reaberto pois o usuário não se sentiu satisfeito com o atendimento.
+  journal_notes_feedback_request_missing: Por favor selecione um grau de satisfação
+  journal_notes_feedback_request_message: Por favor utilize o campo de comentários para nos informar o que o deixou insatisfeito com nosso atendimento.
+  journal_notes_feedback_request_message_reopened: Por favor selecione um motivo de insatisfação para nos informar o principal motivo da insatisfação
+
+  no_faqs_registered_message: Não há faqs cadastrados no sistema
+  in_case_of_doubts_message: Para dúvidas sobre esse tipo de problema, acesse o FAQ em
+  inform_valid_email_explanation_message: Por favor, informe um endereço de e-mail válido. Uma mensagem de confirmação deste e-mail será enviada para o endereço informado. Caso este não seja validado, seu chamado não será atendido.
+  comma_separator_message: Separar emails com virgula
+
+  param_ticket_should_be_set_exception: Param 'ticket' should be set
+  contact_should_have_email_exception: Contact should have email address
+  new_tickets_default_priority_exception: É necessário definir a prioridade padrão dos chamados novos
+
+  first_name_error_param: Primeiro nome
+  email_error_param: Email
+  confirm_email_error_param: Confirme o Email
+  email_doesnt_match_error: não confere
+  no_permission_error: sem permissão para abertura de chamados
+
+  comments_label:  Comentários
+  confirm_email_label: Confirme o Email
+  send_answer_copy_to_label: Enviar cópia da resposta para
+  submit_with_new_issue_label: Enviar e abrir novo chamado
+  yes_label: Sim
+  no_label: Não
+  hours_label: hora(s)
+  minutes_label: minuto(s)
+  reopen_issue_label: Desejo reabrir o chamado
+  comments_field_label: Use o campo abaixo para fazer comentários sobre o nosso atendimento
+
+  issue_creation_permission_settings_label: Disponibilizar criação de chamados nos seguintes projetos
+  issue_creation_permission_settings_message: Caso seja marcado apenas um, o campo projeto não ficará disponível para o usuário anônimo na criação do chamado.
+  project_wiki_settings_label: Projeto Wiki do fornecedor
+  project_faq_settings_label: Projeto FAQ do fornecedor
+  status_waiting_settings_label: Status Aguardando Confirmação
+  exclude_waiting_after_settings_label: Excluir Aguardando Confirmação depois de
+  status_new_settings_label: Status Novo
+  status_doing_settings_label: Status Em Andamento
+  status_answered_settings_label: Status Respondido
+  status_archived_settings_label: Status Arquivado
+  status_canceled_settings_label: Status Cancelado
+  status_unconfirmed_archived_settings_label: Status Arquivado sem confirmação
+  default_issue_priority_settings_label: Prioridade padrão dos chamados novos
+  answered_priority_settings_label: Prioridade Respondido
+  normal_priority_settings_label: Prioridade Normal
+  high_priority_settings_label: Prioridade Alta
+  enable_archive_issue_settings_label: Habilitar arquivamento de chamados
+  auto_archive_after_settings_label: Arquivar automaticamente após
+  satisfaction_survey_days_settings_label: Quantos dias antes do arquivamento do chamado a Pesquisa de Satisfação deve ser enviada?
+  auto_archive_with_comments_settings_label: Arquivar automaticamente chamados com comentários de usuário anônimo após concluído?
+  mistaken_status_settings_label: Status Encaminhamento Indevido
+  copy_issue_when_forward_settings_label: Criar novo chamado ao encaminhar
+  mistaken_notify_settings_label: Alterar prioridade ao reportar encaminhamento indevido
+  increase_priority_forwarded_settings_label: Alterar prioridade ao resolver chamado encaminhado
+  rollback_forwarding_config_settings_label: Atribuir para responsável anterior ao reportar encaminhamento indevido
+  enable_satisfaction_survey_settings_label: Habilitar pesquisa de satisfação
+  enable_involved_mailing_settings_label: Habilitar envio de email à todos os usuários envolvidos
+  reopen_status_to_settings_label: Reabrir chamado para o status abaixo
+  trackers_reopen_disabled_settings_label: Desabilitar reabertura para os tipos de chamado abaixo
+  projects_attachments_field_hided_settings_label: Ocultar o campo de arquivos do(s) projeto(s)
+  email_list_behavior_settings_label: Comportamento da lista de emails
+  customer_field_settings_label: Campo CPF-CNPJ do Fornecedor
+  social_name_settings_label: Campo Razão Social do Fornecedor
+  assign_to_field_settings_label: Atribuir tarefa automaticamente de acordo com o campo
+  forward_same_project_settings_label: Proibir encaminhamento de chamados para mesmo projeto
+
+  faq_link_edit_header: Editar Link para FAQ
+  faq_link_list_header: Lista de Links de FAQs
+  faq_link_new_header: Novo Link para FAQ
+  faq_link_detail_header: Detalhar Controle de Acesso
+
+  link_to_new_faq: Novo FAQ
+  link_to_confirmation: Link de Confirmação
+
+  satisfaction_question_edit_header: Editar Razão de Satisfação
+  satisfaction_question_list_header: Lista de Razões de Satisfação
+  satisfaction_question_new_header: Nova Razão de Satisfação
+  satisfaction_question_detail_header: Detalhar Controle de Acesso
+  link_to_new_satisfaction_question: Link para nova Razão de Satisfação
+  satisfaction_create_sucess_message: Razão de Insatisfação criada com sucesso
+  satisfaction_edit_sucess_message: Razão de Insatisfação editada com sucesso
+  no_file_to_import_error_message: É necessário selecionar um arquivo para importar.
+  label_question: Razão em Português
+  label_question_en: Razão em Inglês
+  label_question_es: Razão em Espanhol
+  label_reopen_enabled: Reabertura Ativada?
+  import_success_message: Importação realizada com sucesso
+  satisfaction_reasons: Qual é o motivo principal de sua insatisfação?
+
+  delete_access_confirmation: Tem certeza que deseja deletar esse acesso?
+  delete_issue_notification_message: 'Não recebemos a confirmação de abertura do chamado # %{issue_id}. Por favor, clique no %{link_to}. Somente ao acessá-lo, seu chamado será encaminhado para um atendente do SAC. Caso contrário, ele será fechado automaticamente em %{days_count} dia(s).'
+  no_supplier_notification_message: Caso não seja preenchido, o fornecedor será identificado pelo sufixo do email(@dominio.com.br)
+  satisfaction_survey_reminder_message: 'O chamado será arquivado em %{days_count} dia(s). Caso necessite reabrir o chamado, responda a pesquisa disponível no link %{link_to} até este prazo.'
+  satisfaction_survey_mail_title: 'Pesquisa do chamado %{issue_id}'
+  answer_satisfaction_survey_message: Caso necessite reabrir o chamado, responda a pesquisa no link
+  prohibited_message: não permitiram que essa configuracao fosse salva
+
+  dear_text: Prezado,
+
+  satisfaction_label: Satisfação
+  satisfaction_survey_header: Pesquisa de Satisfação
+  satisfaction_survey_question: Está satisfeito com o atendimento do chamado?
+  totally_satisfied: Totalmente Satisfeito
+  totally_dissatisfied: Totalmente Insatisfeito
+  satisfaction_explanation_reopen: Notas de 6 para baixo permitem a reabertura do chamado.
+  satisfaction_explanation_no_reopen:  Notas de 7 para cima não permitem a reabertura do chamado.
+
+  consider_new_area_forward_option: Considera encaminhamento à nova área
+  consider_resposible_forward_option: Considera encaminhamento apenas ao novo responsável
+  black_list_option: Black list
+  white_list_option: White list
+
+  field_archivable: Arquivável
+
+  satisfaction_survey_already_answered: 'Pesquisa de satisfação já respondida'
+  enable_closing_child_issues_label: 'Habilitar fechamento automático de chamados filhos para estes chamados'
+  enable_only_one_child_issue_label: 'Habilitar apenas um filho para os seguintes chamados'
+  unable_copy_closed: 'Não é possível encaminhar chamados fechados para esse tipo de chamado'
+  disable_copy_from_closed_issues: 'Desabilitar encaminhamento de chamados fechados para os seguintes tipos de chamado'
+  one_child_issue_error: 'Este chamado já possui um chamado filho associado e com status aberto. Para criar um novo chamado filho associado a este chamado, nenhum chamado filho associado pode estar com status de aberto.'
+  redirect_copy_error: 'O chamado do tipo %{tracker} só pode ser encaminhado para os seguintes projetos: %{projects}'
+  redirect_copy_error_label: 'Bloquear encaminhamento para áreas onde os seguintes chamados não existem'
+
+  not_assigned: Não Atribuído
+
+  enable_priority_cascade: 'Habilitar cascateamento de prioridade?'
+  change_status_in_copy: 'Mudar situação no encaminhamento'
+  change_status_copy_trackers_label: 'Habilitar para os seguintes tipos de chamado'
+  change_copied_status_label: 'Situação encaminhado'
+  change_answered_status_label: 'Situação respondido'
+  enable_change_status_in_copy_label: 'Habilitar?'
+  not_possible_to_update_because_parent_closed: 'Não é possível atualizar este chamado, pois o chamado pai já foi fechado'
+  enable_auto_change_in_child_reopen: 'Habilitar mudança automatica para Direcionado na reabertura do chamado filho?'
+
+  not_a_valid_id: 'O ID %{issue_id} não corresponde ao ID de nenhum chamado criado.'
+  validate_issue_id_field_label: "Campo referente ao Número do Chamado no Service Center a ser validado"
+  response_question: "Orientação apresentada na conclusão do chamado não atende"
+  url_satisfaction_survey: "URL da Pesquisa de Satisfação"

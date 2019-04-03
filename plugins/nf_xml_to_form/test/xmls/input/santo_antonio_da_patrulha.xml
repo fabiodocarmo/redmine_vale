@@ -1,0 +1,106 @@
+<ConsultarNfseResposta xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd">
+    <ListaNfse>
+        <CompNfse>
+            <Nfse>
+                <InfNfse>
+                    <Numero>20166</Numero>
+                    <CodigoVerificacao>2427524</CodigoVerificacao>
+                    <DataEmissao>2016-03-11T11:06:46.000-03:00</DataEmissao>
+                    <IdentificacaoRps>
+                        <Numero>20166</Numero>
+                        <Serie>NF</Serie>
+                        <Tipo>0</Tipo>
+                    </IdentificacaoRps>
+                    <DataEmissaoRps>2016-03-11-03:00</DataEmissaoRps>
+                    <NaturezaOperacao>63</NaturezaOperacao>
+                    <RegimeEspecialTributacao>0</RegimeEspecialTributacao>
+                    <OptanteSimplesNacional>2</OptanteSimplesNacional>
+                    <IncentivadorCultural>0</IncentivadorCultural>
+                    <Competencia>2016-03-11T00:00:00.000-03:00</Competencia>
+                    <Servico>
+                        <Valores>
+                            <ValorServicos>67243.48</ValorServicos>
+                            <ValorDeducoes>0</ValorDeducoes>
+                            <ValorPis>0</ValorPis>
+                            <ValorCofins>0</ValorCofins>
+                            <ValorInss>0</ValorInss>
+                            <ValorIr>0</ValorIr>
+                            <ValorCsll>0</ValorCsll>
+                            <IssRetido>2</IssRetido>
+                            <ValorIss>3362.17</ValorIss>
+                            <ValorIssRetido>3362.17</ValorIssRetido>
+                            <OutrasRetencoes>0</OutrasRetencoes>
+                            <BaseCalculo>67243.48</BaseCalculo>
+                            <Aliquota>0.05</Aliquota>
+                            <ValorLiquidoNfse>63881.31</ValorLiquidoNfse>
+                            <DescontoIncondicionado>0</DescontoIncondicionado>
+                            <DescontoCondicionado>0</DescontoCondicionado>
+                        </Valores>
+                        <ItemListaServico>1401</ItemListaServico>
+                        <CodigoCnae>2822401</CodigoCnae>
+                        <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                        <Discriminacao>Serviço de supervisão de montagem na torre dotada de escadaria interna e passarelas telescópicas, extensivas e anguláveis na parte externa, para acesso a embarcações, marca IMAP, modelo Imesacna, número de série 9124015, com uma lança com aparelho de elevação de carga e kit de montagem, para ser instalada sobre o pier de atracação de propriedade da VALE S/A - São Luís/MA.
+
+OBS1: Nº do contrato: 5900019855; Pedido: 4502497264; Centro: 1068; Localidade: São Luís/MA; Folha de Registro de Serviço (FRS): 1001504375; Relatório de Faturamento: 6200344752.
+
+OBS2:Venda de serviço efetuada com suspensão da exigência da Contribuição para o PIS/PASEP e da COFINS, conforme artigo 2º da Instrução Normativa RFB nº 758, de 25 de julho de 2007. Projeto aprovado e enquadrado ao REIDI pela Portaria nº SEP 103, de 14 de abril de 2015. Pessoa jurídica adquirente habilitada ao REIDI conforme Ato Declaratório Executivo da Receita Federal do Brasil nº.  17, de 21 de maio de 2015.</Discriminacao>
+                        <CodigoMunicipio>4317608</CodigoMunicipio>
+                    </Servico>
+                    <PrestadorServico>
+                        <IdentificacaoPrestador>
+                            <Cnpj>87857629000130</Cnpj>
+                            <InscricaoMunicipal>32337</InscricaoMunicipal>
+                        </IdentificacaoPrestador>
+                        <RazaoSocial>IMAP INDUSTRIA E COMERCIO DE MAQUINAS E EQUIPAMENTOS LTDA</RazaoSocial>
+                        <NomeFantasia>MATRIZ              </NomeFantasia>
+                        <Endereco>
+                            <Endereco>RUA FRANCISCO J LOPES</Endereco>
+                            <Numero>01436</Numero>
+                            <Complemento>                    </Complemento>
+                            <Bairro>PASSO DOS RAMOS</Bairro>
+                            <CodigoMunicipio>4317608</CodigoMunicipio>
+                            <Uf>RS</Uf>
+                            <Cep>95500000</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>662-8500</Telefone>
+                            <Email>fiscal@imap.com.br</Email>
+                        </Contato>
+                    </PrestadorServico>
+                    <TomadorServico>
+                        <IdentificacaoTomador>
+                            <CpfCnpj>
+                                <Cpf></Cpf>
+                                <Cnpj>33592510042400</Cnpj>
+                            </CpfCnpj>
+                            <InscricaoMunicipal></InscricaoMunicipal>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S.A.</RazaoSocial>
+                        <Endereco>
+                            <Endereco>AV. DOS PORTUGUESES</Endereco>
+                            <Numero>S/N</Numero>
+                            <Complemento>PRAIA DO BOQUEIRÃO</Complemento>
+                            <Bairro>ITAQUI</Bairro>
+                            <CodigoMunicipio>2111300</CodigoMunicipio>
+                            <Uf>MA</Uf>
+                            <Cep>65085582</Cep>
+                        </Endereco>
+                        <Contato>
+                            <Telefone>9832183302</Telefone>
+                            <Email></Email>
+                        </Contato>
+                    </TomadorServico>
+                    <IntermediarioServico></IntermediarioServico>
+                    <OrgaoGerador>
+                        <CodigoMunicipio>4317608</CodigoMunicipio>
+                        <Uf>RS</Uf>
+                    </OrgaoGerador>
+                    <ContrucaoCivil></ContrucaoCivil>
+                </InfNfse>
+            </Nfse>
+        </CompNfse>
+    </ListaNfse>
+    <ListaMensagemRetorno>
+        <MensagemRetorno></MensagemRetorno>
+    </ListaMensagemRetorno>
+</ConsultarNfseResposta>

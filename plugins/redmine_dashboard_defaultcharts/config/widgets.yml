@@ -1,0 +1,68 @@
+new_by_tracker:
+  exclude_statuses: text
+  chart_type: stack
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+new_by_project:
+  exclude_statuses: text
+  chart_type: stack
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+weekly_progress:
+  exclude_statuses: text
+  chart_type: column
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+answered_by_project:
+  exclude_statuses: text
+  chart_type: stack
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+opened_issues_status:
+  exclude_statuses: text
+  chart_type: pie
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+closed_issues_status:
+  exclude_statuses: text
+  chart_type: pie
+  filters:
+    - range_date
+    - tracker_id
+    - time_segmentation
+    - priority_id
+aging_has_atendent:
+  aging: text
+aging_per_atendent:
+  aging: text
+aging_project:
+  aging: text
+aging_tracker:
+  aging: text
+  chart_type: stack
+  filters:
+    - range_date
+    - priority_id
+performance_per_fte:
+  range_day: string
+  goal: string
+  filters:
+    range_date: range_date
+performance_by_project:
+  range_day: string
+  exclude_statuses: text

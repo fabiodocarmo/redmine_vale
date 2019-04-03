@@ -1,0 +1,3 @@
+api.errors do
+  api.error t(:child_issue_open)
+end

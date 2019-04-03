@@ -1,0 +1,35 @@
+en:
+  search_request_failed: Search request to full text search engine failed.
+  search_connection_refused: Connection to full text search engine refused.
+
+  label_attachment_content: Attachment content
+  label_search_quick_reference: Search Quick Reference
+  label_how_to_search: How to search
+
+  field_digest: MD5 digest
+
+  es:
+    word: Word
+    phrase: Phrase
+    many_words: Many words
+    wildcards: Wildcards
+    field: Search by field
+    regular_expression: Regular expression
+    fuzziness: Fuzziness
+    proximity_searches: Proximity searches
+    ranges: Ranges
+    boosting: Boosting
+    boolean_operators: Boolean operators
+    grouping: Grouping
+    reserved_characters: Reserved characters
+    empty_query: Empty query
+    available_fields: Available search fields
+    attachments: Search by attachments
+
+  views:
+      pagination:
+        first: "&laquo; First"
+        last: "Last &raquo;"
+        previous: "&lsaquo; Prev"
+        next: "Next &rsaquo;"
+        truncate: "..."

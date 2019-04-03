@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Nfse>
+      <InfNfse id="71336218000160_201600000008729">
+         <Numero>201600000008729</Numero>
+         <CodigoVerificacao>4f551f78</CodigoVerificacao>
+         <DataEmissao>2016-03-04T09:11:18</DataEmissao>
+         <IdentificacaoRps>
+            <Numero>201608729</Numero>
+            <Serie>NPS</Serie>
+            <Tipo>1</Tipo>
+         </IdentificacaoRps>
+         <DataEmissaoRps>2016-03-04</DataEmissaoRps>
+         <NaturezaOperacao>1</NaturezaOperacao>
+         <OptanteSimplesNacional>2</OptanteSimplesNacional>
+         <IncentivadorCultural>2</IncentivadorCultural>
+         <Competencia>2016-03-04T09:03:21</Competencia>
+         <NfseSubstituida>0</NfseSubstituida>
+         <OutrasInformacoes>Lei 12741/2012: Mun: R$ 140.80; Est: R$ 0.00; Fed: R$ 0.00;
+Total: R$ 140.80.</OutrasInformacoes>
+         <Servico>
+            <Valores>
+               <ValorServicos>7040.00</ValorServicos>
+               <ValorDeducoes>0</ValorDeducoes>
+               <ValorPis>0</ValorPis>
+               <ValorCofins>0</ValorCofins>
+               <ValorInss>0</ValorInss>
+               <ValorIr>0</ValorIr>
+               <ValorCsll>0</ValorCsll>
+               <IssRetido>2</IssRetido>
+               <ValorIss>140.80</ValorIss>
+               <ValorIssRetido>0</ValorIssRetido>
+               <OutrasRetencoes>0</OutrasRetencoes>
+               <BaseCalculo>7040.00</BaseCalculo>
+               <Aliquota>2.00</Aliquota>
+               <ValorLiquidoNfse>7040.00</ValorLiquidoNfse>
+               <DescontoIncondicionado>0</DescontoIncondicionado>
+               <DescontoCondicionado>0</DescontoCondicionado>
+            </Valores>
+            <ItemListaServico>01.07</ItemListaServico>
+            <CodigoCnae>0</CodigoCnae>
+            <CodigoTributacaoMunicipio>107</CodigoTributacaoMunicipio>
+            <Discriminacao>SERVICOS DE TELEMETRIA E GERENCIAMENTO DE FROTA PRESTADOS NO PERIODO DE 21/01/16 a 20/02/16 - PEDIDO 4502484182/00010 VENCTO 30 DDL  FRS 1001496499 CONTRATO 5900002375 RF 6200341062 SUP. TECN. INFORM., INSTAL., CONFIG. E MANUT. PROG E BD</Discriminacao>
+            <CodigoMunicipio>3118601</CodigoMunicipio>
+         </Servico>
+         <ValorCredito>0</ValorCredito>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <Cnpj>71336218000160</Cnpj>
+               <InscricaoMunicipal>40849015</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>SEVA ENGENHARIA ELETRONICA S.A.</RazaoSocial>
+            <NomeFantasia />
+            <Endereco>
+               <Endereco>Av. DAS AMERICAS</Endereco>
+               <Numero>34</Numero>
+               <Bairro>KENNEDY</Bairro>
+               <CodigoMunicipio>3118601</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <Cep>32145000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>31-3211-1040</Telefone>
+               <Email>SEVA@SEVA.COM.BR</Email>
+            </Contato>
+         </PrestadorServico>
+         <TomadorServico>
+            <IdentificacaoTomador>
+               <CpfCnpj>
+                  <Cnpj>33592510000740</Cnpj>
+               </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>VALE S.A</RazaoSocial>
+            <Endereco>
+               <Endereco>BR040 KM 598</Endereco>
+               <Numero>0</Numero>
+               <Complemento>CAIXA POSTAL 91</Complemento>
+               <Bairro>MIGUEL BURNIER</Bairro>
+               <CodigoMunicipio>3146107</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <Cep>35400000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>03196610023</Telefone>
+               <Email>nfe.servico@vale.com,nfe@quadrem.net</Email>
+            </Contato>
+         </TomadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3118601</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+      </InfNfse>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="SMF_71336218000160_201600000008729">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+            <Reference URI="">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+               <DigestValue>u7ZevsG7y9vuYknZuKF4DcOLX9Q=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>Q5s4t7S7jGGhVqdjeqcau9n+2GsHR7ajpCVJ4o3gbdp2yBxMJ/dga2hpG062ZJn8S36mqsMqmKBR5B+BBm3D1OFxCsWj9zwqG6FlD8jAmsJj9EDwNsyZoWCS90q4lvGjnheicxUvIsDmqaKgTjIvJoSYJUZUADfVthEGDfIa4uyTgf56hb3PCesyJ4OZ1VORZwi4B16fe1yaNJR/wKqWS0x3Ms4dXpGWZOD6pTD4gelBIDcwA/6mAYKWoyxEEFOvrHsN1extrFufCx1siMMy+LBhB+croiRRftR6zbUkhkpSg55Diy8uyeuTNnv+Vmx2iUzYUPehTTbLWXYrV9sS+w==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>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</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </Nfse>
+</CompNfse>

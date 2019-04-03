@@ -1,0 +1,4 @@
+<p>
+  <%= l(:dear_text) %>
+</p>
+<p><%=I18n.t('delete_issue_notification_message', issue_id: @issue.id, link_to: link_to( l(:link_to_confirmation), 'www.google.com'), days_count: Setting.plugin_redmine_gestor_chamadas[:after_days].to_i/2 )%></p>

@@ -1,0 +1,26 @@
+.errors{
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: red;
+  margin-bottom: 30px;
+}
+
+.list_cf{
+	margin-left: 10px;
+}
+
+.field_reopen label{
+	margin-left: 10px;
+}
+
+.checkboxgroup {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+.checkboxgroup label {
+  width: 100px;
+  display: block;
+}

@@ -1,0 +1,16 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Trigger: </b></label><br />
+    <%= f.date_select :datetime_trigger %><br /><br />
+  </div>
+
+  <% if Redmine::VERSION::MAJOR >= 3 %>
+    <div class="field">
+      <label> <b>Hora: </b></label><br />
+      <%= f.text_field :hour %><br /><br />
+      <small>Timezone: <%= Time.zone.name %></small>
+    </div>
+  <% end %>
+
+  <%= link_to_remove_association "auto_issue_remove_trigger", f %>
+</div>

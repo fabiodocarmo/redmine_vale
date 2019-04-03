@@ -1,0 +1,22 @@
+# English strings go here for Rails i18n
+pt-BR:
+  label_approvals: Aprovação
+  approvals:
+    list: Lista de Aprovação
+    new_approval: Nova Aprovação
+    import_empty_file: É necessário um arquivo para importação
+    import_template: Importar
+    export_template: Exportar
+    import_successful: Importação realizada com sucesso
+  label_sign: Sinal
+  label_value: Valor
+  label_level: Nível
+  label_level_below: Níveis Abaixo
+
+  sign_eq: Sinal
+  value_cont: Valor contém
+  level_cont: Nível contém
+  level_below_cont: Níveis Abaixo contém
+  link_to_new_approval: 'Nova aprovação'
+  no_approval_message: 'Nenhuma aprovação cadastrada'
+  edit_approval: Editar Aprovação

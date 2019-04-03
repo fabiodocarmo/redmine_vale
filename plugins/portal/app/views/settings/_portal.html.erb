@@ -1,0 +1,65 @@
+<table>
+  <tbody>
+    <tr>
+      <td>Página Padrão do Projeto</td>
+      <td>
+        <%= select_tag 'settings[default_project_page]', options_for_select([[:default, :default], [:new_issue, :new_issue]], settings['default_project_page']) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('portal.auto_reload_welcome') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[auto_reload_welcome]', true, settings['auto_reload_welcome']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('portal.auto_reload_issues') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[auto_reload_issues]', true, settings['auto_reload_issues']  %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= t('portal.show_tracker_at_home') %>:</th>
+      <td>
+        <%= check_box_tag 'settings[show_tracker_at_home]', true, settings['show_tracker_at_home']  %>
+      </td>
+    </tr>
+
+    <tr>
+  <th>Habilita painel de notificação do sistema?</th>
+  <td style='width: 70%;'>
+
+    <%= select_tag 'settings[enable_system_box_notification]',
+    options_for_select([['Sim', 'true'], ['Não', 'false']], settings['enable_system_box_notification']), include_blank: '' %>
+  </td>
+</tr>
+
+  <tr>
+    <th>Mensagem em Português:</th>
+    <td style='width: 70%;'>
+
+      <%= text_area_tag 'settings[system_box_notification_ptbr]', settings['system_box_notification_ptbr'], style: 'height: 300px', :class => 'wiki-edit'  %>
+      <%= wikitoolbar_for 'settings_system_box_notification_ptbr' %>
+
+
+    </td>
+  </tr>
+
+
+  <tr>
+    <th>Mensagem em Inglês:</th>
+    <td style='width: 70%;'>
+      <%= text_area_tag 'settings[system_box_notification_en]', settings['system_box_notification_en'], style: 'height: 300px', :class => 'wiki-edit'  %>
+      <%= wikitoolbar_for 'settings_system_box_notification_en' %>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Mensagem em Espanhol:</th>
+    <td style='width: 70%;'>
+      <%= text_area_tag 'settings[system_box_notification_es]', settings['system_box_notification_es'], style: 'height: 300px', :class => 'wiki-edit'  %>
+      <%= wikitoolbar_for 'settings_system_box_notification_es' %>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,170 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe versao="3.10" Id="NFe32151003314034000149550010000006811558532239">
+         <ide>
+            <cUF>32</cUF>
+            <cNF>55853223</cNF>
+            <natOp>DEVOLUÇÃO DE MERCADORIA EM CONSERTO (DE - 5916)</natOp>
+            <indPag>0</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>681</nNF>
+            <dhEmi>2015-10-20T09:28:54-02:00</dhEmi>
+            <dhSaiEnt>2015-10-20T09:28:54-02:00</dhSaiEnt>
+            <tpNF>1</tpNF>
+            <idDest>1</idDest>
+            <cMunFG>3205002</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>9</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>0</indFinal>
+            <indPres>9</indPres>
+            <procEmi>0</procEmi>
+            <verProc>5,1418.1;SVC</verProc>
+         </ide>
+         <emit>
+            <CNPJ>03314034000149</CNPJ>
+            <xNome>HIDRAUSERRA MANUT EM EQUIP HIDRAULICOS LTDA</xNome>
+            <xFant>HIDRAUSERRA MANUT EM EQUIP HIDRAULICOS LTDA</xFant>
+            <enderEmit>
+               <xLgr>RUA CLAUDIO COUTINHO</xLgr>
+               <nro>250</nro>
+               <xBairro>JARDIM LIMOEIRO</xBairro>
+               <cMun>3205002</cMun>
+               <xMun>SERRA</xMun>
+               <UF>ES</UF>
+               <CEP>29164074</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>2732284559</fone>
+            </enderEmit>
+            <IE>082103712</IE>
+            <CRT>3</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510022042</CNPJ>
+            <xNome>VALE S/A</xNome>
+            <enderDest>
+               <xLgr>Av. Dante Micheline</xLgr>
+               <nro>0</nro>
+               <xCpl>PONTA DE 5500</xCpl>
+               <xBairro>Porto de Tubarao</xBairro>
+               <cMun>3205309</cMun>
+               <xMun>Vitoria</xMun>
+               <UF>ES</UF>
+               <CEP>29090900</CEP>
+               <cPais>1058</cPais>
+               <xPais>Brasil</xPais>
+               <fone>2733335000</fone>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>080266240</IE>
+            <email>carlos.alberto@vale.com,deyse.jantorno@vale.com</email>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>15762089</cProd>
+               <cEAN></cEAN>
+               <xProd>PALETEIRA 2200 KG</xProd>
+               <NCM>84281000</NCM>
+               <CFOP>5916</CFOP>
+               <uCom>PC</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>900.0000</vUnCom>
+               <vProd>900.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>PC</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>900.0000</vUnTrib>
+               <indTot>1</indTot>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMS40>
+                     <orig>0</orig>
+                     <CST>41</CST>
+                  </ICMS40>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPINT>
+                     <CST>53</CST>
+                  </IPINT>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>0.00</vBC>
+               <vICMS>0.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>900.00</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.00</vPIS>
+               <vCOFINS>0.00</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>900.00</vNF>
+            </ICMSTot>
+         </total>
+         <transp>
+            <modFrete>0</modFrete>
+            <vol>
+               <qVol>1</qVol>
+            </vol>
+         </transp>
+         <infAdic>
+            <infCpl>NF DE REMESSA Nº 027.366, EMITIDA DIA 20/08/2015 -  -</infCpl>
+         </infAdic>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe32151003314034000149550010000006811558532239">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>pU1A1ICzBiZMER9NazobW0SYf3k=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>5ESZCF8NLOhX1xovRR7I/C0atlAClv0LWiHO4jqgbo29GrLdMQLuvA7PkMngyeOf8KzcFP2PRovjKO48kCxhQRqIecu+wvmrDHAARrJh/JN+ZqLomQ85pv5KuRFhGXWMshs4/Gs9M2rNyuVbK3FrSTS6qG4Zj/ZYFdsobBShBbI9sD4ZVQ2WXQIz3vTjFXjR8kQ7yKBwjE0wV9Cj9N7FO4msS3YCjRkJAVODgvaf176MzvQMPy338ApLNeHcHEyF45hdgNYkkU7BKf9miRr8IofzyUr+Xz6eL+xdvtnTQnQiEucGer4MwFt7RcKm2QU4kVuXd09P8vIrIDu1TBlvcQ==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIIYDCCBkigAwIBAgIQbsVdKaL90wo3cCErf9w/dTANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQGEwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc0MB4XDTEzMDYyNDAwMDAwMFoXDTE2MDYyMjIzNTk1OVowgf8xCzAJBgNVBAYTAkJSMRMwEQYDVQQKFApJQ1AtQnJhc2lsMQswCQYDVQQIEwJFUzEOMAwGA1UEBxQFU0VSUkExNjA0BgNVBAsULVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFsIGRvIEJyYXNpbCAtIFJGQjEWMBQGA1UECxQNUkZCIGUtQ05QSiBBMzEjMCEGA1UECxQaQXV0ZW50aWNhZG8gcG9yIEFSIEZlbmFjb24xSTBHBgNVBAMTQEhJRFJBVVNFUlJBIE1BTlVURU5DQU8gRU0gRVFVSVBBTUVOVE9TIEhJRFJBVUxJQ086MDMzMTQwMzQwMDAxNDkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDpycbUx6ctiElLZjL1ZozNtUo7UauOnaVUYvLMn+ZGWMNswBb2L7B8YqC5bGLj+nQxPwExAzfor4bvBbPRIfPL2/3C02t6kI0+3BWXMOUeV1L7VpBvktcsSe4agZOIogKqMMbREWUm4vH3WndUeapgIIHDOWYroXNRs5MuMtcShgaUyqm373EhJeyw6lgRu2EdwgD0Gg8HDLvVxr7dgH4OYqSjAZ5RXCavqD3slxAHyNLILe+VtbuwQVBdEgCLp5Clp3jFHvvRjdvPju8R6GU+uCLeFx68D1W21NpoMtd9NCtvkcVaIsWgntwyJlKbWLV7cLoGi436L3CCcjdbQjqJAgMBAAGjggNcMIIDWDCBwQYDVR0RBIG5MIG2oD0GBWBMAQMEoDQEMjI4MDExOTY0ODUzMzI5OTI3MzQwMDAwMDAwMDAwMDAwMDAwMDAwMTc1NTE2NVNTUEVToCUGBWBMAQMCoBwEGkdFTkVST1NPIEdPTUVTIERFIE9MSVZFSVJBoBkGBWBMAQMDoBAEDjAzMzE0MDM0MDAwMTQ5oBcGBWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEaY29udGF0b0BoaWRyYXVzZXJyYS5jb20uYnIwCQYDVR0TBAIwADAfBgNVHSMEGDAWgBQukerWbeWyWYLcOIUpdjQWVjzQPjAOBgNVHQ8BAf8EBAMCBeAwfwYDVR0gBHgwdjB0BgZgTAECAwYwajBoBggrBgEFBQcCARZcaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9kcGMvQUNfQ2VydGlzaWduX1JGQi9EUENfQUNfQ2VydGlzaWduX1JGQi5wZGYwggEWBgNVHR8EggENMIIBCTBXoFWgU4ZRaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNpZ25SRkJHNC9MYXRlc3RDUkwuY3JsMFagVKBShlBodHRwOi8vaWNwLWJyYXNpbC5vdXRyYWxjci5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDQ2VydGlzaWduUkZCRzQvTGF0ZXN0Q1JMLmNybDBWoFSgUoZQaHR0cDovL3JlcG9zaXRvcmlvLmljcGJyYXNpbC5nb3YuYnIvbGNyL0NlcnRpc2lnbi9BQ0NlcnRpc2lnblJGQkc0L0xhdGVzdENSTC5jcmwwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMIGbBggrBgEFBQcBAQSBjjCBizBfBggrBgEFBQcwAoZTaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9jZXJ0aWZpY2Fkb3MvQUNfQ2VydGlzaWduX1JGQl9HNC5wN2MwKAYIKwYBBQUHMAGGHGh0dHA6Ly9vY3NwLmNlcnRpc2lnbi5jb20uYnIwDQYJKoZIhvcNAQELBQADggIBAI6n/GcgN/vwChp2VlZdWMA6AyeWhYLri6XwGiLygagLuCjdntpcy9unbgJ5zH3TWlx+uxa572eX/CZXNX/xFiq19fgI5urZwja9k7H7TV5pAE1qqL2NCT3sgyUnB/tx4DnKk98T9PU3mbtZaq9vXoIAfivyIxUqHdgkxUpMC2PyFkFtlXSvZFW1td+FW6YNrTN8pw+vQezNqD7fa2W++UPPxq6cvuI9hzQ20sPqrzA9GN2tr3lESzVO5p0Jut2KOwye8UfiwylX5havNJNkdzA9ttTn+FXq/K4hmlbuxmPBi2RoqkFL9hdPOcgX88K9PKZZLboACTjkhorOz7jqh03VSG/Mgbt6IN4psPRD7JOBs1xglpNNw7WkwCJ2j4QqPKNsw235tMqDv6KzIu8f1DT62/QN5BBmDk/MzguaspM/D5qPbJWe2VxmnfYWk1G8eIP92ZtZD3vsu92xnEfjd1UpKB7u535AilS7LIF9I4/EBThOdf79zG7Ac9+9RI/d5hJNmEQUgTEaGHQxvTczx0ygkeMO+DlQDSivOZ8URChVlGx7zwrvKF9Taum/Evh5VyNkWQHEDcYlCDy+pgNdPDO8DtMKSJmqys0doP5iwvsBOnu9AQ65q/+WN4m0wDau6nSVhEdQbQ3BxHe3bE1feqJlGCqTlqFKC8j4gJbctKKE</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+      <infProt xmlns="http://www.portalfiscal.inf.br/nfe">
+         <tpAmb>1</tpAmb>
+         <verAplic>SVRS201507311123</verAplic>
+         <chNFe>32151003314034000149550010000006811558532239</chNFe>
+         <dhRecbto>2015-10-20T09:30:48-02:00</dhRecbto>
+         <nProt>332150037169831</nProt>
+         <digVal>pU1A1ICzBiZMER9NazobW0SYf3k=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

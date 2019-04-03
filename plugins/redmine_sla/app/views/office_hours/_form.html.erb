@@ -1,0 +1,7 @@
+<div id='form_content'>
+  <%= render partial: 'form_content', locals: { office_hour: @office_hour } %>
+</div>
+
+<% include_calendar_headers_tags %>
+<%= javascript_include_tag "cocoon", plugin: 'redmine_sla' %>
+<%= stylesheet_link_tag "cocoon", plugin: 'redmine_sla' %>

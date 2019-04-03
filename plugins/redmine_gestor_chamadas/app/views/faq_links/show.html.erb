@@ -1,0 +1,16 @@
+<%#encoding: utf-8%>
+<h2><%= l(:faq_link_detail_header) %></h2>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= l(:label_tracker) %>:</b>
+  <%= @faq_link.tracker.name %>
+</p>
+
+<p>
+  <b><%= l(:label_link) %>:</b>
+  <%= link_to @faq_link.faq_link %>
+</p>
+
+<%= link_to l(:button_back), faq_links_path %>

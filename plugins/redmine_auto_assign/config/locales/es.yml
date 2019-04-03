@@ -1,0 +1,41 @@
+es:
+  label_atribuicao_automaticas: Asignación Automática
+  column_invalid_rows: "El valor de la columna {column}% de la siguiente línea(s) no es válida:% {rows}"
+  views:
+    pagination:
+      first: 'Primero'
+      last: 'Última'
+      previous: 'Anterior'
+      next: 'Siguiente'
+      truncate: '...'
+
+  auto_assignment_edit_success_message: Asignación automática editado con éxito.
+  auto_assignment_create_success_message: Asignación automática creado con éxito.
+  import_success_message: Importación completada con éxito.
+  access_delete_confirmation_message: ¿Está seguro de que desea eliminar este acceso?
+  no_auto_assignment_message:  No hay asignaciones automáticas registrados en el sistema
+
+  no_file_to_import_error_message: Debe seleccionar un archivo para importar.
+  export_template_filename: Modelo_Importacion_Asignacion_Automatica.xlsx
+
+  redistribute_type_workload: Carga de Trabajo
+  redistribute_type_round: Circular
+  redistribute_type_author: Autor
+  redistribute_type_watcher: Observador
+  redistribute_type_open: Primer a Abrir
+  redistribute_type_me: Usuario Actual
+
+  status_from_label: Situación de
+  status_to_label: Situación para
+  auto_assignment_type_label: Tipo de asignación automática
+  use_custom_field_label: Usar campo personalizado?
+  import_template_label: Modelo para la importación
+  custom_field_value_label: Valor de campo personalizado
+  redistribute_label: Redistribuir
+
+  auto_assignment_edit_header: Editar asignación automática
+  auto_assignment_list_header: Lista de asignación automática
+  new_auto_assignment_header: Nueva asignación automática
+  detail_auto_assignment_header: Detalle asignación automática
+
+  link_to_new_auto_assignment: Nueva asignación automática

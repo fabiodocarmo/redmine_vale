@@ -1,0 +1,114 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="1395618600010713230480900000130">
+               <Numero>00000130</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{5B79ADEA-A4DA-4F97-9652-79653C806D1B}</CodigoControle>
+               <DataEmissao>2015-10-01T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>58268.35</BaseCalculo>
+                  <Aliquota>5.0000</Aliquota>
+                  <ValorIss>2913.42</ValorIss>
+                  <ValorLiquidoNfse>54684.85</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>13956186000107</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>132304809</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>CITIC HIC BRASIL SERVIÇOS TÉCNICOS DE EQUIPAMENTOS DE MINERAÇÃO LTDA</RazaoSocial>
+                  <Endereco>
+                     <Endereco>ALM OSCAR NIEMEYER</Endereco>
+                     <Numero>400</Numero>
+                     <Complemento>SL 902 A 916 E 1002</Complemento>
+                     <Bairro>VALE DO SERENO</Bairro>
+                     <CodigoMunicipio>3144805</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>35895600</Telefone>
+                     <Email>nfe@citic-hic.com</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3161908</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2015-10-01</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>58268.35</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>378.74</ValorPis>
+                     <ValorCofins>1748.05</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>874.03</ValorIr>
+                     <ValorCsll>582.68</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>2913.42</ValorIss>
+                     <Aliquota>5.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>7112000</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao>Prestação de serviço referente ao período 08/09/2014 à 21/11/2014 conforme subitem 7.19 da lista de serviços constante na Lei Complementar 116 de 31/07/2003. Subitem 7.19: Acompanhamento e fiscalização da execução de obra de engenharia, arquitetura e urbanismo.
+</Discriminacao>
+                  <CodigoMunicipio>3161908</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>13956186000107</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>132304809</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510044798</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>318311620</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>VALE S/A</RazaoSocial>
+                     <Endereco>
+                        <Endereco> SERRA DO MACHADO</Endereco>
+                        <Numero>S/N</Numero>
+                        <Complemento></Complemento>
+                        <Bairro>ZONA RURAL</Bairro>
+                        <CodigoMunicipio></CodigoMunicipio>
+                        <Uf>MG</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>35935000</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone></Telefone>
+                        <Email></Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

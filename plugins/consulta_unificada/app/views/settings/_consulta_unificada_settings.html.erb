@@ -1,0 +1,17 @@
+<table>
+  <tbody>
+    <tr>
+      <th><%=l(:invoice_field_label)%>:</th>
+      <td>
+        <%= select_tag 'settings[nf_custom_field]',
+        options_from_collection_for_select(CustomField.all, 'id', 'name', settings['nf_custom_field']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=l(:system_url_label)%>:</th>
+      <td>
+        <input type="text" value="<%= settings['url_consulta'] %>" name="settings[url_consulta]" >
+      </td>
+    </tr>
+  </tbody>
+</table>

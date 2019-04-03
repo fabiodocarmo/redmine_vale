@@ -1,0 +1,118 @@
+<% @issue_custom_fields_grid = IssueCustomField.where(field_format: 'grid') %>
+<% @issue_custom_fields_float = IssueCustomField.where(field_format: 'float') %>
+<% @issue_custom_fields_string = IssueCustomField.where(field_format: 'string') %>
+<% @issue_custom_fields_text = IssueCustomField.where(field_format: 'text') %>
+<% @issue_custom_fields_user = IssueCustomField.where(field_format: 'user') %>
+<% @issue_custom_fields_list = IssueCustomField.where(field_format: 'list') %>
+<% @issue_custom_fields_bool = IssueCustomField.where(field_format: 'bool') %>
+<% @issue_custom_fields_date = IssueCustomField.where(field_format: 'date') %>
+<% @issue_custom_fields_int = IssueCustomField.where(field_format: 'int') %>
+
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('label_tracker') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_tracker_id]', options_from_collection_for_select(Tracker.all, :id, :name, settings['measurement2_tracker_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.wating_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_wating_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['measurement2_wating_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['measurement2_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.success_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_success_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['measurement2_success_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.error_robot_status') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_error_robot_status_id]', options_from_collection_for_select(IssueStatus.all, :id, :name, settings['measurement2_error_robot_status_id']), include_blank: true %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<% @issue_custom_fields = IssueCustomField.all %>
+<table>
+  <tbody>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.area') %>:</th>
+    <td>
+       <%= select_tag 'settings[measurement2_area_id]', options_for_select(@issue_custom_fields_list.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_area_id'])  %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.numero_requisicao') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_numero_requisicao_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_numero_requisicao_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.periodo_referencia') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_periodo_referencia_id]', options_for_select(@issue_custom_fields_string.map{ |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_periodo_referencia_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.dados_pedido_frs') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_dados_pedido_frs_id]', options_for_select(@issue_custom_fields_grid.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_dados_pedido_frs_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.pedido') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_pedido_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_pedido_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.linhas_contrato') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_linhas_contrato_id]', options_for_select(@issue_custom_fields_grid.map {|cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_linhas_contrato_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.descricao_linha_medida') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_descricao_linha_medida_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_descricao_linha_medida_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.numero_frs') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_numero_frs_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_numero_frs_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.valor_frs') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_valor_frs_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_valor_frs_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.data_frs') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_data_frs_id]', options_for_select(@issue_custom_fields_date.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_data_frs_id']) %>
+    </td>
+  </tr>
+  <tr>
+    <th><%= t('export_to_vale_sap_robot.razao_social') %>:</th>
+    <td>
+      <%= select_tag 'settings[measurement2_razao_social_id]', options_for_select(@issue_custom_fields_string.map { |cf| ["#{cf.name} - #{cf.id.to_s}", cf.id ] }, settings['measurement2_razao_social_id']) %>
+    </td>
+  </tr>
+  </tbody>
+</table>

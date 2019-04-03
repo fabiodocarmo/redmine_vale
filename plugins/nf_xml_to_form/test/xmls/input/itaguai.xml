@@ -1,0 +1,109 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse>
+      <InfNfse Id="0609447400012613389056300001153">
+         <Numero>00001153</Numero>
+         <CodigoVerificacao></CodigoVerificacao>
+         <CodigoControle>{EFA58190-46DC-423B-BAEE-F2FE12E513C3}</CodigoControle>
+         <DataEmissao>2016-04-06T00:00:00</DataEmissao>
+         <ValoresNfse>
+            <BaseCalculo>13083.65</BaseCalculo>
+            <Aliquota>5.0000</Aliquota>
+            <ValorIss>654.18</ValorIss>
+            <ValorLiquidoNfse>12364.05</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>06094474000126</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>133890563</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>IRMÃOS SANTOS CAVALCANTI SERVIÇOS E COMÉRCIO LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>ROD ROD MG-030</Endereco>
+               <Numero>8625</Numero>
+               <Complemento>SALA 06</Complemento>
+               <Bairro>VALE DO SERENO</Bairro>
+               <CodigoMunicipio>3144805</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <CodigoPais></CodigoPais>
+               <Cep>34000000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>35632356</Telefone>
+               <Email>danielgonçalves@gruposemil.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3302007</CodigoMunicipio>
+            <Uf>RJ</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <Competencia>2016-04-06</Competencia>
+            <Servico></Servico>
+            <Valores>
+               <ValorServicos>13083.65</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>0.00</ValorPis>
+               <ValorCofins>0.00</ValorCofins>
+               <ValorInss>719.60</ValorInss>
+               <ValorIr>0.00</ValorIr>
+               <ValorCsll>0.00</ValorCsll>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <ValorIss>654.18</ValorIss>
+               <Aliquota>5.0000</Aliquota>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <IssRetido></IssRetido>
+            <ResponsavelRetencao></ResponsavelRetencao>
+            <ItemListaServico>-</ItemListaServico>
+            <CodigoCnae>4399104</CodigoCnae>
+            <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+            <Discriminacao>PRESTAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS NA GESTÃO DE CMD CPBS. Nº CONTRATO: 5900030295; Nº PEDIDO/ITEM: 4502556846; Nº FRS: 1001544447; PERÍODO MEDIÇÃO: 21/02/2016 a 20/03/2016.
+</Discriminacao>
+            <CodigoMunicipio>3302007</CodigoMunicipio>
+            <CodigoPais></CodigoPais>
+            <ExigibilidadeISS></ExigibilidadeISS>
+            <MunicipioIncidencia></MunicipioIncidencia>
+            <NumeroProcesso></NumeroProcesso>
+            <Prestador>
+               <CpfCnpj>
+                  <Cnpj>06094474000126</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>133890563</InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+               <IdentificacaoTomador>
+                  <CpfCnpj>
+                     <Cnpj>72372998000409</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>318328393</InscricaoMunicipal>
+               </IdentificacaoTomador>
+               <RazaoSocial>COMPANHIA PORTUARIA BAIA DE SEPETIBA</RazaoSocial>
+               <Endereco>
+                  <Endereco>EST ILHA DA MADEIRA</Endereco>
+                  <Numero>SN</Numero>
+                  <Complemento></Complemento>
+                  <Bairro>PORTO ITAGUAI</Bairro>
+                  <CodigoMunicipio></CodigoMunicipio>
+                  <Uf>RJ</Uf>
+                  <CodigoPais></CodigoPais>
+                  <Cep>23825410</Cep>
+               </Endereco>
+               <Contato>
+                  <Telefone></Telefone>
+                  <Email></Email>
+               </Contato>
+            </Tomador>
+            <ConstrucaoCivil>
+               <CodigoObra></CodigoObra>
+               <Art></Art>
+            </ConstrucaoCivil>
+            <OptanteSimplesNacional></OptanteSimplesNacional>
+            <IncentivoFiscal></IncentivoFiscal>
+         </DeclaracaoPrestacaoServico>
+         <Versao>2.01</Versao>
+      </InfNfse>
+   </Nfse>
+</CompNfse>

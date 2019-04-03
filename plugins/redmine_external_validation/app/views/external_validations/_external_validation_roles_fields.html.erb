@@ -1,0 +1,64 @@
+<hr>
+<div class="nested-fields">
+  <div class="field">
+    <label> <b>Validate with Constant? </b></label><br />
+    <%= f.check_box :constant %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Constant: </b></label><br />
+    <%= f.text_field :constant_value %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Custom Field: </b></label><br />
+    <%= f.collection_select :custom_field_id, f.object.external_validation.try(:tracker) && ! f.object.external_validation.all_trackers ? (f.object.external_validation.tracker.custom_fields) : IssueCustomField.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Secondary Custom Field: </b></label><br />
+    <%= f.collection_select :secondary_custom_field_id, f.object.external_validation.try(:tracker) && ! f.object.external_validation.all_trackers ? (f.object.external_validation.tracker.custom_fields) : IssueCustomField.all, :id, :name, {include_blank: true } %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Columns (for grid custom fields): </b></label><br />
+    <%= f.collection_select :column_grid_id, IssueCustomField.where(id: CustomFieldsGridColumn.select(:grid_column_id)), :id, :name, {include_blank: true } %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Field Name: </b></label><br />
+    <%= f.text_field :field_name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Error Status: </b></label><br />
+    <%= f.collection_select :error_status_id, IssueStatus.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Format:</b></label><br />
+    <%= f.select :format, ExternalValidationRole::FORMATS.map { |k| [k, k] }, {include_blank: true} %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Tolerance:</b></label><br />
+    <%= f.number_field :tolerance, step: 0.01, min: 0 %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Error Id: </b></label><br />
+    <%= f.text_field :error_id %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Error Message: </b></label><br />
+    <%= f.text_area :error_message %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b>Message Custom Field: </b></label><br />
+    <%= f.collection_select :message_custom_field_id, f.object.external_validation.try(:tracker) && ! f.object.external_validation.all_trackers ? (f.object.external_validation.tracker.custom_fields.where(field_format: 'text')) : IssueCustomField.where(field_format: 'text').all, :id, :name %><br /><br />
+  </div>
+
+  <%= link_to_remove_association t("external_validation_remove_external_validation_role"), f %>
+</div>

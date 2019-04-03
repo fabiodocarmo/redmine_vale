@@ -1,0 +1,15 @@
+pt-BR:
+  redmine_widget: 'Dashboard'
+  redmine_widget_filters: "Filtros"
+  apply_filter: "Aplicar Filtros"
+  date:
+    formats:
+      month_year: "%B/%Y"
+  dashboard_filters:
+    range_date_from: De
+    range_date_to: Até
+    time_segmentation: Visão Temporal
+    daily: Dirário
+    weekly: Semanal
+    monthly: Mensal
+    yearly: Anual

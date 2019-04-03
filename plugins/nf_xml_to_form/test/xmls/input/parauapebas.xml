@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse>
+      <InfNfse Id="2600575100019413100568400000285">
+         <Numero>00000285</Numero>
+         <CodigoVerificacao>Z22244666</CodigoVerificacao>
+         <CodigoControle>{8DDBF302-4D33-4C07-981B-94F41E4E08BD}</CodigoControle>
+         <DataEmissao>2015-10-01T00:00:00</DataEmissao>
+         <ValoresNfse>
+            <BaseCalculo>663508.38</BaseCalculo>
+            <Aliquota>5.0000</Aliquota>
+            <ValorIss>33175.42</ValorIss>
+            <ValorLiquidoNfse>644512.19</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>26005751000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>131005684</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>BEMON ENGENHARIA E MONTAGENS LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>RUA DA PAISAGEM</Endereco>
+               <Numero>480</Numero>
+               <Complemento>SALA 708</Complemento>
+               <Bairro>VILA DA SERRA</Bairro>
+               <CodigoMunicipio />
+               <Uf>MG</Uf>
+               <CodigoPais />
+               <Cep>34000000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>32546700</Telefone>
+               <Email>bh@bemon.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>1505536</CodigoMunicipio>
+            <Uf>PA</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <Rps Id="26005751000194131005684285">
+               <IdentificacaoRps>
+                  <Numero>285</Numero>
+                  <Serie>A</Serie>
+                  <Tipo>1</Tipo>
+               </IdentificacaoRps>
+               <DataEmissao>2015-10-01</DataEmissao>
+               <Status>1</Status>
+            </Rps>
+            <Competencia>2015-10-01</Competencia>
+            <Servico />
+            <Valores>
+               <ValorServicos>663508.38</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>0.00</ValorPis>
+               <ValorCofins>0.00</ValorCofins>
+               <ValorInss>18996.19</ValorInss>
+               <ValorIr>0.00</ValorIr>
+               <ValorCsll>0.00</ValorCsll>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <ValorIss>33175.42</ValorIss>
+               <Aliquota>5.0000</Aliquota>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <IssRetido>1</IssRetido>
+            <ResponsavelRetencao>1</ResponsavelRetencao>
+            <ItemListaServico>702</ItemListaServico>
+            <CodigoCnae>4329104</CodigoCnae>
+            <CodigoTributacaoMunicipio>4329104</CodigoTributacaoMunicipio>
+            <Discriminacao>Servicos de montagem, teste, comissionamento, operacao assistida e treinamentos para o Sistema de Sinalizacao Distribuida da Linha Tronco da Vale-EFC. (SEGMENTO 57-58 - Parauapebas - PA)  MATERIAIS E EQUIPAMENTOS:    120.760,00 MAO DE OBRA:              542.748,38 CONTRATO: 5900020950  PEDIDO: 4502150825  FRS: 1001226098 Venda de servico efetuada com suspensao da exigencia da Contribuicao para o PIS/PASEP e da COFINS, conforme artigo 2  da Instrucao Normativa RFB n  758, de 25 de julho de 2007. Projeto aprovado e enquadrado ao REIDI pela Portaria do Ministerio de Estado dos Transportes n  335, de 9 de setembro de 2014. Pessoa juridica adquirente habilitada ao REIDI conforme Ato Declaratorio Executivo da Receita Federal do Brasil n . 5, de 2 de fevereiro de 2015.CEI:512120031276  CREA: 561478 IMPOSTOS INCIDENTES CONF. TAB IBPT: 13,45%</Discriminacao>
+            <CodigoMunicipio>1505536</CodigoMunicipio>
+            <CodigoPais />
+            <ExigibilidadeISS>1</ExigibilidadeISS>
+            <MunicipioIncidencia>1505536</MunicipioIncidencia>
+            <NumeroProcesso />
+            <Prestador>
+               <CpfCnpj>
+                  <Cnpj>26005751000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>131005684</InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+               <IdentificacaoTomador>
+                  <CpfCnpj>
+                     <Cnpj>33592510037074</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>318311253</InscricaoMunicipal>
+               </IdentificacaoTomador>
+               <RazaoSocial>VALE S.A</RazaoSocial>
+               <Endereco>
+                  <Endereco>ESTRADA RAYMUNDO MASCARENHAS</Endereco>
+                  <Numero>S/N</Numero>
+                  <Complemento>ZONA RURAL</Complemento>
+                  <Bairro>SERRA DOS CARAJAS</Bairro>
+                  <CodigoMunicipio>1505536</CodigoMunicipio>
+                  <Uf>PA</Uf>
+                  <CodigoPais>1058</CodigoPais>
+                  <Cep>68515000</Cep>
+               </Endereco>
+               <Contato>
+                  <Telefone>33272835</Telefone>
+                  <Email>nfe.servico@vale.com</Email>
+               </Contato>
+            </Tomador>
+            <ConstrucaoCivil>
+               <CodigoObra />
+               <Art />
+            </ConstrucaoCivil>
+            <OptanteSimplesNacional>2</OptanteSimplesNacional>
+            <IncentivoFiscal>2</IncentivoFiscal>
+         </DeclaracaoPrestacaoServico>
+         <Versao>2.01</Versao>
+      </InfNfse>
+   </Nfse>
+</CompNfse>

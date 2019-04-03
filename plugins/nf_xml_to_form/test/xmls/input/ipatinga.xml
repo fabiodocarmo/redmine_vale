@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns:ii="Actcon">
+   <ii:Nfse>
+      <ii:InfNfse>
+         <ii:Numero>201500001002539</ii:Numero>
+         <ii:CodigoVerificacao>KCHX-JZJW</ii:CodigoVerificacao>
+         <ii:DataEmissao>2015-10-02T11:05:28</ii:DataEmissao>
+         <ii:Competencia>2015-10-00T00:00:00</ii:Competencia>
+         <ii:NaturezaOperacao>2</ii:NaturezaOperacao>
+         <ii:OutrasInformacoes />
+         <ii:Servico>
+            <ii:Valores>
+               <ii:ValorServicos>13412.37</ii:ValorServicos>
+               <ii:ValorDeducoes>0.00</ii:ValorDeducoes>
+               <ii:ValorAcrescimos>0.00</ii:ValorAcrescimos>
+               <ii:ValorInss>422.49</ii:ValorInss>
+               <ii:ValorPis>87.18</ii:ValorPis>
+               <ii:ValorCofins>402.37</ii:ValorCofins>
+               <ii:ValorIr>134.12</ii:ValorIr>
+               <ii:ValorCsll>134.12</ii:ValorCsll>
+               <ii:ValorIss>0.00</ii:ValorIss>
+               <ii:IssRetido>1</ii:IssRetido>
+               <ii:ValorIssRetido>268.25</ii:ValorIssRetido>
+               <ii:OutrasRetencoes>0.00</ii:OutrasRetencoes>
+               <ii:BaseCalculo>13412.37</ii:BaseCalculo>
+               <ii:Aliquota>0.020000000000000000416</ii:Aliquota>
+               <ii:ValorLiquidoNfse>11963.84</ii:ValorLiquidoNfse>
+               <ii:DescontoIncondicionado>0.00</ii:DescontoIncondicionado>
+               <ii:DescontoCondicionado>0.00</ii:DescontoCondicionado>
+            </ii:Valores>
+            <ii:CodigoCnae>8129-0/00</ii:CodigoCnae>
+            <ii:ItemListaServico>07.09</ii:ItemListaServico>
+            <ii:Discriminacao>CONTRATO Nº 5900003749 (2438107) Obra 615
+PEDIDO: 4502139822
+FOLHA: 1001218747
+
+Valor referente a prestação Serviços de Limpeza, Zeladoria e Conferência de Passagem,
+Conferência de Documentos, Auxilio a Passageiros - inclusive no Embarque e
+Desembarque e Transporte de Encomenda nos Trens de Passageiros.
+
+
+Mão-de-Obra ........................................... R$ 12.071,13
+Equipamentos, Vale Transporte e Alimentacao ........... R$  1.341,24
+
+
+Serviços Prestados: R$ 13.412,37
+
+Vencimento 01/11/2015
+
+Favor efetuar o credito em nossa c/c número 485801-1 AG.0001 ,Banco Intermedium S/A.</ii:Discriminacao>
+            <ii:CodigoMunicipio>3131307</ii:CodigoMunicipio>
+         </ii:Servico>
+         <ii:PrestadorServico>
+            <ii:IdentificacaoPrestador>
+               <ii:Cnpj>19158435000197</ii:Cnpj>
+               <ii:InscricaoMunicipal>87800</ii:InscricaoMunicipal>
+               <ii:InscricaoEstadual>3134213820050</ii:InscricaoEstadual>
+            </ii:IdentificacaoPrestador>
+            <ii:RazaoSocial>DELTA ENGENHARIA E MANUTENCAO INDUST. LTDA</ii:RazaoSocial>
+            <ii:Endereco>
+               <ii:Endereco>AVN   FELIPE DOS SANTOS</ii:Endereco>
+               <ii:Numero>321</ii:Numero>
+               <ii:Complemento />
+               <ii:Bairro>CIDADE NOBRE</ii:Bairro>
+               <ii:CodigoMunicipio>3131307</ii:CodigoMunicipio>
+               <ii:Uf>MG</ii:Uf>
+               <ii:Cep>35162369</ii:Cep>
+            </ii:Endereco>
+            <ii:Contato>
+               <ii:Telefone>3138011600</ii:Telefone>
+               <ii:Email>******</ii:Email>
+            </ii:Contato>
+         </ii:PrestadorServico>
+         <ii:TomadorServico>
+            <ii:IdentificacaoTomador>
+               <ii:CpfCnpj>
+                  <ii:Cnpj>33592510026200</ii:Cnpj>
+               </ii:CpfCnpj>
+               <ii:InscricaoMunicipal />
+               <ii:InscricaoEstadual>081264577</ii:InscricaoEstadual>
+            </ii:IdentificacaoTomador>
+            <ii:RazaoSocial>VALE S.A.</ii:RazaoSocial>
+            <ii:Endereco>
+               <ii:Endereco>AV DANTE MICHELINE</ii:Endereco>
+               <ii:Numero>5500</ii:Numero>
+               <ii:Complemento>PONTA DE TUBARÃO</ii:Complemento>
+               <ii:Bairro>JARDIM CAMBURI</ii:Bairro>
+               <ii:CodigoMunicipio>3205309</ii:CodigoMunicipio>
+               <ii:Uf>ES</ii:Uf>
+               <ii:Cep>29090900</ii:Cep>
+            </ii:Endereco>
+            <ii:Contato>
+               <ii:Email>medicao.divm@vale.com</ii:Email>
+            </ii:Contato>
+         </ii:TomadorServico>
+         <ii:OrgaoGerador>
+            <ii:CodigoMunicipio>3131307</ii:CodigoMunicipio>
+            <ii:Uf>MG</ii:Uf>
+         </ii:OrgaoGerador>
+      </ii:InfNfse>
+   </ii:Nfse>
+</CompNfse>

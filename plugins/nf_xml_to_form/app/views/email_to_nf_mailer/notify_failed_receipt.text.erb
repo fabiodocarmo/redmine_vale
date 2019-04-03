@@ -1,0 +1,6 @@
+Obrigado por enviar sua nota fiscal,
+
+Mas infelizmente tivemos os seguintes problemas:
+<% @issue.errors.full_messages.each do |full_message| %>
+  * <%= full_message %>
+<% end %>

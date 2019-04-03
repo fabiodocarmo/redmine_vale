@@ -1,0 +1,52 @@
+<%= error_messages_for 'hierarchy' %>
+<h1><%= l(:label_hierarchy) %></h1>
+
+<%= render 'cruj_cruj_cruj/filters' %>
+
+<div style="float: right;">
+   <%= form_tag url_for(action: :export_template, controller: params[:controller], q: params[:q], filter: params[:filter]), style: 'margin-right: 10px' do %>
+     <%= submit_tag l(:export_label) %>
+   <% end %>
+</div>
+
+<div style="clear: both;">
+  <%if !@resources.empty? %>
+    <div class="autoscroll">
+      <table class="list resources">
+        <tr>
+          <% index_attributes.each do |index_attribute| %>
+            <% unless exclude_index_attributes.find { |eia| index_attribute =~ /#{eia}/ } %>
+              <th>
+                <%= l("label_#{index_attribute.is_a?(Array) ? index_attribute[0] : index_attribute}") %>
+              </th>
+            <% end %>
+          <% end %>
+        </tr>
+
+        <% @resources.each do |resource| %>
+          <tr>
+            <% index_attributes.each do |index_attribute| %>
+              <% attribute_name = index_attribute.is_a?(Array)   ? index_attribute[0] : index_attribute %>
+              <% attribute_values = index_attribute.is_a?(Array) ? index_attribute[1] : [] %>
+
+              <% unless exclude_index_attributes.select { |eia| attribute_name =~ /#{eia}/ }.first %>
+                <td>
+                  <%= format_field(resource.send(attribute_name), attribute_values) %>
+                </td>
+              <% end %>
+            <% end %>
+
+
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <%= paginate @resources %>
+
+    <br />
+  <% else %>
+    <h3> <%= l("no_#{snake_case_model_name}_message")%> </h1>
+  <% end %>
+</div>
+<%= link_to l(:button_back), :controller => 'escalation', :action => 'index' %>

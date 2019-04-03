@@ -1,0 +1,108 @@
+<ConsultarNfseResposta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.abrasf.org.br/nfse">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="NFSe201500000000064">
+               <Numero>201500000000064</Numero>
+               <CodigoVerificacao>I5LC-C6B6</CodigoVerificacao>
+               <DataEmissao>2015-09-18T14:22:51</DataEmissao>
+               <NaturezaOperacao>1</NaturezaOperacao>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivadorCultural>2</IncentivadorCultural>
+               <Competencia>2015-09-01T00:00:00</Competencia>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>51778.3400</ValorServicos>
+                     <IssRetido>2</IssRetido>
+                     <ValorIss>1035.5700</ValorIss>
+                     <BaseCalculo>51778.3400</BaseCalculo>
+                     <Aliquota>0.020000</Aliquota>
+                     <ValorLiquidoNfse>51778.3400</ValorLiquidoNfse>
+                  </Valores>
+                  <ItemListaServico>1104</ItemListaServico>
+                  <CodigoCnae>5211799</CodigoCnae>
+                  <CodigoTributacaoMunicipio>1104</CodigoTributacaoMunicipio>
+                  <Discriminacao>3914 TONS - 4º RECAP - DESCARGA/REMOÇAO E EMPILHAMENTO PARA ARMAZENAGEM, ESTADIA LIVRE (30 DIAS) / CARREGAMENTO
+DE CAMINHÕES E/OU VAGÕES, EMISSÃO DE RELATÓRIO DE PESAGEM - R$5,10 POR TON - R$19.961,40
+
+193.075,04 TONS - 4º RECAP - ARMAZENAGEM APÓS PERIODO DE 30 DIAS TONELADA MEDIA ARMAZENADA DIA IGUAL A 15 MIL
+TONELADAS - R$0,07 POR TONELADA - R$13.515,25
+
+4º RECAP - LOCAÇÃO DE GALPÃO - 100M X 25M ESTOCAGEM DE INSUMOS - R$ 18.301,69
+_____________________________________________
+PEDIDO: 4502118662/00010
+FRS: 1001205707
+CONTA ITAÚ PARA DEPOSITO
+AG.: 5605 / C.C.: 43400-9</Discriminacao>
+                  <CodigoMunicipio>3153608</CodigoMunicipio>
+               </Servico>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <Cnpj>21511663000140</Cnpj>
+                     <InscricaoMunicipal>4546</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>MULTIMODAL TERMINAL DE CARGAS PRUDENTE LTDA</RazaoSocial>
+                  <NomeFantasia>MULTIMODAL TERMINAL DE CARGAS PRUDENTE LTDA</NomeFantasia>
+                  <Endereco>
+                     <Endereco>RUA JOÃO HENRIQUE PEREIRA</Endereco>
+                     <Numero>850</Numero>
+                     <Bairro>Centro</Bairro>
+                     <CodigoMunicipio>3153608</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>35715000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3133620883</Telefone>
+                     <Email>contato@barcelos.cnt.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <TomadorServico>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510003412</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>3170241615704</InscricaoMunicipal>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>COMPANHIA VALE DO RIO DOCE</RazaoSocial>
+                  <Endereco>
+                     <Endereco>FAZENDA RIO DE PEIXE</Endereco>
+                     <Numero>S/N</Numero>
+                     <Bairro>ZONA RURAL</Bairro>
+                     <CodigoMunicipio>3144805</CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3132155333</Telefone>
+                     <Email></Email>
+                  </Contato>
+               </TomadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3153608</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+            </InfNfse>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+               <SignedInfo>
+                  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                  <Reference URI="#NFSe201500000000064">
+                     <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                     </Transforms>
+                     <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                     <DigestValue>dRd6hLjvulMx2ZoLPIvh/CD+958=</DigestValue>
+                  </Reference>
+               </SignedInfo>
+               <SignatureValue>MFSlDTEJHJFtkfUkdyCbhjKSGxiFzw6cO2VV69Q3BBgVPkQIpp08kz0WQFNPxA4ug2WPNR8Q9pEYu5HyLvoKxjE1OGcAcY8WvRtAtVty+BoVzVnYZyIRUiwXB9882HB5VtqzZ9Z+NeXlqaGvhaIlJcqOXLxf+z1xsFCgKjn6jGZqEx+9IPCIGQ83AkKyVrc39f2s2VuszWL9XA5MSd/+VDu4VBVoWGUFUsNgSjYPxjfySPsZx7s3s0WA031+AC/xHMc5GZsY9NzkRK03yiu70PsQqoMUfLH9DCxAREuRIPPvV1YbBIo11hlFMuQSznEa0VpSoV4hGwr4PKvYX+EC7Q==</SignatureValue>
+               <KeyInfo>
+                  <X509Data>
+                     <X509Certificate>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</X509Certificate>
+                  </X509Data>
+               </KeyInfo>
+            </Signature>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarNfseResposta>

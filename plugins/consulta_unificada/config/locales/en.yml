@@ -1,0 +1,25 @@
+# English strings go here for Rails i18n
+en:
+  label_nf_statuses: Invoice Statuses
+  link_to_nf: Search invoice
+  link_to_deposito: Search deposit
+  link_to_edit: Edit
+
+  cnpj_cpf_field: CNPJ/CPF
+  invoice_number_field: Invoice number
+
+  status_creation_sucess_message: Status sucessfully created.
+  status_update_sucess_message: Status sucessfully edited.
+
+  warning_message_label: Warning message
+  id_label: ID
+  name_id_label: Name ID
+  invoice_field_label: Invoice field
+  system_url_label: Unified Invoice Search system's URL
+
+  edit_status_header: Edit Status
+  invoice_status_list_header: Invoice Status List
+  new_status_header: New Status
+
+  invoice_status_caption: Invoice Status
+  prohibited_message: prohibited this configuration from being saved

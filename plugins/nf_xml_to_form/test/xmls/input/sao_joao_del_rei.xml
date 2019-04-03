@@ -1,0 +1,51 @@
+<ConsultarNfseResposta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd">
+	<ListaNfse>
+		<CompNfse>
+			<Nfse versao="2.02">
+					<InfNfse>
+						<Numero>201500000000028</Numero>
+						
+			<CodigoVerificacao>9E97-FD11</CodigoVerificacao><DataEmissao>2015-10-01T19:18:22</DataEmissao><ValoresNfse>
+					<BaseCalculo>10260.00</BaseCalculo>
+					<Aliquota>5.00</Aliquota>
+					<ValorIss>513.00</ValorIss>
+					<ValorLiquidoNfse>9747.00</ValorLiquidoNfse>			
+				</ValoresNfse><ValorCredito>0.00</ValorCredito>
+				<PrestadorServico>
+					<IdentificacaoPrestador><CpfCnpj><Cnpj>07835189000181</Cnpj></CpfCnpj><InscricaoMunicipal>0204585664</InscricaoMunicipal></IdentificacaoPrestador>
+					<RazaoSocial>ZAMPIERI &amp; FERREIRA JARDINAGEM LTDA - ME</RazaoSocial><Endereco><Endereco>QUINTINO BOCAIUVA</Endereco><Numero>242</Numero><Bairro>CENTRO</Bairro><CodigoMunicipio>3162500</CodigoMunicipio><Uf>MG</Uf><CodigoPais>1058</CodigoPais><Cep>36307302</Cep>
+					</Endereco>
+					<Contato>
+			<Email>ZEFEJARDINAGEM@MGCONECTA.COM.BR</Email></Contato>
+				</PrestadorServico>
+				<OrgaoGerador>
+					<CodigoMunicipio>3162500</CodigoMunicipio>
+					<Uf>MG</Uf>
+				</OrgaoGerador>
+				
+				<DeclaracaoPrestacaoServico>
+					<InfDeclaracaoPrestacaoServico><Competencia>2015-10-01</Competencia>
+					<Servico>
+						<Valores>
+							<ValorServicos>10260.00</ValorServicos>
+							<ValorDeducoes>0.00</ValorDeducoes>
+							<ValorPis>0.00</ValorPis>
+							<ValorCofins>0.00</ValorCofins>
+							<ValorInss>0.00</ValorInss>
+							<ValorIr>0.00</ValorIr>
+							<ValorCsll>0.00</ValorCsll>
+							<OutrasRetencoes>0</OutrasRetencoes>
+							<ValorIss>513.00</ValorIss>
+							<Aliquota>5.00</Aliquota>
+							<DescontoIncondicionado>0.00</DescontoIncondicionado>
+							<DescontoCondicionado>0.00</DescontoCondicionado>
+						</Valores><IssRetido>1</IssRetido><ResponsavelRetencao>1</ResponsavelRetencao><ItemListaServico>0705</ItemListaServico><CodigoCnae>4120400</CodigoCnae><CodigoTributacaoMunicipio>9570</CodigoTributacaoMunicipio><Discriminacao>Servi&#xE7;os de drenagem e infraestrutura de Mina - R$ 11.866,50
+CT 4600014340
+Pedido 4502143980
+FRS 1001220190
+Valor R$ 10.260,00</Discriminacao><CodigoMunicipio>3118304</CodigoMunicipio><ExigibilidadeISS>1</ExigibilidadeISS>				
+				</Servico>
+				<Prestador><CpfCnpj><Cnpj>07835189000181</Cnpj></CpfCnpj><InscricaoMunicipal>0204585664</InscricaoMunicipal></Prestador><Tomador><IdentificacaoTomador><CpfCnpj><Cnpj>15144306007959</Cnpj></CpfCnpj></IdentificacaoTomador><RazaoSocial>VALE MANGANES S/A</RazaoSocial><Endereco><Endereco>RUA DUQUE DE CAXIAS</Endereco><Bairro>MORRO DA MINA</Bairro><CodigoMunicipio>3118304</CodigoMunicipio><Uf>MG</Uf><CodigoPais>1058</CodigoPais><Cep>36400000</Cep></Endereco><Contato><Telefone>3137694350</Telefone></Contato></Tomador><OptanteSimplesNacional>1</OptanteSimplesNacional><IncentivoFiscal>2</IncentivoFiscal>
+			
+				</InfDeclaracaoPrestacaoServico></DeclaracaoPrestacaoServico>								
+				</InfNfse></Nfse></CompNfse></ListaNfse></ConsultarNfseResposta>

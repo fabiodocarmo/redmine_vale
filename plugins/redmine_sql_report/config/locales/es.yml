@@ -1,0 +1,21 @@
+es:
+  sql_reports: 'Informes'
+  label_sql_reports: 'Informes SQL'
+
+  report_create_sucess_message: Informe creado con éxito
+  report_edit_sucess_message: Informe editado con éxito
+  generate_label: Generar
+  sql_label: SQL
+  id_label: id
+  report_label: Informe
+
+  report_edit_header: Editar Informe
+  report_list_header: Lista de Informes
+  report_new_header: Nuevo Informe
+  report_detail_header: Detalle del Informe
+
+  link_to_new_report: Nuevo Informe
+
+  delete_access_confirmation_message: ¿Está seguro de que quiere eliminar este acceso?
+  no_aproval_register_message: No hay aprobaciónes registradas en el sistema
+  prohibited_message: impidieron que se guarde esta configuración

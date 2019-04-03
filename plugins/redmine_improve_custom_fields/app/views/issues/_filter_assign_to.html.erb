@@ -1,0 +1,53 @@
+
+<% groups = @issue.assignable_users.select { |element| element.is_a? Group } %>
+<% if groups.any? %>
+  <div id="assigned_to_id_filters" style="display:none">
+    <div class="filter">
+      <%= label_tag :group_filter %>
+      <%= select_tag :group_filter, options_from_collection_for_select(groups, 'id', 'lastname'), id: :group_filter %>
+    </div>
+    <div class="filter">
+      <%= label_tag :assigned_to_filter %>
+      <%= select_tag :assigned_to_filter, options_from_collection_for_select(@issue.assignable_users.reject { |element| element.is_a? Group }.select { |element| element.in? groups.first.users }, 'id', 'name'), id: :assigned_to_filter, include_blank: true %>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var groups = <%= raw groups.reduce({}) { |acc, group| acc[group.id] = group.users.map { |u| {name: u.name, id: u.id} }; acc }.to_json %>;
+
+  $("#group_filter").change(function() {
+    $('#assigned_to_filter').empty();
+    $('#assigned_to_filter').append($('<option>').text(" ").attr('value', "0"));
+    $.each(groups[this.value], function(i, value) {
+      $('#assigned_to_filter').append($('<option>').text(value['name']).attr('value', value['id']));
+    });
+
+    $('#assigned_to_filter').trigger("chosen:updated");
+  });
+
+  $("#assigned_to_id_filters").dialog({
+    title: "<%= t('filter') %>",
+    resizable: false,
+    width: 600,
+    height: 300,
+    modal: true,
+    autoOpen: false,
+    buttons: {
+      "Filtrar": function() {
+        if ($('#assigned_to_filter').val() != "" && $('#assigned_to_filter').val() != null) {
+          $("#issue_assigned_to_id").val($('#assigned_to_filter').val());
+        } else {
+          $("#issue_assigned_to_id").val($('#group_filter').val());
+        }
+        $('#issue_assigned_to_id').trigger("chosen:updated");
+        $( this ).dialog( "close" );
+      },
+      "Cancelar": function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  });
+  $("#filter-assing-to-icon").on('click', function() {
+    $("#assigned_to_id_filters").dialog("open");
+  })
+  </script>
+<% end %>

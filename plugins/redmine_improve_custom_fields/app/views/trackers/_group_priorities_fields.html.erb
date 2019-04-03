@@ -1,0 +1,13 @@
+<div class="nested-fields">
+  <div class="field">
+    <label> <b><%= t('group_priority.author') %>: </b></label><br />
+    <%= f.collection_select :author_id, Group.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('group_priority.enumeration_id') %>: </b></label><br />
+    <%= f.collection_select :enumeration_id, IssuePriority.all, :id, :name %><br />
+  </div>
+
+  <%= link_to_remove_association "remove_group_priority", f %>
+</div>

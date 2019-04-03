@@ -1,0 +1,18 @@
+<table>
+  <tbody>
+    <tr>
+      <th>Status Aguardando Aprovação:</th>
+      <td>
+        <%= select_tag 'settings[waiting_approval_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['waiting_approval_status']), include_blank: '' %>
+      </td>
+    </tr>
+    <tr>
+      <th>Status Aprovado:</th>
+      <td>
+        <%= select_tag 'settings[approval_status]',
+        options_from_collection_for_select(IssueStatus.all, 'id', 'name', settings['approval_status']), include_blank: '' %>
+      </td>
+    </tr>
+  </tbody>
+</table>

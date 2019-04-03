@@ -1,0 +1,4 @@
+gem 'cocoon'
+gem 'cruj_cruj_cruj', '0.0.15'
+gem 'httparty', '0.13.5'
+gem 'mechanize'

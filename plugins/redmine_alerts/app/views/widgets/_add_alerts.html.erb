@@ -1,0 +1,52 @@
+<%= javascript_include_tag "detectie.js", plugin: 'redmine_alerts' %>
+<%= javascript_include_tag "sweetalert2.min.js", plugin: 'redmine_alerts' %>
+<!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+<%= stylesheet_link_tag "sweetalert2.css", plugin: 'redmine_alerts' %>
+
+
+
+<% if @issue.id %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#issue-form').submit(function(e) {
+        <% database_issue = Issue.find(@issue.id) %>
+        <% if (Setting.plugin_redmine_alerts[:redmine_alerts_trackers].present? && (@issue.try(:tracker).id.to_s.in? Setting.plugin_redmine_alerts[:redmine_alerts_trackers]) ) && (Setting.plugin_redmine_alerts[:redmine_alerts_projects].present? && (@issue.try(:project).id.to_s.in? Setting.plugin_redmine_alerts[:redmine_alerts_projects]) ) && (Setting.plugin_redmine_alerts[:redmine_alerts_roles] && User.current.roles_for_project(@issue.try(:project)).any? {|role| role.id.to_s.in? Setting.plugin_redmine_alerts[:redmine_alerts_roles] }) %>
+          if ($("#issue_status_id").val() !== undefined && $("#issue_status_id").val() === "<%= database_issue.status.try(:id).to_s %>") {
+            var form = this;
+            if (detectIE() >= 11 || detectIE() == false){
+              e.preventDefault ? e.preventDefault() : e.returnValue = false;
+              swal({
+                title: "<%= t("text_are_you_sure") %>",
+                text: "<%= t("alert_status_did_not_change") %>",
+                type: "warning",
+                showCancelButton: true,
+                allowOutsideClick: true,
+                showCloseButton: false,
+                allowEscapeKey: false,
+                confirmButtonColor: "#46ce63",
+                confirmButtonText: "<%= t("text_confirm") %>",
+                cancelButtonText: "<%= t("text_cancel") %>",
+                }).then(
+                    function(result) {
+                      form.submit();
+                    }, function(dismiss) {
+                      return false;
+                    });
+            }else{
+              if (confirm("<%= t("alert_status_did_not_change") %>")){
+                window.onbeforeunload = null;
+              	form.submit();
+              }else{
+              	return false;
+              }
+            }
+          }else{
+            this.submit();
+          }
+        <% end %>
+      });
+    });
+  </script>
+<% end %>

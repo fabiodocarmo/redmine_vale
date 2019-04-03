@@ -1,0 +1,236 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe Id="NFe53151007495715000101550010000000751030640052" versao="3.10">
+         <ide>
+            <cUF>53</cUF>
+            <cNF>03064005</cNF>
+            <natOp>Prestação de Serviço</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>75</nNF>
+            <dhEmi>2015-10-06T09:28:00-03:00</dhEmi>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>5300108</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>2</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>1</indFinal>
+            <indPres>0</indPres>
+            <procEmi>3</procEmi>
+            <verProc>3.10.66</verProc>
+         </ide>
+         <emit>
+            <CNPJ>07495715000101</CNPJ>
+            <xNome>COMTEXTO TREINAMENTO E CONSULTORIA LTDA.</xNome>
+            <xFant>COMTEXTO CONSULTORIA</xFant>
+            <enderEmit>
+               <xLgr>Quadra SCLN 113 Bloco B</xLgr>
+               <nro>00</nro>
+               <xCpl>Sala 214</xCpl>
+               <xBairro>Asa Norte</xBairro>
+               <cMun>5300108</cMun>
+               <xMun>Brasilia</xMun>
+               <UF>DF</UF>
+               <CEP>70763520</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>6130415566</fone>
+            </enderEmit>
+            <IE>0764819300196</IE>
+            <IM>0764819300196</IM>
+            <CNAE>8299799</CNAE>
+            <CRT>3</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510000154</CNPJ>
+            <xNome>VALE S/A</xNome>
+            <enderDest>
+               <xLgr>Avenida Graça Aranha</xLgr>
+               <nro>26</nro>
+               <xCpl>Edifício Barão de Maua</xCpl>
+               <xBairro>Centro</xBairro>
+               <cMun>3304557</cMun>
+               <xMun>Rio de Janeiro</xMun>
+               <UF>RJ</UF>
+               <CEP>20030001</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>80495072</IE>
+            <email>nfe.servico@vale.com</email>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>802</cProd>
+               <cEAN></cEAN>
+               <xProd>Prestação de serviços de orientação antropológica e indigenista</xProd>
+               <NCM>99999999</NCM>
+               <CFOP>6933</CFOP>
+               <uCom>UN</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>50132.5000000000</vUnCom>
+               <vProd>50132.50</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>UN</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>50132.5000000000</vUnTrib>
+               <indTot>1</indTot>
+            </prod>
+            <imposto>
+               <IPI>
+                  <cEnq>053</cEnq>
+                  <IPINT>
+                     <CST>53</CST>
+                  </IPINT>
+               </IPI>
+               <ISSQN>
+                  <vBC>50132.50</vBC>
+                  <vAliq>5.0000</vAliq>
+                  <vISSQN>2506.63</vISSQN>
+                  <cMunFG>5300108</cMunFG>
+                  <cListServ>08.02</cListServ>
+                  <indISS>1</indISS>
+                  <indIncentivo>2</indIncentivo>
+               </ISSQN>
+               <PIS>
+                  <PISAliq>
+                     <CST>01</CST>
+                     <vBC>50132.50</vBC>
+                     <pPIS>0.6500</pPIS>
+                     <vPIS>325.86</vPIS>
+                  </PISAliq>
+               </PIS>
+               <COFINS>
+                  <COFINSAliq>
+                     <CST>01</CST>
+                     <vBC>50132.50</vBC>
+                     <pCOFINS>3.0000</pCOFINS>
+                     <vCOFINS>1503.98</vCOFINS>
+                  </COFINSAliq>
+               </COFINS>
+            </imposto>
+            <infAdProd>No período de 21 de agosto a 20 de setembro de 2015 - mês de competência 08/2015, referente ao contrato SAP nº 5900030053 (ACA 1844176), incluindo horas e serviços adicionais. Pedido nº 4502151138/00010, Liberação FRS nº 1001226773 e RF nº 6200288549. Serviços realizados em 5300108 - Brasília, DF.</infAdProd>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>0.00</vBC>
+               <vICMS>0.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>0.00</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.00</vPIS>
+               <vCOFINS>0.00</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>50132.50</vNF>
+               <vTotTrib>0.00</vTotTrib>
+            </ICMSTot>
+            <ISSQNtot>
+               <vServ>50132.50</vServ>
+               <vBC>50132.50</vBC>
+               <vISS>2506.63</vISS>
+               <vPIS>325.86</vPIS>
+               <vCOFINS>1503.98</vCOFINS>
+               <dCompet>2015-09-20</dCompet>
+               <cRegTrib>1</cRegTrib>
+            </ISSQNtot>
+            <retTrib>
+               <vRetPIS>325.86</vRetPIS>
+               <vRetCOFINS>1503.98</vRetCOFINS>
+               <vRetCSLL>401.33</vRetCSLL>
+               <vBCIRRF>50132.50</vBCIRRF>
+               <vIRRF>751.99</vIRRF>
+            </retTrib>
+         </total>
+         <transp>
+            <modFrete>9</modFrete>
+         </transp>
+         <infAdic>
+            <infAdFisco>Prestação de serviço tributada pelo ISSQN; Retenções: PIS 0,65% R$ 325,86, COFINS 3% R$ 1.503,98, CSLL 1% R$ 501,33 e IRRF 1,5% R$ 751399; Percentual aproximado dos tributos: Federal 13,45%, Estadual 0,00%, Municipal 4,09% - FONTE: IBPT</infAdFisco>
+         </infAdic>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe53151007495715000101550010000000751030640052">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>xeGqGvjvt3LJ8eHlwOlRuslVjqg=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>ol7VtoTyjArgLywcI5wGqnMxgKe9fVfKN9I097BPbyThaJxeo89g5pa/K5J4/zEwULVm/hXXWXQq
+TNLsnIJTNBeOTp8hCEaEbVabJnLYJ0i9NGdv6hvC/SxzLpmTJI9I0M+9fgdo6qgVnq5t63tZfsrG
+VQXma4Wc4S2fdIB1ey2QE4HV0RqJf6VkZqno/a2ZutC3r9YZPliip48o0vzvNopVPLy9ZVBeFi2l
+svg07FY1oQoUh+38r37S7y1VVzaLs3QgVZW+Vd8/K+J+UwwVzN0JieiT4Ns75aVrN1F7V5YA3YZt
+p6FyHS0gsLRakBQzKixpU398xFLx4HyNfrlhzA==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIIWTCCBkGgAwIBAgIQTko8u5icswnwmZyPBsKeRTANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRwwGgYDVQQDExNBQyBDZXJ0aXNpZ24gUkZCIEc0MB4X
+DTEzMDIyMjAwMDAwMFoXDTE2MDIyMTIzNTk1OVowgfoxCzAJBgNVBAYTAkJSMRMwEQYDVQQKFApJ
+Q1AtQnJhc2lsMQswCQYDVQQIEwJTUDETMBEGA1UEBxQKUElSQUNJQ0FCQTE2MDQGA1UECxQtU2Vj
+cmV0YXJpYSBkYSBSZWNlaXRhIEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRYwFAYDVQQLFA1SRkIg
+ZS1DTlBKIEEzMSAwHgYDVQQLFBdBdXRlbnRpY2FkbyBwb3IgQVIgTWluYzFCMEAGA1UEAxM5Q09N
+VEVYVE8gVFJFSU5BTUVOVE8gRSBDT05TVUxUT1JJQSBMVERBIE1FOjA3NDk1NzE1MDAwMTAxMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwd2o7MTCI5gETxUawPKb3f3j6yry6tjzMlQ0
+CiOHgzl2Tum6BCUDHyhBgYsknsnmAgMz3V53rSOnFVJvhvs9ed9N1hJMefrH6hm8tH/EQCZJ4unk
++VN3TRX9W6NuUKPnrjXgbF2YUzEcSN9jsVZwG9XxoxklXsSrzKOLb8jRdTJ0usxwc76e8lqlDC15
+oVsLkshcJUYjdkjMlhRvWj8/5q8m899uiEuVTSTCOqa4AFVgde9kdI96pSuSgzWE8qn8noESE0eH
+1n1BQeDU1xPl/KseAPdI0Y1iAM2cJ9is2wCyhLJEHZ0diauHfIu7q244D5+9eKw/CqkRBMtMa1XI
+3QIDAQABo4IDWjCCA1Ywgb8GA1UdEQSBtzCBtKA4BgVgTAEDBKAvBC0xMDA1MTk3MDE1MTg0MTEx
+ODU5MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDCgKQYFYEwBAwKgIAQeQ0FTU0lPIE5PUk9OSEEg
+SU5HTEVTIERFIFNPVVNBoBkGBWBMAQMDoBAEDjA3NDk1NzE1MDAwMTAxoBcGBWBMAQMHoA4EDDAw
+MDAwMDAwMDAwMIEZY2Fzc2lvY2FtYXJhZGFAdW9sLmNvbS5icjAJBgNVHRMEAjAAMB8GA1UdIwQY
+MBaAFC6R6tZt5bJZgtw4hSl2NBZWPNA+MA4GA1UdDwEB/wQEAwIF4DB/BgNVHSAEeDB2MHQGBmBM
+AQIDBjBqMGgGCCsGAQUFBwIBFlxodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3Jl
+cG9zaXRvcmlvL2RwYy9BQ19DZXJ0aXNpZ25fUkZCL0RQQ19BQ19DZXJ0aXNpZ25fUkZCLnBkZjCC
+ARYGA1UdHwSCAQ0wggEJMFegVaBThlFodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJy
+L3JlcG9zaXRvcmlvL2xjci9BQ0NlcnRpc2lnblJGQkc0L0xhdGVzdENSTC5jcmwwVqBUoFKGUGh0
+dHA6Ly9pY3AtYnJhc2lsLm91dHJhbGNyLmNvbS5ici9yZXBvc2l0b3Jpby9sY3IvQUNDZXJ0aXNp
+Z25SRkJHNC9MYXRlc3RDUkwuY3JsMFagVKBShlBodHRwOi8vcmVwb3NpdG9yaW8uaWNwYnJhc2ls
+Lmdvdi5ici9sY3IvQ2VydGlzaWduL0FDQ2VydGlzaWduUkZCRzQvTGF0ZXN0Q1JMLmNybDAdBgNV
+HSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwgZsGCCsGAQUFBwEBBIGOMIGLMF8GCCsGAQUFBzAC
+hlNodHRwOi8vaWNwLWJyYXNpbC5jZXJ0aXNpZ24uY29tLmJyL3JlcG9zaXRvcmlvL2NlcnRpZmlj
+YWRvcy9BQ19DZXJ0aXNpZ25fUkZCX0c0LnA3YzAoBggrBgEFBQcwAYYcaHR0cDovL29jc3AuY2Vy
+dGlzaWduLmNvbS5icjANBgkqhkiG9w0BAQsFAAOCAgEAO0Ya6f0qE6rwTtPVy1zMHbJwQdnGySUd
+2IPxN3yqVJw3JKFGNPtKQJgief9RAIh9q0VUc4yFKu3FwLOSQ1Gfx3DcJNQHtNTqti5ANAvZbv3S
+jK++g6J5NJEYUjwIHnhapdOpN7flbV3QJ047RdNS8xI3hfRnS1g/5xyFbaH9eZ3ccmGxo8irxn3c
+i+1xQUA5U+EebWqdpIAGwTJ+t8p8vYpQLXyWgvA1mNzGO/b0MYwdJXvSoJ4wO8v9Pv197kZ4pnwl
+PEBCOHeK3xkAkKyENU4t2bn5jnF7W5sNgURSGhTwZscHZ8MA1an0NNkDaN3NJHHIaBYFvnqHMyNX
+Qa7JRdooITBe4M+SNDIiuVrI3KIN9XlArjlY449ihMNMrELzKc03Ds4zeJBc7MucwHhsbl2M8qQK
+iYkEeUT+l9gRYMTuFwM0BqXW2Asp19eHiyIeHpebSXzFI65oeqF3jAPza3YY97GQ1v2Dzwx9sYck
+87ndX0P6EPhzeEf9qSEMv2LV/GX/YzeoFaEvkU72byZjn04G/OeyYFwPxeqjWU6d1UdjnKIXkYkz
+IPx7Qj37vrL9FiVSQZxrQMTbJX6qy79daT0m3lesIA5T2jsrHyqA82u741yAEliwPxk/8/g+MDQU
+Bli7EWs7R8pFCPssRrIWwGSGG/mXOcmY2ESeBHzFfIY=</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe versao="3.10">
+      <infProt>
+         <tpAmb>1</tpAmb>
+         <verAplic>SVRS201507311123</verAplic>
+         <chNFe>53151007495715000101550010000000751030640052</chNFe>
+         <dhRecbto>2015-10-06T13:05:14-03:00</dhRecbto>
+         <nProt>353150033022177</nProt>
+         <digVal>xeGqGvjvt3LJ8eHlwOlRuslVjqg=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

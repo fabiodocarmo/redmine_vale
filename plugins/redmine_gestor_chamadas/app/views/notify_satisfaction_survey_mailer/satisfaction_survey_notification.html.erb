@@ -1,0 +1,9 @@
+<p>
+  <%= l(:dear_text) %>
+</p>
+
+<p><%=
+I18n.t('satisfaction_survey_reminder_message',
+  link_to: link_to(l(:satisfaction_survey), Setting.plugin_redmine_gestor_chamadas[:url_satisfaction_survey] + issue.id),
+  days_count: Setting.plugin_redmine_gestor_chamadas[:mail_satisfaction_survey_after_days]).html_safe
+  %></p>

@@ -1,0 +1,48 @@
+<%= form_for(satisfaction_question) do |f| %>
+  <% if satisfaction_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(satisfaction_question.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+
+      <ul>
+      <% satisfaction_question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:label_question) %>: </b></label><br />
+    <%= f.text_field :question, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_question_en) %>: </b></label><br />
+    <%= f.text_field :question_en, class: 'string_cf'%><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_question_es) %>: </b></label><br />
+    <%= f.text_field :question_es, class: 'string_cf'%><br /><br />
+  </div>
+  <div class="field">
+    <label> <b><%= l(:label_reopen_enabled) %>: </b></label><br />
+    <%= f.check_box :reopen_enabled %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+
+
+<% end %>
+
+<script>
+
+</script>

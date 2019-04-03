@@ -1,0 +1,76 @@
+.redimine-widget {
+  padding: 15px;
+  width: 80%;
+}
+
+#redmine-dashboard-refresh-filters-button {
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+#redmine-dashboard-filters {
+  width: 20%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  float: left;
+  padding: 15px;
+  background: #FFF;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a#redmine-dashboard-refresh-filters-button {
+  padding: 10px;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+  background: #fc3;
+  color: #000;
+
+  margin: auto;
+  font-weight: bold;
+}
+
+.redmine_widget_filter {
+  margin-bottom: 20px;
+}
+
+a#redmine-dashboard-refresh-filters-button:hover {
+  text-decoration: none;
+}
+
+.redmine_widget_filter label {
+  font-weight: bold;
+}
+
+.redmine_widget_filter input, select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.redmine_widget_filter input.hasDatepicker {
+  width: calc(100% - 24px);
+}
+
+.redmine_widget_filter img.ui-datepicker-trigger {
+  margin-bottom: 10px;
+}
+
+div#redmine-widget-dashboard {
+  width: 75%;
+  float: right;
+}
+
+div#redmine-widget-dashboard canvas {
+  width: 100%;
+}
+
+@media (max-width: 899px) {
+  #redmine-dashboard-filters, div#redmine-widget-dashboard , .redimine-widget {
+    width: 100%;
+    display: block;
+  }
+}

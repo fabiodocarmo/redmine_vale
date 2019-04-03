@@ -1,0 +1,2 @@
+class RanfsBusinessRule < BusinessRule
+end

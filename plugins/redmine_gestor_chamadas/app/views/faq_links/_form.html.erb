@@ -1,0 +1,39 @@
+<%= form_for(@faq_link) do |f| %>
+  <% if @faq_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@faq_link.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+
+      <ul>
+      <% @faq_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label> <b><%= l(:label_tracker) %>: </b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all, :id, :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= l(:label_link) %>: </b></label><br />
+    <%= f.text_field :faq_link %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+
+
+<% end %>
+
+<script>
+
+</script>

@@ -1,0 +1,6 @@
+<%= render 'simple', widget: widget, chart_type: REDMINE_DASHBOARD_PLUGINS_CONFIG[widget.name_id][:chart_type], options: {
+  column: {
+    pointPadding: 0.2,
+    borderWidth: 0
+  }
+}.to_json %>

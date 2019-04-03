@@ -1,0 +1,19 @@
+pt-BR:
+  status_change:
+    settings_label: 'StatusChangeJob settings'
+    hour_label: 'Hora:'
+    minutes_label: 'Minuto:'
+    days_label: 'Dias:'
+    old_status_id_label: 'ID do status original:'
+    status_id_label: 'Novo ID do status:'
+
+  order_type:
+    settings_label: 'RetentionJob settings'
+    missing_order_type: 'Valor Padrão'
+    zpr_retention_status: 'Situação da retenção por ZPR'
+    total_value: 'Valor Total da Nota'
+    iss_base_value: 'Valor da Base ISS'
+    inss_base_value: 'Valor da Base INSS'
+    cf_divergences: 'Campo das divergências'
+    divergences: 'Divergências selecionadas'
+

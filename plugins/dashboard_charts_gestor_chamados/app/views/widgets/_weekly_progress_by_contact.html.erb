@@ -1,0 +1,6 @@
+<%=select_tag "suppliers", options_from_collection_for_select(Contact.where(is_company:true), "id", "first_name"), include_blank: true%>
+<hr style="margin-top: 20px;margin-bottom: 20px;">
+
+<h2> <%= t('weekly_progress_by_contact.title') %></h2>
+<canvas id="weekly_progress_by_contactChart" width="1000" height="400"></canvas>
+<div  id="weekly_progress_by_contact_legend" class='legend' style='float: right;' width='50'> </div>

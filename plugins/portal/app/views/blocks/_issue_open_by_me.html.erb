@@ -1,0 +1,29 @@
+<% issues = Issue.visible.
+      where(:author_id => User.current.id).
+      limit(5).
+      includes(:status, :project, :tracker).
+      references(:status, :project, :tracker).
+      order("#{Issue.table_name}.updated_on DESC") %>
+
+<% if issues.any? %>
+
+<div class="">
+  <h2>
+    <%= link_to l(:label_reported_issues),
+          issues_path(:set_filter => 1, :status_id => '*', :author_id => 'me', :sort => 'updated_on:desc') %>
+    (<%= Issue.visible.where(:author_id => User.current.id).count %>)
+  </h2>
+  <div id="issues-index">
+    <% issues.each do |issue| %>
+      <div class="issue">
+        <div class="status">
+          <%= issue.status.name %>
+        </div>
+        <div class="subject">
+          <%= link_to issue.subject, issue_path(issue), class: "issue query #{issue.closed? ? 'closed' : ''}" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% end %>

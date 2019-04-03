@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  <% @issue.visible_custom_field_values.each do |value| %>
+    <% unless value.custom_field.mask.blank? %>
+      for (var i = 0; i < $(".cf_<%= value.custom_field.id %>.value").length; i++) {
+        if ($(".cf_<%= value.custom_field.id %>.value")[i].innerHTML !== "") {
+          $(".cf_<%= value.custom_field.id %>.value")[i].innerHTML = Inputmask.format($(".cf_<%= value.custom_field.id %>.value")[i].innerHTML, { alias: "<%= value.custom_field.mask %>"});
+        }
+      }
+    <% end %>
+  <% end %>
+</script>
+<% if Setting.plugin_redmine_improve_custom_fields[:hide_empty_fields] %>
+  <script type="text/javascript">
+  //função para eliminar campos vazios na visualização de tarefas
+  function hideEmptyFields() {
+    $('.attributes .attribute').each(function() {
+      var main = $(this);
+      main.toggle(main.children('.value:empty').length === 0);
+    });
+  }
+
+  $(document).ready(hideEmptyFields)
+  </script>
+<% end %>
+
+<%= content_for :header_tags do %>
+  <%= javascript_include_tag "inputmask", plugin: 'redmine_improve_custom_fields' %>
+  <%= javascript_include_tag "masks", plugin: 'redmine_improve_custom_fields' %>
+<% end %>

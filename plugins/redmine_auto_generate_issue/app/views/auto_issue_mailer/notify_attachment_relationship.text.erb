@@ -1,0 +1,3 @@
+<% @related_issues.each do |ri| %>
+  <%= "#{ri.tracker.name} ##{ri.id}: #{ri.subject}" %>
+<% end %>

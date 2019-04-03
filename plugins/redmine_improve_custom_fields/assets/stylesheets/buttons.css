@@ -1,0 +1,20 @@
+a.issue-status-button {
+  padding: 3px 10px 3px 10px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #169;
+  color: #FFF;
+}
+
+a.issue-status-button:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 899px) {
+  #content>.contextual a.issue-status-button {
+    background: #169;
+    color: #FFF;
+  }
+}

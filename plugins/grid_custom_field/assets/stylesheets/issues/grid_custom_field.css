@@ -1,0 +1,24 @@
+div[id^="grid_pop_up_"] .list{
+	overflow: auto !important;
+}
+
+div[id^="grid_pop_up_"] {
+	display: none;
+}
+
+div#grid_custom_field_show_tables {
+  overflow-x: auto;
+}
+
+button[id^="grid_custom_field_show_"]{
+	border: none;
+	background: none;
+}
+
+.ui-datepicker {
+	width: 20em;
+}
+
+form#issue-form input[type=submit] {
+	display: none;
+}

@@ -1,0 +1,49 @@
+<%= title l(:label_issue_new) %>
+
+<%= labelled_form_for @ticket, url: gestor_chamados_tickets_path, html: {id: 'issue-form', multipart: true} do |f| %>
+  <%= labelled_fields_for :issue, @ticket.issue do |fi| %>
+    <%= error_messages_for 'issue' %>
+    <%= hidden_field_tag 'copy_from', params[:copy_from] if params[:copy_from] %>
+
+    <div class="box tabular">
+      <%= f.fields_for :customer do |cf| %>
+        <p><%= cf.email_field :email, required: true %></p>
+        <p>
+          <label for="helpdesk_ticket[customer_attributes]_email"><%= l(:confirm_email_label) %><span class="required"> *</span></label>
+          <%= email_field_tag :email_confirmation, params[:email_confirmation], size: "30" %>
+        </p>
+        <p>
+          <small><%= l(:inform_valid_email_explanation_message) %></small>
+        </p>
+        <p>
+          <%= cf.text_field :first_name, required: true %>
+        </p>
+        <p>
+          <%= cf.text_field :last_name, required: true %>
+        </p>
+      <% end %>
+
+      <p>
+        <label for="copy_to"><%= l(:send_answer_copy_to_label)%></label>
+        <%= text_area_tag :copy_to, @copy_to %>
+        <br />
+        <small><%= l(:comma_separator_message)%></small>
+      </p>
+
+      <div id="all_attributes">
+        <%= render :partial => 'gestor_chamados_tickets/form', :locals => {:f => fi} %>
+      </div>
+    </div>
+
+    <!-- Cuidado ao alterar esse valor, modifica a lógica do controller. Pensar em uma maneira menos feia de fazer essa lógica -->
+    <div id="submit_form">
+      <%= submit_tag l(:button_submit),  name: 'submit' %>
+      <%= submit_tag l(:submit_with_new_issue_label), name: 'submit' %>
+    </div>
+
+  <% end %>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= robot_exclusion_tag %>
+<% end %>

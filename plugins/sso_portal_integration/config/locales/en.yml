@@ -1,0 +1,10 @@
+# English strings go here for Rails i18n
+en:
+  config_id_sso: Application ID on SSO Portal
+  disable_regular_login: Disable regular login
+  disable_edit_user: Disable user default fields/permissions edition
+  url_login_sso: SSO portal`s URL
+  url_validate_sso: SSO validate URL
+  error_authentication: An error occured when authenticating
+  app_id_fieldname_sso: Field App ID in SSO Portal
+  backurl_fieldname_sso: Field Backurl in SSO Portal

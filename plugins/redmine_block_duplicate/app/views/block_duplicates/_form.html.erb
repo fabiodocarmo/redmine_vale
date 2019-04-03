@@ -1,0 +1,191 @@
+<%= form_for(@block_duplicate) do |f| %>
+  <% if @block_duplicate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@block_duplicate.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+      <ul>
+      <% @block_duplicate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field">
+    <label> <b><%= l(:label_project) %>: </b></label><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %><br /><br />
+  </div> -->
+
+
+  <!-- <div class="field">
+    <label> <b><%= l(:label_tracker) %>: </b></label><br />
+    <%= f.collection_select :tracker_id, Tracker.all, :id, :name %><br /><br />
+  </div> -->
+
+  <%= content_for :header_tags do
+    javascript_include_tag 'select_list_move', plugin: 'redmine_block_duplicate'
+  end %>
+
+  <div class="field">
+  <p>
+  <table class="query-columns">
+    <tr>
+      <td style="padding-left:0">
+        <b><%= l(:label_tracker) %>: </b>
+        <br />
+        <% tracker_id = @block_duplicate.find_tracker_id %>
+
+        <%= select_tag 'tracker_id_available_columns',
+                       options_for_select((Tracker.sorted.all - tracker_id).map {|g| [ g.name, g.id ] }),
+                       :multiple => true, :size => 10, :style => "width:200px",
+                       :ondblclick => "moveOptions(this.form.tracker_id_available_columns, this.form.tracker_id_selected_columns);" %>
+      </td>
+      <td class="buttons">
+        <input type="button" value="&#8594;"
+               onclick="moveOptions(this.form.tracker_id_available_columns, this.form.tracker_id_selected_columns);" /><br />
+        <input type="button" value="&#8592;"
+               onclick="moveOptions(this.form.tracker_id_selected_columns, this.form.tracker_id_available_columns);" />
+      </td>
+      <td>
+        <br />
+        <%= f.collection_select :tracker_id, tracker_id, :id, :name, {}, id: 'tracker_id_selected_columns',
+                                multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.tracker_id_selected_columns, this.form.tracker_id_available_columns);" %>
+      </td>
+      <td class="buttons">
+        <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.tracker_id_selected_columns);" /><br />
+        <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.tracker_id_selected_columns);" /><br />
+        <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.tracker_id_selected_columns);" /><br />
+        <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.tracker_id_selected_columns);" />
+      </td>
+    </tr>
+  </table>
+  </p>
+  </div>
+
+  <div class="field">
+    <p>
+    <table class="query-columns">
+      <tr>
+        <td style="padding-left:0">
+          <b><%= l(:fields_to_consider_label) %>: </b>
+          <br />
+          <% custom_fields = @block_duplicate.find_custom_fields %>
+          <%= select_tag 'custom_fields_available_columns',
+                         options_for_select((IssueCustomField.sorted.all - custom_fields).map {|g| [ g.name, g.id ] }),
+                         :multiple => true, :size => 10, :style => "width:200px",
+                         :ondblclick => "moveOptions(this.form.custom_fields_available_columns, this.form.custom_fields_selected_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" value="&#8594;"
+                 onclick="moveOptions(this.form.custom_fields_available_columns, this.form.custom_fields_selected_columns);" /><br />
+          <input type="button" value="&#8592;"
+                 onclick="moveOptions(this.form.custom_fields_selected_columns, this.form.custom_fields_available_columns);" />
+        </td>
+        <td>
+          <br />
+          <%= f.collection_select :custom_fields, custom_fields, :id, :name, {}, id: 'custom_fields_selected_columns',
+                                  multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.custom_fields_selected_columns, this.form.custom_fields_available_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.custom_fields_selected_columns);" /><br />
+          <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.custom_fields_selected_columns);" /><br />
+          <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.custom_fields_selected_columns);" /><br />
+          <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.custom_fields_selected_columns);" />
+        </td>
+      </tr>
+    </table>
+    </p>
+  </div>
+
+
+    <div class="field">
+    <p>
+    <table class="query-columns">
+      <tr>
+        <td style="padding-left:0">
+          <b><%= l(:label_project) %>: </b>
+          <br />
+          <% project_id = @block_duplicate.find_project_id %>
+
+          <%= select_tag 'project_id_available_columns',
+                         options_for_select((Project.sorted.all - project_id).map {|g| [ g.name, g.id ] }),
+                         :multiple => true, :size => 10, :style => "width:200px",
+                         :ondblclick => "moveOptions(this.form.project_id_available_columns, this.form.project_id_selected_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" value="&#8594;"
+                 onclick="moveOptions(this.form.project_id_available_columns, this.form.project_id_selected_columns);" /><br />
+          <input type="button" value="&#8592;"
+                 onclick="moveOptions(this.form.project_id_selected_columns, this.form.project_id_available_columns);" />
+        </td>
+        <td>
+          <br />
+          <%= f.collection_select :project_id, project_id, :id, :name, {}, id: 'project_id_selected_columns',
+                                  multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.project_id_selected_columns, this.form.project_id_available_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.project_id_selected_columns);" /><br />
+          <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.project_id_selected_columns);" /><br />
+          <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.project_id_selected_columns);" /><br />
+          <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.project_id_selected_columns);" />
+        </td>
+      </tr>
+    </table>
+    </p>
+  </div>
+
+  <div class="field">
+    <p>
+    <table class="query-columns">
+      <tr>
+        <td style="padding-left:0">
+          <b><%= l(:statuses_to_consider_label) %>: </b>
+          <br />
+          <% statuses = @block_duplicate.find_statuses %>
+          <%= select_tag 'statuses_available_columns',
+                         options_for_select((IssueStatus.all.sorted - statuses).map {|g| [ g.name, g.id ] }),
+                         :multiple => true, :size => 10, :style => "width:200px",
+                         :ondblclick => "moveOptions(this.form.statuses_available_columns, this.form.statuses_selected_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" value="&#8594;"
+                 onclick="moveOptions(this.form.statuses_available_columns, this.form.statuses_selected_columns);" /><br />
+          <input type="button" value="&#8592;"
+                 onclick="moveOptions(this.form.statuses_selected_columns, this.form.statuses_available_columns);" />
+        </td>
+        <td>
+          <br />
+          <%= f.collection_select :statuses, statuses, :id, :name, {}, id: 'statuses_selected_columns',
+                                  multiple: true, size: 10, style: "width:200px", ondblclick: "moveOptions(this.form.statuses_selected_columns, this.form.statuses_available_columns);" %>
+        </td>
+        <td class="buttons">
+          <input type="button" id="Ihhh" value="&#8648;" onclick="moveOptionTop(this.form.statuses_selected_columns);" /><br />
+          <input type="button" value="&#8593;" onclick="moveOptionUp(this.form.statuses_selected_columns);" /><br />
+          <input type="button" value="&#8595;" onclick="moveOptionDown(this.form.statuses_selected_columns);" /><br />
+          <input type="button" value="&#8650;" onclick="moveOptionBottom(this.form.statuses_selected_columns);" />
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $('.edit_block_duplicate, .new_block_duplicate').attr('onsubmit',
+            'selectAllOptions("statuses_selected_columns"); selectAllOptions("custom_fields_selected_columns"); selectAllOptions("project_id_selected_columns"); selectAllOptions("tracker_id_selected_columns");');
+      });
+    </script>
+    </p>
+
+  </div>
+  <div class="field">
+    <label> <b><%= l(:label_duplicated_copies_enabled) %> </b></label><br />
+    <%= f.check_box :copy_flag %><br /><br />
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+<% end %>

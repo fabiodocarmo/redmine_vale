@@ -1,0 +1,36 @@
+.wrapper {
+  text-align: center;
+  margin: 200px auto 50px auto;
+}
+
+.burger {
+  height: 30px;
+  width: 33px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding-top: 10px;
+  display: block;
+  z-index: 101;
+}
+.burger .one,
+.burger .two,
+.burger .three {
+  margin-top: 3px;
+
+  background: #f58220; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f58220, #F6A027); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f58220, #F6A027); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f58220, #F6A027); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f58220, #F6A027); /* Standard syntax (must be last) */
+
+  width: 33px;
+  height: 4px;
+  position: absolute;
+  border-radius: 2px;
+}
+.burger .two {
+  margin-top: 13px;
+}
+.burger .three {
+  margin-top: 23px;
+}

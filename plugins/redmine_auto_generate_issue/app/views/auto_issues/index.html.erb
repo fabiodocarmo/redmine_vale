@@ -1,0 +1,15 @@
+<%= error_messages_for 'auto_issue' %>
+<h1><%= t('auto_issue_list') %></h1>
+
+<%= render 'cruj_cruj_cruj/filters' %>
+
+<br />
+<br />
+
+<div>
+  <div style="float: left;">
+    <%= link_to t('new_auto_issue'), new_auto_issue_path %>
+  </div>
+</div>
+
+<%= render 'cruj_cruj_cruj/list_table' %>

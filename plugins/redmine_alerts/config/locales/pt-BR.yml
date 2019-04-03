@@ -1,0 +1,10 @@
+pt-BR:
+  alert_status_did_not_change: "A situação do chamado não foi alterada. Deseja Continuar?"
+  field_alert_status_did_not_change: Alerta quando a situação não foi alterada
+  trackers_alerts: Alertas
+  text_confirm: Continuar
+  text_cancel: Cancelar
+  text_are_you_sure: "Aviso"
+  redmine_alerts_projects_label: 'Projetos Habilitados'
+  redmine_alerts_trackers_label: 'Chamados Habilitados'
+  redmine_alerts_roles_label: 'Papeis Habilitados'

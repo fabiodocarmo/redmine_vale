@@ -1,0 +1,30 @@
+<% custom_field_values = @issue.editable_custom_field_values %>
+<% i = 0 %>
+<% locale = User.current.language.blank? ? I18n.locale : User.current.language %>
+<% custom_field_values.each_with_index do |value, index| %>
+  <% if value.custom_field.big_size? %>
+    <% if i == 1 %>
+      </div>
+    <% end %>
+    <%= render 'render_custom_field', value: value, big_size: true %>
+    <% i = 0 %>
+  <% elsif i == 0 %>
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <%= render 'render_custom_field', value: value, big_size: false %>
+      </div>
+      <% i = 1 %>
+  <% else %>
+      <div class="splitcontentright">
+        <%= render 'render_custom_field', value: value, big_size: false %>
+      </div>
+    </div>
+    <% i = 0 %>
+  <% end %>
+<% end %>
+
+<% if i == 1 %>
+  </div>
+<% end %>
+<%= javascript_include_tag "countable", plugin: 'redmine_improve_custom_fields' %>
+<%= stylesheet_link_tag    "countable", plugin: 'redmine_improve_custom_fields' %>

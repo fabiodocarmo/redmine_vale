@@ -1,0 +1,28 @@
+<%#encoding: utf-8%>
+<h2><%= l(:satisfaction_question_detail_header) %></h2>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= l(:label_question) %>:</b>
+  <%= @satisfaction_question.question %>
+</p>
+
+<p>
+  <b><%= l(:label_question_en) %>:</b>
+  <%= @satisfaction_question.question_en %>
+</p>
+
+<p>
+  <b><%= l(:label_question_es) %>:</b>
+  <%= @satisfaction_question.question_es %>
+</p>
+
+<p>
+  <b><%= l(:label_reopen_enabled) %>:</b>
+  <%= @satisfaction_question.question %>
+</p>
+
+
+
+<%= link_to l(:button_back), satisfaction_question_path %>

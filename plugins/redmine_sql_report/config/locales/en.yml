@@ -1,0 +1,21 @@
+en:
+  sql_reports: 'Reports'
+  label_sql_reports: 'SQL Reports'
+
+  report_create_sucess_message: Report successfully created
+  report_edit_sucess_message: Report successfully updated
+  generate_label: Generate
+  sql_label: SQL
+  id_label: id
+  report_label: Report
+
+  report_edit_header: Edit Report
+  report_list_header: List of Reports
+  report_new_header: New Report
+  report_detail_header: Report Details
+
+  link_to_new_report: New Report
+
+  delete_access_confirmation_message: Are you sure you want to delete this access?
+  no_aproval_register_message: No approvals registered in the system
+  prohibited_message: prohibited this configuration from being saved

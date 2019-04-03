@@ -1,0 +1,11 @@
+pt-BR:
+  aging_n1_n2:
+    title: Aging N1/N2
+  answered_by_level_by_contact:
+    title: Chamados Fechados - Últimos %{count} meses
+  free_money:
+    title: Montante Liberado
+
+  permission_aging_n1_n2: Aging N1/N2
+  permission_answered_by_fornec: Chamados Fechados - Últimos meses
+  permission_free_money: Montante Liberado

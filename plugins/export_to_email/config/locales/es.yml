@@ -1,0 +1,6 @@
+es:
+  sending_mail_message: Enviando email
+  csv_export_mail_subject_message: CSV exportado
+  csv_export_message: Usted recibirá un correo electrónico con la lista en formato CSV por lo que la exportación se ha completado.
+  ok_label: OK
+  send_issues_export_message: Se adjunta un archivo en formato CSV que contiene la lista de los llamados exportados.

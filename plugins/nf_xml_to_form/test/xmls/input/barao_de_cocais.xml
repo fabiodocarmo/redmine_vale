@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse>
+      <InfNfse Id="2600575100019413100568400000330">
+         <Numero>00000330</Numero>
+         <CodigoVerificacao>kooqqqsss</CodigoVerificacao>
+         <CodigoControle>{F32614C4-54E5-443B-A6C1-DA3313677E30}</CodigoControle>
+         <DataEmissao>2015-10-21T00:00:00</DataEmissao>
+         <ValoresNfse>
+            <BaseCalculo>7122.41</BaseCalculo>
+            <Aliquota>4.0000</Aliquota>
+            <ValorIss>284.90</ValorIss>
+            <ValorLiquidoNfse>6873.13</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>26005751000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>131005684</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>BEMON ENGENHARIA E MONTAGENS LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>RUA DA PAISAGEM</Endereco>
+               <Numero>480</Numero>
+               <Complemento>SALA 708</Complemento>
+               <Bairro>VILA DA SERRA</Bairro>
+               <CodigoMunicipio />
+               <Uf>MG</Uf>
+               <CodigoPais />
+               <Cep>34000000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>32546700</Telefone>
+               <Email>bh@bemon.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>3105400</CodigoMunicipio>
+            <Uf>MG</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <Rps Id="26005751000194131005684330">
+               <IdentificacaoRps>
+                  <Numero>330</Numero>
+                  <Serie>A</Serie>
+                  <Tipo>1</Tipo>
+               </IdentificacaoRps>
+               <DataEmissao>2015-10-21</DataEmissao>
+               <Status>1</Status>
+            </Rps>
+            <Competencia>2015-10-21</Competencia>
+            <Servico />
+            <Valores>
+               <ValorServicos>7122.41</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>0.00</ValorPis>
+               <ValorCofins>0.00</ValorCofins>
+               <ValorInss>249.28</ValorInss>
+               <ValorIr>0.00</ValorIr>
+               <ValorCsll>0.00</ValorCsll>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <ValorIss>284.90</ValorIss>
+               <Aliquota>4.0000</Aliquota>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <IssRetido>1</IssRetido>
+            <ResponsavelRetencao>1</ResponsavelRetencao>
+            <ItemListaServico>702</ItemListaServico>
+            <CodigoCnae>4329104</CodigoCnae>
+            <CodigoTributacaoMunicipio>4329104</CodigoTributacaoMunicipio>
+            <Discriminacao>VALOR REFERENTE MEDICAO DOS SERVICOS DE INSTALACAO DE MATERIAIS NECESSARIOS PARA FUTURA SINALIZACAO DO TRECHO ENTRE O PATIO 05(FUTURA H207) E O PATIO 08 (FUTURA H203) N  CONTRATO : 5900018936N  PEDIDO : 4502194509N  FRS :1001253058,IMPOSTOS INCIDENTES:13,45% VENCIMENTO  19/11/2015CEI:51.224.16591-76CREA: 1827834</Discriminacao>
+            <CodigoMunicipio>3105400</CodigoMunicipio>
+            <CodigoPais />
+            <ExigibilidadeISS>1</ExigibilidadeISS>
+            <MunicipioIncidencia>3105400</MunicipioIncidencia>
+            <NumeroProcesso />
+            <Prestador>
+               <CpfCnpj>
+                  <Cnpj>26005751000194</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>131005684</InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+               <IdentificacaoTomador>
+                  <CpfCnpj>
+                     <Cnpj>33592510004907</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>318328126</InscricaoMunicipal>
+               </IdentificacaoTomador>
+               <RazaoSocial>VALE S/A</RazaoSocial>
+               <Endereco>
+                  <Endereco>RUA NEIDE FERREIRA DE LACERDA</Endereco>
+                  <Numero>75</Numero>
+                  <Complemento />
+                  <Bairro>GARCIA II</Bairro>
+                  <CodigoMunicipio>3105400</CodigoMunicipio>
+                  <Uf>MG</Uf>
+                  <CodigoPais>1058</CodigoPais>
+                  <Cep>35970000</Cep>
+               </Endereco>
+               <Contato>
+                  <Telefone />
+                  <Email>nfe.servico@vale.com</Email>
+               </Contato>
+            </Tomador>
+            <ConstrucaoCivil>
+               <CodigoObra />
+               <Art />
+            </ConstrucaoCivil>
+            <OptanteSimplesNacional>2</OptanteSimplesNacional>
+            <IncentivoFiscal>2</IncentivoFiscal>
+         </DeclaracaoPrestacaoServico>
+         <Versao>2.01</Versao>
+      </InfNfse>
+   </Nfse>
+</CompNfse>

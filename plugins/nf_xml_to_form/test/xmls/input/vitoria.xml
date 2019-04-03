@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConsultarNfseFaixaResposta xmlns="http://www.abrasf.org.br/nfse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse>
+               <Numero>843</Numero>
+               <CodigoVerificacao>A922F56C-</CodigoVerificacao>
+               <DataEmissao>2015-10-06</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>938.88</BaseCalculo>
+                  <Aliquota>3.84</Aliquota>
+                  <ValorIss>36.05</ValorIss>
+                  <ValorLiquidoNfse>938.88</ValorLiquidoNfse>
+               </ValoresNfse>
+               <ValorCredito>0.00</ValorCredito>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>05820118000180</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>902373</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>ART SIGN VITORIA - COMUNICACAO VISUAL LTDA - ME</RazaoSocial>
+                  <Endereco>
+                     <Endereco>RUA PEDRO BUSATTO</Endereco>
+                     <Numero>504</Numero>
+                     <Bairro>JARDIM CAMBURI</Bairro>
+                     <CodigoMunicipio>3205309</CodigoMunicipio>
+                     <Cep>29090470</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>(27)3225-3003</Telefone>
+                     <Email>CALVICON@TERRA.COM.BR</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3205309</CodigoMunicipio>
+                  <Uf>ES</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <InfDeclaracaoPrestacaoServico Id="44cfb951-ac37-4715-a5fb-0bdd527bbd74">
+                     <Competencia>2015-10-06</Competencia>
+                     <Servico>
+                        <Valores>
+                           <ValorServicos>938.88</ValorServicos>
+                           <ValorDeducoes>0.00</ValorDeducoes>
+                           <ValorPis>0.00</ValorPis>
+                           <ValorCofins>0.00</ValorCofins>
+                           <ValorInss>0.00</ValorInss>
+                           <ValorIr>0.00</ValorIr>
+                           <ValorCsll>0.00</ValorCsll>
+                           <OutrasRetencoes>0.00</OutrasRetencoes>
+                           <ValorIss>36.05</ValorIss>
+                           <Aliquota>3.84</Aliquota>
+                           <DescontoCondicionado>0.00</DescontoCondicionado>
+                        </Valores>
+                        <IssRetido>2</IssRetido>
+                        <ResponsavelRetencao>1</ResponsavelRetencao>
+                        <ItemListaServico>13.05</ItemListaServico>
+                        <CodigoCnae>1813001</CodigoCnae>
+                        <Discriminacao>SERVIÇOS GRÁFICOS GERALNUMERO DO PEDIDO:4502143126/00010DOCUMENTO EMITIDO POR ME OU EPP OPTANTE PELO SIMPLES NACIONAL. VALOR APROXIMADO DE TRIBUTOS COM ALÍQUOTA 11,31%.FORMA PAGAMENTO: SPSDADOS BANCÁRIOS: BANCO DO BRASILAG: 3084-8, C/C: 2959-9</Discriminacao>
+                        <CodigoMunicipio>3205309</CodigoMunicipio>
+                        <ExigibilidadeISS>1</ExigibilidadeISS>
+                        <MunicipioIncidencia>3205309</MunicipioIncidencia>
+                     </Servico>
+                     <Tomador>
+                        <IdentificacaoTomador>
+                           <CpfCnpj>
+                              <Cnpj>33592510002106</Cnpj>
+                           </CpfCnpj>
+                        </IdentificacaoTomador>
+                        <RazaoSocial>VALE S/A</RazaoSocial>
+                        <Endereco>
+                           <Endereco>AV.DANTE MICHELINI - PONTA DE TUBARÃO</Endereco>
+                           <Numero>5500</Numero>
+                           <Bairro>JARDIM CAMBURI</Bairro>
+                           <CodigoMunicipio>3205309</CodigoMunicipio>
+                           <Uf>ES</Uf>
+                           <CodigoPais>1058</CodigoPais>
+                           <Cep>29090970</Cep>
+                        </Endereco>
+                        <Contato>
+                           <Telefone>27 3333-5000</Telefone>
+                        </Contato>
+                     </Tomador>
+                     <OptanteSimplesNacional>1</OptanteSimplesNacional>
+                     <IncentivoFiscal>2</IncentivoFiscal>
+                  </InfDeclaracaoPrestacaoServico>
+               </DeclaracaoPrestacaoServico>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+      <ProximaPagina>0</ProximaPagina>
+   </ListaNfse>
+</ConsultarNfseFaixaResposta>

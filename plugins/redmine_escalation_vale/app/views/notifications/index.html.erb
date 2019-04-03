@@ -1,0 +1,86 @@
+
+<div style="clear: both;">
+  <%if !@resources.empty? %>
+    <%= link_to l(:send_mail), :controller => 'notifications', :action => 'sender', :filter =>  params[:filter] %>
+    <div class="autoscroll">
+      <table class="list resources">
+        <tr>
+          <th><%= l("label_filter_area") %></th>
+          <th><%= l("label_filter_classification") %></th>
+          <th><%= l("label_sent_rule") %> </th>
+          <th><%= l("label_hierarchy") %></th>
+          <th><%= l("label_user") %></th>
+          <th><%= l("label_users_notified") %></th>
+          <th><%= l("label_qt_chamados") %></th>
+          <th></th>
+        </tr>
+
+        <% @resources.each do |resource| %>
+          <% if resource["user_id"] != nil && !(@filter.include? resource["user_id"].to_s)  %>
+            <tr>
+              <td>
+                <%= if resource["area"].present?
+                      resource["area"]
+                    else
+                      'TODOS'
+                    end %>
+              </td>
+              <td>
+                <%= if resource["classification"].present?
+                      resource["classification"]
+                    else
+                      'TODOS'
+                    end %>
+              </td>
+              <td>
+                <%= "["+resource["min_sent"].to_s + "," + resource["max_sent"].to_s+")" %>
+              </td>
+              <td>
+                <%= resource["hierarchy"] %>
+              </td>
+              <td>
+                <% user = User.find(resource["user_id"]) %>
+                <%= user.mail %>
+              </td>
+              <td>
+                <%= if resource["bccs_id"].size > 1
+                      link_to resource["bccs_id"].size.to_s, :controller => 'hierarchies', :action => 'index', :filter => resource["bccs_id"]
+                     else
+                      resource["bccs_id"].size
+                    end %>
+              </td>
+              <td>
+                <%= link_to resource["qt"].to_s, :controller => 'visibility_reports', :action => 'index', :filter => resource["issues"], target: "_blank"%>
+              </td>
+              <td>
+                <%= link_to l(:button_delete), target: "_blank", :filter => Base64.encode64(@filter.join(",")+","+resource["user_id"].to_s)  %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr>
+
+          <td colspan="4"><b>TOTAL</b></td>
+          <td>
+            <b><%= @resources.reject{|r1| (@filter.include? r1["user_id"].to_s)}.size%> usuários</b>
+          </td>
+          <td>
+            <b><%= @resources.reject{|r1| (@filter.include? r1["user_id"].to_s)}.map{|r| r["bccs"].size}.sum %> copiados</b>
+          </td>
+          <td>
+            <b><%= @resources.reject{|r1| (@filter.include? r1["user_id"].to_s)}.map{|r| r["qt"].to_i}.sum%> chamados</b>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <br />
+  <% else %>
+  <h3> <%= l("no_data") %>
+    <%= link_to l(:click_here_to_edit_rules), :controller => 'rules', :action => 'index' %>
+  </h3>
+  <% end %>
+</div>
+<%= link_to l(:button_back), :controller => 'escalation', :action => 'index' %>

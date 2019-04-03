@@ -1,0 +1,271 @@
+en:
+  messages:
+    not_same_project: "not from the same environment"
+ # Active Record
+  activerecord:
+    errors:
+      messages:
+        earlier_than_minimum_start_date: "cannot be earlier to %{date} due to the previous issues"
+        record_invalid: "invalid register"
+        not_a_date: "Data is not in the yyyy-mm-dd format"
+  helpdesk_ticket:
+    new_ticket: New Issue
+  contact:
+    email: Email
+  date:
+    formats:
+      month_year: "%B/%Y"
+
+  field_hint: Hint
+  field_dont_copy: Do not copy issue manager
+  field_value_field: Count field value
+  label_search_for_watchers: Search for other watchers to add
+  label_helpdesk_previous_tickets: Previous issues
+  field_contact_first_name: First name
+  notice_no_issue_selected: "No issue selected! Please, select the issue you want to edit."
+  error_issue_not_found_in_project: 'Issue not found or not from this environment'
+  mail_subject_reminder: "%{count} issue(s) estimated for the next %{days} days"
+  mail_body_reminder: "%{count} issue(s) for you estimated for the next %{days} days:"
+  field_issue: Issue
+  field_is_closed: Closed issue
+  field_assignable: Issues can be assigned to this role
+  setting_issues_export_limit: Issues export limit
+  setting_cross_project_issue_relations: Enable issues relations between environments
+  setting_issue_list_default_columns: Standard columns visible in the issue list
+  project_module_issue_tracking: Issue tracking
+  label_issue: Issue
+  label_issue_new: New Issue
+  label_issue_plural: Issues
+  label_issue_view_all: Show all issues
+  label_issues_by: "Issues by %{value}"
+  label_issue_added: Issue added
+  label_issue_updated: Issue updated
+  label_tracker: Issue type
+  label_tracker_plural: Issue types
+  label_issue_status: Issue Status
+  label_issue_status_plural: Issue Statuses
+  label_reported_issues: Reported Issues
+  label_assigned_to_me_issues: My Issues
+  label_roadmap_no_issues: No issues for this version
+  label_watched_issues: Watched issues
+  label_related_issues: Related issues
+  text_workflow_edit: Select a role and an issue type to edit the workflow
+  text_tip_issue_begin_day: issue begining this day
+  text_tip_issue_end_day: issue ending this day
+  text_tip_issue_begin_end_day: issue beginning and ending this day
+  text_issue_added: "Issue %{id} has been reported by %{author}."
+  text_issue_updated: "Issue %{id} has been updated by %{author}."
+  text_issue_category_destroy_question: "Some issues (%{count}) are assigned to this category. What do you want to do?"
+  text_user_mail_option: "For unselected areas, you will only receive notifications about things you watch or you are involved in (eg. issues you are the author or assignee)."
+  text_no_configuration_data: "Roles, issue types, issue statuses and workflow have not been configured yet.\nIt is highly recommended to load the default configuration. You will be able to modify it once loaded."
+  text_issues_destroy_confirmation: 'Are you sure you want to delete the selected issue(s)?'
+  text_destroy_time_entries_question: "%{hours} hours were reported on the issues you are about to delete. What do you want to do?"
+  text_reassign_time_entries: 'Reassign reported hours to this issue:'
+  default_issue_status_resolved: Resolved
+  default_issue_status_closed: Closed
+  default_issue_status_rejected: Rejected
+  enumeration_issue_priorities: Issue priorities
+  enumeration_doc_categories: Document categories
+  permission_edit_issues: Edit Issues
+  permission_add_issues: Add issues
+  permission_manage_categories: Manage issue categories
+  permission_move_issues: Move issues
+  permission_manage_issue_relations: Manage issue relations
+  permission_delete_issues: Delete issues
+  text_repository_usernames_mapping: "Select or update the Redmine user mapped to each username found in the repository log.\nUsers with the same Redmine and repository username or email are automatically mapped."
+  error_can_not_reopen_issue_on_closed_version: 'An issue assigned to a closed version cannot be reopened'
+  setting_issue_done_ratio: Calculate the issue done ratio with
+  setting_issue_done_ratio_issue_status: Use the issue status
+  error_issue_done_ratios_not_updated: "Issue done ratios not updated."
+  error_workflow_copy_target: 'Please select target issue type(s) and role(s)'
+  setting_issue_done_ratio_issue_field: Use the issue field
+  error_workflow_copy_source: 'Please select a source issue type or role'
+  label_update_issue_done_ratios: Update issue done ratios
+  permission_view_issues: View Issues
+  label_display_used_statuses_only: Only display statuses that are used by this issue type
+  error_unable_delete_issue_status: 'Unable to delete issue status'
+  error_can_not_delete_tracker: "This issue type contains issues and cannot be deleted."
+  label_additional_workflow_transitions_for_assignee: Additional transitions allowed when the user is the assignee
+  label_issues_visibility_own: Issues created by or assigned to the user
+  field_issues_visibility: Issue visibility
+  label_issues_visibility_all: All Issues
+  permission_set_own_issues_private: Set own issues public or private
+  permission_set_issues_private: Set issues public or private
+  label_issues_visibility_public: All non private issues
+  notice_issue_successful_create: Issue %{id} created.
+  setting_issue_group_assignment: Allow issue assignment to groups
+  setting_default_issue_start_date_to_creation_date: Use current date as start date for new issues
+  label_x_issues:
+    zero:  0 issues
+    one:   1 issue
+    other: "%{count} issues"
+  setting_commit_cross_project_ref: Allow issues of all the other areas to be referenced and fixed
+  label_any_issues_in_project: any issues in area
+  label_any_issues_not_in_project: any issues not in area
+  label_no_issues_in_project: No issues in area
+  label_issue_tracking: Issues
+
+  warning_deletion_unconfirmed_tickets: This issue will be deleted  if not confirmed in %{days} days.
+
+  #button_copy: Encaminhar
+  #label_copied_to: Encaminhado para
+  #label_copied_from: Encaminhado de
+  #field_project: Área Responsável
+  #label_helpdesk_blacklist: Emails permitidos
+  button_archive: Archive
+  satisfaction_survey: Satisfaction Survey
+
+  activerecord:
+    errors:
+      template:
+        header:
+      messages:
+        satisfaction_comment: Please use the comments field to inform us why you are not satisfied
+        satisfaction_issue_reopened: Please select a dissatisfaction reason to inform us why you are not satisfied
+        forward_same_project: You must change the area in the issue forwarding
+        satisfaction_missing: Please select a satisfaction level
+        reopen_not_allowed: 'It is not possible to reopen this issue because the issue %{issue} has an open child issue.'
+
+
+  link_sucessfully_updated_message: Link successfully updated.
+  link_sucessfully_created_message: Link successfully created.
+  expiration_date_error_message: Impossible to confirm this issue. Confirmation period has already expired.
+  confirmation_email_sent_message: Confirmation email sent.
+  ticket_sucessfully_created_message: Email successfully confirmed, your issue will be evaluated, thanks.
+  satisfaction_message: Please use the comments field to inform us why you are not satisfied.
+  satisfaction_missing: Please select a satisfaction level
+  satisfaction_issue_reopened: Please select a dissatisfaction reason to inform us the main reason why you are not satisfied.
+  answer_sucessfully_sent_message: Answer successfully sent.
+  no_confirmation_message: 'The issue # %{issue_id} will be deleted due lack of confirmation'
+  journal_notes_positive_message: Issue archived because the user is satisfied.
+  journal_notes_neutral_message: Issue archived, but the user is not satisfied.
+  journal_notes_negative_message: Issue reopended because the user is not satisfied.
+  journal_notes_feedback_request_missing: Please select a satisfaction level
+  journal_notes_feedback_request_message: Please use the comments field to inform us why you are no satisfied.
+  journal_notes_feedback_request_message_reopened: Please select a dissatisfaction reason to inform us why you are not satisfied
+  no_faqs_registered_message: No FAQs in the system
+  in_case_of_doubts_message: For questions about this problem access the FAQ in
+  inform_valid_email_explanation_message: Please inform a valid email address. A confirmation message will be sent to this email. In case of no confirmation your issue wont be answered.
+  comma_separator_message: Comma separates emails
+
+  param_ticket_should_be_set_exception: Param ticket should be set
+  contact_should_have_email_exception: Contact should have email address
+  new_tickets_default_priority_exception: You must define the default priority for the new issues
+
+  first_name_error_param: First Name
+  email_error_param: Email
+  confirm_email_error_param: Confirm Email
+  email_doesnt_match_error: does not match
+  no_permission_error: no permission to create new issues
+
+  comments_label:  Comments
+  confirm_email_label: Confirm the Email
+  send_answer_copy_to_label: Send a copy of the answers to
+  submit_with_new_issue_label: Send and open new issue
+  yes_label: Yes
+  no_label: No
+  hours_label: hour(s)
+  minutes_label: minute(s)
+  reopen_issue_label: Reopen issue
+  comments_field_label: Use the following field to write comments about our service
+
+  issue_creation_permission_settings_label: Enable issue creation in the following projects
+  issue_creation_permission_settings_message: If only one is selected the project field wont be available to the anonymous user at the issue creation.
+  project_wiki_settings_label: Supplier Wiki Project
+  project_faq_settings_label: Supplier FAQ Project
+  status_waiting_settings_label: Status Waiting for Confirmation
+  exclude_waiting_after_settings_label: Delete Waiting for Confirmation after
+  status_new_settings_label: Rename New Status
+  status_doing_settings_label: Rename In Progress Status
+  status_answered_settings_label: Rename Answered Status
+  status_archived_settings_label: Rename Archived Status
+  status_canceled_settings_label: Canceled Status
+  status_unconfirmed_archived_settings_label: Rename Archived Without Confirmation Status
+  default_issue_priority_settings_label: Default priority for new issues
+  answered_priority_settings_label: Answered Priority
+  normal_priority_settings_label: Normal Priority
+  high_priority_settings_label: High Priority
+  enable_archive_issue_settings_label: Enable issue archive
+  auto_archive_after_settings_label: Automatically archive after
+  satisfaction_survey_days_settings_label: How many days before issue archiving should the Satisfaction Survey be sent?
+  auto_archive_with_comments_settings_label: Automatically archive issues with anonymous user comments after finish?
+  mistaken_status_settings_label: Rename Improperly Forwarded Status
+  copy_issue_when_forward_settings_label: Create new issue when forward
+  mistaken_notify_settings_label: Change priority when reporting Improperly Forwarded issues
+  increase_priority_forwarded_settings_label: Change priority when finish a forwarded issue
+  rollback_forwarding_config_settings_label: Assign to the previous responsible when reporting Improperly Forwarded issues
+  enable_satisfaction_survey_settings_label: Enable satisfaction survey
+  enable_involved_mailing_settings_label: Enable sending emails to all involved users
+  reopen_status_to_settings_label: Reopen issues with the following status
+  trackers_reopen_disabled_settings_label: Disable reopening of the following types of issues
+  projects_attachments_field_hided_settings_label: Hide attachments field of the project(s)
+  email_list_behavior_settings_label: Mail list behavior
+  customer_field_settings_label: Supplier CPF-CNPJ
+  social_name_settings_label: Supplier Corporate Name
+  assign_to_field_settings_label: Automatically assign issue according to the field
+  forward_same_project_settings_label: Disable issue forwarding in the same project
+
+  faq_link_edit_header: Edit FAQ Link
+  faq_link_list_header: List of FAQ Links
+  faq_link_new_header: New FAQ Link
+  faq_link_detail_header: Access Control Details
+
+  link_to_new_faq: New FAQ
+  link_to_confirmation: Confirmation link
+
+  satisfaction_question_edit_header: Edit Satisfaction Reason
+  satisfaction_question_list_header: List of Satisfaction Reasons
+  satisfaction_question_new_header: New Satisfaction Reason
+  satisfaction_question_detail_header: Access Control Details
+  link_to_new_satisfaction_question: New Satisfaction Reason
+  satisfaction_create_sucess_message: Reasons for dissatisfaction successfully created
+  satisfaction_edit_sucess_message: Reasons for dissatisfaction successfully edited
+  no_file_to_import_error_message: You must select a file to import.
+  label_question: Portuguese Reason
+  label_question_en: English Reason
+  label_question_es: Spanish Reason
+  label_reopen_enabled: Reopening Enabled?
+  import_success_message: Import sucessfully finished
+  satisfaction_reasons: What's the main reason for your dissatisfaction?
+
+  delete_access_confirmation: Are you sure you want to delete this access?
+  delete_issue_notification_message: 'We did not received the confirmation of the issue creation for %{issue_id}. Please follow the %{link_to}. Only then your issue will be sent to a SAC attendant. Otherwise it will be automatically closed in %{days_count} day(s).'
+  no_supplier_notification_message: If blank the supplier will be identified by the email sufix (@domain.com)
+  satisfaction_survey_reminder_message: 'The issue will be archived in %{days_count} day(s). To reopen the issue, answer the survey available in this link: %{link_to} until this deadline.'
+  satisfaction_survey_mail_title: 'Survey of issue # %{issue_id}'
+  answer_satisfaction_survey_message: To reopen the issue, answer to the survey in the link
+  prohibited_message: prohibited this configuration from being saved
+
+  dear_text: Dear,
+
+  satisfaction_label: Satisfaction
+  satisfaction_survey_header: Satisfaction Survey
+  satisfaction_survey_question: Are you satisfied with our service?
+  totally_satisfied: Totally Satisfied
+  totally_dissatisfied: Totally Dissatisfied
+  satisfaction_explanation_reopen: Grades 6 and below allow reopening an issue.
+  satisfaction_explanation_no_reopen:  Grades above 7 do not allow reopening an issue.
+
+
+  consider_new_area_forward_option: Consider forward to the new area
+  consider_resposible_forward_option: Consider forward only to the new responsible
+  black_list_option: Black list
+  white_list_option: White list
+
+  field_archivable: Archivable
+
+  satisfaction_survey_already_answered: 'Satisfaction Survey Already Answered'
+  enable_closing_child_issues_label: 'Enable closing child issues for the following issues'
+  enable_only_one_child_issue_label: 'Enable only one child for the following issues'
+  unable_copy_closed: 'Can not forward closed issues'
+  disable_copy_from_closed_issues: 'Disable copy of closed issues to the following trackers'
+  one_child_issue_error: 'This issue already has an associated open child issue.To create a new child issue associated with this issue, no associated child issues may have an open status.'
+  redirect_copy_error: 'The issue type %{tracker} can only be forwarded to the following areas: %{projects}'
+  redirect_copy_error_label: 'Block routing where the following issues do not exist'
+  not_possible_to_update_because_parent_closed: 'Is not possible to update this issue, because its parent is closed'
+
+
+  not_assigned: Not Assigned
+  enable_priority_cascade: 'Enable priority cascade?'
+  response_question: "Orientation shown at call completion does not answer"
+  url_satisfaction_survey: "Satisfaction Survey URL"

@@ -1,0 +1,128 @@
+<ConsultarNfseResposta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.abrasf.org.br/nfse">
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="NFSe201600000000375">
+               <Numero>201600000000375</Numero>
+               <CodigoVerificacao>2WRE-AR86</CodigoVerificacao>
+               <DataEmissao>2016-05-12T09:41:33</DataEmissao>
+               <NaturezaOperacao>2</NaturezaOperacao>
+               <RegimeEspecialTributacao>0</RegimeEspecialTributacao>
+               <OptanteSimplesNacional>2</OptanteSimplesNacional>
+               <IncentivadorCultural>2</IncentivadorCultural>
+               <Competencia>2016-05-01T00:00:00</Competencia>
+               <NfseSubstituida>201600000000374</NfseSubstituida>
+               <OutrasInformacoes>ISS Retido pelo Tomador.
+Substitui Nota 201600000000374 de 12/05/2016.
+</OutrasInformacoes>
+               <Servico>
+                  <Valores>
+                     <ValorServicos>109434.6700</ValorServicos>
+                     <ValorPis>711.3300</ValorPis>
+                     <ValorCofins>3283.0400</ValorCofins>
+                     <ValorInss>3830.2100</ValorInss>
+                     <ValorIr>1641.5200</ValorIr>
+                     <ValorCsll>1094.3500</ValorCsll>
+                     <IssRetido>1</IssRetido>
+                     <ValorIssRetido>5471.7300</ValorIssRetido>
+                     <BaseCalculo>109434.6700</BaseCalculo>
+                     <Aliquota>0.050000</Aliquota>
+                     <ValorLiquidoNfse>93402.4900</ValorLiquidoNfse>
+                  </Valores>
+                  <ItemListaServico>2001</ItemListaServico>
+                  <CodigoCnae>5030102</CodigoCnae>
+                  <CodigoTributacaoMunicipio>2001</CodigoTributacaoMunicipio>
+                  <Discriminacao>Serviços preventivos e emergenciais de atendimento à ocorrências ambientais de vazamento de óleo e similares.
+
+
+Porto: TMPM - São Luís/MA
+Proforma: 160545
+Contrato: 5900026483
+Pedido:   4502621042
+FRS:      1001584081
+
+
+Alíquota INSS 3,5% - Base legal § 5º do artigo 8º da Lei 12.546/2011 e demais alterações dispostas na Lei 12.844/2013.
+
+ - Vencimento: 13/06/2016
+
+Dados para pagamento:
+Banco: 237 - Banco Bradesco
+Agência: 3369-3
+Conta Corrente: 212464-5
+
+Val. Aprox. dos Tributos: R$ 20.048,43 (18,32%)
+</Discriminacao>
+                  <CodigoMunicipio>2111300</CodigoMunicipio>
+               </Servico>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <Cnpj>09114805000211</Cnpj>
+                     <InscricaoMunicipal>1608447</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>OCEANPACT SERVIÇOS MARITIMOS S.A.</RazaoSocial>
+                  <NomeFantasia>OceanPact</NomeFantasia>
+                  <Endereco>
+                     <Endereco>Ilha do Caju</Endereco>
+                     <Numero>131</Numero>
+                     <Complemento></Complemento>
+                     <Bairro>Ponta D'Areia</Bairro>
+                     <CodigoMunicipio>3303302</CodigoMunicipio>
+                     <Uf>RJ</Uf>
+                     <Cep>24040005</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>2130326700</Telefone>
+                     <Email>nfenit@oceanpact.com</Email>
+                  </Contato>
+               </PrestadorServico>
+               <TomadorServico>
+                  <IdentificacaoTomador>
+                     <CpfCnpj>
+                        <Cnpj>33592510042400</Cnpj>
+                     </CpfCnpj>
+                  </IdentificacaoTomador>
+                  <RazaoSocial>VALE S.A.</RazaoSocial>
+                  <Endereco>
+                     <Endereco>Avenida dos Portugueses</Endereco>
+                     <Numero>S/N</Numero>
+                     <Complemento></Complemento>
+                     <Bairro>Itaqui</Bairro>
+                     <CodigoMunicipio>2111300</CodigoMunicipio>
+                     <Uf>MA</Uf>
+                     <Cep>65085582</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>9832184144</Telefone>
+                     <Email>nfe.servico@vale.com</Email>
+                  </Contato>
+               </TomadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3303302</CodigoMunicipio>
+                  <Uf>RJ</Uf>
+               </OrgaoGerador>
+            </InfNfse>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+               <SignedInfo>
+                  <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+                  <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+                  <Reference URI="#NFSe201600000000375">
+                     <Transforms>
+                        <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+                     </Transforms>
+                     <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+                     <DigestValue>wDzOtarAgYP2WnShXXfiFw3CZAQ=</DigestValue>
+                  </Reference>
+               </SignedInfo>
+               <SignatureValue>VN/zqMKZpDXlDftiWMqEdvYKEM8fNTcLv2QxG7/R5KPzORrndtkmFRz7T86qBZ81xAfF9/EaUIkhpF1MqyLMALWreQTzumEcJC2uGdvPz1ZyzzryDaj5yz3vdbkzjV08G6xJeaop9d5nvyZIGkDy8mfhuVA6bMHYPY3lXDQZElVo8oHJbpj7u1ummxGiEj4geMRNgeFiQLvP+k35hrMMG5aCdrmBBrVeZvIdmPfUh+f2SQKSgbe7RkWeXQzotrkJRwifv0xB+ERYTTy4tCkbvTMStxEQDdh66PGAtdRanXajBqyCvnrNhjfQGNfsV7ncrp3H2iH5nHDM2Zi9z/tTYQ==</SignatureValue>
+               <KeyInfo>
+                  <X509Data>
+                     <X509Certificate>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</X509Certificate>
+                  </X509Data>
+               </KeyInfo>
+            </Signature>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarNfseResposta>

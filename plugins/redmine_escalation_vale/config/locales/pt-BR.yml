@@ -1,0 +1,89 @@
+pt-BR:
+  label_assigned_to: Atribuído Para
+  label_supplier_social_name: Razão Social
+  label_supplier_cnpj: CNPJ
+  label_classification: Classificação
+  label_area: Área
+  label_total_aging: Aging Total
+  label_phase_aging: Aging Etapa
+  label_sent_number: Envios
+  visibility_reports: Chamados Pendentes
+  classification_cont:  Classificação contém
+  supplier_social_name_cont: Razão Social contém
+  supplier_cnpj_cont: CNPJ contém
+  area_cont: Área contém
+  total_aging_cont: Aging total contém
+  phase_aging_cont: Aging etapa contém
+  sent_number_cont: Envios contém
+  no_visibility_report_message: Nenhum dado encontrado
+  label_min_sent: Número mínimo Envios
+  label_max_sent: Número máximo Envios
+  label_hierarchy: Hierarquia
+  link_to_new_rule: Nova Regra
+  rules_new_header: Nova Regra
+  label_min_sent: Mínimo Envios
+  label_max_sent: Máximo Envios
+  label_area: Área
+  label_hierarchy: Hierarquia
+  label_classification: Classificação
+  no_rule_message: Sem regras definidas
+  rules: Painel de Regras
+  notifications: Nova notificação
+  label_rule: ID Regra
+  label_qt_chamados: Qt. Chamados
+  label_email_template: Templates de Email
+  no_email_template_message: Sem templates definidos
+  link_to_new_email_template: Novo Template
+  mail_body: Corpo
+  mail_subject: Assunto
+  template_name: Nome do Template
+  label_subject: Assunto
+  label_template: Template
+  mail_sent_sucessfully: Emails enviados com sucesso
+  send_mail: Enviar email
+  no_data: Sem dados.
+  label_users_notified: Usuários em cópia
+  mail_image_url: URL da imagem (precisa estar em domínio público)
+  click_here_to_edit_rules: Painel de regras
+  export_label: Exportar Base
+  label_n1: DE-1
+  label_n2: DE-2
+  label_n3: DE-3
+  label_n4: DE-4
+  label_n5: DE-5
+  label_n6: DE-6
+  label_n7: DE-7
+  label_n8: DE-8
+  user_firstname_or_user_lastname_cont: Nome do Usuário Contém
+  no_hierarchy_message: Sem dados
+  user_label: Usuário
+  n1_label: DE-1
+  n2_label: DE-2
+  n3_label: DE-3
+  n4_label: DE-4
+  n5_label: DE-5
+  n6_label: DE-6
+  n7_label: DE-7
+  n8_label: DE-8
+  min_sent_cont: Num Envios Mínimo
+  max_sent_cont: Num Envios Máximo
+  area_cont: Área contém
+  hierarchy_cont: Hierarquia contém
+  classification_cont: Classificação contém
+  email_template_name_cont: Nome do Template de email contém
+  label_rules: Painel de Regras
+  classification_label: Classificação
+  supplier_social_name_label: Razão Social Fornecedor
+  supplier_cnpj_label: CNPJ Fornecedor
+  area_label: Área
+  total_aging_label: Aging Total
+  phase_aging_label: Aging Etapa
+  sent_number_label: Número Envios
+  min_sent_label: Num Min Envios
+  max_sent_label: Num Max Envios
+  hierarchy_label: Hierarquia
+  email_template_label: Template de Email
+  label_filter_area: Filtro Área
+  label_filter_classification: Filtro Classificação
+  escalator_menu_name: Notificações
+  label_sent_rule: Regra de Envio

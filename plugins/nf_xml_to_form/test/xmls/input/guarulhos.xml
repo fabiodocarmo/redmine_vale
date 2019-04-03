@@ -1,0 +1,89 @@
+<ns2:NFSE xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://www.ginfes.com.br/servico_consultar_nfse_envio" xmlns:ns3="http://www.ginfes.com.br/tipos" xmlns:ns5="http://www.ginfes.com.br/servico_cancelar_nfse_envio">
+   <ns2:Nfse>
+      <ns3:IdentificacaoNfse>
+         <ns3:Numero>281</ns3:Numero>
+         <ns3:CodigoVerificacao>768742979</ns3:CodigoVerificacao>
+      </ns3:IdentificacaoNfse>
+      <ns3:DataEmissao>2015-10-13T10:13:00</ns3:DataEmissao>
+      <ns3:NaturezaOperacao>1</ns3:NaturezaOperacao>
+      <ns3:RegimeEspecialTributacao>0</ns3:RegimeEspecialTributacao>
+      <ns3:OptanteSimplesNacional>1</ns3:OptanteSimplesNacional>
+      <ns3:IncetivadorCultural>2</ns3:IncetivadorCultural>
+      <ns3:Competencia>2015-10-13</ns3:Competencia>
+      <ns3:Servico>
+         <ns3:Valores>
+            <ns3:ValorServicos>1250.00</ns3:ValorServicos>
+            <ns3:IssRetido>2</ns3:IssRetido>
+            <ns3:ValorIss>0.00</ns3:ValorIss>
+            <ns3:BaseCalculo>1250.00</ns3:BaseCalculo>
+            <ns3:Aliquota>0.0387</ns3:Aliquota>
+            <ns3:ValorLiquidoNfse>1250.00</ns3:ValorLiquidoNfse>
+            <ns3:ValorIssRetido>0</ns3:ValorIssRetido>
+         </ns3:Valores>
+         <ns3:ItemListaServico>802</ns3:ItemListaServico>
+         <ns3:CodigoTributacaoMunicipio>859960400</ns3:CodigoTributacaoMunicipio>
+         <ns3:Discriminacao>Prestação de serviços de mão de obra especializada para realização de treinamento de "Rigger", nas dependências da IPS Serviços, em Guarulhos/SP.
+Período: 05/08/15 a 08/08/15.
+Participante: Bruno Lima Ferreira/ CPF: 086.940.987-50.
+Pedido de compra nº: 4502177708.
+
+Dados Bancários:
+Banco Santander 033
+Agência 0766
+Conta 130005143
+IPS SERVIÇOS DE RIGGING LTDA /EPP
+
+VENCIMENTO: 12/11/15.
+
+Valor sem Retenções: Empresa Optante pelo Simples Nacional.
+
+Valor aproximado total de tributos federais, estaduais e municipais conforme disposto na Lei R$ 207,12(16,57%) Fonte: IBPT.
+</ns3:Discriminacao>
+         <ns3:MunicipioPrestacaoServico>3518800</ns3:MunicipioPrestacaoServico>
+      </ns3:Servico>
+      <ns3:ValorCredito>0.00</ns3:ValorCredito>
+      <ns3:PrestadorServico>
+         <ns3:IdentificacaoPrestador>
+            <ns3:Cnpj>15066495000129</ns3:Cnpj>
+            <ns3:InscricaoMunicipal>206898</ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoPrestador>
+         <ns3:RazaoSocial>IPS SERVIÇOS COMERCIO E REPRESENTAÇÃO DE RIGGING LTDA EPP</ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>RUA RONALDO</ns3:Endereco>
+            <ns3:Numero>225</ns3:Numero>
+            <ns3:Complemento>SALA 02</ns3:Complemento>
+            <ns3:Bairro>JARDIM SANTA MENA</ns3:Bairro>
+            <ns3:Cidade>3518800</ns3:Cidade>
+            <ns3:Estado>SP</ns3:Estado>
+            <ns3:Cep>07096080</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato></ns3:Contato>
+      </ns3:PrestadorServico>
+      <ns3:TomadorServico>
+         <ns3:IdentificacaoTomador>
+            <ns3:CpfCnpj>
+               <ns3:Cnpj>33592510003765</ns3:Cnpj>
+            </ns3:CpfCnpj>
+            <ns3:InscricaoMunicipal>131390412</ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoTomador>
+         <ns3:RazaoSocial>VALE S/A</ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>AV. DE LIGACAO</ns3:Endereco>
+            <ns3:Numero>3580</ns3:Numero>
+            <ns3:Complemento></ns3:Complemento>
+            <ns3:Bairro>AGUAS CLARAS</ns3:Bairro>
+            <ns3:Cidade>3144805</ns3:Cidade>
+            <ns3:Estado>MG</ns3:Estado>
+            <ns3:Cep>34000000</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato>
+            <ns3:Telefone>3139162150</ns3:Telefone>
+            <ns3:Email>nfe.servico@vale.com</ns3:Email>
+         </ns3:Contato>
+      </ns3:TomadorServico>
+      <ns3:OrgaoGerador>
+         <ns3:CodigoMunicipio>3518800</ns3:CodigoMunicipio>
+         <ns3:Uf>SP</ns3:Uf>
+      </ns3:OrgaoGerador>
+   </ns2:Nfse>
+</ns2:NFSE>

@@ -1,0 +1,52 @@
+<%= form_for(office_hour, html: {id: 'office_hour_form'}) do |f| %>
+  <% if office_hour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(office_hour.errors.count, "error") %> prohibited this configuracao from being saved:</h2>
+
+      <ul>
+      <% office_hour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label><b><%= t('office_hour.name') %>: </b></label><br />
+    <%= f.text_field :name %><br /><br />
+  </div>
+
+  <div class="field">
+    <label> <b><%= t('office_hour.timezone') %>: </b></label><br />
+    <%= f.time_zone_select :timezone %><br /><br />
+  </div>
+
+  <%= f.fields_for :working_days do |wd| %>
+    <%= render 'working_days_fields', f: wd %>
+  <% end %>
+
+  <div class="links">
+    <%= link_to_add_association t('office_hour.office_hour_add_working_days'), f, :working_days,
+      partial: 'working_days_fields' %>
+  </div>
+
+  <% if f.object.id %>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%end%>
+<% end %>
+
+<script>
+  function updateForm() {
+    $.ajax({
+      url: "<%= office_hours_form_path(format: 'js') %>",
+      type: 'POST',
+      data: $('#office_hour_form').serialize()
+    });
+  }
+</script>

@@ -1,0 +1,111 @@
+#encoding: UTF-8
+<%= form_for(dependent_field) do |f| %>
+
+  <% if dependent_field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dependent_field.errors.count, "error") %> <%= l(:prohibited_message)%>:</h2>
+      <ul>
+        <% dependent_field.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:field_active) %> </b></label>
+        <%= f.check_box :avaliable %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:dependency_type_label) %></b></label><br />
+        <%= f.select :dependent_type, DependentField::DEPENDENT_TYPE.map {|k,v| [v, k]} %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b> <%= l(:label_project) %> </b></label><br />
+        <%= f.collection_select :project_id, Project.order('name ASC').all, :id, :name %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:label_tracker) %> </b></label><br />
+        <%= f.collection_select :tracker_id, Tracker.order('name ASC').all, :id, :name %>
+        <br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:main_field_label)%> </b></label><br />
+        <%= f.collection_select :main_field_id, CustomField.order('name ASC').all, :id, :name %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:expected_value_label) %></b></label><br />
+        <%= f.text_field :main_field_value, class: 'string_cf' %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b><%= l(:secondary_field_label) %> </b></label><br />
+        <%= f.collection_select :secondary_field_id, CustomField.order('name ASC').all, :id, :name %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b> <%= l(:non_nullable_secondary_field_label) %> </b></label>
+        <%= f.check_box :not_nullable %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <label> <b> <%= l(:expected_secondary_field_label) %> </b></label><br />
+        <label  style="font-size: x-small"><%= l(:options_format_hint) %> </label><br />
+        <%= f.text_field :secondary_field_value, class: 'string_cf' %><br /><br />
+      </div>
+    </div>
+  </div>
+
+  <% if params[:action] === "new" %>
+    <div class="actions">
+      <%= f.submit l(:button_create) %>
+    </div>
+  <%else%>
+    <div class="actions">
+      <%= f.submit l(:button_update) %>
+    </div>
+  <%end%>
+
+  <br />
+  <%= link_to l(:button_back), dependent_fields_path %>
+
+<% end %>

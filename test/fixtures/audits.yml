@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  klazz_name: 
+  col_name: 
+  action: 
+  value_was: MyText
+  value: MyText
+  resource_id: MyString
+  integer: MyString
+
+two:
+  klazz_name: 
+  col_name: 
+  action: 
+  value_was: MyText
+  value: MyText
+  resource_id: MyString
+  integer: MyString

@@ -1,0 +1,160 @@
+<ns2:NFSE xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns4="http://www.ginfes.com.br/servico_consultar_nfse_envio" xmlns:ns3="http://www.ginfes.com.br/tipos" xmlns:ns5="http://www.ginfes.com.br/servico_cancelar_nfse_envio">
+   <ns2:Nfse>
+      <ns3:IdentificacaoNfse>
+         <ns3:Numero>1297</ns3:Numero>
+         <ns3:CodigoVerificacao>995725702</ns3:CodigoVerificacao>
+      </ns3:IdentificacaoNfse>
+      <ns3:DataEmissao>2016-06-03T16:22:06</ns3:DataEmissao>
+      <ns3:NaturezaOperacao>1</ns3:NaturezaOperacao>
+      <ns3:RegimeEspecialTributacao>0</ns3:RegimeEspecialTributacao>
+      <ns3:OptanteSimplesNacional>2</ns3:OptanteSimplesNacional>
+      <ns3:IncetivadorCultural>2</ns3:IncetivadorCultural>
+      <ns3:Competencia>2016-06-03</ns3:Competencia>
+      <ns3:Servico>
+         <ns3:Valores>
+            <ns3:ValorServicos>189950.00</ns3:ValorServicos>
+            <ns3:IssRetido>2</ns3:IssRetido>
+            <ns3:ValorIss>3799.00</ns3:ValorIss>
+            <ns3:BaseCalculo>189950.00</ns3:BaseCalculo>
+            <ns3:Aliquota>0.0200</ns3:Aliquota>
+            <ns3:ValorLiquidoNfse>189950.00</ns3:ValorLiquidoNfse>
+            <ns3:ValorIssRetido>0</ns3:ValorIssRetido>
+         </ns3:Valores>
+         <ns3:ItemListaServico>1401</ns3:ItemListaServico>
+         <ns3:CodigoTributacaoMunicipio>331390100</ns3:CodigoTributacaoMunicipio>
+         <ns3:Discriminacao>SERVICO BOBINA ELETROMAGNETICA DOS SEPARADORES MAGNETICOS
+
+VENCIMENTO: 03/07/2016
+
+SERVICOS PRESTADOS EM NOSSAS INSTALACOES (SARZEDO,MG). BANCO DO BRASIL- AGENCIA 1632-2 - CC 54857-X /BH-MG. OS 8561. SPS 4706 / PEDIDO 4502697593.
+
+SERVICO NÃO SUJEITO A RETENÇÃO DE PIS/COFINS/CSLL CONFORME ART 1º IN 459/2004 MERO REPARO BEM DEFEITUOSO. ITEM 14.01 LC 116/2003. TRIBUTOS 18,05% FONTE: IBPT.</ns3:Discriminacao>
+         <ns3:MunicipioPrestacaoServico>3165537</ns3:MunicipioPrestacaoServico>
+      </ns3:Servico>
+      <ns3:ValorCredito>0.00</ns3:ValorCredito>
+      <ns3:PrestadorServico>
+         <ns3:IdentificacaoPrestador>
+            <ns3:Cnpj>26389015000187</ns3:Cnpj>
+            <ns3:InscricaoMunicipal>13463000426</ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoPrestador>
+         <ns3:RazaoSocial>DATA ENGENHARIA LTDA</ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>RUA  SÃO JUDAS TADEU.</ns3:Endereco>
+            <ns3:Numero>280</ns3:Numero>
+            <ns3:Bairro>DISTRITO INDUSTRIAL BENJAMIM GUIMARÃES.</ns3:Bairro>
+            <ns3:Cidade>3165537</ns3:Cidade>
+            <ns3:Estado>MG</ns3:Estado>
+            <ns3:Cep>32450000</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato>
+            <ns3:Telefone>3135770404</ns3:Telefone>
+            <ns3:Email>fiscal@data.com.br</ns3:Email>
+         </ns3:Contato>
+      </ns3:PrestadorServico>
+      <ns3:TomadorServico>
+         <ns3:IdentificacaoTomador>
+            <ns3:CpfCnpj>
+               <ns3:Cnpj>33592510000740</ns3:Cnpj>
+            </ns3:CpfCnpj>
+            <ns3:InscricaoMunicipal></ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoTomador>
+         <ns3:RazaoSocial>VALE S.A. </ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>RODOVIA BR-040 </ns3:Endereco>
+            <ns3:Numero>S/N</ns3:Numero>
+            <ns3:Complemento>KM 598 - MINA FABRICA </ns3:Complemento>
+            <ns3:Bairro>MIGUEL BURNIER</ns3:Bairro>
+            <ns3:Cidade>3146107</ns3:Cidade>
+            <ns3:Estado>MG</ns3:Estado>
+            <ns3:Cep>35400000</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato>
+            <ns3:Telefone>3137497000</ns3:Telefone>
+            <ns3:Email>nfe.servico@vale.com</ns3:Email>
+         </ns3:Contato>
+      </ns3:TomadorServico>
+      <ns3:OrgaoGerador>
+         <ns3:CodigoMunicipio>3165537</ns3:CodigoMunicipio>
+         <ns3:Uf>MG</ns3:Uf>
+      </ns3:OrgaoGerador>
+   </ns2:Nfse>
+   <ns2:Nfse>
+      <ns3:IdentificacaoNfse>
+         <ns3:Numero>1297</ns3:Numero>
+         <ns3:CodigoVerificacao>995725702</ns3:CodigoVerificacao>
+      </ns3:IdentificacaoNfse>
+      <ns3:DataEmissao>2016-06-03T16:22:06</ns3:DataEmissao>
+      <ns3:NaturezaOperacao>1</ns3:NaturezaOperacao>
+      <ns3:RegimeEspecialTributacao>0</ns3:RegimeEspecialTributacao>
+      <ns3:OptanteSimplesNacional>2</ns3:OptanteSimplesNacional>
+      <ns3:IncetivadorCultural>2</ns3:IncetivadorCultural>
+      <ns3:Competencia>2016-06-03</ns3:Competencia>
+      <ns3:Servico>
+         <ns3:Valores>
+            <ns3:ValorServicos>189950.00</ns3:ValorServicos>
+            <ns3:IssRetido>2</ns3:IssRetido>
+            <ns3:ValorIss>3799.00</ns3:ValorIss>
+            <ns3:BaseCalculo>189950.00</ns3:BaseCalculo>
+            <ns3:Aliquota>0.0200</ns3:Aliquota>
+            <ns3:ValorLiquidoNfse>189950.00</ns3:ValorLiquidoNfse>
+            <ns3:ValorIssRetido>0</ns3:ValorIssRetido>
+         </ns3:Valores>
+         <ns3:ItemListaServico>1401</ns3:ItemListaServico>
+         <ns3:CodigoTributacaoMunicipio>331390100</ns3:CodigoTributacaoMunicipio>
+         <ns3:Discriminacao>SERVICO BOBINA ELETROMAGNETICA DOS SEPARADORES MAGNETICOS
+
+VENCIMENTO: 03/07/2016
+
+SERVICOS PRESTADOS EM NOSSAS INSTALACOES (SARZEDO,MG). BANCO DO BRASIL- AGENCIA 1632-2 - CC 54857-X /BH-MG. OS 8561. SPS 4706 / PEDIDO 4502697593.
+
+SERVICO NÃO SUJEITO A RETENÇÃO DE PIS/COFINS/CSLL CONFORME ART 1º IN 459/2004 MERO REPARO BEM DEFEITUOSO. ITEM 14.01 LC 116/2003. TRIBUTOS 18,05% FONTE: IBPT.</ns3:Discriminacao>
+         <ns3:MunicipioPrestacaoServico>3165537</ns3:MunicipioPrestacaoServico>
+      </ns3:Servico>
+      <ns3:ValorCredito>0.00</ns3:ValorCredito>
+      <ns3:PrestadorServico>
+         <ns3:IdentificacaoPrestador>
+            <ns3:Cnpj>26389015000187</ns3:Cnpj>
+            <ns3:InscricaoMunicipal>13463000426</ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoPrestador>
+         <ns3:RazaoSocial>DATA ENGENHARIA LTDA</ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>RUA  SÃO JUDAS TADEU.</ns3:Endereco>
+            <ns3:Numero>280</ns3:Numero>
+            <ns3:Bairro>DISTRITO INDUSTRIAL BENJAMIM GUIMARÃES.</ns3:Bairro>
+            <ns3:Cidade>3165537</ns3:Cidade>
+            <ns3:Estado>MG</ns3:Estado>
+            <ns3:Cep>32450000</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato>
+            <ns3:Telefone>3135770404</ns3:Telefone>
+            <ns3:Email>fiscal@data.com.br</ns3:Email>
+         </ns3:Contato>
+      </ns3:PrestadorServico>
+      <ns3:TomadorServico>
+         <ns3:IdentificacaoTomador>
+            <ns3:CpfCnpj>
+               <ns3:Cnpj>33592510000740</ns3:Cnpj>
+            </ns3:CpfCnpj>
+            <ns3:InscricaoMunicipal></ns3:InscricaoMunicipal>
+         </ns3:IdentificacaoTomador>
+         <ns3:RazaoSocial>VALE S.A. </ns3:RazaoSocial>
+         <ns3:Endereco>
+            <ns3:Endereco>RODOVIA BR-040 </ns3:Endereco>
+            <ns3:Numero>S/N</ns3:Numero>
+            <ns3:Complemento>KM 598 - MINA FABRICA </ns3:Complemento>
+            <ns3:Bairro>MIGUEL BURNIER</ns3:Bairro>
+            <ns3:Cidade>3146107</ns3:Cidade>
+            <ns3:Estado>MG</ns3:Estado>
+            <ns3:Cep>35400000</ns3:Cep>
+         </ns3:Endereco>
+         <ns3:Contato>
+            <ns3:Telefone>3137497000</ns3:Telefone>
+            <ns3:Email>nfe.servico@vale.com</ns3:Email>
+         </ns3:Contato>
+      </ns3:TomadorServico>
+      <ns3:OrgaoGerador>
+         <ns3:CodigoMunicipio>3165537</ns3:CodigoMunicipio>
+         <ns3:Uf>MG</ns3:Uf>
+      </ns3:OrgaoGerador>
+   </ns2:Nfse>
+</ns2:NFSE>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Nfse>
+      <InfNfse Id="0609447400012613389056300001305">
+         <Numero>00001305</Numero>
+         <CodigoVerificacao />
+         <CodigoControle>{45018644-F21B-476E-ACBD-46C3456B2FAF}</CodigoControle>
+         <DataEmissao>2016-06-02T00:00:00</DataEmissao>
+         <ValoresNfse>
+            <BaseCalculo>285403.90</BaseCalculo>
+            <Aliquota>5.0000</Aliquota>
+            <ValorIss>14270.20</ValorIss>
+            <ValorLiquidoNfse>256435.40</ValorLiquidoNfse>
+         </ValoresNfse>
+         <PrestadorServico>
+            <IdentificacaoPrestador>
+               <CpfCnpj>
+                  <Cnpj>06094474000126</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>133890563</InscricaoMunicipal>
+            </IdentificacaoPrestador>
+            <RazaoSocial>IRMÃOS SANTOS CAVALCANTI SERVIÇOS E COMÉRCIO LTDA</RazaoSocial>
+            <Endereco>
+               <Endereco>ROD ROD MG-030</Endereco>
+               <Numero>8625</Numero>
+               <Complemento>SALA 06</Complemento>
+               <Bairro>VALE DO SERENO</Bairro>
+               <CodigoMunicipio>3144805</CodigoMunicipio>
+               <Uf>MG</Uf>
+               <CodigoPais />
+               <Cep>34000000</Cep>
+            </Endereco>
+            <Contato>
+               <Telefone>35632356</Telefone>
+               <Email>danielgonçalves@gruposemil.com.br</Email>
+            </Contato>
+         </PrestadorServico>
+         <OrgaoGerador>
+            <CodigoMunicipio>1504208</CodigoMunicipio>
+            <Uf>PA</Uf>
+         </OrgaoGerador>
+         <DeclaracaoPrestacaoServico>
+            <Competencia>2016-06-02</Competencia>
+            <Servico />
+            <Valores>
+               <ValorServicos>285403.90</ValorServicos>
+               <ValorDeducoes>0.00</ValorDeducoes>
+               <ValorPis>1855.13</ValorPis>
+               <ValorCofins>8562.12</ValorCofins>
+               <ValorInss>15697.21</ValorInss>
+               <ValorIr>0.00</ValorIr>
+               <ValorCsll>2854.04</ValorCsll>
+               <OutrasRetencoes>0.00</OutrasRetencoes>
+               <ValorIss>14270.20</ValorIss>
+               <Aliquota>5.0000</Aliquota>
+               <DescontoIncondicionado>0.00</DescontoIncondicionado>
+               <DescontoCondicionado>0.00</DescontoCondicionado>
+            </Valores>
+            <IssRetido />
+            <ResponsavelRetencao />
+            <ItemListaServico>-</ItemListaServico>
+            <CodigoCnae>3314715</CodigoCnae>
+            <CodigoTributacaoMunicipio />
+            <Discriminacao>PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO, INTERNA E NAS INSTALAÇÕES DA CONTRATADA, EM VEÍCULOS LEVES, MÉDIOS E PESADOS, E EQUIPAMENTOS AUXILIARES, A SEREM XECUTADOS NA MINA.</Discriminacao>
+            <CodigoMunicipio>1504208</CodigoMunicipio>
+            <CodigoPais />
+            <ExigibilidadeISS />
+            <MunicipioIncidencia />
+            <NumeroProcesso />
+            <Prestador>
+               <CpfCnpj>
+                  <Cnpj>06094474000126</Cnpj>
+               </CpfCnpj>
+               <InscricaoMunicipal>133890563</InscricaoMunicipal>
+            </Prestador>
+            <Tomador>
+               <IdentificacaoTomador>
+                  <CpfCnpj>
+                     <Cnpj>33931478000275</Cnpj>
+                  </CpfCnpj>
+                  <InscricaoMunicipal>6001337</InscricaoMunicipal>
+               </IdentificacaoTomador>
+               <RazaoSocial>SALOBO METAIS S/A</RazaoSocial>
+               <Endereco>
+                  <Endereco>ACAMPAMENTO 3 ALFA FLORESTA NACIONAL</Endereco>
+                  <Numero>SN</Numero>
+                  <Complemento>TAPIRAPE AQUIRI</Complemento>
+                  <Bairro>SERRA DOS CARAJAS</Bairro>
+                  <CodigoMunicipio />
+                  <Uf>PA</Uf>
+                  <CodigoPais />
+                  <Cep>68501535</Cep>
+               </Endereco>
+               <Contato>
+                  <Telefone>33283603</Telefone>
+                  <Email>roberta.diedrich@vale.com</Email>
+               </Contato>
+            </Tomador>
+            <ConstrucaoCivil>
+               <CodigoObra />
+               <Art />
+            </ConstrucaoCivil>
+            <OptanteSimplesNacional />
+            <IncentivoFiscal />
+         </DeclaracaoPrestacaoServico>
+         <Versao>2.01</Versao>
+      </InfNfse>
+   </Nfse>
+</CompNfse>

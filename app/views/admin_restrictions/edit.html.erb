@@ -1,0 +1,6 @@
+<%= title [l(:label_admin_restriction_plural), admin_restrictions_path], @admin_restriction.name %>
+
+<%= labelled_form_for @admin_restriction do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<%= submit_tag l(:button_save) %>
+<% end %>

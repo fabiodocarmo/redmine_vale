@@ -1,0 +1,809 @@
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10">
+   <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+      <infNFe Id="NFe35160654217674000171550010000004751550033511" versao="3.10">
+         <ide>
+            <cUF>35</cUF>
+            <cNF>55003351</cNF>
+            <natOp>Vendas merc.adq. terceiros</natOp>
+            <indPag>1</indPag>
+            <mod>55</mod>
+            <serie>1</serie>
+            <nNF>475</nNF>
+            <dhEmi>2016-06-02T15:57:00-03:00</dhEmi>
+            <dhSaiEnt>2016-06-02T15:57:00-03:00</dhSaiEnt>
+            <tpNF>1</tpNF>
+            <idDest>2</idDest>
+            <cMunFG>3545803</cMunFG>
+            <tpImp>1</tpImp>
+            <tpEmis>1</tpEmis>
+            <cDV>1</cDV>
+            <tpAmb>1</tpAmb>
+            <finNFe>1</finNFe>
+            <indFinal>1</indFinal>
+            <indPres>1</indPres>
+            <procEmi>3</procEmi>
+            <verProc>3.10.83</verProc>
+         </ide>
+         <emit>
+            <CNPJ>54217674000171</CNPJ>
+            <xNome>MAQUITECNICA COM. ASSISTENCIA DE MAQUINAS OPERATRIZES LTDA.</xNome>
+            <xFant>MAQUITECNICA</xFant>
+            <enderEmit>
+               <xLgr>Rua Paraguai</xLgr>
+               <nro>321</nro>
+               <xBairro>Jardim Belo Horizonte II</xBairro>
+               <cMun>3545803</cMun>
+               <xMun>Santa Barbara d'Oeste</xMun>
+               <UF>SP</UF>
+               <CEP>13450178</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+               <fone>1934633911</fone>
+            </enderEmit>
+            <IE>606028640112</IE>
+            <IM>7694</IM>
+            <CNAE>4663000</CNAE>
+            <CRT>1</CRT>
+         </emit>
+         <dest>
+            <CNPJ>33592510031548</CNPJ>
+            <xNome>Vale S.A</xNome>
+            <enderDest>
+               <xLgr>Praca Joao Paulo Pinheiro</xLgr>
+               <nro>s/n</nro>
+               <xBairro>Centro</xBairro>
+               <cMun>3127701</cMun>
+               <xMun>Governador Valadares</xMun>
+               <UF>MG</UF>
+               <CEP>35010330</CEP>
+               <cPais>1058</cPais>
+               <xPais>BRASIL</xPais>
+            </enderDest>
+            <indIEDest>1</indIEDest>
+            <IE>2770241610321</IE>
+         </dest>
+         <det nItem="1">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>CHAPA VC 130</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>54250.0000</vUnCom>
+               <vProd>54250.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>54250.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>1665.48</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="2">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>CHAPA DE BRONZE E BUCHAS DE BRONZE</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>95500.0000</vUnCom>
+               <vProd>95500.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>95500.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>2931.85</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="3">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>FUSO TRAPEZOIDAL COM PORCA</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>67560.0000</vUnCom>
+               <vProd>67560.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>67560.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>2074.09</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="4">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>ROLAMENTO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>128250.0000</vUnCom>
+               <vProd>128250.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>128250.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>3937.28</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="5">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>MOTOR ELETRICO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>135864.5000</vUnCom>
+               <vProd>135864.50</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>135864.5000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>4171.04</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="6">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>VALVULA HIDRAULICA</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>130250.2000</vUnCom>
+               <vProd>130250.20</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>130250.2000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>3998.68</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="7">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>MATERIAL ELETRICO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>195250.0000</vUnCom>
+               <vProd>195250.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>195250.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>5994.18</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="8">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>VEDACOES</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>72500.0000</vUnCom>
+               <vProd>72500.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>72500.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>2225.75</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="9">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>SUPORTE PIVO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>6.0000</qCom>
+               <vUnCom>890.5000</vUnCom>
+               <vProd>5343.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>6.0000</qTrib>
+               <vUnTrib>890.5000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>164.03</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="10">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>TRANSPORTADOR DE CAVACO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>240500.0000</vUnCom>
+               <vProd>240500.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>240500.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>7383.35</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="11">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>CILINDRO GUIA DO SINCRONISMO</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>2403.4300</vUnCom>
+               <vProd>2403.43</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>2403.4300</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>73.79</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="12">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>POLIA</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>4700.0000</vUnCom>
+               <vProd>4700.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>4700.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>144.29</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <det nItem="13">
+            <prod>
+               <cProd>.</cProd>
+               <cEAN></cEAN>
+               <xProd>CORREIA</xProd>
+               <NCM>85030090</NCM>
+               <CFOP>6102</CFOP>
+               <uCom>pc</uCom>
+               <qCom>1.0000</qCom>
+               <vUnCom>4700.0000</vUnCom>
+               <vProd>4700.00</vProd>
+               <cEANTrib></cEANTrib>
+               <uTrib>pc</uTrib>
+               <qTrib>1.0000</qTrib>
+               <vUnTrib>4700.0000</vUnTrib>
+               <indTot>1</indTot>
+               <nItemPed>0</nItemPed>
+            </prod>
+            <imposto>
+               <ICMS>
+                  <ICMSSN101>
+                     <orig>0</orig>
+                     <CSOSN>101</CSOSN>
+                     <pCredSN>3.07</pCredSN>
+                     <vCredICMSSN>144.29</vCredICMSSN>
+                  </ICMSSN101>
+               </ICMS>
+               <IPI>
+                  <cEnq>999</cEnq>
+                  <IPITrib>
+                     <CST>99</CST>
+                     <qUnid>0</qUnid>
+                     <vUnid>0</vUnid>
+                     <vIPI>0.00</vIPI>
+                  </IPITrib>
+               </IPI>
+               <PIS>
+                  <PISNT>
+                     <CST>07</CST>
+                  </PISNT>
+               </PIS>
+               <COFINS>
+                  <COFINSNT>
+                     <CST>07</CST>
+                  </COFINSNT>
+               </COFINS>
+            </imposto>
+         </det>
+         <total>
+            <ICMSTot>
+               <vBC>0.00</vBC>
+               <vICMS>0.00</vICMS>
+               <vICMSDeson>0.00</vICMSDeson>
+               <vFCPUFDest>0.00</vFCPUFDest>
+               <vICMSUFDest>0.00</vICMSUFDest>
+               <vICMSUFRemet>0.00</vICMSUFRemet>
+               <vBCST>0.00</vBCST>
+               <vST>0.00</vST>
+               <vProd>1137071.13</vProd>
+               <vFrete>0.00</vFrete>
+               <vSeg>0.00</vSeg>
+               <vDesc>0.00</vDesc>
+               <vII>0.00</vII>
+               <vIPI>0.00</vIPI>
+               <vPIS>0.00</vPIS>
+               <vCOFINS>0.00</vCOFINS>
+               <vOutro>0.00</vOutro>
+               <vNF>1137071.13</vNF>
+               <vTotTrib>0.00</vTotTrib>
+            </ICMSTot>
+         </total>
+         <transp>
+            <modFrete>0</modFrete>
+            <vol>
+               <qVol>0</qVol>
+               <nVol>0</nVol>
+            </vol>
+         </transp>
+         <cobr>
+            <fat>
+               <nFat>475</nFat>
+               <vOrig>1137071.13</vOrig>
+               <vLiq>1137071.13</vLiq>
+            </fat>
+            <dup>
+               <nDup>475_1</nDup>
+               <dVenc>2016-07-02</dVenc>
+               <vDup>1137071.13</vDup>
+            </dup>
+         </cobr>
+         <infAdic>
+            <infCpl>Documento emitido por EPP Optante pelo Simples Nacional. Nao gera direito a credito fiscal de ICMS e de ISS.  Conforme Pedido Sap 4100106766  / Linhas 18 a 30.  Cond.Pagamento: 30 dias  Efetuar deposito em C/C Banco Bradesco,   Ag.0520-7 conta 70.753-8.</infCpl>
+         </infAdic>
+      </infNFe>
+      <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+         <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+            <Reference URI="#NFe35160654217674000171550010000004751550033511">
+               <Transforms>
+                  <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+                  <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+               </Transforms>
+               <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+               <DigestValue>mGyAp/IeIMQwwEEN1ovO0ctnM+Q=</DigestValue>
+            </Reference>
+         </SignedInfo>
+         <SignatureValue>OiUg1A1Bh7dLUpEK874VLOXmR0QpKUovC7BfIjrqSuhxELbpu3xdkxWBpQlPHXw8rAwFPdOrz11G
+3Fwy3nHNoGa/tMJY6am47HSrRcpF5Q2PlvVYv3fuHywEzsWwiuOVKf7YBPZnvb6BNwPmvLf3YJ+V
+vjAQz4ffVKBS+rqEtGRqXMMk8H3bv5JncFIW3d5ZMRSkvgccnHYU7osbaWddcDYPU5P4G35FOZzh
+T/F6jOWgPUTaWkpWJxseakWWVv/ylNpRyRRWLxC/3VSzez1UzpndPZrSRB3xTOy6zzpZt0dezhli
+wtbt4MuRUHeZ/mFmabuOSAVtlfWV9Zh9p5puXg==</SignatureValue>
+         <KeyInfo>
+            <X509Data>
+               <X509Certificate>MIIITjCCBjagAwIBAgIQTwMGcMOYybjqCvA9GsGKMTANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQG
+EwJCUjETMBEGA1UEChMKSUNQLUJyYXNpbDE2MDQGA1UECxMtU2VjcmV0YXJpYSBkYSBSZWNlaXRh
+IEZlZGVyYWwgZG8gQnJhc2lsIC0gUkZCMRkwFwYDVQQDExBBQyBTSU5DT1IgUkZCIEc0MB4XDTE1
+MTIwMjAwMDAwMFoXDTE4MTEzMDIzNTk1OVowggENMQswCQYDVQQGEwJCUjETMBEGA1UEChQKSUNQ
+LUJyYXNpbDELMAkGA1UECBMCU1AxHTAbBgNVBAcUFFNhbnRhIEJhcmJhcmEgRE9lc3RlMTYwNAYD
+VQQLFC1TZWNyZXRhcmlhIGRhIFJlY2VpdGEgRmVkZXJhbCBkbyBCcmFzaWwgLSBSRkIxFjAUBgNV
+BAsUDVJGQiBlLUNOUEogQTMxIjAgBgNVBAsUGUF1dGVudGljYWRvIHBvciBBUiBKVU5TRUcxSTBH
+BgNVBAMTQE1BUVVJVEVDTklDQSBDT00gRSBBU1NJU1QgREUgTUFRVUlOQVMgT1BFUkFUUklaRVM6
+NTQyMTc2NzQwMDAxNzEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwzc0yvmcybT2W
+TQZ85aLZBlWQYuIvoXrvfiwi1grS8bETfnku5xWYGIlkV3KsYoz9XogNS9hSLp+osv1Ue1+i61CU
+iuK7FbAsh+jDzYIomyid+NnK95XXMV4Y2u6nD4gRj8ncrKJwjF0sGBuCzHfQyaKvOjddt24FItCn
+nh2fFqBeFA7St98LK4JopfPNve7t6e1pSlgeR642ZHFAhla0PaSc0R7Un4IlmYsqDM65atM3J1kz
+lk40XcFwFqFd2iHp1XkheFW0cd1ylR4AuwRiWqAUuBHHlGXYhIYQYYHY3ghVYN5NSoBEpdVQVtGN
+ATFYQ5pCA1BbX6nAau7rppozAgMBAAGjggM+MIIDOjCBtgYDVR0RBIGuMIGroDgGBWBMAQMEoC8E
+LTIzMDgxOTUzNzE2NjAyNTk4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMKAhBgVgTAEDAqAY
+BBZPU1ZBTERPIFNBUlRPUkkgQ0FNUE9ToBkGBWBMAQMDoBAEDjU0MjE3Njc0MDAwMTcxoBcGBWBM
+AQMHoA4EDDAwMDAwMDAwMDAwMIEYZmlzY2FsQGVjemFtcGllcmkuY29tLmJyMAkGA1UdEwQCMAAw
+HwYDVR0jBBgwFoAUKcOB2ehusr9RJA+XRhMMuN7ENZgwDgYDVR0PAQH/BAQDAgXgMHgGA1UdIARx
+MG8wbQYGYEwBAgMZMGMwYQYIKwYBBQUHAgEWVWh0dHA6Ly9pY3AtYnJhc2lsLmFjc2luY29yLmNv
+bS5ici9yZXBvc2l0b3Jpby9kcGMvQUNfU0lOQ09SX1JGQi9EUENfQUNfU0lOQ09SX1JGQi5wZGYw
+ggENBgNVHR8EggEEMIIBADBUoFKgUIZOaHR0cDovL2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5i
+ci9yZXBvc2l0b3Jpby9sY3IvQUNTSU5DT1JSRkJHNC9MYXRlc3RDUkwuY3JsMFOgUaBPhk1odHRw
+Oi8vaWNwLWJyYXNpbC5vdXRyYWxjci5jb20uYnIvcmVwb3NpdG9yaW8vbGNyL0FDU0lOQ09SUkZC
+RzQvTGF0ZXN0Q1JMLmNybDBToFGgT4ZNaHR0cDovL3JlcG9zaXRvcmlvLmljcGJyYXNpbC5nb3Yu
+YnIvbGNyL0NlcnRpc2lnbi9BQ1NJTkNPUlJGQkc0L0xhdGVzdENSTC5jcmwwHQYDVR0lBBYwFAYI
+KwYBBQUHAwIGCCsGAQUFBwMEMIGYBggrBgEFBQcBAQSBizCBiDBcBggrBgEFBQcwAoZQaHR0cDov
+L2ljcC1icmFzaWwuY2VydGlzaWduLmNvbS5ici9yZXBvc2l0b3Jpby9jZXJ0aWZpY2Fkb3MvQUNf
+U0lOQ09SX1JGQl9HNC5wN2MwKAYIKwYBBQUHMAGGHGh0dHA6Ly9vY3NwLmNlcnRpc2lnbi5jb20u
+YnIwDQYJKoZIhvcNAQELBQADggIBAJDVsPpf179lC+elowDDsAbpxjlrshQ0iqJOhMjDEHoAbiZn
+VzfL5faue9WdAwcc/GBe7tfpfsyNy1rvUfcND5kxg05xqo648FF00bOEhpyGri45R25KPnVC/YBa
+EsLfTI1ghUGSu9oEoyA/kA5ThFyIeviExTpLGPvhCHMH14geIW5mNH82Bxr2KyfSDDjRb1n3VtSB
+uUQmXgdJRUtLy6CzmoYpMXtR5kiAknXjihbDIYiiNpOVoRa0A+zk1oVSwE9JwFERzAj/6Y/+CjR7
+/hGDVDPIchOVF2aI24l1CYttwj9Sa/ZNHhInd37/ts/no5zKAF+LW/zyDENdjcr0kfoSi26Gj30I
+7INyZKGeeB2EOOR2ldRpuDDydibscry7H5602d/Mkr4yVBM3vgg/r1YSTVdEGK1kaiSTMizw9U1s
+4wSpf3JE05qNEXCHPTjmpJQ6ejGlTLhYsP8QdfFF07f70xJKNsm2svv4felanGc8GKbSTVXl08AH
+k6q3IhCE+vTnrtB086xoN+Q/gfimLdlWHSlbH0DpZUa7bOotaxxyQhFYPT8W9ZOueXrP7d0xkqS2
+722yNoUhlvH+r/WoK6szD4Z5MkSqMHOsTfZIfY1UIHJxoABpg2IUY58QXzcJdT3RRCBWiXlcqmHe
+xquoFNTcG8NpKBPF462zFam925Ho</X509Certificate>
+            </X509Data>
+         </KeyInfo>
+      </Signature>
+   </NFe>
+   <protNFe versao="3.10">
+      <infProt>
+         <tpAmb>1</tpAmb>
+         <verAplic>SP_NFE_PL_008i2</verAplic>
+         <chNFe>35160654217674000171550010000004751550033511</chNFe>
+         <dhRecbto>2016-06-02T16:18:16-03:00</dhRecbto>
+         <nProt>135160336756713</nProt>
+         <digVal>mGyAp/IeIMQwwEEN1ovO0ctnM+Q=</digVal>
+         <cStat>100</cStat>
+         <xMotivo>Autorizado o uso da NF-e</xMotivo>
+      </infProt>
+   </protNFe>
+</nfeProc>

@@ -1,0 +1,32 @@
+<% issues = Issue.visible.open.
+      where(:assigned_to_id => (User.current.id)).
+      limit(5).
+      includes(:status, :project, :tracker, :priority).
+      references(:status, :project, :tracker, :priority).
+      order("#{IssuePriority.table_name}.position DESC, #{Issue.table_name}.updated_on DESC") %>
+
+<% if issues.any? %>
+
+<div class="">
+  <h2>
+    <%= link_to l(:label_assigned_to_me_issues),
+    issues_path(:set_filter => 1, :assigned_to_id => 'me', :sort => 'priority:desc,updated_on:desc') %>
+    (<%= Issue.visible.open.where(:assigned_to_id => User.current.id).count %>)
+  </h2>
+  <div id="issues-index">
+    <% issues.each do |issue| %>
+      <div class="issue">
+        <div class="status">
+          <%= issue.status.name %>
+        </div>
+        <div class="subject">
+          <%= link_to issue.subject, issue_path(issue) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+<br>
+<% end %>

@@ -1,0 +1,114 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="04685944000109150306000000101">
+               <Numero>00000101</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{053CB905-A4F8-46B5-8202-AB65D664FCAF}</CodigoControle>
+               <DataEmissao>2016-06-02T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>1081.44</BaseCalculo>
+                  <Aliquota>3.0000</Aliquota>
+                  <ValorIss>32.44</ValorIss>
+                  <ValorLiquidoNfse>1081.44</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>04685944000109</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>1503060</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>UNIGUINCHO ASSISTENCIA 24 HORAS EIRELI - EPP</RazaoSocial>
+                  <Endereco>
+                     <Endereco>RUA EMIDIO QUITES</Endereco>
+                     <Numero>427</Numero>
+                     <Complemento>LETRA A</Complemento>
+                     <Bairro>PRAIA</Bairro>
+                     <CodigoMunicipio></CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>35450000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>3562-3162</Telefone>
+                     <Email>senhas@contabilidadeitabirito.com.br</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3109006</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2016-06-02</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>1081.44</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>0.00</ValorPis>
+                     <ValorCofins>0.00</ValorCofins>
+                     <ValorInss>0.00</ValorInss>
+                     <ValorIr>0.00</ValorIr>
+                     <ValorCsll>0.00</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>32.44</ValorIss>
+                     <Aliquota>3.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>5229002</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao>SERVIÇO DE MOVIMENTAÇÃO INTERNA - RF. 6200372920 - CONTRATO. 5900005610 - PEDIDO. 4502708406 - FRS. 1001629890 - PERIODO. 21.04.2016 A 20.05.2016
+</Discriminacao>
+                  <CodigoMunicipio>3109006</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>04685944000109</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>1503060</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510000820</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>3000721</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>VALE S.A</RazaoSocial>
+                     <Endereco>
+                        <Endereco>FAZ CORREGO DO FEIJÃO</Endereco>
+                        <Numero>S/N</Numero>
+                        <Complemento></Complemento>
+                        <Bairro>ETC ALBERTO FLORES</Bairro>
+                        <CodigoMunicipio></CodigoMunicipio>
+                        <Uf>MG</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>35460000</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone></Telefone>
+                        <Email></Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>

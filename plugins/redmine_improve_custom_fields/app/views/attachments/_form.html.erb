@@ -1,0 +1,129 @@
+<span id="attachments_fields">
+<% @attachments_description_possible_values = Setting.try(:plugin_redmine_improve_custom_fields)[:attachments_description_possible_values] %>
+<% if defined?(container) && container && container.saved_attachments %>
+  <% container.saved_attachments.each_with_index do |attachment, i| %>
+    <span id="attachments_p<%= i %>">
+      <% if @attachments_description_possible_values.blank? %>
+        <%= text_field_tag("attachments[p#{i}][filename]", attachment.filename, :class => 'filename') +
+            text_field_tag("attachments[p#{i}][description]", attachment.description, :maxlength => 255, :placeholder => l(:label_optional_description), :class => 'description') +
+            link_to('&nbsp;'.html_safe, attachment_path(attachment, :attachment_id => "p#{i}", :format => 'js'), :method => 'delete', :remote => true, :class => 'remove-upload') %>
+      <% else %>
+        <%= text_field_tag("attachments[p#{i}][filename]", attachment.filename, :class => 'filename') +
+            select_tag("attachments[p#{i}][description]", options_for_select(Setting.try(:plugin_redmine_improve_custom_fields)[:attachments_description_possible_values].split("\r\n"), attachment.description), :maxlength => 255, :placeholder => l(:label_optional_description), :class => 'description') +
+            link_to('&nbsp;'.html_safe, attachment_path(attachment, :attachment_id => "p#{i}", :format => 'js'), :method => 'delete', :remote => true, :class => 'remove-upload') %>
+      <% end %>
+      <%= hidden_field_tag "attachments[p#{i}][token]", "#{attachment.token}" %>
+    </span>
+  <% end %>
+<% end %>
+</span>
+<span class="add_attachment">
+<%= file_field_tag 'attachments[dummy][file]',
+      :id => nil,
+      :class => 'file_selector',
+      :multiple => true,
+      :onchange => 'addInputFiles(this);',
+      :data => {
+        :max_file_size => Setting.attachment_max_size.to_i.kilobytes,
+        :max_file_size_message => l(:error_attachment_too_big, :max_size => number_to_human_size(Setting.attachment_max_size.to_i.kilobytes)),
+        :max_concurrent_uploads => Redmine::Configuration['max_concurrent_ajax_uploads'].to_i,
+        :upload_path => uploads_path(:format => 'js'),
+        :description_placeholder => l(:label_optional_description)
+      } %>
+(<%= l(:label_max_size) %>: <%= number_to_human_size(Setting.attachment_max_size.to_i.kilobytes) %>)
+</span>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag 'attachments' %>
+  <%= stylesheet_link_tag 'attachments', plugin: 'redmine_improve_custom_fields' %>
+
+  <script type="text/javascript">
+    function addFile(inputEl, file, eagerUpload) {
+
+      if ($('#attachments_fields').children().length < 10) {
+
+        var attachmentId = addFile.nextAttachmentId++;
+
+        var fileSpan = $('<span>', { id: 'attachments_' + attachmentId });
+
+        <% if @attachments_description_possible_values.blank? %>
+          var description_input = $('<input>', { type: 'text', 'class': 'description', name: 'attachments[' + attachmentId + '][description]', maxlength: 255, placeholder: $(inputEl).data('description-placeholder') } );
+        <% else %>
+          var description_input = $('<select>', {'class': 'description', name: 'attachments[' + attachmentId + '][description]', maxlength: 255, placeholder: $(inputEl).data('description-placeholder') } );
+
+          <% @attachments_description_possible_values.split("\r\n").each do |value| %>
+            description_input.append($("<option>").attr('value', '<%= value %>').text('<%= value %>'));
+          <% end %>
+        <% end %>
+
+        fileSpan.append(
+            $('<input>', { type: 'text', 'class': 'filename readonly', name: 'attachments[' + attachmentId + '][filename]', readonly: 'readonly'} ).val(file.name),
+            description_input.toggle(!eagerUpload),
+            $('<a>&nbsp</a>').attr({ href: "#", 'class': 'remove-upload' }).click(removeFile).toggle(!eagerUpload)
+        ).appendTo('#attachments_fields');
+
+        if(eagerUpload) {
+          ajaxUpload(file, attachmentId, fileSpan, inputEl);
+        }
+
+        return attachmentId;
+      }
+      return null;
+    }
+    addFile.nextAttachmentId = 1;
+
+    function ajaxUpload(file, attachmentId, fileSpan, inputEl) {
+
+      function onLoadstart(e) {
+        fileSpan.removeClass('ajax-waiting');
+        fileSpan.addClass('ajax-loading');
+        $('input:submit', $(this).parents('form')).attr('disabled', 'disabled');
+      }
+
+      function onProgress(e) {
+        if(e.lengthComputable) {
+          this.progressbar( 'value', e.loaded * 100 / e.total );
+        }
+      }
+
+      function actualUpload(file, attachmentId, fileSpan, inputEl) {
+
+        ajaxUpload.uploading++;
+
+        uploadBlob(file, $(inputEl).data('upload-path'), attachmentId, {
+            loadstartEventHandler: onLoadstart.bind(progressSpan),
+            progressEventHandler: onProgress.bind(progressSpan)
+          })
+          .done(function(result) {
+            progressSpan.progressbar( 'value', 100 ).remove();
+            fileSpan.find('.description, a').css('display', 'inline-block');
+          })
+          .fail(function(result) {
+            progressSpan.text(result.statusText);
+          }).always(function() {
+            ajaxUpload.uploading--;
+            fileSpan.removeClass('ajax-loading');
+            var form = fileSpan.parents('form');
+            if (form.queue('upload').length == 0 && ajaxUpload.uploading == 0) {
+              $('input:submit', form).removeAttr('disabled');
+            }
+            form.dequeue('upload');
+          });
+      }
+
+      var progressSpan = $('<div>').insertAfter(fileSpan.find('input.filename'));
+      progressSpan.progressbar();
+      fileSpan.addClass('ajax-waiting');
+
+      var maxSyncUpload = $(inputEl).data('max-concurrent-uploads');
+
+      if(maxSyncUpload == null || maxSyncUpload <= 0 || ajaxUpload.uploading < maxSyncUpload)
+        actualUpload(file, attachmentId, fileSpan, inputEl);
+      else
+        $(inputEl).parents('form').queue('upload', actualUpload.bind(this, file, attachmentId, fileSpan, inputEl));
+    }
+
+    ajaxUpload.uploading = 0;
+  </script>
+  <% include_calendar_headers_tags %>
+<% end %>

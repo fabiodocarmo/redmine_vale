@@ -1,0 +1,115 @@
+<ConsultarLoteRpsResposta xmlns="http://www.abrasf.org.br/nfse.xsd">
+   <Situacao>4</Situacao>
+   <ListaNfse>
+      <CompNfse>
+         <Nfse>
+            <InfNfse Id="2638679700010913080410400000422">
+               <Numero>00000422</Numero>
+               <CodigoVerificacao></CodigoVerificacao>
+               <CodigoControle>{B70573DD-EED8-4497-8F6B-C960392604BB}</CodigoControle>
+               <DataEmissao>2016-01-04T00:00:00</DataEmissao>
+               <ValoresNfse>
+                  <BaseCalculo>2961.04</BaseCalculo>
+                  <Aliquota>3.0000</Aliquota>
+                  <ValorIss>88.83</ValorIss>
+                  <ValorLiquidoNfse>2468.03</ValorLiquidoNfse>
+               </ValoresNfse>
+               <PrestadorServico>
+                  <IdentificacaoPrestador>
+                     <CpfCnpj>
+                        <Cnpj>26386797000109</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>130804104</InscricaoMunicipal>
+                  </IdentificacaoPrestador>
+                  <RazaoSocial>BIOMA-MEIO AMBIENTE LTDA - EPP</RazaoSocial>
+                  <Endereco>
+                     <Endereco>ALM DO INGA</Endereco>
+                     <Numero>840</Numero>
+                     <Complemento>SL. 401 A 406 E 410</Complemento>
+                     <Bairro>VALE DO SERENO</Bairro>
+                     <CodigoMunicipio></CodigoMunicipio>
+                     <Uf>MG</Uf>
+                     <CodigoPais></CodigoPais>
+                     <Cep>34000000</Cep>
+                  </Endereco>
+                  <Contato>
+                     <Telefone>32263815</Telefone>
+                     <Email>KENIA@ASSERCON.COM</Email>
+                  </Contato>
+               </PrestadorServico>
+               <OrgaoGerador>
+                  <CodigoMunicipio>3115359</CodigoMunicipio>
+                  <Uf>MG</Uf>
+               </OrgaoGerador>
+               <DeclaracaoPrestacaoServico>
+                  <Competencia>2016-01-04</Competencia>
+                  <Servico></Servico>
+                  <Valores>
+                     <ValorServicos>2961.04</ValorServicos>
+                     <ValorDeducoes>0.00</ValorDeducoes>
+                     <ValorPis>19.25</ValorPis>
+                     <ValorCofins>88.83</ValorCofins>
+                     <ValorInss>325.71</ValorInss>
+                     <ValorIr>29.61</ValorIr>
+                     <ValorCsll>29.61</ValorCsll>
+                     <OutrasRetencoes>0.00</OutrasRetencoes>
+                     <ValorIss>88.83</ValorIss>
+                     <Aliquota>3.0000</Aliquota>
+                     <DescontoIncondicionado>0.00</DescontoIncondicionado>
+                     <DescontoCondicionado>0.00</DescontoCondicionado>
+                  </Valores>
+                  <IssRetido></IssRetido>
+                  <ResponsavelRetencao></ResponsavelRetencao>
+                  <ItemListaServico>-</ItemListaServico>
+                  <CodigoCnae>7490199</CodigoCnae>
+                  <CodigoTributacaoMunicipio></CodigoTributacaoMunicipio>
+                  <Discriminacao>Prestação de serviços de resgate e reintrodução de flora acompanhamento de supressão de vegetação com eventual salvamento e resgate da fauna e
+monitoramento levantamento/inventariamento da fauna silvestre, elaboração de estudos de fauna e flora dos empreendimentos dos novos e/ou já existentes na DIFS.
+</Discriminacao>
+                  <CodigoMunicipio>3115359</CodigoMunicipio>
+                  <CodigoPais></CodigoPais>
+                  <ExigibilidadeISS></ExigibilidadeISS>
+                  <MunicipioIncidencia></MunicipioIncidencia>
+                  <NumeroProcesso></NumeroProcesso>
+                  <Prestador>
+                     <CpfCnpj>
+                        <Cnpj>26386797000109</Cnpj>
+                     </CpfCnpj>
+                     <InscricaoMunicipal>130804104</InscricaoMunicipal>
+                  </Prestador>
+                  <Tomador>
+                     <IdentificacaoTomador>
+                        <CpfCnpj>
+                           <Cnpj>33592510023529</Cnpj>
+                        </CpfCnpj>
+                        <InscricaoMunicipal>318325490</InscricaoMunicipal>
+                     </IdentificacaoTomador>
+                     <RazaoSocial>CIA VALE DO RIO DOCE</RazaoSocial>
+                     <Endereco>
+                        <Endereco> DE FERRO VITORIA MINAS</Endereco>
+                        <Numero>S/N</Numero>
+                        <Complemento></Complemento>
+                        <Bairro>ZONA RURAL</Bairro>
+                        <CodigoMunicipio>3115359</CodigoMunicipio>
+                        <Uf>MG</Uf>
+                        <CodigoPais></CodigoPais>
+                        <Cep>35969000</Cep>
+                     </Endereco>
+                     <Contato>
+                        <Telefone></Telefone>
+                        <Email></Email>
+                     </Contato>
+                  </Tomador>
+                  <ConstrucaoCivil>
+                     <CodigoObra></CodigoObra>
+                     <Art></Art>
+                  </ConstrucaoCivil>
+                  <OptanteSimplesNacional></OptanteSimplesNacional>
+                  <IncentivoFiscal></IncentivoFiscal>
+               </DeclaracaoPrestacaoServico>
+               <Versao>2.01</Versao>
+            </InfNfse>
+         </Nfse>
+      </CompNfse>
+   </ListaNfse>
+</ConsultarLoteRpsResposta>
